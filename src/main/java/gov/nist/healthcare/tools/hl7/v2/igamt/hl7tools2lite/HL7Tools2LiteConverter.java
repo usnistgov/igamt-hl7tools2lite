@@ -33,6 +33,7 @@ import gov.nist.healthcare.hl7tools.domain.IGLibrary;
 import gov.nist.healthcare.hl7tools.service.HL7DBMockServiceImpl;
 import gov.nist.healthcare.hl7tools.service.HL7DBService;
 import gov.nist.healthcare.hl7tools.service.HL7DBServiceException;
+import gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter.ProfilePreLib;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Code;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Component;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ContentDefinition;
@@ -44,7 +45,6 @@ import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Group;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.IGDocumentScope;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Message;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Messages;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Profile2;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ProfileMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Segment;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.SegmentRef;
@@ -65,7 +65,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 	public final static File OUTPUT_DIR = new File(System.getenv("IGAMT") + "/profiles");
 	public static SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
 
-	public Profile2 profile;
+	public ProfilePreLib profile;
 	public IGLibrary ig;
 	String version;
 
@@ -74,7 +74,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 	public Map<String, Segment> mapSegmentsById;
 	public Map<String, Table> mapTables;
 
-	public Map<String, Profile2> profiles = new HashMap<String, Profile2>();
+	public Map<String, ProfilePreLib> profiles = new HashMap<String, ProfilePreLib>();
 	public Map<String, IGLibrary> igLibraries = new HashMap<String, IGLibrary>();
 
 	public HL7DBService service = new HL7DBMockServiceImpl();
@@ -85,14 +85,14 @@ public class HL7Tools2LiteConverter implements Runnable {
 		mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igl"));
 		log.info("start...");
 		log.info("Dropping mongo collection profile...");
-		mongoOps.dropCollection(Profile2.class);
+		mongoOps.dropCollection(ProfilePreLib.class);
 		List<String> versions = service.getSupportedHL7Versions();
 		// if (!OUTPUT_DIR.exists()) {
 		// OUTPUT_DIR.mkdir();
 		// }
 		for (String version : versions) {
 			this.version = version;
-			Profile2 profile = doVersion(version);
+			ProfilePreLib profile = doVersion(version);
 			mongoOps.insert(profile);
 			igLibraries.put(version, ig);
 			profiles.put(version, profile);
@@ -100,7 +100,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		log.info("...end");
 	}
 
-	public Profile2 doVersion(String version) {
+	public ProfilePreLib doVersion(String version) {
 		log.info("version=" + version);
 		mapDatatypes = new HashMap<String, Datatype>();
 		mapSegments = new HashMap<String, Segment>();
@@ -142,8 +142,8 @@ public class HL7Tools2LiteConverter implements Runnable {
 		app.run();
 	}
 
-	Profile2 convert(IGLibrary i) {
-		Profile2 p = new Profile2();
+	ProfilePreLib convert(IGLibrary i) {
+		ProfilePreLib p = new ProfilePreLib();
 		Tables tabs = convertTables(i.getCodeTableLibrary());
 		convertDataTypesFirstPass(i.getDatatypeLibrary());
 		convertDataTypesSecondPass(i.getDatatypeLibrary());

@@ -32,6 +32,8 @@ import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 
+import gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter.IGDocumentPreLib;
+import gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter.IGDocumentReadConverterPreLib;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Code;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Component;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
@@ -299,18 +301,24 @@ public class ReferentialIntegrityTest {
 			ObjectMapper mapper = new ObjectMapper();
 
 			IGDocumentReadConverter conv = new IGDocumentReadConverter();
+			IGDocumentReadConverterPreLib convPreLib = new IGDocumentReadConverterPreLib();
 			IGDocument igdocument = null;
+			IGDocumentPreLib igdocumentPreLib = null;
 
 			DBCollection coll = mongoOps.getCollection("igdocument");
+			DBCollection collPreLib = mongoOps.getCollection("igdocumentPreLib");
 			BasicDBObject qry = new BasicDBObject();
 			List<BasicDBObject> where = new ArrayList<BasicDBObject>();
 			where.add(new BasicDBObject("scope", "HL7STANDARD"));
 			qry.put("$and", where);
 			DBCursor cur = coll.find(qry);
+			DBCursor curPreLib = collPreLib.find(qry);
 
 			while (cur.hasNext()) {
 				DBObject obj = cur.next();
+				DBObject objPreLib = curPreLib.next();
 				igdocument = conv.convert(obj);
+				igdocumentPreLib = convPreLib.convert(objPreLib);
 				log.info("scope=" + igdocument.getScope());
 				log.info("version=" + igdocument.getProfile().getMetaData().getHl7Version());
 				boolean b = account4Events(igdocument.getProfile());		

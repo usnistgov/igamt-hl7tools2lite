@@ -25,14 +25,13 @@ import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.IGDocument;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.service.converters.IGDocumentReadConverter;
+import gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter.IGDocumentPreLib;
+import gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter.IGDocumentReadConverterPreLib;
 
 public class IGDocumentExporter implements Runnable {
 
@@ -49,8 +48,8 @@ public class IGDocumentExporter implements Runnable {
 			mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igl"));
 			ObjectMapper mapper = new ObjectMapper();
 
-			IGDocumentReadConverter conv = new IGDocumentReadConverter();
-			IGDocument igdocument = null;
+			IGDocumentReadConverterPreLib conv = new IGDocumentReadConverterPreLib();
+			IGDocumentPreLib igdocument = null;
 
 			DBCollection coll = mongoOps.getCollection("igdocumentPreLib");
 			BasicDBObject qry = new BasicDBObject();
@@ -64,7 +63,7 @@ public class IGDocumentExporter implements Runnable {
 				igdocument = conv.convert(obj);
 				String hl7Version = igdocument.getProfile().getMetaData().getHl7Version();
 				log.info("hl7Version=" + hl7Version);
-				File outfile = new File(OUTPUT_DIR, "igdocument-" + hl7Version + "-" + igdocument.getScope().name() + ".json"); 
+				File outfile = new File(OUTPUT_DIR, "igdocument-" + hl7Version + "-" + igdocument.getScope().name() + ".json");
 					Writer igdocumentJson = new FileWriter(outfile);
 				mapper.writerWithDefaultPrettyPrinter().writeValue(igdocumentJson, igdocument);
 			}
