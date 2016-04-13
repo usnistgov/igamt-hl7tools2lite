@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 303,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd445aad",
+  "hl7Version" : "2.3.1",
+  "libId" : null,
+  "bindingIdentifier" : "0143",
+  "name" : "Non-covered Insurance Code",
+  "description" : "Non-covered Insurance Code",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

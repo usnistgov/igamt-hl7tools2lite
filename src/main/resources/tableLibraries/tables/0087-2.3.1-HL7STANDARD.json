@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 105,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd445e52",
+  "hl7Version" : "2.3.1",
+  "libId" : null,
+  "bindingIdentifier" : "0087",
+  "name" : "Preadmit Test Indicator",
+  "description" : "Preadmit Test Indicator",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

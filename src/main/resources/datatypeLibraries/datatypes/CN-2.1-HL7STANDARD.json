@@ -1,0 +1,19 @@
+{
+  "type" : "datatype",
+  "sectionPosition" : 22,
+  "scope" : "HL7STANDARD",
+  "hl7Version" : "2.1",
+  "accountId" : null,
+  "libId" : null,
+  "predicates" : [ ],
+  "conformanceStatements" : [ ],
+  "id" : "565f3ab7d4c6e52cfd448418",
+  "label" : "CN",
+  "ext" : null,
+  "components" : [ ],
+  "name" : "CN",
+  "description" : "composite ID number and name",
+  "status" : "UNPUBLISHED",
+  "comment" : "",
+  "usageNote" : ""
+}

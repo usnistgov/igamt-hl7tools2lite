@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 232,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd447214",
+  "hl7Version" : "2.3",
+  "libId" : null,
+  "bindingIdentifier" : "0056",
+  "name" : "DRG Grouper Review Code",
+  "description" : "DRG Grouper Review Code",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

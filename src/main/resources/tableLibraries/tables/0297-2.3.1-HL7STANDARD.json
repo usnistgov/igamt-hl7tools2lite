@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 217,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd445d1f",
+  "hl7Version" : "2.3.1",
+  "libId" : null,
+  "bindingIdentifier" : "0297",
+  "name" : "CN ID source",
+  "description" : "CN ID source",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

@@ -1,0 +1,19 @@
+{
+  "type" : "datatype",
+  "sectionPosition" : 16,
+  "scope" : "HL7STANDARD",
+  "hl7Version" : "2.1",
+  "accountId" : null,
+  "libId" : null,
+  "predicates" : [ ],
+  "conformanceStatements" : [ ],
+  "id" : "565f3ab7d4c6e52cfd448415",
+  "label" : "TX",
+  "ext" : null,
+  "components" : [ ],
+  "name" : "TX",
+  "description" : "text data",
+  "status" : "UNPUBLISHED",
+  "comment" : "",
+  "usageNote" : ""
+}

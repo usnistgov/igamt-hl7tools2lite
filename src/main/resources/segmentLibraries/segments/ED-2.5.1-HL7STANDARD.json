@@ -1,0 +1,22 @@
+{
+  "type" : "segment",
+  "sectionPosition" : 71,
+  "scope" : "HL7STANDARD",
+  "hl7Version" : "2.5.1",
+  "accountId" : null,
+  "libId" : null,
+  "predicates" : [ ],
+  "conformanceStatements" : [ ],
+  "id" : "569eac0fd4c623dc6550f2c1",
+  "label" : "ED",
+  "fields" : [ ],
+  "dynamicMapping" : {
+    "id" : "570ceab24ee66831a56161f4",
+    "mappings" : [ ]
+  },
+  "name" : "ED",
+  "description" : "Encapsulated Data (wrong segment)",
+  "comment" : "",
+  "text1" : "",
+  "text2" : ""
+}

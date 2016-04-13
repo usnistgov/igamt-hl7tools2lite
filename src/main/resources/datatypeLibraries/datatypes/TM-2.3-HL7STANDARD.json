@@ -1,0 +1,19 @@
+{
+  "type" : "datatype",
+  "sectionPosition" : 116,
+  "scope" : "HL7STANDARD",
+  "hl7Version" : "2.3",
+  "accountId" : null,
+  "libId" : null,
+  "predicates" : [ ],
+  "conformanceStatements" : [ ],
+  "id" : "565f3ab7d4c6e52cfd447583",
+  "label" : "TM",
+  "ext" : null,
+  "components" : [ ],
+  "name" : "TM",
+  "description" : "time",
+  "status" : "UNPUBLISHED",
+  "comment" : "",
+  "usageNote" : ""
+}

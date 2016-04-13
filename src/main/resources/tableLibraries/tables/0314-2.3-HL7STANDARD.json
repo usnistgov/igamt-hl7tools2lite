@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 22,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd44737c",
+  "hl7Version" : "2.3",
+  "libId" : null,
+  "bindingIdentifier" : "0314",
+  "name" : "Document Change Reason",
+  "description" : "Document Change Reason",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Closed",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

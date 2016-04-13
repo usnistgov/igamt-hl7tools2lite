@@ -1,0 +1,19 @@
+{
+  "type" : "datatype",
+  "sectionPosition" : 138,
+  "scope" : "HL7STANDARD",
+  "hl7Version" : "2.3.1",
+  "accountId" : null,
+  "libId" : null,
+  "predicates" : [ ],
+  "conformanceStatements" : [ ],
+  "id" : "565f3ab7d4c6e52cfd446209",
+  "label" : "IS",
+  "ext" : null,
+  "components" : [ ],
+  "name" : "IS",
+  "description" : "coded value for user-defined tables",
+  "status" : "UNPUBLISHED",
+  "comment" : "",
+  "usageNote" : ""
+}

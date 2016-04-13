@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 21,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd4483c7",
+  "hl7Version" : "2.1",
+  "libId" : null,
+  "bindingIdentifier" : "0120",
+  "name" : "APPLICATION ID",
+  "description" : "APPLICATION ID",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

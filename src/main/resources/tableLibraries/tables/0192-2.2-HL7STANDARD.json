@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 165,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd447fa9",
+  "hl7Version" : "2.2",
+  "libId" : null,
+  "bindingIdentifier" : "0192",
+  "name" : "Visit Id type",
+  "description" : "Visit Id type",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

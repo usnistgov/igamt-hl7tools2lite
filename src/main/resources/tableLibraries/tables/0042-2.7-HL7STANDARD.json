@@ -1,0 +1,28 @@
+{
+  "type" : "table",
+  "sectionPosition" : 224,
+  "scope" : "HL7STANDARD",
+  "id" : "569eac0dd4c623dc65507762",
+  "hl7Version" : "2.7",
+  "libId" : null,
+  "bindingIdentifier" : "0042",
+  "name" : "Company Plan Code",
+  "description" : "Company Plan Code",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ {
+    "type" : "code",
+    "id" : "569eac0dd4c623dc65507763",
+    "value" : "�",
+    "label" : "No suggested values defined",
+    "codeSystem" : "HL70042",
+    "codeSystemVersion" : null,
+    "codeUsage" : "F",
+    "comments" : ""
+  } ]
+}

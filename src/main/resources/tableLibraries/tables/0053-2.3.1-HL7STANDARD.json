@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 107,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd445bed",
+  "hl7Version" : "2.3.1",
+  "libId" : null,
+  "bindingIdentifier" : "0053",
+  "name" : "Diagnosis Coding Methed",
+  "description" : "Diagnosis Coding Methed",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

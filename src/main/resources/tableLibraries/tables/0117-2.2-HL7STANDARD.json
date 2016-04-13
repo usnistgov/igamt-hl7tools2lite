@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 42,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd448073",
+  "hl7Version" : "2.2",
+  "libId" : null,
+  "bindingIdentifier" : "0117",
+  "name" : "ACCOUNT STATUS",
+  "description" : "ACCOUNT STATUS",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

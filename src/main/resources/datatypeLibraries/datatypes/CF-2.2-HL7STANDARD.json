@@ -1,0 +1,19 @@
+{
+  "type" : "datatype",
+  "sectionPosition" : 37,
+  "scope" : "HL7STANDARD",
+  "hl7Version" : "2.2",
+  "accountId" : null,
+  "libId" : null,
+  "predicates" : [ ],
+  "conformanceStatements" : [ ],
+  "id" : "565f3ab7d4c6e52cfd4480f4",
+  "label" : "CF",
+  "ext" : null,
+  "components" : [ ],
+  "name" : "CF",
+  "description" : "coded element with formatted values",
+  "status" : "UNPUBLISHED",
+  "comment" : "",
+  "usageNote" : ""
+}

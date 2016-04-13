@@ -1,0 +1,12 @@
+*.classpath
+*.settings*
+*target*
+*.project*
+*.classpath*
+*bower-components*
+*node_modules*
+*.tmp*
+**/*DS_Store
+**/WebContent/**
+**/logs/**
+/bin

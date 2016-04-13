@@ -1,0 +1,19 @@
+{
+  "type" : "datatype",
+  "sectionPosition" : 44,
+  "scope" : "HL7STANDARD",
+  "hl7Version" : "2.2",
+  "accountId" : null,
+  "libId" : null,
+  "predicates" : [ ],
+  "conformanceStatements" : [ ],
+  "id" : "565f3ab7d4c6e52cfd4480dd",
+  "label" : "RP",
+  "ext" : null,
+  "components" : [ ],
+  "name" : "RP",
+  "description" : "reference pointer",
+  "status" : "UNPUBLISHED",
+  "comment" : "",
+  "usageNote" : ""
+}

@@ -1,0 +1,19 @@
+{
+  "type" : "datatype",
+  "sectionPosition" : 14,
+  "scope" : "HL7STANDARD",
+  "hl7Version" : "2.1",
+  "accountId" : null,
+  "libId" : null,
+  "predicates" : [ ],
+  "conformanceStatements" : [ ],
+  "id" : "565f3ab7d4c6e52cfd448419",
+  "label" : "CE_0057",
+  "ext" : null,
+  "components" : [ ],
+  "name" : "CE_0057",
+  "description" : "#FIXME#",
+  "status" : "UNPUBLISHED",
+  "comment" : "",
+  "usageNote" : ""
+}

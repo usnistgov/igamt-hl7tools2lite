@@ -1,0 +1,19 @@
+{
+  "type" : "datatype",
+  "sectionPosition" : 53,
+  "scope" : "HL7STANDARD",
+  "hl7Version" : "2.3",
+  "accountId" : null,
+  "libId" : null,
+  "predicates" : [ ],
+  "conformanceStatements" : [ ],
+  "id" : "565f3ab7d4c6e52cfd447549",
+  "label" : "CM_CCP",
+  "ext" : null,
+  "components" : [ ],
+  "name" : "CM_CCP",
+  "description" : "channel calibration parameters",
+  "status" : "UNPUBLISHED",
+  "comment" : "",
+  "usageNote" : ""
+}

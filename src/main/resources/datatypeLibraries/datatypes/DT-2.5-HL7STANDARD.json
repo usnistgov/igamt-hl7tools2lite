@@ -1,0 +1,19 @@
+{
+  "type" : "datatype",
+  "sectionPosition" : 49,
+  "scope" : "HL7STANDARD",
+  "hl7Version" : "2.5",
+  "accountId" : null,
+  "libId" : null,
+  "predicates" : [ ],
+  "conformanceStatements" : [ ],
+  "id" : "565f3ab6d4c6e52cfd4416b6",
+  "label" : "DT",
+  "ext" : null,
+  "components" : [ ],
+  "name" : "DT",
+  "description" : "Date",
+  "status" : "UNPUBLISHED",
+  "comment" : "",
+  "usageNote" : ""
+}

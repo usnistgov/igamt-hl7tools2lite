@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 81,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd4483b0",
+  "hl7Version" : "2.1",
+  "libId" : null,
+  "bindingIdentifier" : "0068",
+  "name" : "GUARANTOR TYPE",
+  "description" : "GUARANTOR TYPE",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

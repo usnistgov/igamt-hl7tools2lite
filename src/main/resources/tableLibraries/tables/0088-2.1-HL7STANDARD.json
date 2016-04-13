@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 6,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd448291",
+  "hl7Version" : "2.1",
+  "libId" : null,
+  "bindingIdentifier" : "0088",
+  "name" : "PROCEDURE CODE",
+  "description" : "PROCEDURE CODE",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

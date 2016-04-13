@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 81,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd447d1a",
+  "hl7Version" : "2.2",
+  "libId" : null,
+  "bindingIdentifier" : "0022",
+  "name" : "BILLING STATUS",
+  "description" : "BILLING STATUS",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

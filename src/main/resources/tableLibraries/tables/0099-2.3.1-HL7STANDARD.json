@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 179,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd445e8b",
+  "hl7Version" : "2.3.1",
+  "libId" : null,
+  "bindingIdentifier" : "0099",
+  "name" : "VIP Indicator",
+  "description" : "VIP Indicator",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

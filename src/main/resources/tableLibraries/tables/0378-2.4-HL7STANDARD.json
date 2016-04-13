@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 121,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab6d4c6e52cfd443288",
+  "hl7Version" : "2.4",
+  "libId" : null,
+  "bindingIdentifier" : "0378",
+  "name" : "Carrier type",
+  "description" : "Carrier type",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

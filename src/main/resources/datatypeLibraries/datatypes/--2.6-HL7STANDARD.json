@@ -1,0 +1,19 @@
+{
+  "type" : "datatype",
+  "sectionPosition" : 24,
+  "scope" : "HL7STANDARD",
+  "hl7Version" : "2.6",
+  "accountId" : null,
+  "libId" : null,
+  "predicates" : [ ],
+  "conformanceStatements" : [ ],
+  "id" : "569eac0ed4c623dc6550bb7f",
+  "label" : "-",
+  "ext" : null,
+  "components" : [ ],
+  "name" : "-",
+  "description" : "withdrawn",
+  "status" : "UNPUBLISHED",
+  "comment" : "",
+  "usageNote" : ""
+}

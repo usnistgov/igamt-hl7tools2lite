@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 127,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd447cf4",
+  "hl7Version" : "2.2",
+  "libId" : null,
+  "bindingIdentifier" : "0026",
+  "name" : "ORDER EVENT TYPE",
+  "description" : "ORDER EVENT TYPE",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Closed",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

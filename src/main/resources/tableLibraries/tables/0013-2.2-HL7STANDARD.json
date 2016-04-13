@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 47,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd447ccb",
+  "hl7Version" : "2.2",
+  "libId" : null,
+  "bindingIdentifier" : "0013",
+  "name" : "CHARGEABLE OR NON-CHARGEABLE",
+  "description" : "CHARGEABLE OR NON-CHARGEABLE",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Closed",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

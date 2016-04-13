@@ -1,0 +1,28 @@
+{
+  "type" : "table",
+  "sectionPosition" : 517,
+  "scope" : "HL7STANDARD",
+  "id" : "569eac0dd4c623dc65507bee",
+  "hl7Version" : "2.7",
+  "libId" : null,
+  "bindingIdentifier" : "0809",
+  "name" : "Maintenance Cycle",
+  "description" : "Maintenance Cycle",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ {
+    "type" : "code",
+    "id" : "569eac0dd4c623dc65507bef",
+    "value" : "�",
+    "label" : "No suggested values",
+    "codeSystem" : "HL70809",
+    "codeSystemVersion" : null,
+    "codeUsage" : "F",
+    "comments" : ""
+  } ]
+}

@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 106,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd447cf3",
+  "hl7Version" : "2.2",
+  "libId" : null,
+  "bindingIdentifier" : "0029",
+  "name" : "UNIT OF MEASURE",
+  "description" : "UNIT OF MEASURE",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Closed",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

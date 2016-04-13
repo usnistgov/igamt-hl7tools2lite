@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 110,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd4457c2",
+  "hl7Version" : "2.3.1",
+  "libId" : null,
+  "bindingIdentifier" : "0246",
+  "name" : "Product Available For Inspection",
+  "description" : "Product Available For Inspection",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

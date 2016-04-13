@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 23,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd448341",
+  "hl7Version" : "2.1",
+  "libId" : null,
+  "bindingIdentifier" : "0047",
+  "name" : "DANGER CODE",
+  "description" : "DANGER CODE",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

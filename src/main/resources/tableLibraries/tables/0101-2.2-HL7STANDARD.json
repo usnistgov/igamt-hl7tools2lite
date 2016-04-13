@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 98,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd448039",
+  "hl7Version" : "2.2",
+  "libId" : null,
+  "bindingIdentifier" : "0101",
+  "name" : "DISPLAY LEVEL",
+  "description" : "DISPLAY LEVEL",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}

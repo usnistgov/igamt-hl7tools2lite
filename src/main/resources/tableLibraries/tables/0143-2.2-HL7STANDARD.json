@@ -1,0 +1,19 @@
+{
+  "type" : "table",
+  "sectionPosition" : 132,
+  "scope" : "HL7STANDARD",
+  "id" : "565f3ab7d4c6e52cfd447d1b",
+  "hl7Version" : "2.2",
+  "libId" : null,
+  "bindingIdentifier" : "0143",
+  "name" : "NON-COVEREDINSURANCE CODE",
+  "description" : "NON-COVEREDINSURANCE CODE",
+  "version" : null,
+  "oid" : "UNSPECIFIED",
+  "stability" : "Static",
+  "extensibility" : "Open",
+  "contentDefinition" : "Extensional",
+  "group" : null,
+  "order" : 0,
+  "codes" : [ ]
+}
