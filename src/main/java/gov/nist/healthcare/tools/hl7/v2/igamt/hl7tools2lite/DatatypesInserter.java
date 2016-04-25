@@ -15,11 +15,10 @@ import com.mongodb.MongoClient;
 
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLibrary;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Table;
 
 public class DatatypesInserter implements Runnable {
 
-	private static final Logger log = LoggerFactory.getLogger(DataypeExporter.class);
+	private static final Logger log = LoggerFactory.getLogger(DatatypesInserter.class);
 
 	public final static File INPUT_DIR = new File(System.getenv("LOCAL_IN") + "/datatypeLibraries");
 
@@ -28,6 +27,8 @@ public class DatatypesInserter implements Runnable {
 
 		MongoOperations mongoOps;
 		mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igl"));
+		mongoOps.dropCollection(Datatype.class);
+		mongoOps.dropCollection(DatatypeLibrary.class);
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			File[] ff = INPUT_DIR.listFiles();
@@ -41,9 +42,9 @@ public class DatatypesInserter implements Runnable {
 					for (Datatype dt : app.getChildren()) {
 						mongoOps.insert(dt, "datatype");
 					}
-					for (Table tab : app.getTables()) {
-						mongoOps.insert(tab, "table");
-					}
+//					for (Table tab : app.getTables()) {
+//						mongoOps.insert(tab, "table");
+//					}
 				}
 			}
 		} catch (IOException e) {

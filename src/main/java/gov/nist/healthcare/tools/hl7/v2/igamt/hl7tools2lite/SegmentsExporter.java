@@ -104,7 +104,7 @@ public class SegmentsExporter {
 
 	SegmentLibraryMetaData createMetaData(String libId, String hl7version) {
 		SegmentLibraryMetaData meta = new SegmentLibraryMetaData();
-		meta.setDatatypLibId(libId);
+		meta.setSegmentLibId(libId);
 		meta.setDate(Constant.mdy.format(new Date()));
 		meta.setName(null);
 		meta.setOrgName("NIST");
