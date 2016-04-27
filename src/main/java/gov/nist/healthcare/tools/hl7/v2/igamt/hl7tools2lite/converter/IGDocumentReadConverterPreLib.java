@@ -11,6 +11,7 @@
 package gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -32,17 +33,14 @@ import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ContentDefinition;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatypes;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DocumentMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DynamicMapping;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Extensibility;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Field;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Group;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.IGDocument;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.IGDocumentScope;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Mapping;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Message;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Messages;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ProfileMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Section;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Segment;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.SegmentRef;
@@ -117,8 +115,8 @@ public class IGDocumentReadConverterPreLib implements Converter<DBObject, IGDocu
 		return profile;
 	}
 
-	private DocumentMetaData documentMetaData(DBObject source) {
-		DocumentMetaData metaData = new DocumentMetaData();
+	private DocumentMetaDataPreLib documentMetaData(DBObject source) {
+		DocumentMetaDataPreLib metaData = new DocumentMetaDataPreLib();
 		metaData.setDate(source.get("date") != null ? ((String) source.get("date")) : null);
 		metaData.setExt(source.get("ext") != null ? ((String) source.get("ext")) : null);
 		metaData.setIdentifier(source.get("identifier") != null ? ((String) source.get("identifier")) : null);
@@ -152,11 +150,10 @@ public class IGDocumentReadConverterPreLib implements Converter<DBObject, IGDocu
 		return sections;
 	}
 	
-	private ProfileMetaData profileMetaData(DBObject source) {
-		ProfileMetaData metaData = new ProfileMetaData();
-		metaData.setName(((String) source.get("name")));
-		metaData.setProfileID(((String) source.get("profileID")));
-		metaData.setOrgName(((String) source.get("orgName")));
+	private ProfileMetaDataPreLib profileMetaData(DBObject source) {
+		ProfileMetaDataPreLib metaData = new ProfileMetaDataPreLib();
+//		metaData.setName(((String) source.get("name")));
+//		metaData.setOrgName("NIST");
 		metaData.setStatus(((String) source.get("status")));
 		metaData.setTopics(((String) source.get("topics")));
 		metaData.setType(((String) source.get("type")));
@@ -164,8 +161,8 @@ public class IGDocumentReadConverterPreLib implements Converter<DBObject, IGDocu
 		metaData.setHl7Version(((String) source.get("hl7Version")));
 		metaData.setSchemaVersion(((String) source.get("schemaVersion")));
 		metaData.setSubTitle(((String) source.get("subTitle")));
-		metaData.setVersion(((String) source.get("version")));
-		metaData.setDate(((String) source.get("date")));
+//		metaData.setVersion(((String) source.get("version")));
+//		metaData.setDate(Constant.mdy.format(new Date()));
 		metaData.setExt(source.get("ext") != null ? ((String) source.get("ext")): null);
 		Set<String> encodings = new HashSet<String>();
 		Object encodingObj = source.get("encodings");

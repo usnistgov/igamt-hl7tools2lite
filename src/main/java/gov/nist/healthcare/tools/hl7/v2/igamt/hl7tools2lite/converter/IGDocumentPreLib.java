@@ -1,5 +1,6 @@
 package gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,7 +11,6 @@ import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Component;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DataModel;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DocumentMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Field;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.IGDocumentScope;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Message;
@@ -38,7 +38,7 @@ public class IGDocumentPreLib extends DataModel implements java.io.Serializable,
 
 	private String usageNote;
 
-	private DocumentMetaData metaData;
+	private DocumentMetaDataPreLib metaData;
 	
 	private ProfilePreLib profile;
 	
@@ -72,15 +72,15 @@ public class IGDocumentPreLib extends DataModel implements java.io.Serializable,
 		this.setScope(p.getScope());
 		this.setUsageNote(p.getUsageNote());
 		
-		DocumentMetaData documentMetaData = new DocumentMetaData();
-		documentMetaData.setDate(p.getMetaData().getDate());
+		DocumentMetaDataPreLib documentMetaData = new DocumentMetaDataPreLib();
+		documentMetaData.setDate(Constant.mdy.format(new Date()));
 		documentMetaData.setExt(p.getMetaData().getExt());
 		documentMetaData.setSubTitle(p.getMetaData().getSubTitle());
-		documentMetaData.setTitle(p.getMetaData().getName());
+//		documentMetaData.setTitle(p.getMetaData().getName());
 		documentMetaData.setType(p.getMetaData().getType());
-		documentMetaData.setVersion(p.getMetaData().getVersion());
-		documentMetaData.setIdentifier(p.getMetaData().getProfileID());
-		documentMetaData.setOrgName(p.getMetaData().getOrgName());
+//		documentMetaData.setVersion(p.getMetaData().getVersion());
+//		documentMetaData.setIdentifier(p.getMetaData().getProfileID());
+		documentMetaData.setOrgName("NIST");
 		documentMetaData.setSpecificationName(p.getMetaData().getSpecificationName());
 		documentMetaData.setStatus(p.getMetaData().getStatus());
 		documentMetaData.setTopics(p.getMetaData().getTopics());
@@ -241,12 +241,12 @@ public class IGDocumentPreLib extends DataModel implements java.io.Serializable,
 		this.usageNote = usageNote;
 	}
 
-	public DocumentMetaData getMetaData() {
+	public DocumentMetaDataPreLib getMetaData() {
 		return metaData;
 	}
 
 
-	public void setMetaData(DocumentMetaData metaData) {
+	public void setMetaData(DocumentMetaDataPreLib metaData) {
 		this.metaData = metaData;
 	}
 

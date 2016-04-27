@@ -89,19 +89,18 @@ public class ProfileReadConverterPreLib implements Converter<DBObject, ProfilePr
 
 	}
 
-	private ProfileMetaData metaData(DBObject source) {
-		ProfileMetaData metaData = new ProfileMetaData();
-		metaData.setName(((String) source.get("name")));
-		metaData.setProfileID(((String) source.get("profileID")));
-		metaData.setOrgName(((String) source.get("orgName")));
+	private ProfileMetaDataPreLib metaData(DBObject source) {
+		ProfileMetaDataPreLib metaData = new ProfileMetaDataPreLib();
+//		metaData.setName(((String) source.get("name")));
+//		metaData.setOrgName(((String) source.get("orgName")));
 		metaData.setStatus(((String) source.get("status")));
 		metaData.setTopics(((String) source.get("topics")));
 		metaData.setType(((String) source.get("type")));
 		metaData.setHl7Version(((String) source.get("hl7Version")));
 		metaData.setSchemaVersion(((String) source.get("schemaVersion")));
 		metaData.setSubTitle(((String) source.get("subTitle")));
-		metaData.setVersion(((String) source.get("version")));
-		metaData.setDate(((String) source.get("date")));
+//		metaData.setVersion(((String) source.get("version")));
+//		metaData.setDate(((String) source.get("date")));
 		metaData.setExt(source.get("ext") != null ? ((String) source.get("ext"))
 				: null);
 		Set<String> encodings = new HashSet<String>();

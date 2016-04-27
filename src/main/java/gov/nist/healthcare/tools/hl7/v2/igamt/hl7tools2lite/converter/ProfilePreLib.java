@@ -7,6 +7,7 @@ import java.util.Set;
 import org.bson.types.ObjectId;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
@@ -15,7 +16,6 @@ import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Group;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.IGDocumentScope;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Message;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Messages;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ProfileMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Segment;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.SegmentRefOrGroup;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Segments;
@@ -29,6 +29,7 @@ import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.constraints.Constraint
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.constraints.Context;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.constraints.Predicate;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ProfilePreLib extends TextbasedSectionModel implements java.io.Serializable, Cloneable {
 
 	private static final long serialVersionUID = 1L;
@@ -44,7 +45,7 @@ public class ProfilePreLib extends TextbasedSectionModel implements java.io.Seri
 
 	private String id;
 
-	private ProfileMetaData metaData;
+	private ProfileMetaDataPreLib metaData;
 
 	private Segments segments;
 	
@@ -85,11 +86,11 @@ public class ProfilePreLib extends TextbasedSectionModel implements java.io.Seri
 		this.id = id;
 	}
 
-	public ProfileMetaData getMetaData() {
+	public ProfileMetaDataPreLib getMetaData() {
 		return metaData;
 	}
 
-	public void setMetaData(ProfileMetaData metaData) {
+	public void setMetaData(ProfileMetaDataPreLib metaData) {
 		this.metaData = metaData;
 	}
 
