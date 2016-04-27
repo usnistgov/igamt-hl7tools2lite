@@ -43,13 +43,12 @@ public class UtilHL7Tools2Lite {
 		return getMessageRefs(msgs).size();
 	}
 
-	public static Set<String> getMessageRefs(Messages msgs) {
+	public static Set<SegmentRef> getMessageRefs(Messages msgs) {
 
-		Set<String> segRefs = new HashSet<String>();
+		Set<SegmentRef> segRefs = new HashSet<SegmentRef>();
 
 		Iterator<Message> itr = msgs.getChildren().iterator();
 
-		Message msg = null;
 		while (itr.hasNext()) {
 			segRefs.addAll(getMessageRefs(itr.next()));
 		}
@@ -57,17 +56,17 @@ public class UtilHL7Tools2Lite {
 		return segRefs;
 	}
 
-	public static Set<String> getMessageRefs(Message msg) {
+	public static Set<SegmentRef> getMessageRefs(Message msg) {
 		return doGroup(msg.getChildren());
 	}
 
-	public static Set<String> doGroup(List<SegmentRefOrGroup> sogs) {
-		Set<String> refs = new HashSet<String>();
+	public static Set<SegmentRef> doGroup(List<SegmentRefOrGroup> sogs) {
+		Set<SegmentRef> refs = new HashSet<SegmentRef>();
 
 		for (SegmentRefOrGroup sog : sogs) {
 			if (Constant.SEGMENTREF.equals(sog.getType())) {
 				SegmentRef sr = (SegmentRef) sog;
-				refs.add(sr.getRef());
+				refs.add(sr);
 			} else if (Constant.GROUP.equals(sog.getType())) {
 				Group grp = (Group) sog;
 				refs.addAll(doGroup(grp.getChildren()));
@@ -82,50 +81,58 @@ public class UtilHL7Tools2Lite {
 		return getFields(segs).size();
 	}
 
-	public static Set<String> getFields(Segments segs) {
+	public static Set<Field> getFields(Segments segs) {
 		
-		Set<String> ids = new HashSet<String>();
+		Set<Field> flds = new HashSet<Field>();
 		
 		for (Segment seg : segs.getChildren()) {
-			ids.addAll(getFields(seg));
+			flds.addAll(getFields(seg));
 		} 
 		
-		return ids;
+		return flds;
 	}
 
-	public static Set<String> getFields(Segment seg) {
+	public static Set<Field> getFields(Segment seg) {
 
-		Set<String> ids = new HashSet<String>();
+		Set<Field> flds = new HashSet<Field>();
 
 		for (Field fld : seg.getFields()) {
-			ids.add(fld.getId());
+			flds.add(fld);
 		}
-		return ids;
+		return flds;
 	}
 
 	public static int countComponents(Datatypes segs) {
 		return getComponents(segs).size();
 	}
-
-	public static Set<String> getComponents(Datatypes dts) {
-		
+	
+	public static Set<String> getComponentIds(Datatypes dts) {
 		Set<String> ids = new HashSet<String>();
-		
-		for (Datatype dt : dts.getChildren()) {
-			ids.addAll(getComponents(dt));
-		} 
-		
+		for (Component cpt : getComponents(dts)) {
+			ids.add(cpt.getId());
+		}
 		return ids;
 	}
 
-	public static Set<String> getComponents(Datatype dt) {
+	public static Set<Component> getComponents(Datatypes dts) {
+		
+		Set<Component> cpts = new HashSet<Component>();
+		
+		for (Datatype dt : dts.getChildren()) {
+			cpts.addAll(getComponents(dt));
+		} 
+		
+		return cpts;
+	}
 
-		Set<String> ids = new HashSet<String>();
+	public static Set<Component> getComponents(Datatype dt) {
+
+		Set<Component> cpts = new HashSet<Component>();
 
 		for (Component cmp : dt.getComponents()) {
-			ids.add(cmp.getId());
+			cpts.add(cmp);
 		}
-		return ids;
+		return cpts;
 	}
 
 }

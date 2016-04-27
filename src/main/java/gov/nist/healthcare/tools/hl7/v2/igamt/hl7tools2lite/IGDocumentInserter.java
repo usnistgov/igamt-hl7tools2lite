@@ -128,6 +128,7 @@ public class IGDocumentInserter implements Runnable {
 					// segMetaData.setVersion(ppl.getMetaData().getVersion());
 					app.getProfile().getSegmentLibrary().setScope(Constant.SCOPE.HL7STANDARD);
 					app.getProfile().getSegmentLibrary().setMetaData(segMetaData);
+					mongoOps.insert(app.getProfile().getSegmentLibrary(), "segment-library");
 					for (Segment seg : segs) {
 						seg.setScope(Constant.SCOPE.HL7STANDARD);
 						if (seg.getId() != null) {
@@ -147,6 +148,7 @@ public class IGDocumentInserter implements Runnable {
 					// dtMetaData.setVersion(ppl.getMetaData().getVersion());
 					app.getProfile().getDatatypeLibrary().setScope(Constant.SCOPE.HL7STANDARD);
 					app.getProfile().getDatatypeLibrary().setMetaData(dtMetaData);
+					mongoOps.insert(app.getProfile().getDatatypeLibrary(), "datatype-library");
 					for (Datatype dt : dts) {
 						if (dt.getId() != null) {
 							dt.setScope(Constant.SCOPE.HL7STANDARD);
@@ -167,6 +169,7 @@ public class IGDocumentInserter implements Runnable {
 					// tabMetaData.setVersion(ppl.getMetaData().getVersion());
 					app.getProfile().getTableLibrary().setScope(Constant.SCOPE.HL7STANDARD);
 					app.getProfile().getTableLibrary().setMetaData(tabMetaData);
+					mongoOps.insert(app.getProfile().getTableLibrary(), "table-library");
 					for (Table tab : tabs) {
 						tab.setScope(Constant.SCOPE.HL7STANDARD);
 						if (tab.getId() != null) {
@@ -178,12 +181,8 @@ public class IGDocumentInserter implements Runnable {
 						}
 					}
 					mongoOps.insert(app.getProfile().getMessages().getChildren(), "message");
-					mongoOps.insert(app.getProfile().getSegmentLibrary(), "segment-library");
 					mongoOps.insert(segs, "segment");
-					DatatypeLibrary xxx = app.getProfile().getDatatypeLibrary();
-					mongoOps.insert(xxx, "datatype-library");
 					mongoOps.insert(dts, "datatype");
-					mongoOps.insert(app.getProfile().getTableLibrary(), "table-library");
 					mongoOps.insert(tabs, "table");
 					mongoOps.insert(app, "igdocument");
 				}
