@@ -26,18 +26,19 @@
     "scope" : "HL7STANDARD",
     "id" : "565f3ab7d4c6e52cfd44822a",
     "metaData" : {
-      "name" : null,
-      "orgName" : null,
-      "version" : null,
       "hl7Version" : "2.2",
-      "date" : null,
-      "profileID" : null,
+      "hl7RulesSchema" : "",
+      "hl7Event" : "",
+      "conformanceType" : "",
+      "adheranceType" : 0,
+      "profileID" : "",
       "type" : "profileMetaData",
       "schemaVersion" : "",
       "specificationName" : null,
       "status" : null,
       "topics" : null,
-      "encodings" : [ ]
+      "encodings" : [ ],
+      "notSet" : true
     },
     "segments" : {
       "type" : "segments",
@@ -60,7 +61,11 @@
         "sectionPosition" : 27,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480eb",
@@ -69,16 +74,19 @@
         "components" : [ ],
         "name" : "COMP_ID_NAME",
         "description" : "COMPOSITE ID AND NAME",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 74,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480ea",
@@ -215,16 +223,19 @@
         } ],
         "name" : "CM_INTERNAL_LOCATION",
         "description" : "CM für Ortsangaben im Krankenhaus",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 36,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480ef",
@@ -265,16 +276,19 @@
         } ],
         "name" : "CM_DLD",
         "description" : "discharge location",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 30,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480ee",
@@ -283,16 +297,19 @@
         "components" : [ ],
         "name" : "SI",
         "description" : "SEQUENCE ID",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 60,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480ed",
@@ -349,16 +366,19 @@
         } ],
         "name" : "CM_PTA",
         "description" : "Policy Type",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 71,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480ec",
@@ -431,16 +451,19 @@
         } ],
         "name" : "CK_ACCOUNT_NO",
         "description" : "Abrechnungsnummer",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 17,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480f9",
@@ -545,16 +568,19 @@
         } ],
         "name" : "CE_0160",
         "description" : "CE_NORM mit Tab. 0160",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 45,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480f8",
@@ -595,16 +621,19 @@
         } ],
         "name" : "CM_BATCH_TOTAL",
         "description" : "CM for Batch Totals",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 67,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480b9",
@@ -677,16 +706,19 @@
         } ],
         "name" : "CM_ABS_RANGE",
         "description" : "absolute range",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 7,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480b8",
@@ -695,16 +727,19 @@
         "components" : [ ],
         "name" : "COMP_ID_DIGIT",
         "description" : "COMPOSITE ID W/CHK DIGIT",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 2,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480f3",
@@ -809,16 +844,19 @@
         } ],
         "name" : "CE",
         "description" : "coded element",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 8,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480f2",
@@ -827,16 +865,19 @@
         "components" : [ ],
         "name" : "ST",
         "description" : "string data",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 28,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480f1",
@@ -893,16 +934,19 @@
         } ],
         "name" : "CM_PCF",
         "description" : "Pre-certification required",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 34,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480f0",
@@ -911,16 +955,19 @@
         "components" : [ ],
         "name" : "CM_UNDEFINED",
         "description" : "undefined CM data type",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 15,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480f7",
@@ -929,16 +976,19 @@
         "components" : [ ],
         "name" : "CK",
         "description" : "composite ID with check digit",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 42,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480f6",
@@ -979,16 +1029,19 @@
         } ],
         "name" : "CM_VR",
         "description" : "value qualifier",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 62,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480f5",
@@ -1029,16 +1082,19 @@
         } ],
         "name" : "CM_RANGE",
         "description" : "Wertebereich",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 37,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480f4",
@@ -1047,16 +1103,19 @@
         "components" : [ ],
         "name" : "CF",
         "description" : "coded element with formatted values",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 82,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480df",
@@ -1065,16 +1124,19 @@
         "components" : [ ],
         "name" : "NM",
         "description" : "numeric",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 23,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480fc",
@@ -1115,16 +1177,19 @@
         } ],
         "name" : "CM_EIP",
         "description" : "parent order",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 38,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480fb",
@@ -1229,16 +1294,19 @@
         } ],
         "name" : "CE_0163",
         "description" : "CE_NORM mit Tab. 0163",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 40,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480fa",
@@ -1327,16 +1395,19 @@
         } ],
         "name" : "CM_PAT_ID_0192",
         "description" : "Patient ID with table 0192",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 48,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd448100",
@@ -1377,16 +1448,19 @@
         } ],
         "name" : "CM_PRACTITIONER",
         "description" : "Maßnahme durchgeführt von",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 50,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480bc",
@@ -1491,16 +1565,19 @@
         } ],
         "name" : "CE_0132",
         "description" : "#FIXME#",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 84,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480bb",
@@ -1605,16 +1682,19 @@
         } ],
         "name" : "CE_0051",
         "description" : "CE_NORM mit Tab. 0051",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 14,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480ff",
@@ -1719,16 +1799,19 @@
         } ],
         "name" : "CE_0164",
         "description" : "CE_NORM mit Tab. 0164",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 66,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480ba",
@@ -1737,16 +1820,19 @@
         "components" : [ ],
         "name" : "TX",
         "description" : "text data",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 69,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480fe",
@@ -1851,16 +1937,19 @@
         } ],
         "name" : "CE_0165",
         "description" : "CE_NORM mit Tab. 0165",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 70,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480fd",
@@ -1965,16 +2054,19 @@
         } ],
         "name" : "CE_0162",
         "description" : "CE_NORM mit Tab. 0162",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 41,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480c8",
@@ -2047,16 +2139,19 @@
         } ],
         "name" : "CK_PAT_ID",
         "description" : "CK für Patienten-IDs",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 31,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480c7",
@@ -2129,16 +2224,19 @@
         } ],
         "name" : "CM_PIP",
         "description" : "Privileges",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 46,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480c6",
@@ -2147,16 +2245,19 @@
         "components" : [ ],
         "name" : "ID",
         "description" : "CODED VALUE",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 47,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480c5",
@@ -2197,16 +2298,19 @@
         } ],
         "name" : "CM_GROUP_ID",
         "description" : "Auftragsgruppennummer",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 10,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480c9",
@@ -2295,16 +2399,19 @@
         } ],
         "name" : "CM_PAT_ID",
         "description" : "Patient ID",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 5,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480c0",
@@ -2313,16 +2420,19 @@
         "components" : [ ],
         "name" : "DT",
         "description" : "DATE",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 59,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480c4",
@@ -2363,16 +2473,19 @@
         } ],
         "name" : "CM_PEN",
         "description" : "penalty",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 77,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480c3",
@@ -2445,16 +2558,19 @@
         } ],
         "name" : "CM_ELD",
         "description" : "error",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 32,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480c2",
@@ -2559,16 +2675,19 @@
         } ],
         "name" : "CE_0129",
         "description" : "#FIXME#",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 55,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480c1",
@@ -2673,16 +2792,19 @@
         } ],
         "name" : "CE_0049",
         "description" : "CE with table 49",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 21,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480cd",
@@ -2723,16 +2845,19 @@
         } ],
         "name" : "CM_OCD",
         "description" : "occurence",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 12,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480cc",
@@ -2773,16 +2898,19 @@
         } ],
         "name" : "CM_PLACER",
         "description" : "Auftragsnummer des Auftraggebers / der auftraggebenden Stelle",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 64,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480cb",
@@ -2919,16 +3047,19 @@
         } ],
         "name" : "AD",
         "description" : "address",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 58,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480ca",
@@ -2937,16 +3068,19 @@
         "components" : [ ],
         "name" : "MO",
         "description" : "money",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 3,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480d9",
@@ -2987,16 +3121,19 @@
         } ],
         "name" : "CM_MSG",
         "description" : "Message Type",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 78,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480d8",
@@ -3037,16 +3174,19 @@
         } ],
         "name" : "CM_MOC",
         "description" : "Charge To Practise",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 33,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480d7",
@@ -3087,16 +3227,19 @@
         } ],
         "name" : "CM_CCD",
         "description" : "charge time",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 26,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480d6",
@@ -3153,16 +3296,19 @@
         } ],
         "name" : "CM_RMC",
         "description" : "Room Coverage",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 73,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480d1",
@@ -3203,16 +3349,19 @@
         } ],
         "name" : "CM_DIN",
         "description" : "activation date",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 80,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480d0",
@@ -3253,16 +3402,19 @@
         } ],
         "name" : "CM_FINANCE",
         "description" : "CM für Finanzen",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 20,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd448109",
@@ -3367,16 +3519,19 @@
         } ],
         "name" : "PN",
         "description" : "person name",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 54,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480d5",
@@ -3481,16 +3636,19 @@
         } ],
         "name" : "CE_0066",
         "description" : "CE_NORM mit Tab. 0066",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 13,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480d4",
@@ -3595,16 +3753,19 @@
         } ],
         "name" : "CE_0184",
         "description" : "CE_NORM mit Tab. 0184",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 11,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480d3",
@@ -3709,16 +3870,19 @@
         } ],
         "name" : "CE_0063",
         "description" : "#FIXME#",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 18,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480d2",
@@ -3775,16 +3939,19 @@
         } ],
         "name" : "CM_OSP",
         "description" : "occurence span",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 83,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd448104",
@@ -3825,16 +3992,19 @@
         } ],
         "name" : "CM_RI",
         "description" : "interval",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 24,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480bf",
@@ -3939,16 +4109,19 @@
         } ],
         "name" : "CE_0175",
         "description" : "CE_NORM mit Tab. 0175",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 56,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd448103",
@@ -4069,16 +4242,19 @@
         } ],
         "name" : "CM_RFR",
         "description" : "reference range",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 68,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd448102",
@@ -4183,16 +4359,19 @@
         } ],
         "name" : "CE_0118",
         "description" : "#FIXME#",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 75,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480be",
@@ -4297,16 +4476,19 @@
         } ],
         "name" : "CE_0131",
         "description" : "CE_NORM mit Tab. 0131",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 81,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480bd",
@@ -4379,16 +4561,19 @@
         } ],
         "name" : "CM_SPD",
         "description" : "Specialty",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 49,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd448101",
@@ -4429,16 +4614,19 @@
         } ],
         "name" : "CM_JOB_CODE",
         "description" : "Berufsbezeichnung",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 79,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd448108",
@@ -4607,16 +4795,19 @@
         } ],
         "name" : "TQ",
         "description" : "timing quantity",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 22,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd448107",
@@ -4673,16 +4864,19 @@
         } ],
         "name" : "CM_AUI",
         "description" : "authorization information",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 9,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd448106",
@@ -4691,16 +4885,19 @@
         "components" : [ ],
         "name" : "TN",
         "description" : "telephone number",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 43,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd448105",
@@ -4709,16 +4906,19 @@
         "components" : [ ],
         "name" : "TM",
         "description" : "time",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 51,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480da",
@@ -4759,16 +4959,19 @@
         } ],
         "name" : "CQ_QUANTITY",
         "description" : "CQ für Mengenangaben",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 39,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480de",
@@ -4841,16 +5044,19 @@
         } ],
         "name" : "CM_NDL",
         "description" : "observing practitioner",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 44,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480dd",
@@ -4859,16 +5065,19 @@
         "components" : [ ],
         "name" : "RP",
         "description" : "reference pointer",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 72,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480dc",
@@ -4909,16 +5118,19 @@
         } ],
         "name" : "CM_LA1",
         "description" : "Location with address information",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 0,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480db",
@@ -4927,16 +5139,19 @@
         "components" : [ ],
         "name" : "varies",
         "description" : "variable data type",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 35,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd44810c",
@@ -4977,16 +5192,19 @@
         } ],
         "name" : "TS",
         "description" : "time stamp",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 19,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480e9",
@@ -5027,16 +5245,19 @@
         } ],
         "name" : "CM_DTN",
         "description" : "Day Type and Number",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 25,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480e8",
@@ -5077,16 +5298,19 @@
         } ],
         "name" : "CM_UVC",
         "description" : "Value code and amount",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 57,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd44810b",
@@ -5095,16 +5319,19 @@
         "components" : [ ],
         "name" : "CQ_COMP_QUANT",
         "description" : "COMPOSITE QUANTITY WITH UNITS",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 63,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd44810a",
@@ -5193,16 +5420,19 @@
         } ],
         "name" : "CM_SPS",
         "description" : "specimen source",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 1,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480e7",
@@ -5259,16 +5489,19 @@
         } ],
         "name" : "CM_POSITION",
         "description" : "Sitzplatz bzw. Saal / Tisch / Stuhl",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 76,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480e2",
@@ -5325,16 +5558,19 @@
         } ],
         "name" : "CM_PLN",
         "description" : "Practitioner ID Numbers",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 53,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480e1",
@@ -5471,16 +5707,19 @@
         } ],
         "name" : "CN_PERSON",
         "description" : "CN für Personen",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 29,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480e0",
@@ -5697,16 +5936,19 @@
         } ],
         "name" : "CN_PHYSICIAN",
         "description" : "CN für Ärzte",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 16,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480e6",
@@ -5715,16 +5957,19 @@
         "components" : [ ],
         "name" : "FT",
         "description" : "formatted text data",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 61,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480e5",
@@ -5765,16 +6010,19 @@
         } ],
         "name" : "CM_FILLER",
         "description" : "Bearbeitungsnummer der Leistungsstelle",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 65,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480e4",
@@ -5847,16 +6095,19 @@
         } ],
         "name" : "CM_DLT",
         "description" : "delta check",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 6,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480e3",
@@ -5913,16 +6164,19 @@
         } ],
         "name" : "CM_DDI",
         "description" : "daily deductible",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 4,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480cf",
@@ -5963,16 +6217,19 @@
         } ],
         "name" : "CM_LICENSE_NO",
         "description" : "CM für Führerscheinlizenzen",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       }, {
         "type" : "datatype",
         "sectionPosition" : 52,
         "hl7Version" : "2.2",
         "accountId" : null,
-        "libId" : null,
+        "scope" : null,
+        "date" : null,
+        "version" : null,
+        "participants" : [ ],
+        "libIds" : [ ],
         "predicates" : [ ],
         "conformanceStatements" : [ ],
         "id" : "565f3ab7d4c6e52cfd4480ce",
@@ -6077,10 +6334,9 @@
         } ],
         "name" : "CE_0181",
         "description" : "CE_NORM mit Tab. 0181",
-        "status" : null,
         "comment" : "",
         "usageNote" : "",
-        "scope" : null
+        "status" : null
       } ]
     },
     "messages" : {
@@ -6129,7 +6385,6 @@
         "sectionPosition" : 35,
         "id" : "565f3ab7d4c6e52cfd447edc",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0047",
         "name" : "DANGER CODE",
         "description" : "DANGER CODE",
@@ -6141,14 +6396,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 113,
         "id" : "565f3ab7d4c6e52cfd447c88",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0009",
         "name" : "AMBULATORY STATUS",
         "description" : "AMBULATORY STATUS",
@@ -6304,14 +6557,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 153,
         "id" : "565f3ab7d4c6e52cfd447c87",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0129",
         "name" : "ACCOMODATION CODE",
         "description" : "ACCOMODATION CODE",
@@ -6323,14 +6574,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 134,
         "id" : "565f3ab7d4c6e52cfd447d26",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0163",
         "name" : "ADMINISTRIVE SITE",
         "description" : "ADMINISTRIVE SITE",
@@ -6828,14 +7077,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 37,
         "id" : "565f3ab7d4c6e52cfd448091",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0119",
         "name" : "ORDER CONTROL",
         "description" : "ORDER CONTROL",
@@ -7180,14 +7427,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 20,
         "id" : "565f3ab7d4c6e52cfd447d25",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0042",
         "name" : "INS. COMPANY PLAN CODE",
         "description" : "INS. COMPANY PLAN CODE",
@@ -7199,14 +7444,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 8,
         "id" : "565f3ab7d4c6e52cfd448090",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0118",
         "name" : "MAJOR DIAGNOSTIC CATEGORY",
         "description" : "MAJOR DIAGNOSTIC CATEGORY",
@@ -7218,14 +7461,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 19,
         "id" : "565f3ab7d4c6e52cfd447dbc",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0157",
         "name" : "WHIHC DATE/TIME STATUS QUALIFIER",
         "description" : "WHIHC DATE/TIME STATUS QUALIFIER",
@@ -7291,14 +7532,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 71,
         "id" : "565f3ab7d4c6e52cfd447edd",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0168",
         "name" : "PROCESSING PRIORITY",
         "description" : "PROCESSING PRIORITY",
@@ -7373,14 +7612,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 188,
         "id" : "565f3ab7d4c6e52cfd447c80",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0008",
         "name" : "ACKNOWLEDGMENT CODE",
         "description" : "ACKNOWLEDGMENT CODE",
@@ -7446,14 +7683,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 123,
         "id" : "565f3ab7d4c6e52cfd44807b",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0078",
         "name" : "ABNORMAL FLAGS",
         "description" : "ABNORMAL FLAGS",
@@ -7636,14 +7871,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 114,
         "id" : "565f3ab7d4c6e52cfd44807a",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0110",
         "name" : "TRANSFER TO BAD DEBT CODE",
         "description" : "TRANSFER TO BAD DEBT CODE",
@@ -7655,14 +7888,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 62,
         "id" : "565f3ab7d4c6e52cfd447bfd",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0125",
         "name" : "VALUE TYPE",
         "description" : "VALUE TYPE",
@@ -7863,14 +8094,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 44,
         "id" : "565f3ab7d4c6e52cfd447dc3",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0033",
         "name" : "ROUTE",
         "description" : "ROUTE",
@@ -7882,14 +8111,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 38,
         "id" : "565f3ab7d4c6e52cfd447ca2",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0017",
         "name" : "TRANSACTION TYPE",
         "description" : "TRANSACTION TYPE",
@@ -7973,14 +8200,12 @@
           "codeUsage" : "F",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 45,
         "id" : "565f3ab7d4c6e52cfd447f4a",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0179",
         "name" : "Response Level",
         "description" : "Response Level",
@@ -8028,14 +8253,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 184,
         "id" : "565f3ab7d4c6e52cfd447ca1",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0140",
         "name" : "CHAMPUS SERVICE",
         "description" : "CHAMPUS SERVICE",
@@ -8047,14 +8270,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 36,
         "id" : "565f3ab7d4c6e52cfd447ca0",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0142",
         "name" : "CHAMPUS STATE",
         "description" : "CHAMPUS STATE",
@@ -8066,14 +8287,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 84,
         "id" : "565f3ab7d4c6e52cfd447c6e",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0001",
         "name" : "SEX",
         "description" : "SEX",
@@ -8121,14 +8340,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 91,
         "id" : "565f3ab7d4c6e52cfd447f4f",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0055",
         "name" : "DRG CODE",
         "description" : "DRG CODE",
@@ -8140,14 +8357,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 124,
         "id" : "565f3ab7d4c6e52cfd447d0c",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0145",
         "name" : "Room Type",
         "description" : "Room Type",
@@ -8213,14 +8428,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 17,
         "id" : "565f3ab7d4c6e52cfd447dc5",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0155",
         "name" : "ACCEPT/APPLICATION ACKNOWLEDGEMENT CONDITIONS",
         "description" : "ACCEPT/APPLICATION ACKNOWLEDGEMENT CONDITIONS",
@@ -8268,14 +8481,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 155,
         "id" : "565f3ab7d4c6e52cfd447dc4",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0034",
         "name" : "SITE ADMINISTERED",
         "description" : "SITE ADMINISTERED",
@@ -8287,14 +8498,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 24,
         "id" : "565f3ab7d4c6e52cfd447ee5",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0044",
         "name" : "CONTRACT CODE",
         "description" : "CONTRACT CODE",
@@ -8342,14 +8551,12 @@
           "codeUsage" : "F",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 75,
         "id" : "565f3ab7d4c6e52cfd448023",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0105",
         "name" : "SOURCE OF COMMENT",
         "description" : "SOURCE OF COMMENT",
@@ -8388,14 +8595,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 160,
         "id" : "565f3ab7d4c6e52cfd447cab",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0018",
         "name" : "PATIENT TYPE",
         "description" : "PATIENT TYPE",
@@ -8488,14 +8693,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 92,
         "id" : "565f3ab7d4c6e52cfd447dcc",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0174",
         "name" : "NATURE OF TEST/OBSERVATION",
         "description" : "NATURE OF TEST/OBSERVATION",
@@ -8552,14 +8755,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 101,
         "id" : "565f3ab7d4c6e52cfd447c99",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0020",
         "name" : "UNUSED TABLE",
         "description" : "UNUSED TABLE",
@@ -8607,14 +8808,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 115,
         "id" : "565f3ab7d4c6e52cfd447dca",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0053",
         "name" : "DIAGNOSIS CODING METHOD",
         "description" : "DIAGNOSIS CODING METHOD",
@@ -8635,14 +8834,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 72,
         "id" : "565f3ab7d4c6e52cfd447eea",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0165",
         "name" : "ADMINISTRATION METHOD",
         "description" : "ADMINISTRATION METHOD",
@@ -8789,14 +8986,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 54,
         "id" : "565f3ab7d4c6e52cfd447c14",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0126",
         "name" : "QUANTITY LIMITED REQUEST",
         "description" : "QUANTITY LIMITED REQUEST",
@@ -8853,14 +9048,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 161,
         "id" : "565f3ab7d4c6e52cfd447c13",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0005",
         "name" : "RACE",
         "description" : "RACE",
@@ -8872,14 +9065,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 30,
         "id" : "565f3ab7d4c6e52cfd44808f",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0111",
         "name" : "DELETE ACCOUNT CODE",
         "description" : "DELETE ACCOUNT CODE",
@@ -8891,14 +9082,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 81,
         "id" : "565f3ab7d4c6e52cfd447d1a",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0022",
         "name" : "BILLING STATUS",
         "description" : "BILLING STATUS",
@@ -8910,14 +9099,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 78,
         "id" : "565f3ab7d4c6e52cfd447dd2",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0175",
         "name" : "MASTER FILE IDENTIFIER CODE",
         "description" : "MASTER FILE IDENTIFIER CODE",
@@ -9010,14 +9197,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 86,
         "id" : "565f3ab7d4c6e52cfd447cb7",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0136",
         "name" : "Y/N Indicator",
         "description" : "Y/N Indicator",
@@ -9047,14 +9232,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 173,
         "id" : "565f3ab7d4c6e52cfd447d1d",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0144",
         "name" : "ELIGIBILITY SOURCE",
         "description" : "ELIGIBILITY SOURCE",
@@ -9129,14 +9312,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 120,
         "id" : "565f3ab7d4c6e52cfd447cb6",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0015",
         "name" : "WEIGHT UNIT OF MEASURE",
         "description" : "WEIGHT UNIT OF MEASURE",
@@ -9148,14 +9329,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 53,
         "id" : "565f3ab7d4c6e52cfd447cb5",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0139",
         "name" : "EMPLOYER INFORMATION DATA",
         "description" : "EMPLOYER INFORMATION DATA",
@@ -9167,14 +9346,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 172,
         "id" : "565f3ab7d4c6e52cfd447d1c",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0023",
         "name" : "ADMIT SOURCE",
         "description" : "ADMIT SOURCE",
@@ -9186,14 +9363,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 55,
         "id" : "565f3ab7d4c6e52cfd447f5e",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0076",
         "name" : "MESSAGE TYPE",
         "description" : "MESSAGE TYPE",
@@ -9520,14 +9695,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 88,
         "id" : "565f3ab7d4c6e52cfd447f5d",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0075",
         "name" : "REPORT TYPES",
         "description" : "REPORT TYPES",
@@ -9539,14 +9712,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 132,
         "id" : "565f3ab7d4c6e52cfd447d1b",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0143",
         "name" : "NON-COVEREDINSURANCE CODE",
         "description" : "NON-COVEREDINSURANCE CODE",
@@ -9558,14 +9729,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 96,
         "id" : "565f3ab7d4c6e52cfd447c9f",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0021",
         "name" : "BAD DEBT AGENCY CODE",
         "description" : "BAD DEBT AGENCY CODE",
@@ -9577,14 +9746,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 52,
         "id" : "565f3ab7d4c6e52cfd447cd1",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0011",
         "name" : "CHARGING SYSTEM",
         "description" : "CHARGING SYSTEM",
@@ -9614,14 +9781,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 28,
         "id" : "565f3ab7d4c6e52cfd448033",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0068",
         "name" : "GUARANTOR TYPE",
         "description" : "GUARANTOR TYPE",
@@ -9678,14 +9843,12 @@
           "codeUsage" : "F",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 187,
         "id" : "565f3ab7d4c6e52cfd447c9e",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0141",
         "name" : "CHAMPUS RANK/GRADE",
         "description" : "CHAMPUS RANK/GRADE",
@@ -9697,14 +9860,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 102,
         "id" : "565f3ab7d4c6e52cfd447df0",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0171",
         "name" : "Country Code",
         "description" : "Country Code",
@@ -11507,14 +11668,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 185,
         "id" : "565f3ab7d4c6e52cfd447efe",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0064",
         "name" : "FINANCIAL CLASS",
         "description" : "FINANCIAL CLASS",
@@ -11796,14 +11955,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 181,
         "id" : "565f3ab7d4c6e52cfd447ddd",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0172",
         "name" : "VETERANS MILITARY STATUS",
         "description" : "VETERANS MILITARY STATUS",
@@ -11815,14 +11972,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 145,
         "id" : "565f3ab7d4c6e52cfd447ddc",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0051",
         "name" : "DIAGNOSIS CODE",
         "description" : "DIAGNOSIS CODE",
@@ -11834,14 +11989,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 143,
         "id" : "565f3ab7d4c6e52cfd447cba",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0016",
         "name" : "ISOLATION",
         "description" : "ISOLATION",
@@ -11943,14 +12096,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 146,
         "id" : "565f3ab7d4c6e52cfd44801d",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0191",
         "name" : "Type Of Data",
         "description" : "Type Of Data",
@@ -12007,14 +12158,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 111,
         "id" : "565f3ab7d4c6e52cfd447f83",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0074",
         "name" : "DIAGNOSTIC SERVICE SECTION ID",
         "description" : "DIAGNOSTIC SERVICE SECTION ID",
@@ -12350,14 +12499,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 164,
         "id" : "565f3ab7d4c6e52cfd447efb",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0166",
         "name" : "RX COMPONENT TYPE",
         "description" : "RX COMPONENT TYPE",
@@ -12387,14 +12534,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 95,
         "id" : "565f3ab7d4c6e52cfd447c20",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0123",
         "name" : "RESULT STATUS - OBR",
         "description" : "RESULT STATUS - OBR",
@@ -12496,14 +12641,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 154,
         "id" : "565f3ab7d4c6e52cfd447dde",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0052",
         "name" : "DIAGNOSIS TYPE",
         "description" : "DIAGNOSIS TYPE",
@@ -12596,14 +12739,12 @@
           "codeUsage" : "F",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 4,
         "id" : "565f3ab7d4c6e52cfd447efa",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0045",
         "name" : "COURTESY CODE",
         "description" : "COURTESY CODE",
@@ -12615,14 +12756,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 178,
         "id" : "565f3ab7d4c6e52cfd447f82",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0073",
         "name" : "INTEREST RATE CODE",
         "description" : "INTEREST RATE CODE",
@@ -12634,14 +12773,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 165,
         "id" : "565f3ab7d4c6e52cfd447fa9",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0192",
         "name" : "Visit Id type",
         "description" : "Visit Id type",
@@ -12653,14 +12790,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 150,
         "id" : "565f3ab7d4c6e52cfd447fa8",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0071",
         "name" : "UNUSED TABLE",
         "description" : "UNUSED TABLE",
@@ -12672,14 +12807,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 107,
         "id" : "565f3ab7d4c6e52cfd448027",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0106",
         "name" : "QUERY FORMAT CODE",
         "description" : "QUERY FORMAT CODE",
@@ -12709,14 +12842,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 135,
         "id" : "565f3ab7d4c6e52cfd447de8",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0173",
         "name" : "COORDINATION OF BENEFITS",
         "description" : "COORDINATION OF BENEFITS",
@@ -12746,14 +12877,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 108,
         "id" : "565f3ab7d4c6e52cfd447cc5",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0137",
         "name" : "MAIL CLAIM PARTY",
         "description" : "MAIL CLAIM PARTY",
@@ -12810,14 +12939,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 80,
         "id" : "565f3ab7d4c6e52cfd448040",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0187",
         "name" : "#FIXME#",
         "description" : "#FIXME#",
@@ -12847,14 +12974,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 168,
         "id" : "565f3ab7d4c6e52cfd447ce2",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0152",
         "name" : "SECOND OPINION DOCUMENTATION RECEIVED",
         "description" : "SECOND OPINION DOCUMENTATION RECEIVED",
@@ -12866,14 +12991,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 170,
         "id" : "565f3ab7d4c6e52cfd447ce1",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0031",
         "name" : "BLOOD BANK - COMPONENT TYPE",
         "description" : "BLOOD BANK - COMPONENT TYPE",
@@ -12885,14 +13008,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 93,
         "id" : "565f3ab7d4c6e52cfd448044",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0100",
         "name" : "WHEN TO CHARGE",
         "description" : "WHEN TO CHARGE",
@@ -12949,14 +13070,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 163,
         "id" : "565f3ab7d4c6e52cfd447ce0",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0019",
         "name" : "ANESTHESIA CODE",
         "description" : "ANESTHESIA CODE",
@@ -12968,14 +13087,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 32,
         "id" : "565f3ab7d4c6e52cfd448043",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0067",
         "name" : "UNUSED TABLE",
         "description" : "UNUSED TABLE",
@@ -12987,14 +13104,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 142,
         "id" : "565f3ab7d4c6e52cfd447ccd",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0135",
         "name" : "ASSIGNMENT OF BENEFITS",
         "description" : "ASSIGNMENT OF BENEFITS",
@@ -13033,14 +13148,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 67,
         "id" : "565f3ab7d4c6e52cfd447ccc",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0014",
         "name" : "HEIGHT UNIT OF MEASURE",
         "description" : "HEIGHT UNIT OF MEASURE",
@@ -13052,14 +13165,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 47,
         "id" : "565f3ab7d4c6e52cfd447ccb",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0013",
         "name" : "CHARGEABLE OR NON-CHARGEABLE",
         "description" : "CHARGEABLE OR NON-CHARGEABLE",
@@ -13071,14 +13182,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 131,
         "id" : "565f3ab7d4c6e52cfd44802e",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0104",
         "name" : "VERSION ID",
         "description" : "VERSION ID",
@@ -13126,14 +13235,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 63,
         "id" : "565f3ab7d4c6e52cfd447deb",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0170",
         "name" : "DERIVED SPECIMEN",
         "description" : "DERIVED SPECIMEN",
@@ -13172,14 +13279,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 169,
         "id" : "565f3ab7d4c6e52cfd447fab",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0193",
         "name" : "Amount Class",
         "description" : "Amount Class",
@@ -13227,14 +13332,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 117,
         "id" : "565f3ab7d4c6e52cfd447faa",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0072",
         "name" : "INS. PLAN ID",
         "description" : "INS. PLAN ID",
@@ -13246,14 +13349,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 121,
         "id" : "565f3ab7d4c6e52cfd447def",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0050",
         "name" : "ACCIDENT CODE",
         "description" : "ACCIDENT CODE",
@@ -13265,14 +13366,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 68,
         "id" : "565f3ab7d4c6e52cfd447fb7",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0070",
         "name" : "SOURCE OF SPECIMEN",
         "description" : "SOURCE OF SPECIMEN",
@@ -14193,14 +14292,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 3,
         "id" : "565f3ab7d4c6e52cfd44802a",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0103",
         "name" : "PROCESSING ID",
         "description" : "PROCESSING ID",
@@ -14239,14 +14336,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 26,
         "id" : "565f3ab7d4c6e52cfd447cd5",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0132",
         "name" : "TRANSACTION CODE",
         "description" : "TRANSACTION CODE",
@@ -14258,14 +14353,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 99,
         "id" : "565f3ab7d4c6e52cfd447fb0",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0190",
         "name" : "Adress Type",
         "description" : "Adress Type",
@@ -14331,14 +14424,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 141,
         "id" : "565f3ab7d4c6e52cfd447c1a",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0002",
         "name" : "MARITAL STATUS",
         "description" : "MARITAL STATUS",
@@ -14395,14 +14486,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 16,
         "id" : "565f3ab7d4c6e52cfd447cd4",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0099",
         "name" : "VIP INDICATOR",
         "description" : "VIP INDICATOR",
@@ -14414,14 +14503,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 11,
         "id" : "565f3ab7d4c6e52cfd447cd9",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0133",
         "name" : "PROCEDURE PRACTITIONER TYPE",
         "description" : "PROCEDURE PRACTITIONER TYPE",
@@ -14487,14 +14574,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 74,
         "id" : "565f3ab7d4c6e52cfd447cd6",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0012",
         "name" : "STOCK LOCATION",
         "description" : "STOCK LOCATION",
@@ -14524,14 +14609,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 98,
         "id" : "565f3ab7d4c6e52cfd448039",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0101",
         "name" : "DISPLAY LEVEL",
         "description" : "DISPLAY LEVEL",
@@ -14543,14 +14626,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 1,
         "id" : "565f3ab7d4c6e52cfd448051",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0108",
         "name" : "QUERY RESULTS LEVEL",
         "description" : "QUERY RESULTS LEVEL",
@@ -14598,14 +14679,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 14,
         "id" : "565f3ab7d4c6e52cfd448056",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0086",
         "name" : "INS. PLAN TYPE",
         "description" : "INS. PLAN TYPE",
@@ -14617,14 +14696,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 106,
         "id" : "565f3ab7d4c6e52cfd447cf3",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0029",
         "name" : "UNIT OF MEASURE",
         "description" : "UNIT OF MEASURE",
@@ -14636,14 +14713,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 87,
         "id" : "565f3ab7d4c6e52cfd44803f",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0066",
         "name" : "EMPLOYMENT STATUS",
         "description" : "EMPLOYMENT STATUS",
@@ -14655,14 +14730,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 15,
         "id" : "565f3ab7d4c6e52cfd447f24",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0065",
         "name" : "ACTION CODE",
         "description" : "ACTION CODE",
@@ -14737,14 +14810,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 140,
         "id" : "565f3ab7d4c6e52cfd447d69",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0161",
         "name" : "ALLOW SUBSTITUTION",
         "description" : "ALLOW SUBSTITUTION",
@@ -14783,14 +14854,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 129,
         "id" : "565f3ab7d4c6e52cfd447d68",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0040",
         "name" : "UNUSED TABLE",
         "description" : "UNUSED TABLE",
@@ -14802,14 +14871,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 60,
         "id" : "565f3ab7d4c6e52cfd44803c",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0102",
         "name" : "DELAYED ACKNOWLEDGMENT TYPE",
         "description" : "DELAYED ACKNOWLEDGMENT TYPE",
@@ -14839,14 +14906,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 110,
         "id" : "565f3ab7d4c6e52cfd44803b",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0069",
         "name" : "HOSPITAL SERVICE",
         "description" : "HOSPITAL SERVICE",
@@ -14858,14 +14923,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 56,
         "id" : "565f3ab7d4c6e52cfd44803a",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0189",
         "name" : "#FIXME#",
         "description" : "#FIXME#",
@@ -14877,14 +14940,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 138,
         "id" : "565f3ab7d4c6e52cfd447ce6",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0153",
         "name" : "VALUE CODE",
         "description" : "VALUE CODE",
@@ -14896,14 +14957,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 50,
         "id" : "565f3ab7d4c6e52cfd447c2b",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0003",
         "name" : "EVENT TYPE CODE",
         "description" : "EVENT TYPE CODE",
@@ -15401,14 +15460,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 130,
         "id" : "565f3ab7d4c6e52cfd447ce3",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0032",
         "name" : "CHARGE/PRICE INDICATOR",
         "description" : "CHARGE/PRICE INDICATOR",
@@ -15438,14 +15495,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 2,
         "id" : "565f3ab7d4c6e52cfd447ce7",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0150",
         "name" : "PRECERTIFICATION PATIENT TYPE",
         "description" : "PRECERTIFICATION PATIENT TYPE",
@@ -15493,14 +15548,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 65,
         "id" : "565f3ab7d4c6e52cfd447f37",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0181",
         "name" : "MFN Recode-Level Error Return",
         "description" : "MFN Recode-Level Error Return",
@@ -15530,14 +15583,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 43,
         "id" : "565f3ab7d4c6e52cfd447f36",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0060",
         "name" : "ERROR CODE",
         "description" : "ERROR CODE",
@@ -15549,14 +15600,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 103,
         "id" : "565f3ab7d4c6e52cfd447be2",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0092",
         "name" : "RE-ADMISSION INDICATOR",
         "description" : "RE-ADMISSION INDICATOR",
@@ -15577,14 +15626,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 148,
         "id" : "565f3ab7d4c6e52cfd448066",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0080",
         "name" : "NATURE OF ABNORMAL TESTING",
         "description" : "NATURE OF ABNORMAL TESTING",
@@ -15632,14 +15679,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 136,
         "id" : "565f3ab7d4c6e52cfd448065",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0083",
         "name" : "OUTLIER TYPE",
         "description" : "OUTLIER TYPE",
@@ -15651,14 +15696,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 10,
         "id" : "565f3ab7d4c6e52cfd448064",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0082",
         "name" : "UNUSED TABLE",
         "description" : "UNUSED TABLE",
@@ -15670,14 +15713,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 0,
         "id" : "565f3ab7d4c6e52cfd447cef",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0149",
         "name" : "DAY TYPE",
         "description" : "DAY TYPE",
@@ -15716,14 +15757,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 171,
         "id" : "565f3ab7d4c6e52cfd447f31",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0183",
         "name" : "Active/Inactive",
         "description" : "Active/Inactive",
@@ -15753,14 +15792,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 177,
         "id" : "565f3ab7d4c6e52cfd447cee",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0028",
         "name" : "UNUSED TABLE",
         "description" : "UNUSED TABLE",
@@ -15772,14 +15809,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 5,
         "id" : "565f3ab7d4c6e52cfd447ced",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0151",
         "name" : "SECOND OPINION STATUS",
         "description" : "SECOND OPINION STATUS",
@@ -15791,14 +15826,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 27,
         "id" : "565f3ab7d4c6e52cfd447cec",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0030",
         "name" : "FREQUENCY CODE",
         "description" : "FREQUENCY CODE",
@@ -15810,14 +15843,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 39,
         "id" : "565f3ab7d4c6e52cfd447f35",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0184",
         "name" : "#FIXME#",
         "description" : "#FIXME#",
@@ -15829,14 +15860,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 183,
         "id" : "565f3ab7d4c6e52cfd447f34",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0063",
         "name" : "RELATIONSHIP",
         "description" : "RELATIONSHIP",
@@ -15848,14 +15877,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 31,
         "id" : "565f3ab7d4c6e52cfd44804a",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0188",
         "name" : "#FIXME#",
         "description" : "#FIXME#",
@@ -15867,14 +15894,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 83,
         "id" : "565f3ab7d4c6e52cfd447eb8",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0048",
         "name" : "WHAT SUBJECT FILTER",
         "description" : "WHAT SUBJECT FILTER",
@@ -16120,14 +16145,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 33,
         "id" : "565f3ab7d4c6e52cfd447f1d",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0185",
         "name" : "Preferred Method Of Contrct",
         "description" : "Preferred Method Of Contrct",
@@ -16193,14 +16216,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 149,
         "id" : "565f3ab7d4c6e52cfd44804e",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0107",
         "name" : "DEFERRED RESPONSE TYPE",
         "description" : "DEFERRED RESPONSE TYPE",
@@ -16230,14 +16251,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 133,
         "id" : "565f3ab7d4c6e52cfd44804b",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0109",
         "name" : "REPORT PRIORITY",
         "description" : "REPORT PRIORITY",
@@ -16267,14 +16286,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 48,
         "id" : "565f3ab7d4c6e52cfd447bd6",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0010",
         "name" : "PHYSICIAN ID",
         "description" : "PHYSICIAN ID",
@@ -16286,14 +16303,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 64,
         "id" : "565f3ab7d4c6e52cfd447d5e",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0164",
         "name" : "ADMINISTRATION DEVICE",
         "description" : "ADMINISTRATION DEVICE",
@@ -16386,14 +16401,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 82,
         "id" : "565f3ab7d4c6e52cfd447d5d",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0043",
         "name" : "CONDITION CODE",
         "description" : "CONDITION CODE",
@@ -16405,14 +16418,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 22,
         "id" : "565f3ab7d4c6e52cfd448059",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0084",
         "name" : "PERFORMED BY CODE",
         "description" : "PERFORMED BY CODE",
@@ -16424,14 +16435,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 147,
         "id" : "565f3ab7d4c6e52cfd447bd5",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0130",
         "name" : "VISIT USER CODE",
         "description" : "VISIT USER CODE",
@@ -16443,14 +16452,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 166,
         "id" : "565f3ab7d4c6e52cfd447bd4",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0097",
         "name" : "UNUSED TABLE",
         "description" : "UNUSED TABLE",
@@ -16462,14 +16469,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 73,
         "id" : "565f3ab7d4c6e52cfd447cf5",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0147",
         "name" : "POLICY TYPE",
         "description" : "POLICY TYPE",
@@ -16526,14 +16531,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 7,
         "id" : "565f3ab7d4c6e52cfd448058",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0120",
         "name" : "APPLICATION ID",
         "description" : "APPLICATION ID",
@@ -16545,14 +16548,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 127,
         "id" : "565f3ab7d4c6e52cfd447cf4",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0026",
         "name" : "ORDER EVENT TYPE",
         "description" : "ORDER EVENT TYPE",
@@ -16564,14 +16565,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 159,
         "id" : "565f3ab7d4c6e52cfd448057",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0087",
         "name" : "PRE-ADMIT TESTING",
         "description" : "PRE-ADMIT TESTING",
@@ -16583,14 +16582,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 51,
         "id" : "565f3ab7d4c6e52cfd447bd3",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0090",
         "name" : "PROCEDURE TYPE",
         "description" : "PROCEDURE TYPE",
@@ -16602,14 +16599,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 90,
         "id" : "565f3ab7d4c6e52cfd447bd9",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0095",
         "name" : "UNUSED TABLE",
         "description" : "UNUSED TABLE",
@@ -16621,14 +16616,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 122,
         "id" : "565f3ab7d4c6e52cfd447bd8",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0131",
         "name" : "CONTRACT ROLE",
         "description" : "CONTRACT ROLE",
@@ -16640,14 +16633,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 59,
         "id" : "565f3ab7d4c6e52cfd447bd7",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0098",
         "name" : "TYPE OF AGREEMENT CODE",
         "description" : "TYPE OF AGREEMENT CODE",
@@ -16659,14 +16650,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 40,
         "id" : "565f3ab7d4c6e52cfd448074",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0114",
         "name" : "DIET TYPE",
         "description" : "DIET TYPE",
@@ -16678,14 +16667,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 139,
         "id" : "565f3ab7d4c6e52cfd447f49",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0058",
         "name" : "UNUSED TABLE",
         "description" : "UNUSED TABLE",
@@ -16697,14 +16684,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 42,
         "id" : "565f3ab7d4c6e52cfd448073",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0117",
         "name" : "ACCOUNT STATUS",
         "description" : "ACCOUNT STATUS",
@@ -16716,14 +16701,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 128,
         "id" : "565f3ab7d4c6e52cfd448078",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0113",
         "name" : "DISCHARGED TO LOCATION",
         "description" : "DISCHARGED TO LOCATION",
@@ -16735,14 +16718,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 104,
         "id" : "565f3ab7d4c6e52cfd447bf3",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0004",
         "name" : "PATIENT CLASS",
         "description" : "PATIENT CLASS",
@@ -16835,14 +16816,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 167,
         "id" : "565f3ab7d4c6e52cfd448077",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0112",
         "name" : "DISCHARGE DISPOSITION",
         "description" : "DISCHARGE DISPOSITION",
@@ -16854,14 +16833,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 156,
         "id" : "565f3ab7d4c6e52cfd448076",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0079",
         "name" : "LOCATION",
         "description" : "LOCATION",
@@ -16873,14 +16850,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 6,
         "id" : "565f3ab7d4c6e52cfd448075",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0115",
         "name" : "SERVICING FACILITY",
         "description" : "SERVICING FACILITY",
@@ -16892,14 +16867,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 89,
         "id" : "565f3ab7d4c6e52cfd447bdf",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0091",
         "name" : "QUERY PRIORITY",
         "description" : "QUERY PRIORITY",
@@ -16929,14 +16902,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 119,
         "id" : "565f3ab7d4c6e52cfd447c67",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0088",
         "name" : "PROCEDURE CODE",
         "description" : "PROCEDURE CODE",
@@ -16948,14 +16919,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 179,
         "id" : "565f3ab7d4c6e52cfd447bde",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0094",
         "name" : "REPORT OF ELIGIBILITY",
         "description" : "REPORT OF ELIGIBILITY",
@@ -16967,14 +16936,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 182,
         "id" : "565f3ab7d4c6e52cfd447f46",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0178",
         "name" : "FILE-LEVEL EVENT CODE",
         "description" : "FILE-LEVEL EVENT CODE",
@@ -17004,14 +16971,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 157,
         "id" : "565f3ab7d4c6e52cfd447d04",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0024",
         "name" : "FEE SCHEDULE",
         "description" : "FEE SCHEDULE",
@@ -17086,14 +17051,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 109,
         "id" : "565f3ab7d4c6e52cfd447f45",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0057",
         "name" : "DRUG CODE",
         "description" : "DRUG CODE",
@@ -17105,14 +17068,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 100,
         "id" : "565f3ab7d4c6e52cfd447f44",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0059",
         "name" : "CONSENT CODE",
         "description" : "CONSENT CODE",
@@ -17124,14 +17085,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 85,
         "id" : "565f3ab7d4c6e52cfd447c68",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0121",
         "name" : "RESPONSE FLAG",
         "description" : "RESPONSE FLAG",
@@ -17188,14 +17147,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 49,
         "id" : "565f3ab7d4c6e52cfd447d01",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0148",
         "name" : "PENALTY TYPE",
         "description" : "PENALTY TYPE",
@@ -17225,14 +17182,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 9,
         "id" : "565f3ab7d4c6e52cfd44805a",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0085",
         "name" : "OBSERVATION RESULT STATUS CODES INTERPRETATION",
         "description" : "OBSERVATION RESULT STATUS CODES INTERPRETATION",
@@ -17325,14 +17280,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 151,
         "id" : "565f3ab7d4c6e52cfd447da7",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0156",
         "name" : "DATE/TIME QUALIFIER",
         "description" : "DATE/TIME QUALIFIER",
@@ -17407,14 +17360,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 57,
         "id" : "565f3ab7d4c6e52cfd447da6",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0035",
         "name" : "UNIT OF MEASURE FOR THE SOLUTION RATE",
         "description" : "UNIT OF MEASURE FOR THE SOLUTION RATE",
@@ -17426,14 +17377,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 76,
         "id" : "565f3ab7d4c6e52cfd447bdb",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0093",
         "name" : "RELEASE OF INFORMATION",
         "description" : "RELEASE OF INFORMATION",
@@ -17463,14 +17412,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 105,
         "id" : "565f3ab7d4c6e52cfd447bda",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0096",
         "name" : "FINANCIAL TRANSACTION CODE",
         "description" : "FINANCIAL TRANSACTION CODE",
@@ -17482,14 +17429,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 61,
         "id" : "565f3ab7d4c6e52cfd447c62",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0124",
         "name" : "TRANSPORTATION MODE",
         "description" : "TRANSPORTATION MODE",
@@ -17537,14 +17482,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 21,
         "id" : "565f3ab7d4c6e52cfd447cfb",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0027",
         "name" : "PRIORITY (COMPONENT 6 QTY/TIMING[735])",
         "description" : "PRIORITY (COMPONENT 6 QTY/TIMING[735])",
@@ -17601,14 +17544,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 116,
         "id" : "565f3ab7d4c6e52cfd447d6e",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0162",
         "name" : "ROUTE OF ADMINISTRATION",
         "description" : "ROUTE OF ADMINISTRATION",
@@ -17881,14 +17822,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 175,
         "id" : "565f3ab7d4c6e52cfd447d6d",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0041",
         "name" : "VOLUME UNIT OF MEASURE",
         "description" : "VOLUME UNIT OF MEASURE",
@@ -17900,14 +17839,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 58,
         "id" : "565f3ab7d4c6e52cfd447be5",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0127",
         "name" : "ALLERGY TYPE",
         "description" : "ALLERGY TYPE",
@@ -17955,14 +17892,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 34,
         "id" : "565f3ab7d4c6e52cfd447be4",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0006",
         "name" : "RELIGION",
         "description" : "RELIGION",
@@ -17974,14 +17909,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 174,
         "id" : "565f3ab7d4c6e52cfd447f2d",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0062",
         "name" : "EVENT REASON",
         "description" : "EVENT REASON",
@@ -18020,14 +17953,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 69,
         "id" : "565f3ab7d4c6e52cfd447f2c",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0186",
         "name" : "Practioner Category",
         "description" : "Practioner Category",
@@ -18039,14 +17970,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 126,
         "id" : "565f3ab7d4c6e52cfd447da2",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0159",
         "name" : "DIET TYPE",
         "description" : "DIET TYPE",
@@ -18085,14 +18014,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 186,
         "id" : "565f3ab7d4c6e52cfd447daf",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0036",
         "name" : "UNITS OF MEASURE - ISO528,1977",
         "description" : "UNITS OF MEASURE - ISO528,1977",
@@ -18212,14 +18139,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 94,
         "id" : "565f3ab7d4c6e52cfd447d8c",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0160",
         "name" : "TRAY TYPE",
         "description" : "TRAY TYPE",
@@ -18276,14 +18201,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 152,
         "id" : "565f3ab7d4c6e52cfd447d99",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0038",
         "name" : "ORDER STATUS",
         "description" : "ORDER STATUS",
@@ -18367,14 +18290,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 46,
         "id" : "565f3ab7d4c6e52cfd447bef",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0128",
         "name" : "ALLERGY SEVERITY",
         "description" : "ALLERGY SEVERITY",
@@ -18413,14 +18334,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 118,
         "id" : "565f3ab7d4c6e52cfd447f52",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0177",
         "name" : "CONFIDENTIALITY CODE",
         "description" : "CONFIDENTIALITY CODE",
@@ -18522,14 +18441,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 158,
         "id" : "565f3ab7d4c6e52cfd447c77",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0122",
         "name" : "CHARGE TYPE",
         "description" : "CHARGE TYPE",
@@ -18613,14 +18530,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 23,
         "id" : "565f3ab7d4c6e52cfd447f51",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0056",
         "name" : "DRG GROUPER REVIEW CODE",
         "description" : "DRG GROUPER REVIEW CODE",
@@ -18632,14 +18547,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 97,
         "id" : "565f3ab7d4c6e52cfd447f50",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0176",
         "name" : "MASTER FILE APPLICATION IDENTIFIER",
         "description" : "MASTER FILE APPLICATION IDENTIFIER",
@@ -18651,14 +18564,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 29,
         "id" : "565f3ab7d4c6e52cfd447d14",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0146",
         "name" : "AMOUNT TYPE",
         "description" : "AMOUNT TYPE",
@@ -18715,14 +18626,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 112,
         "id" : "565f3ab7d4c6e52cfd447d13",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0025",
         "name" : "CONFIRMATION CODE",
         "description" : "CONFIRMATION CODE",
@@ -18734,14 +18643,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 25,
         "id" : "565f3ab7d4c6e52cfd44806c",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0116",
         "name" : "BED STATUS",
         "description" : "BED STATUS",
@@ -18807,14 +18714,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 79,
         "id" : "565f3ab7d4c6e52cfd44806b",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0081",
         "name" : "NOTICE OF ADMISSION",
         "description" : "NOTICE OF ADMISSION",
@@ -18826,14 +18731,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 125,
         "id" : "565f3ab7d4c6e52cfd447ed8",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0167",
         "name" : "SUBSTITUTION STATUS",
         "description" : "SUBSTITUTION STATUS",
@@ -18872,14 +18775,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 12,
         "id" : "565f3ab7d4c6e52cfd447d94",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0158",
         "name" : "DATE/TIME SELECTION QUALIFIER",
         "description" : "DATE/TIME SELECTION QUALIFIER",
@@ -18927,14 +18828,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 77,
         "id" : "565f3ab7d4c6e52cfd447c73",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0089",
         "name" : "PROCEDURE CODING METHOD",
         "description" : "PROCEDURE CODING METHOD",
@@ -18973,14 +18872,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 180,
         "id" : "565f3ab7d4c6e52cfd447d93",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0037",
         "name" : "DRUG DOSE UNIT OF MEASURE",
         "description" : "DRUG DOSE UNIT OF MEASURE",
@@ -18992,14 +18889,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 13,
         "id" : "565f3ab7d4c6e52cfd447bea",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0007",
         "name" : "ADMISSION TYPE",
         "description" : "ADMISSION TYPE",
@@ -19047,14 +18942,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 137,
         "id" : "565f3ab7d4c6e52cfd447d92",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0039",
         "name" : "UNUSED TABLE",
         "description" : "UNUSED TABLE",
@@ -19066,14 +18959,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 162,
         "id" : "565f3ab7d4c6e52cfd447ed3",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0169",
         "name" : "REPORTIN PRIORITY",
         "description" : "REPORTIN PRIORITY",
@@ -19103,14 +18994,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 18,
         "id" : "565f3ab7d4c6e52cfd447f3a",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0061",
         "name" : "CHECK DIGIT SCHEME",
         "description" : "CHECK DIGIT SCHEME",
@@ -19140,14 +19029,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 176,
         "id" : "565f3ab7d4c6e52cfd448079",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0077",
         "name" : "UNUSED TABLE",
         "description" : "UNUSED TABLE",
@@ -19159,14 +19046,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 66,
         "id" : "565f3ab7d4c6e52cfd447f3e",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0180",
         "name" : "REcord Level Event Code",
         "description" : "REcord Level Event Code",
@@ -19223,14 +19108,12 @@
           "codeUsage" : "P",
           "comments" : ""
         } ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 70,
         "id" : "565f3ab7d4c6e52cfd447ed7",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0046",
         "name" : "CREDIT RATING",
         "description" : "CREDIT RATING",
@@ -19242,14 +19125,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 144,
         "id" : "565f3ab7d4c6e52cfd447f3d",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0182",
         "name" : "#FIXME#",
         "description" : "#FIXME#",
@@ -19261,14 +19142,12 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       }, {
         "type" : "table",
         "sectionPosition" : 41,
         "id" : "565f3ab7d4c6e52cfd447ed6",
         "hl7Version" : null,
-        "libId" : null,
         "bindingIdentifier" : "0049",
         "name" : "DEPARTMENT CODE",
         "description" : "DEPARTMENT CODE",
@@ -19280,7 +19159,6 @@
         "group" : null,
         "order" : 0,
         "codes" : [ ],
-        "libIds" : [ ],
         "scope" : null
       } ]
     },
@@ -19301,6 +19179,38 @@
     "sectionContents" : null,
     "id" : "56b4b811d4c6f591953e7b5c",
     "childSections" : [ {
+      "type" : "section",
+      "sectionPosition" : 2,
+      "sectionTitle" : "Use case assumptions",
+      "sectionDescription" : null,
+      "sectionContents" : null,
+      "id" : "56b4b811d4c6f591953e7b5e",
+      "childSections" : [ {
+        "type" : "section",
+        "sectionPosition" : 2,
+        "sectionTitle" : "Post Condition",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b60",
+        "childSections" : [ ]
+      }, {
+        "type" : "section",
+        "sectionPosition" : 1,
+        "sectionTitle" : "Pre Conditions",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b5f",
+        "childSections" : [ ]
+      }, {
+        "type" : "section",
+        "sectionPosition" : 3,
+        "sectionTitle" : "Functional Requirements",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b61",
+        "childSections" : [ ]
+      } ]
+    }, {
       "type" : "section",
       "sectionPosition" : 1,
       "sectionTitle" : "Actors",
@@ -19334,38 +19244,6 @@
       } ]
     }, {
       "type" : "section",
-      "sectionPosition" : 2,
-      "sectionTitle" : "Use case assumptions",
-      "sectionDescription" : null,
-      "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b5e",
-      "childSections" : [ {
-        "type" : "section",
-        "sectionPosition" : 2,
-        "sectionTitle" : "Post Condition",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b60",
-        "childSections" : [ ]
-      }, {
-        "type" : "section",
-        "sectionPosition" : 3,
-        "sectionTitle" : "Functional Requirements",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b61",
-        "childSections" : [ ]
-      }, {
-        "type" : "section",
-        "sectionPosition" : 1,
-        "sectionTitle" : "Pre Conditions",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b5f",
-        "childSections" : [ ]
-      } ]
-    }, {
-      "type" : "section",
       "sectionPosition" : 3,
       "sectionTitle" : "User story",
       "sectionDescription" : null,
@@ -19382,19 +19260,35 @@
     "id" : "56b4b811d4c6f591953e7b53",
     "childSections" : [ {
       "type" : "section",
-      "sectionPosition" : 3,
-      "sectionTitle" : "Organization of this guide",
+      "sectionPosition" : 5,
+      "sectionTitle" : "Scope",
       "sectionDescription" : null,
       "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b56",
-      "childSections" : [ ]
+      "id" : "56b4b811d4c6f591953e7b58",
+      "childSections" : [ {
+        "type" : "section",
+        "sectionPosition" : 2,
+        "sectionTitle" : "Out of Scope",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b5a",
+        "childSections" : [ ]
+      }, {
+        "type" : "section",
+        "sectionPosition" : 1,
+        "sectionTitle" : "In Scope",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b59",
+        "childSections" : [ ]
+      } ]
     }, {
       "type" : "section",
-      "sectionPosition" : 6,
-      "sectionTitle" : "Key technical decisions [conventions]",
+      "sectionPosition" : 4,
+      "sectionTitle" : "Referenced profiles - antecedents",
       "sectionDescription" : null,
       "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b5b",
+      "id" : "56b4b811d4c6f591953e7b57",
       "childSections" : [ ]
     }, {
       "type" : "section",
@@ -19414,35 +19308,19 @@
       "childSections" : [ ]
     }, {
       "type" : "section",
-      "sectionPosition" : 5,
-      "sectionTitle" : "Scope",
+      "sectionPosition" : 3,
+      "sectionTitle" : "Organization of this guide",
       "sectionDescription" : null,
       "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b58",
-      "childSections" : [ {
-        "type" : "section",
-        "sectionPosition" : 1,
-        "sectionTitle" : "In Scope",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b59",
-        "childSections" : [ ]
-      }, {
-        "type" : "section",
-        "sectionPosition" : 2,
-        "sectionTitle" : "Out of Scope",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b5a",
-        "childSections" : [ ]
-      } ]
+      "id" : "56b4b811d4c6f591953e7b56",
+      "childSections" : [ ]
     }, {
       "type" : "section",
-      "sectionPosition" : 4,
-      "sectionTitle" : "Referenced profiles - antecedents",
+      "sectionPosition" : 6,
+      "sectionTitle" : "Key technical decisions [conventions]",
       "sectionDescription" : null,
       "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b57",
+      "id" : "56b4b811d4c6f591953e7b5b",
       "childSections" : [ ]
     } ]
   } ]

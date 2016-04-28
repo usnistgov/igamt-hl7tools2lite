@@ -131,6 +131,7 @@ public class IGDocumentInserter implements Runnable {
 					mongoOps.insert(app.getProfile().getSegmentLibrary(), "segment-library");
 					for (Segment seg : segs) {
 						seg.setScope(Constant.SCOPE.HL7STANDARD);
+						seg.setHl7Version(app.getProfile().getMetaData().getHl7Version());
 						if (seg.getId() != null) {
 							seg.getLibIds().add(app.getProfile().getSegmentLibrary().getId());
 							app.getProfile().getSegmentLibrary()
@@ -139,6 +140,7 @@ public class IGDocumentInserter implements Runnable {
 							log.error("Null id seg=" + seg.toString());
 						}
 					}
+					mongoOps.save(app.getProfile().getSegmentLibrary());
 					Set<Datatype> dts = appPreLib.getProfile().getDatatypes().getChildren();
 					DatatypeLibraryMetaData dtMetaData = new DatatypeLibraryMetaData();
 					dtMetaData.setDate(Constant.mdy.format(new Date()));
@@ -153,13 +155,15 @@ public class IGDocumentInserter implements Runnable {
 						if (dt.getId() != null) {
 							dt.setScope(Constant.SCOPE.HL7STANDARD);
 							dt.setStatus(Datatype.STATUS.PUBLISHED);
+							dt.setHl7Version(app.getProfile().getMetaData().getHl7Version());
 							dt.getLibIds().add(app.getProfile().getDatatypeLibrary().getId());
 							app.getProfile().getDatatypeLibrary()
-									.addDatatype(new DatatypeLink(dt.getId(), dt.getName()));
+									.addDatatype(new DatatypeLink(dt.getId(), dt.getName(), dt.getExt()));
 						} else {
 							log.error("Null id dt=" + dt.toString());
 						}
 					}
+					mongoOps.save(app.getProfile().getDatatypeLibrary());
 					Set<Table> tabs = appPreLib.getProfile().getTables().getChildren();
 					TableLibraryMetaData tabMetaData = new TableLibraryMetaData();
 					tabMetaData.setDate(Constant.mdy.format(new Date()));
@@ -172,6 +176,7 @@ public class IGDocumentInserter implements Runnable {
 					mongoOps.insert(app.getProfile().getTableLibrary(), "table-library");
 					for (Table tab : tabs) {
 						tab.setScope(Constant.SCOPE.HL7STANDARD);
+						tab.setHl7Version(app.getProfile().getMetaData().getHl7Version());
 						if (tab.getId() != null) {
 							tab.getLibIds().add(app.getProfile().getTableLibrary().getId());
 							app.getProfile().getTableLibrary()
@@ -180,6 +185,7 @@ public class IGDocumentInserter implements Runnable {
 							log.error("Null id tab=" + tab.toString());
 						}
 					}
+					mongoOps.save(app.getProfile().getTableLibrary());
 					mongoOps.insert(app.getProfile().getMessages().getChildren(), "message");
 					mongoOps.insert(segs, "segment");
 					mongoOps.insert(dts, "datatype");

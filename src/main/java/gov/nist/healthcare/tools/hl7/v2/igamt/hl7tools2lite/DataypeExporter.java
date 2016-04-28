@@ -15,7 +15,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -31,103 +30,57 @@ import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 
-import gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter.IGDocumentPreLib;
-import gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter.IGDocumentReadConverterPreLib;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Component;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLibrary;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLibraryMetaData;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatypes;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Table;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Tables;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.service.converters.DatatypeReadConverter;
 
 public class DataypeExporter implements Runnable {
 
 	private static final Logger log = LoggerFactory.getLogger(DataypeExporter.class);
 
-	public final static File OUTPUT_DIR = new File(System.getenv("LOCAL_OUT") + "/datatypeLibraries");
-	public final static File OUTPUT_DIR_DTS = new File(OUTPUT_DIR, "datatypes");
+	public final static File OUTPUT_DIR_LOCAL = new File(System.getenv("LOCAL_OUT") + "/datatypes");
+	public final static File OUTPUT_DIR_IGAMT = new File(System.getenv("IGAMT_OUT") + "/datatypes");
 
 	public void run() {
 
-		if (!OUTPUT_DIR.exists()) {
-			OUTPUT_DIR.mkdir();
+		if (!OUTPUT_DIR_LOCAL .exists()) {
+			OUTPUT_DIR_LOCAL .mkdir();
 		}
 
-		if (!OUTPUT_DIR_DTS.exists()) {
-			OUTPUT_DIR_DTS.mkdir();
+		if (!OUTPUT_DIR_IGAMT .exists()) {
+			OUTPUT_DIR_IGAMT .mkdir();
 		}
-
+		
 		MongoOperations mongoOps;
 		mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igl"));
 		ObjectMapper mapper = new ObjectMapper();
 
-		IGDocumentPreLib igd;
+		Datatype dt;
 
-		IGDocumentReadConverterPreLib convIGD = new IGDocumentReadConverterPreLib();
+		DatatypeReadConverter conv = new DatatypeReadConverter();
 
-		DBCollection coll = mongoOps.getCollection("igdocumentPreLib");
+		DBCollection coll = mongoOps.getCollection("datatype");
 		BasicDBObject qry = new BasicDBObject();
 		List<BasicDBObject> where = new ArrayList<BasicDBObject>();
 		where.add(new BasicDBObject("scope", "HL7STANDARD"));
-		qry.put("$and", where);			
+		qry.put("$and", where);
 		DBCursor cur = coll.find(qry);
 
 		while (cur.hasNext()) {
 			DBObject obj = cur.next();
-			igd = convIGD.convert(obj);
-			String hl7Version = igd.getProfile().getMetaData().getHl7Version();
-			log.info("hl7Version=" + hl7Version);
-			Datatypes dts = igd.getProfile().getDatatypes();
-			Tables tabs = igd.getProfile().getTables();
-			DatatypeLibrary dtLib = new DatatypeLibrary();
-			dtLib.setScope(Constant.SCOPE.HL7STANDARD);
-			dtLib.setMetaData(createMetaData(dtLib.getId(), hl7Version));
-
-			for (Datatype dt : dts.getChildren()) {
-				dt.setHl7Version(igd.getProfile().getMetaData().getHl7Version());
-				dt.setScope(Constant.SCOPE.HL7STANDARD);
-				dt.setStatus(Datatype.STATUS.UNPUBLISHED);
-				for (Component cpt : dt.getComponents()) {
-					String tabId = cpt.getTable();
-					if (tabId != null && !"".equals(tabId)) {
-						Table tab = tabs.findOneTableById(tabId);
-						if (tab != null) {
-							dtLib.addTable(tab);
-						} else {
-							log.error("Table not found version.dt.cpt=" + hl7Version + "." + dt.getName() + "." + cpt.getName());
-						}
-					}
-				}
-				dtLib.addDatatype(dt);
-				File outfile = new File(OUTPUT_DIR_DTS, dt.getName() + "-" + hl7Version + "-" + dtLib.getScope().name() + ".json");
-				try {
-					Writer dtJson = new FileWriter(outfile);
-					mapper.writerWithDefaultPrettyPrinter().writeValue(dtJson, dt);
-				} catch (IOException e) {
-					log.error("", e);
-				}
-			}
-			File outfileLib = new File(OUTPUT_DIR, "dtLib-" + hl7Version + "-" + dtLib.getScope().name() + ".json");
+			dt = conv.convert(obj);
+			String hl7Version = dt.getHl7Version();
+			String fName = "datatype-" + dt.getName() + "-" + dt.getScope().name() + "-" + hl7Version + ".json"; 
+			File outfileLocal = new File(OUTPUT_DIR_LOCAL , fName);
+			File outfileIGAMT = new File(OUTPUT_DIR_IGAMT , fName);
 			try {
-				Writer dtLibJson = new FileWriter(outfileLib);
-				mapper.writerWithDefaultPrettyPrinter().writeValue(dtLibJson, dtLib);
+				Writer jsonLocal = new FileWriter(outfileLocal);
+				mapper.writerWithDefaultPrettyPrinter().writeValue(jsonLocal, dt);
+				Writer jsonIGAMT = new FileWriter(outfileIGAMT);
+				mapper.writerWithDefaultPrettyPrinter().writeValue(jsonIGAMT, dt);
 			} catch (IOException e) {
 				log.error("", e);
 			}
 		}
-	}
-
-	DatatypeLibraryMetaData createMetaData(String libId, String hl7version) {
-		DatatypeLibraryMetaData meta = new DatatypeLibraryMetaData();
-		meta.setDatatypLibId(libId);
-		meta.setDate(Constant.mdy.format(new Date()));
-		meta.setName(null);
-		meta.setOrgName("NIST");
-		meta.setVersion(null);
-		meta.setHl7Version(hl7version);
-		return meta;
 	}
 
 	public static void main(String[] args) throws Exception {
