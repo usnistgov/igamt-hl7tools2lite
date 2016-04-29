@@ -19187,14 +19187,6 @@
       "id" : "56b4b811d4c6f591953e7b5e",
       "childSections" : [ {
         "type" : "section",
-        "sectionPosition" : 2,
-        "sectionTitle" : "Post Condition",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b60",
-        "childSections" : [ ]
-      }, {
-        "type" : "section",
         "sectionPosition" : 1,
         "sectionTitle" : "Pre Conditions",
         "sectionDescription" : null,
@@ -19209,15 +19201,15 @@
         "sectionContents" : null,
         "id" : "56b4b811d4c6f591953e7b61",
         "childSections" : [ ]
+      }, {
+        "type" : "section",
+        "sectionPosition" : 2,
+        "sectionTitle" : "Post Condition",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b60",
+        "childSections" : [ ]
       } ]
-    }, {
-      "type" : "section",
-      "sectionPosition" : 1,
-      "sectionTitle" : "Actors",
-      "sectionDescription" : null,
-      "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b5d",
-      "childSections" : [ ]
     }, {
       "type" : "section",
       "sectionPosition" : 4,
@@ -19227,21 +19219,29 @@
       "id" : "56b4b811d4c6f591953e7b63",
       "childSections" : [ {
         "type" : "section",
-        "sectionPosition" : 1,
-        "sectionTitle" : "Acknowledgement",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b64",
-        "childSections" : [ ]
-      }, {
-        "type" : "section",
         "sectionPosition" : 2,
         "sectionTitle" : "Error Handling",
         "sectionDescription" : null,
         "sectionContents" : null,
         "id" : "56b4b811d4c6f591953e7b65",
         "childSections" : [ ]
+      }, {
+        "type" : "section",
+        "sectionPosition" : 1,
+        "sectionTitle" : "Acknowledgement",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b64",
+        "childSections" : [ ]
       } ]
+    }, {
+      "type" : "section",
+      "sectionPosition" : 1,
+      "sectionTitle" : "Actors",
+      "sectionDescription" : null,
+      "sectionContents" : null,
+      "id" : "56b4b811d4c6f591953e7b5d",
+      "childSections" : [ ]
     }, {
       "type" : "section",
       "sectionPosition" : 3,
@@ -19260,28 +19260,20 @@
     "id" : "56b4b811d4c6f591953e7b53",
     "childSections" : [ {
       "type" : "section",
-      "sectionPosition" : 5,
-      "sectionTitle" : "Scope",
+      "sectionPosition" : 3,
+      "sectionTitle" : "Organization of this guide",
       "sectionDescription" : null,
       "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b58",
-      "childSections" : [ {
-        "type" : "section",
-        "sectionPosition" : 2,
-        "sectionTitle" : "Out of Scope",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b5a",
-        "childSections" : [ ]
-      }, {
-        "type" : "section",
-        "sectionPosition" : 1,
-        "sectionTitle" : "In Scope",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b59",
-        "childSections" : [ ]
-      } ]
+      "id" : "56b4b811d4c6f591953e7b56",
+      "childSections" : [ ]
+    }, {
+      "type" : "section",
+      "sectionPosition" : 6,
+      "sectionTitle" : "Key technical decisions [conventions]",
+      "sectionDescription" : null,
+      "sectionContents" : null,
+      "id" : "56b4b811d4c6f591953e7b5b",
+      "childSections" : [ ]
     }, {
       "type" : "section",
       "sectionPosition" : 4,
@@ -19308,20 +19300,28 @@
       "childSections" : [ ]
     }, {
       "type" : "section",
-      "sectionPosition" : 3,
-      "sectionTitle" : "Organization of this guide",
+      "sectionPosition" : 5,
+      "sectionTitle" : "Scope",
       "sectionDescription" : null,
       "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b56",
-      "childSections" : [ ]
-    }, {
-      "type" : "section",
-      "sectionPosition" : 6,
-      "sectionTitle" : "Key technical decisions [conventions]",
-      "sectionDescription" : null,
-      "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b5b",
-      "childSections" : [ ]
+      "id" : "56b4b811d4c6f591953e7b58",
+      "childSections" : [ {
+        "type" : "section",
+        "sectionPosition" : 2,
+        "sectionTitle" : "Out of Scope",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b5a",
+        "childSections" : [ ]
+      }, {
+        "type" : "section",
+        "sectionPosition" : 1,
+        "sectionTitle" : "In Scope",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b59",
+        "childSections" : [ ]
+      } ]
     } ]
   } ]
 }
