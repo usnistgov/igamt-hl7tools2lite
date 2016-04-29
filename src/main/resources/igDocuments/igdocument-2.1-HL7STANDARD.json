@@ -6071,100 +6071,12 @@
   "scope" : "HL7STANDARD",
   "childSections" : [ {
     "type" : "section",
-    "sectionPosition" : 1,
-    "sectionTitle" : "Use Case",
-    "sectionDescription" : null,
-    "sectionContents" : null,
-    "id" : "56b4b811d4c6f591953e7b48",
-    "childSections" : [ {
-      "type" : "section",
-      "sectionPosition" : 3,
-      "sectionTitle" : "User story",
-      "sectionDescription" : null,
-      "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b4e",
-      "childSections" : [ ]
-    }, {
-      "type" : "section",
-      "sectionPosition" : 4,
-      "sectionTitle" : "Sequence diagram",
-      "sectionDescription" : null,
-      "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b4f",
-      "childSections" : [ {
-        "type" : "section",
-        "sectionPosition" : 1,
-        "sectionTitle" : "Acknowledgement",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b50",
-        "childSections" : [ ]
-      }, {
-        "type" : "section",
-        "sectionPosition" : 2,
-        "sectionTitle" : "Error Handling",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b51",
-        "childSections" : [ ]
-      } ]
-    }, {
-      "type" : "section",
-      "sectionPosition" : 2,
-      "sectionTitle" : "Use case assumptions",
-      "sectionDescription" : null,
-      "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b4a",
-      "childSections" : [ {
-        "type" : "section",
-        "sectionPosition" : 1,
-        "sectionTitle" : "Pre Conditions",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b4b",
-        "childSections" : [ ]
-      }, {
-        "type" : "section",
-        "sectionPosition" : 2,
-        "sectionTitle" : "Post Condition",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b4c",
-        "childSections" : [ ]
-      }, {
-        "type" : "section",
-        "sectionPosition" : 3,
-        "sectionTitle" : "Functional Requirements",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b4d",
-        "childSections" : [ ]
-      } ]
-    }, {
-      "type" : "section",
-      "sectionPosition" : 1,
-      "sectionTitle" : "Actors",
-      "sectionDescription" : null,
-      "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b49",
-      "childSections" : [ ]
-    } ]
-  }, {
-    "type" : "section",
     "sectionPosition" : 0,
     "sectionTitle" : "Introduction",
     "sectionDescription" : null,
     "sectionContents" : null,
     "id" : "56b4b811d4c6f591953e7b3f",
     "childSections" : [ {
-      "type" : "section",
-      "sectionPosition" : 6,
-      "sectionTitle" : "Key technical decisions [conventions]",
-      "sectionDescription" : null,
-      "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b47",
-      "childSections" : [ ]
-    }, {
       "type" : "section",
       "sectionPosition" : 2,
       "sectionTitle" : "Audience",
@@ -6174,35 +6086,11 @@
       "childSections" : [ ]
     }, {
       "type" : "section",
-      "sectionPosition" : 5,
-      "sectionTitle" : "Scope",
+      "sectionPosition" : 6,
+      "sectionTitle" : "Key technical decisions [conventions]",
       "sectionDescription" : null,
       "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b44",
-      "childSections" : [ {
-        "type" : "section",
-        "sectionPosition" : 1,
-        "sectionTitle" : "In Scope",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b45",
-        "childSections" : [ ]
-      }, {
-        "type" : "section",
-        "sectionPosition" : 2,
-        "sectionTitle" : "Out of Scope",
-        "sectionDescription" : null,
-        "sectionContents" : null,
-        "id" : "56b4b811d4c6f591953e7b46",
-        "childSections" : [ ]
-      } ]
-    }, {
-      "type" : "section",
-      "sectionPosition" : 1,
-      "sectionTitle" : "Purpose",
-      "sectionDescription" : null,
-      "sectionContents" : null,
-      "id" : "56b4b811d4c6f591953e7b40",
+      "id" : "56b4b811d4c6f591953e7b47",
       "childSections" : [ ]
     }, {
       "type" : "section",
@@ -6220,6 +6108,118 @@
       "sectionContents" : null,
       "id" : "56b4b811d4c6f591953e7b43",
       "childSections" : [ ]
+    }, {
+      "type" : "section",
+      "sectionPosition" : 1,
+      "sectionTitle" : "Purpose",
+      "sectionDescription" : null,
+      "sectionContents" : null,
+      "id" : "56b4b811d4c6f591953e7b40",
+      "childSections" : [ ]
+    }, {
+      "type" : "section",
+      "sectionPosition" : 5,
+      "sectionTitle" : "Scope",
+      "sectionDescription" : null,
+      "sectionContents" : null,
+      "id" : "56b4b811d4c6f591953e7b44",
+      "childSections" : [ {
+        "type" : "section",
+        "sectionPosition" : 2,
+        "sectionTitle" : "Out of Scope",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b46",
+        "childSections" : [ ]
+      }, {
+        "type" : "section",
+        "sectionPosition" : 1,
+        "sectionTitle" : "In Scope",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b45",
+        "childSections" : [ ]
+      } ]
+    } ]
+  }, {
+    "type" : "section",
+    "sectionPosition" : 1,
+    "sectionTitle" : "Use Case",
+    "sectionDescription" : null,
+    "sectionContents" : null,
+    "id" : "56b4b811d4c6f591953e7b48",
+    "childSections" : [ {
+      "type" : "section",
+      "sectionPosition" : 3,
+      "sectionTitle" : "User story",
+      "sectionDescription" : null,
+      "sectionContents" : null,
+      "id" : "56b4b811d4c6f591953e7b4e",
+      "childSections" : [ ]
+    }, {
+      "type" : "section",
+      "sectionPosition" : 1,
+      "sectionTitle" : "Actors",
+      "sectionDescription" : null,
+      "sectionContents" : null,
+      "id" : "56b4b811d4c6f591953e7b49",
+      "childSections" : [ ]
+    }, {
+      "type" : "section",
+      "sectionPosition" : 4,
+      "sectionTitle" : "Sequence diagram",
+      "sectionDescription" : null,
+      "sectionContents" : null,
+      "id" : "56b4b811d4c6f591953e7b4f",
+      "childSections" : [ {
+        "type" : "section",
+        "sectionPosition" : 2,
+        "sectionTitle" : "Error Handling",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b51",
+        "childSections" : [ ]
+      }, {
+        "type" : "section",
+        "sectionPosition" : 1,
+        "sectionTitle" : "Acknowledgement",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b50",
+        "childSections" : [ ]
+      } ]
+    }, {
+      "type" : "section",
+      "sectionPosition" : 2,
+      "sectionTitle" : "Use case assumptions",
+      "sectionDescription" : null,
+      "sectionContents" : null,
+      "id" : "56b4b811d4c6f591953e7b4a",
+      "childSections" : [ {
+        "type" : "section",
+        "sectionPosition" : 2,
+        "sectionTitle" : "Post Condition",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b4c",
+        "childSections" : [ ]
+      }, {
+        "type" : "section",
+        "sectionPosition" : 1,
+        "sectionTitle" : "Pre Conditions",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b4b",
+        "childSections" : [ ]
+      }, {
+        "type" : "section",
+        "sectionPosition" : 3,
+        "sectionTitle" : "Functional Requirements",
+        "sectionDescription" : null,
+        "sectionContents" : null,
+        "id" : "56b4b811d4c6f591953e7b4d",
+        "childSections" : [ ]
+      } ]
     } ]
   } ]
 }
