@@ -14,23 +14,20 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 
+import gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter.IGDocumentReadConverter;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.IGDocument;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.service.converters.IGDocumentReadConverter;
 
 public class HL7Tools2LiteExporter implements Runnable {
 
@@ -42,7 +39,7 @@ public class HL7Tools2LiteExporter implements Runnable {
 		if (!OUTPUT_DIR.exists()) {
 			OUTPUT_DIR.mkdir();
 		}
-		MongoOperations mongoOps;
+		MongoTemplate mongoOps;
 		try {
 			mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igl"));
 			ObjectMapper mapper = new ObjectMapper();

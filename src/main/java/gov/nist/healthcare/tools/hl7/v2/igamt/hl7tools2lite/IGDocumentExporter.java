@@ -19,7 +19,6 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 
@@ -32,40 +31,42 @@ import com.mongodb.MongoClient;
 
 import gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter.IGDocumentPreLib;
 import gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter.IGDocumentReadConverterPreLib;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.IGDocument;
 
 public class IGDocumentExporter implements Runnable {
 
 	private static final Logger log = LoggerFactory.getLogger(IGDocumentExporter.class);
 
 	public final static File OUTPUT_DIR = new File(System.getenv("LOCAL_OUT") + "/igDocuments");
+	public final static File OUTPUT_DIR_IGAMT = new File(System.getenv("IGAMT_OUT") + "/igDocuments");
 
 	public void run() {
-		if (!OUTPUT_DIR.exists()) {
-			OUTPUT_DIR.mkdir();
+		if (OUTPUT_DIR.exists()) {
+			OUTPUT_DIR.delete();
 		}
-		MongoOperations mongoOps;
+		OUTPUT_DIR.mkdir();
+
+		if (OUTPUT_DIR_IGAMT.exists()) {
+			OUTPUT_DIR_IGAMT.delete();
+		}
+		OUTPUT_DIR_IGAMT.mkdir();
+		
+		MongoTemplate mongoOps;
 		try {
 			mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igl"));
+			List<IGDocument> igds = mongoOps.findAll(IGDocument.class);
 			ObjectMapper mapper = new ObjectMapper();
-
-			IGDocumentReadConverterPreLib conv = new IGDocumentReadConverterPreLib();
-			IGDocumentPreLib igdocument = null;
-
-			DBCollection coll = mongoOps.getCollection("igdocumentPreLib");
-			BasicDBObject qry = new BasicDBObject();
-			List<BasicDBObject> where = new ArrayList<BasicDBObject>();
-			where.add(new BasicDBObject("scope", "HL7STANDARD"));
-			qry.put("$and", where);			
-			DBCursor cur = coll.find(qry);
-
-			while (cur.hasNext()) {
-				DBObject obj = cur.next();
-				igdocument = conv.convert(obj);
+			for (IGDocument igdocument : igds) {
 				String hl7Version = igdocument.getProfile().getMetaData().getHl7Version();
 				log.info("hl7Version=" + hl7Version);
-				File outfile = new File(OUTPUT_DIR, "igdocument-" + hl7Version + "-" + igdocument.getScope().name() + ".json");
-					Writer igdocumentJson = new FileWriter(outfile);
-				mapper.writerWithDefaultPrettyPrinter().writeValue(igdocumentJson, igdocument);
+				File outfile = new File(OUTPUT_DIR,
+						"igdocument-" + hl7Version + "-" + igdocument.getScope().name() + ".json");
+				File outfileIGAMT = new File(OUTPUT_DIR_IGAMT,
+						"igd-" + igdocument.getScope().name() + "-" + hl7Version + ".json");
+				Writer jsonLocal = new FileWriter(outfile);
+				mapper.writerWithDefaultPrettyPrinter().writeValue(jsonLocal, igdocument);
+				Writer jsonIGAMT = new FileWriter(outfileIGAMT);
+				mapper.writerWithDefaultPrettyPrinter().writeValue(jsonIGAMT, igdocument);
 			}
 		} catch (IOException e) {
 			log.error("", e);

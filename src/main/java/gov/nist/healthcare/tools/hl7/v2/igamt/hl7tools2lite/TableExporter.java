@@ -14,24 +14,17 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mongodb.BasicDBObject;
-import com.mongodb.DBCollection;
-import com.mongodb.DBCursor;
-import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Table;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.service.converters.TableReadConverter;
 
 public class TableExporter implements Runnable {
 
@@ -42,36 +35,26 @@ public class TableExporter implements Runnable {
 
 	public void run() {
 
-		if (!OUTPUT_DIR_LOCAL .exists()) {
-			OUTPUT_DIR_LOCAL .mkdir();
+		if (!OUTPUT_DIR_LOCAL.exists()) {
+			OUTPUT_DIR_LOCAL.mkdir();
 		}
 
-		if (!OUTPUT_DIR_IGAMT .exists()) {
-			OUTPUT_DIR_IGAMT .mkdir();
+		if (!OUTPUT_DIR_IGAMT.exists()) {
+			OUTPUT_DIR_IGAMT.mkdir();
 		}
-		
-		MongoOperations mongoOps;
+
+		MongoTemplate mongoOps;
 		mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igl"));
 		ObjectMapper mapper = new ObjectMapper();
 
-		Table tab;
+		List<Table> tabs = mongoOps.findAll(Table.class);
 
-		TableReadConverter conv = new TableReadConverter();
-
-		DBCollection coll = mongoOps.getCollection("table");
-		BasicDBObject qry = new BasicDBObject();
-		List<BasicDBObject> where = new ArrayList<BasicDBObject>();
-		where.add(new BasicDBObject("scope", "HL7STANDARD"));
-		qry.put("$and", where);
-		DBCursor cur = coll.find(qry);
-
-		while (cur.hasNext()) {
-			DBObject obj = cur.next();
-			tab = conv.convert(obj);
+		for (Table tab : tabs) {
 			String hl7Version = tab.getHl7Version();
-			String fName = "table-" + tab.getBindingIdentifier() + "-" + tab.getScope().name() + "-" + hl7Version + ".json"; 
-			File outfileLocal = new File(OUTPUT_DIR_LOCAL , fName);
-			File outfileIGAMT = new File(OUTPUT_DIR_IGAMT , fName);
+			String fName = "table-" + tab.getBindingIdentifier() + "-" + tab.getScope().name() + "-" + hl7Version
+					+ ".json";
+			File outfileLocal = new File(OUTPUT_DIR_LOCAL, fName);
+			File outfileIGAMT = new File(OUTPUT_DIR_IGAMT, fName);
 			try {
 				Writer jsonLocal = new FileWriter(outfileLocal);
 				mapper.writerWithDefaultPrettyPrinter().writeValue(jsonLocal, tab);

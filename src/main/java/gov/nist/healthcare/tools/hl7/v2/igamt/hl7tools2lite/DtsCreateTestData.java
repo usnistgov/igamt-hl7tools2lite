@@ -24,10 +24,10 @@ import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 
+import gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite.converter.DatatypeLibraryReadConverter;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLibrary;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLink;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.service.converters.DatatypeLibraryReadConverter;
 
 public class DtsCreateTestData implements Runnable {
 
