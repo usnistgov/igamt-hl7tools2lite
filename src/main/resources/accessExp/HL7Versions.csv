@@ -1,0 +1,30 @@
+version_id,hl7_version,description,status,date_release,HtmlPath,HtmlFile,filename_prefix,previous_version,sort,HtmlGeneration,display,base_standard,XML_schema_path,compare_table
+0,0,invisible,-,,,,,0,0,FALSE,FALSE,0,,FALSE
+1,2.1,Official Standard,Final Release,12/31/92,std21,hl7.html,v21,0,1,TRUE,TRUE,0,,TRUE
+2,2.2,Official Standard,Final Release,12/1/94,std22,hl7.html,v22,1,3,TRUE,TRUE,0,d:\temp\HL7-xml v2.2,TRUE
+3,2.3,Official Standard,Final Release,4/7/97,std23,hl7.htm,v23,2,5,TRUE,TRUE,0,d:\temp\HL7-xml v2.3,TRUE
+4,2.3.1,Official Standard,Final Release,5/17/99,std231,hl7.html,v231,3,8,TRUE,TRUE,0,d:\temp\HL7-xml v2.3.1,TRUE
+5,2.4,Official Standard,Final Release,11/1/00,std24,hl7.htm,v24,4,10,TRUE,TRUE,0,d:\temp\HL7-xml v2.4,TRUE
+6,2.5,Official Standard,Final Release,8/30/03,std25,hl7.html,v25,5,14,TRUE,TRUE,0,d:\temp\HL7-xml v2.5,TRUE
+7,2.6,Official Standard,Final Release,10/1/07,std26,hl7.html,v26,6,21,TRUE,TRUE,0,D:\temp\HL7-xml v2.6,TRUE
+8,2.7,Official Standard,Final Release,2/1/11,std27,hl7.html,v27,7,23,TRUE,TRUE,0,d:\temp\HL7-xml v2.7,TRUE
+9,2.8,Official Standard,Final Release,4/1/14,std28,hl7.html,v28,8,26,TRUE,TRUE,0,d:\temp\HL7-xml v2.8,TRUE
+20,2.2 DE,German Additions,In progress,,std22de,hl7.html,v22de,2,4,TRUE,TRUE,2,,FALSE
+32,2.3 Agfa,Agfa: ORBIS SP7,in progress,11/18/07,std23agfa,,v23agfa,3,7,TRUE,TRUE,3,,FALSE
+60,2.5 DE,German Additions,In Progress,7/5/07,std25de,hl7.html,v25de,6,15,TRUE,TRUE,6,,FALSE
+61,2.5.1,Official Standard,Final Release,5/5/07,std251,hl7.html,v251,6,19,TRUE,TRUE,6,d:\temp\HL7-xml v2.5.1,TRUE
+81,2.7.1,Official Standard,Final Release,,std271,hl7.html,v271,8,24,TRUE,TRUE,8,d:\temp\HL7-xml v2.7.1,TRUE
+91,2.8.1,Official Standard,Final Release,,std281,hl7.html,v281,9,27,TRUE,TRUE,9,d:\temp\HL7-xml v2.8.1,TRUE
+92,2.8.2,Official Standard,Final Release,,std282,hl7.html,v282,92,28,TRUE,TRUE,9,,TRUE
+100,2.1 DE,German Additions,in progress,,std21de,,v21de,1,2,FALSE,FALSE,1,,FALSE
+300,2.3 DE,German Additions,in progress,,std23de,,v23de,3,6,TRUE,TRUE,3,,FALSE
+400,2.3.1 DE,German Additions,in progress,,std231de,,v231de,4,9,TRUE,TRUE,4,,FALSE
+500,2.4 DE,German Additions,in progress,,std24de,,v24de,5,11,TRUE,TRUE,5,d:\temp\HL7-xml v2.4 DE,FALSE
+530,2.4 CH,Swiss Additionas,in progress,12/17/11,std24ch,,v24ch,5,13,TRUE,TRUE,5,,FALSE
+540,2.4 UK,British Additions,in progress,,std24uk,,v24uk,5,12,TRUE,TRUE,5,,FALSE
+610,2.5.1 DE,German Additions,in progress,,std251de,,v251de,61,20,FALSE,FALSE,61,,FALSE
+620,2.5 AT,Austrian Additions,in progress,6/10/08,std25at,hl7.html,v25at,6,17,TRUE,TRUE,6,,FALSE
+630,2.5 FR,French Additions,in progress,7/10/14,std25fr,,v25fr,6,18,TRUE,TRUE,6,,FALSE
+640,2.5 IHE,IHE,Final Release,,std25ihe,,v25ihe,6,16,TRUE,TRUE,6,,FALSE
+700,2.6 DE,German Additions,in progress,,std26de,,v26de,7,22,TRUE,TRUE,7,,FALSE
+800,2.7 DE,German Additions,in progress,,std27de,,v27de,8,25,FALSE,FALSE,8,,FALSE

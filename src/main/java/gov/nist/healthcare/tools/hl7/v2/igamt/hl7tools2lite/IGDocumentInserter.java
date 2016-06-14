@@ -125,7 +125,7 @@ public class IGDocumentInserter implements Runnable {
 			for (Message sm : msgsPreLib) {
 				System.out.println("msgs=" + app.getProfile().getMessages().getChildren().size() + " msg name="
 						+ sm.getName() + " children=" + sm.getChildren().size());
-				sm.setScope(SCOPE.HL7STANDARD);
+//				sm.setScope(SCOPE.HL7STANDARD);
 				app.getProfile().getMessages().addMessage(sm);
 
 				Set<Segment> segs = appPreLib.getProfile().getSegments().getChildren();
@@ -143,8 +143,8 @@ public class IGDocumentInserter implements Runnable {
 					seg.setHl7Version(app.getProfile().getMetaData().getHl7Version());
 					if (seg.getId() != null) {
 						seg.getLibIds().add(app.getProfile().getSegmentLibrary().getId());
-						app.getProfile().getSegmentLibrary()
-								.addSegment(new SegmentLink(seg.getId(), seg.getName(), ""));
+//						app.getProfile().getSegmentLibrary()
+//								.addSegment(new SegmentLink(seg.getId(), seg.getName(), ""));
 					} else {
 						log.error("Null id seg=" + seg.toString());
 					}
@@ -165,7 +165,7 @@ public class IGDocumentInserter implements Runnable {
 				for (Datatype dt : dts) {
 					if (dt.getId() != null) {
 						dt.setScope(Constant.SCOPE.HL7STANDARD);
-						dt.setStatus(Constant.STATUS.PUBLISHED);
+//						dt.setStatus(Constant.STATUS.PUBLISHED);
 						dt.setHl7Version(app.getProfile().getMetaData().getHl7Version());
 						dt.getLibIds().add(app.getProfile().getDatatypeLibrary().getId());
 						app.getProfile().getDatatypeLibrary()

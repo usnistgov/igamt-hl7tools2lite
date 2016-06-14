@@ -220,7 +220,7 @@
 		<dependency>
 			<groupId>gov.nist.healthcare.hl7tools</groupId>
 			<artifactId>hl7tools-service</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>1.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>

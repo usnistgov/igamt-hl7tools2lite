@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>mdb</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>root@127.0.0.1</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJX
+			TlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAF
+			gAdUdHlwZVRyb3dzXxAdU2VsZWN0aW9uRGV0YWlsVHlwZU5TSW5k
+			ZXhTZXTSFwsYGVxOU1JhbmdlQ291bnQQAIAG0hscHR5aJGNsYXNz
+			bmFtZVgkY2xhc3Nlc1pOU0luZGV4U2V0oh8gWk5TSW5kZXhTZXRY
+			TlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVk
+			QXJjaGl2ZXLRJidUZGF0YYABAAgAEQAaACMALQAyADcAQABGAE0A
+			VQBgAGcAagBsAG4AcQBzAHUAdwB8AIEAoQCmALMAtQC3ALwAxwDQ
+			ANsA3gDpAPIA9wEEAQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1133, 695}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>table</key>
+			<string>seg92</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>248</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>select * 
+from seg92 inner join ele92 on seg92.`seg_code` = ele92.`seg_code`</string>
+		<string>create or replace view ele92 as
+SELECT m.`message_structure`, m.`seq_no`, m.`groupname`, m.`seg_code`, m.`modification`, m.`optional`, m.`repetitional`, m.`version_id` 
+FROM hl7versions v INNER JOIN hl7msgstructidsegments m ON v.version_id = m.version_id 
+WHERE v.`hl7_version` = '2.8.2'</string>
+		<string>create or replace view ele92 as
+SELECT m.`message_structure`, m.`seq_no`, m.`groupname`, m.`seg_code`, m.`modification`, m.`optional`, m.`repetitional`, m.`version_id` 
+FROM hl7versions v INNER JOIN hl7msgstructidsegments m ON v.version_id = m.version_id 
+WHERE v.`hl7_version` = '2.8.2'
+ORDER BY m.`seg_code`</string>
+		<string>create or replace view seg92 as 
+SELECT v.version_id, v.hl7_version, s.seg_code, s.description, s.visible
+FROM hl7versions v INNER JOIN hl7segments s ON v.version_id = s.version_id
+WHERE v.`hl7_version` = "2.8.2"
+AND s.visible = 'TRUE'</string>
+		<string>SET @row_number = 0;
+SELECT (@row_number:=@row_number + 1) AS id, m.`message_structure`, m.`seq_no`, m.`groupname`, m.`seg_code`, m.`modification`, m.`optional`, m.`repetitional`, m.`version_id` 
+FROM hl7versions v INNER JOIN hl7msgstructidsegments m ON v.version_id = m.version_id 
+WHERE v.`hl7_version` = '2.8.2'
+ORDER BY m.`seg_code`</string>
+		<string>SET @row_number = 0;
+SELECT (@row_number:=@row_number + 1) AS id, m.`message_structure`, m.`seq_no`, m.`groupname`, m.`seg_code`, m.`modification`, m.`optional`, m.`repetitional` 
+FROM hl7versions v INNER JOIN hl7msgstructidsegments m ON v.version_id = m.version_id 
+WHERE v.`hl7_version` = '2.8.2'
+ORDER BY m.`seg_code`</string>
+		<string>SET @row_number = 0;
+SELECT (@row_number:=@row_number + 1) AS id, m.`message_structure`, m.`seq_no`, m.`groupname`, m.`seg_code`, m.`modification`, m.`optional`, m.`repetitional` 
+FROM hl7versions v INNER JOIN hl7msgstructidsegments m ON v.version_id = m.version_id 
+WHERE v.`hl7_version` = '2.8.2'</string>
+		<string>SELECT v.version_id, v.hl7_version, s.seg_code, s.description, s.visible
+FROM hl7versions v INNER JOIN hl7segments s ON v.version_id = s.version_id
+WHERE v.`hl7_version` = "2.8.2"
+AND s.visible = 'TRUE'</string>
+		<string>SELECT m.`message_structure` , m.`description`, m.`section`, e.`event_code`, e.`message_structure_snd` 
+FROM hl7versions v 
+INNER JOIN hl7msgstructids m ON v.`version_id` = m.`version_id` 
+INNER JOIN hl7eventmessagetypes e ON v.`version_id` = e.`version_id` 
+WHERE v.`hl7_version` = '2.8.2'
+AND m.`message_structure` = e.`message_structure_snd`</string>
+		<string>SELECT m.`message_structure` , m.`description`, m.`section`, e.`event_code`, e.`message_structure_snd` 
+FROM hl7versions v 
+INNER JOIN hl7msgstructids m ON v.`version_id` = m.`version_id` 
+INNER JOIN hl7eventmessagetypes e ON v.`version_id` = e.`version_id` 
+WHERE v.`hl7_version` = '2.8.2'</string>
+		<string>SELECT m.`message_structure` , m.`description`, m.`section`, e.`message_structure_snd` 
+FROM hl7versions v 
+INNER JOIN hl7msgstructids m ON v.`version_id` = m.`version_id` 
+INNER JOIN hl7eventmessagetypes e ON v.`version_id` = e.`version_id` 
+WHERE v.`hl7_version` = '2.8.2'</string>
+		<string>SELECT e.`event_code`, e.`message_structure_snd`, e.`message_structure_return` 
+ FROM hl7versions v  
+ INNER JOIN hl7eventmessagetypes e ON v.`version_id` = e.`version_id`
+ WHERE v.`hl7_version` = '2.8.2'  
+ AND e.`message_structure_snd` IS NOT NULL
+ ORDER BY e.`event_code`</string>
+		<string>SELECT m.`message_structure` , m.`description`, m.`section` FROM hl7versions v INNER JOIN hl7msgstructids m ON v.`version_id` = m.`version_id` WHERE v.`hl7_version` = '2.8.2'</string>
+		<string>SELECT m.`message_structure` , m.adescription`, m.`section` FROM hl7versions v INNER JOIN hl7msgstructids m ON v.`version_id` = m.`version_id` WHERE v.`hl7_version` = '2.8.2';</string>
+		<string>SELECT m.`message_structure`, m`description`, m.`section` FROM hl7versions v INNER JOIN hl7msgstructids m ON v.`version_id` = m.`version_id` WHERE v.`hl7_version` = '2.8.2'</string>
+		<string>SELECT m.`message_structure`, m`description`, m.`section` FROM hl7versions v INNER JOIN hl7msgstructids m ON v.version_id = m.version_id WHERE v.`hl7_version` = '2.8.2'</string>
+		<string>SELECT HL7Versions.version_id, HL7Versions.hl7_version,
+HL7Segments.seg_code, HL7Segments.description, HL7Segments.visible
+FROM HL7Versions INNER JOIN HL7Segments ON HL7Versions.version_id =
+HL7Segments.version_id
+WHERE (((HL7Versions.version_id)=92) AND ((HL7Segments.visible)='TRUE'))</string>
+		<string>SELECT m.`message_structure`, m.`seq_no`, m.`groupname`, m.`seg_code` FROM hl7versions v INNER JOIN hl7msgstructidsegments m ON v.version_id = m.version_id WHERE v.`hl7_version` = '2.8.2' AND m.`version_id` = v.`version_id` AND (m.`seg_code` = 'MSH' || length(m.`groupname`) &gt; 0) ORDER BY m.`message_structure`, m.`seq_no`</string>
+		<string>SELECT m.`message_structure`, m.`seq_no`, m.`groupname`, m.`seg_code` FROM hl7versions v INNER JOIN hl7msgstructidsegments m ON v.version_id = m.version_id WHERE v.`hl7_version` = '2.8.2' AND m.`version_id` = v.`version_id` AND (m.`seq_no` = 1 || length(m.`groupname`) &gt; 0) ORDER BY m.`message_structure`, m.`seq_no`</string>
+		<string>SELECT m.`message_structure`, m.`seq_no`, m.`groupname`, m.`seg_code`, m.`modification`, m.`optional`, m.`repetitional` 
+FROM hl7versions v INNER JOIN hl7msgstructidsegments m ON v.version_id = m.version_id 
+WHERE v.`hl7_version` = '2.8.2'</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.11-log</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

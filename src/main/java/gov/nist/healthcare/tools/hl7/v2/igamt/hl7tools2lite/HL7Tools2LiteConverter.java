@@ -42,10 +42,9 @@ import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatypes;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Extensibility;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Field;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Group;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.IGDocumentScope;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Message;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Messages;
-import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ProfileMetaData;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Profile;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Segment;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.SegmentRef;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.SegmentRefOrGroup;
@@ -85,17 +84,17 @@ public class HL7Tools2LiteConverter implements Runnable {
 		mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igl"));
 		log.info("start...");
 		log.info("Dropping mongo collection profile...");
-		mongoOps.dropCollection(ProfilePreLib.class);
+//		mongoOps.dropCollection(ProfilePreLib.class);
 		List<String> versions = service.getSupportedHL7Versions();
 		// if (!OUTPUT_DIR.exists()) {
 		// OUTPUT_DIR.mkdir();
 		// }
 		for (String version : versions) {
 			this.version = version;
-			ProfilePreLib profile = doVersion(version);
-			mongoOps.insert(profile);
+			ProfilePreLib profile = doVersion("2.8.2");
+//			mongoOps.insert(profile);
 			igLibraries.put(version, ig);
-			profiles.put(version, profile);
+//			profiles.put(version, profile);
 		}
 		log.info("...end");
 	}
@@ -124,9 +123,9 @@ public class HL7Tools2LiteConverter implements Runnable {
 			profile = convert(ig);
 			profile.setId(generateId());
 			profile.setScope(IGDocumentScope.HL7STANDARD);
-			ProfileMetaData pmd = new ProfileMetaData();
+			ProfileMetaData pmd = new ProfileMetaDataPreLib();
 			pmd.setOrgName("NIST");
-//  			pmd.setIdentifier("Default Identifier");
+			pmd.setIdentifier("Default Identifier");
 			pmd.setHl7Version(version);
 			pmd.setName("Default Name");
 			profile.setMetaData(pmd);
@@ -143,7 +142,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 	}
 
 	ProfilePreLib convert(IGLibrary i) {
-		ProfilePreLib p = new ProfilePreLib();
+		Profile p = new Profile();
 		Tables tabs = convertTables(i.getCodeTableLibrary());
 		convertDataTypesFirstPass(i.getDatatypeLibrary());
 		convertDataTypesSecondPass(i.getDatatypeLibrary());

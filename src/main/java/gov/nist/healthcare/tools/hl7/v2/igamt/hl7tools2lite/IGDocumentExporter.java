@@ -41,15 +41,13 @@ public class IGDocumentExporter implements Runnable {
 	public final static File OUTPUT_DIR_IGAMT = new File(System.getenv("IGAMT_OUT") + "/igDocuments");
 
 	public void run() {
-		if (OUTPUT_DIR.exists()) {
-			OUTPUT_DIR.delete();
+		if (!OUTPUT_DIR.exists()) {
+			OUTPUT_DIR.mkdir();
 		}
-		OUTPUT_DIR.mkdir();
 
-		if (OUTPUT_DIR_IGAMT.exists()) {
-			OUTPUT_DIR_IGAMT.delete();
+		if (!OUTPUT_DIR_IGAMT.exists()) {
+			OUTPUT_DIR_IGAMT.mkdir();
 		}
-		OUTPUT_DIR_IGAMT.mkdir();
 		
 		MongoTemplate mongoOps;
 		try {

@@ -10,20 +10,26 @@
  */
 package gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.StringWriter;
 import java.io.Writer;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.MongoClient;
 
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Table;
 
 public class TableExporter implements Runnable {
@@ -45,24 +51,65 @@ public class TableExporter implements Runnable {
 
 		MongoTemplate mongoOps;
 		mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igl"));
+		Criteria where = Criteria.where("scope").is("HL7STANDARD");
+		Query qry = Query.query(where);
+		qry.with(new Sort(Sort.Direction.ASC, "hl7Version"));
 		ObjectMapper mapper = new ObjectMapper();
 
-		List<Table> tabs = mongoOps.findAll(Table.class);
+		List<Table> tabs = mongoOps.find(qry, Table.class);
+		String hl7VersionOld = null;
+		String hl7Version = null;
+		StringBuilder bld = new StringBuilder();
+		bld.append("[");
 
 		for (Table tab : tabs) {
-			String hl7Version = tab.getHl7Version();
-			String fName = "table-" + tab.getBindingIdentifier() + "-" + tab.getScope().name() + "-" + hl7Version
-					+ ".json";
-			File outfileLocal = new File(OUTPUT_DIR_LOCAL, fName);
-			File outfileIGAMT = new File(OUTPUT_DIR_IGAMT, fName);
-			try {
-				Writer jsonLocal = new FileWriter(outfileLocal);
-				mapper.writerWithDefaultPrettyPrinter().writeValue(jsonLocal, tab);
-				Writer jsonIGAMT = new FileWriter(outfileIGAMT);
-				mapper.writerWithDefaultPrettyPrinter().writeValue(jsonIGAMT, tab);
-			} catch (IOException e) {
-				log.error("", e);
+			hl7Version = tab.getHl7Version();
+			hl7VersionOld = hl7VersionOld == null ? hl7Version : hl7VersionOld;
+			if (hl7Version.equals(hl7VersionOld)) {
+				String fName = "tables-" + tab.getBindingIdentifier() + "-" + tab.getScope().name() + "-" + hl7Version
+						+ ".json";
+				File outfileLocal = new File(OUTPUT_DIR_LOCAL, fName);
+				File outfileIGAMT = new File(OUTPUT_DIR_IGAMT, fName);
+				try {
+					Writer jsonLocal = new FileWriter(outfileLocal);
+					mapper.writerWithDefaultPrettyPrinter().writeValue(jsonLocal, tab);
+					Writer jsonIGAMT = new FileWriter(outfileIGAMT);
+					mapper.writerWithDefaultPrettyPrinter().writeValue(jsonIGAMT, tab);
+					Writer jsonCollection = new StringWriter();
+					mapper.writerWithDefaultPrettyPrinter().writeValue(jsonCollection, tab);
+					bld.append(jsonCollection.toString());
+					bld.append(",");
+				} catch (IOException e) {
+					log.error("", e);
+				}
+			} else {
+				writeCollection(hl7VersionOld, bld);
+				hl7VersionOld = hl7Version;
+				bld = new StringBuilder();
+				bld.append("[");
 			}
+		}
+		writeCollection(hl7Version, bld);
+	}
+
+	void writeCollection(String hl7Version, StringBuilder bld) {
+		int pos = bld.lastIndexOf(",");
+		bld.delete(pos, pos + 1);
+		bld.append("]");
+		String fNameColl = "tables-" + "HL7STANDARD-" + hl7Version + ".json";
+		File outfileLocal = new File(OUTPUT_DIR_LOCAL, fNameColl);
+		File outfileIGAMT = new File(OUTPUT_DIR_IGAMT, fNameColl);
+		BufferedWriter writeCollLocal = null;
+		BufferedWriter writeCollIGAMT = null;
+		try {
+			writeCollLocal = new BufferedWriter(new FileWriter(outfileLocal));
+			writeCollIGAMT = new BufferedWriter(new FileWriter(outfileIGAMT));
+			writeCollLocal.write(bld.toString());
+			writeCollIGAMT.write(bld.toString());
+			writeCollLocal.close();
+			writeCollIGAMT.close();
+		} catch (IOException e) {
+			log.error("", e);
 		}
 	}
 

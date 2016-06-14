@@ -1,0 +1,1091 @@
+data_type_code,version_id,description,length,anchor,owl_gen
+-,7,withdrawn,,,FALSE
+-,8,withdrawn,,,FALSE
+-,9,withdrawn,,,FALSE
+-,61,withdrawn,,,FALSE
+-,81,withdrawn,,,FALSE
+-,91,withdrawn,,,FALSE
+-,92,withdrawn,,,FALSE
+-,540,withdrawn,,,FALSE
+AD,1,ADDRESS,0,,FALSE
+AD,2,ADDRESS,0,,FALSE
+AD,3,address,0,,FALSE
+AD,4,Address,0,ch2fin.html#Heading22,FALSE
+AD,5,Address,,,FALSE
+AD,6,Address,,ch02A.html#Heading3,FALSE
+AD,7,Address,,ch02a.html#Heading3,FALSE
+AD,8,Address,,ch02a.html#Heading3,FALSE
+AD,9,Address,,ch02a.html#Heading3,FALSE
+AD,60,Address,,ch02A.html#Heading3,FALSE
+AD,61,Address,,ch02a.html#Heading3,FALSE
+AD,81,Address,,ch02a.html#Heading3,FALSE
+AD,91,Address,,ch02a.html#Heading3,FALSE
+AD,92,Address,,ch02a.html#Heading3,FALSE
+AUI,4,authorization information,,,FALSE
+AUI,5,authorization information,,,FALSE
+AUI,6,Authorization Information,,ch02A.html#Heading13,FALSE
+AUI,7,Authorization Information,,ch02a.html#Heading13,FALSE
+AUI,8,Authorization Information,,ch02a.html#Heading13,FALSE
+AUI,9,Authorization Information,,ch02a.html#Heading13,FALSE
+AUI,60,Authorization Information,,ch02A.html#Heading13,FALSE
+AUI,61,Authorization Information,,ch02a.html#Heading13,FALSE
+AUI,81,Authorization Information,,ch02a.html#Heading11,FALSE
+AUI,91,Authorization Information,,ch02a.html#Heading13,FALSE
+AUI,92,Authorization Information,,ch02a.html#Heading13,FALSE
+CCD,4,charge time,,,FALSE
+CCD,5,charge time,,,FALSE
+CCD,6,Charge Code and Date,,ch02A.html#Heading18,FALSE
+CCD,7,Charge Code and Date,,ch02a.html#Heading18,FALSE
+CCD,8,Charge Code and Date,,ch02a.html#Heading18,FALSE
+CCD,9,Charge Code and Date,,ch02a.html#Heading18,FALSE
+CCD,60,Charge Code and Date,,ch02A.html#Heading18,FALSE
+CCD,61,Charge Code and Date,,ch02a.html#Heading18,FALSE
+CCD,81,Charge Code and Date,,ch02a.html#Heading15,FALSE
+CCD,91,Charge Code and Date,,ch02a.html#Heading18,FALSE
+CCD,92,Charge Code and Date,,ch02a.html#Heading18,FALSE
+CCP,4,calibration parameters,,,FALSE
+CCP,5,calibration parameters,,,FALSE
+CCP,6,Channel Calibration Parameters,,ch02A.html#Heading22,FALSE
+CCP,7,Channel Calibration Parameters,,ch02a.html#Heading22,FALSE
+CCP,8,Channel Calibration Parameters,,ch02a.html#Heading22,FALSE
+CCP,9,Channel Calibration Parameters,,ch02a.html#Heading22,FALSE
+CCP,60,Channel Calibration Parameters,,ch02A.html#Heading22,FALSE
+CCP,61,Channel Calibration Parameters,,ch02a.html#Heading22,FALSE
+CCP,81,Channel Calibration Parameters,,ch02a.html#Heading18,FALSE
+CCP,91,Channel Calibration Parameters,,ch02a.html#Heading22,FALSE
+CCP,92,Channel Calibration Parameters,,ch02a.html#Heading22,FALSE
+CD,3,channel definition,0,,FALSE
+CD,4,Channel definition,0,ch2fin.html#Heading32,FALSE
+CD,5,Channel definition,,,FALSE
+CD,6,Channel Definition,,ch02A.html#Heading27,FALSE
+CD,7,Channel Definition,,ch02a.html#Heading27,FALSE
+CD,8,Channel Definition,,ch02a.html#Heading27,FALSE
+CD,9,Channel Definition,,ch02a.html#Heading27,FALSE
+CD,60,Channel Definition,,ch02A.html#Heading27,FALSE
+CD,61,Channel Definition,,ch02a.html#Heading27,FALSE
+CD,81,Channel Definition,,ch02a.html#Heading22,FALSE
+CD,91,Channel Definition,,ch02a.html#Heading27,FALSE
+CD,92,Channel Definition,,ch02a.html#Heading27,FALSE
+CE,1,CODED ELEMENT,0,,FALSE
+CE,2,CODED ELEMENT,0,,FALSE
+CE,3,CODED ELEMENT,0,,FALSE
+CE,4,Coded element,0,ch2fin.html#Heading33,FALSE
+CE,5,Coded element,,,FALSE
+CE,6,Coded Element,,ch02A.html#Heading34,FALSE
+CE,7,Coded Element,,ch02a.html#Heading35,TRUE
+CE,20,Coded elements,,,FALSE
+CE,60,Coded Element,,ch02A.html#Heading34,FALSE
+CE,61,Coded Element,,ch02a.html#Heading34,FALSE
+CE,540,Coded Element,,,FALSE
+CE,630,Coded Element,,,FALSE
+CF,2,CODED ELEMENT WITH FORMATTED VALUES,0,,FALSE
+CF,3,coded element with formatted values,0,,FALSE
+CF,4,Coded element with formatted values,0,ch2fin.html#Heading38,FALSE
+CF,5,Coded element with formatted values,,,FALSE
+CF,6,Coded Element with Formatted Values,,ch02A.html#Heading42,FALSE
+CF,7,Coded Element with Formatted Values,,ch02a.html#Heading36,FALSE
+CF,8,Coded Element with Formatted Values,,ch02a.html#Heading36,FALSE
+CF,9,Coded Element with Formatted Values,,ch02a.html#Heading36,FALSE
+CF,60,Coded Element with Formatted Values,,ch02A.html#Heading42,FALSE
+CF,61,Coded Element with Formatted Values,,ch02a.html#Heading42,FALSE
+CF,81,Coded Element with Formatted Values,,ch02a.html#Heading30,FALSE
+CF,91,Coded Element with Formatted Values,,ch02a.html#Heading36,FALSE
+CF,92,Coded Element with Formatted Values,,ch02a.html#Heading36,FALSE
+CK,1,COMPOSITE ID W/CHK DIGIT,0,,FALSE
+CK,2,COMPOSITE ID W/CHK DIGIT,0,,FALSE
+CK,3,composite ID with check digit,0,,FALSE
+CK,4,Composite ID with check digit,0,ch2fin.html#Heading39,FALSE
+CK,5,Composite ID with check digit,,,FALSE
+CM,1,COMPOSITE,0,,FALSE
+CM,2,COMPOSITE,0,,FALSE
+CM,3,COMPOSITE,,,FALSE
+CN,1,COMPOSITE ID AND NAME,0,,FALSE
+CN,2,COMPOSITE ID AND NAME,0,,FALSE
+CN,3,composite ID number and name,0,,FALSE
+CN,4,Composite ID number and name,0,ch2fin.html#Heading45,FALSE
+CN,5,Composite ID number and name,,,FALSE
+CNE,4,Coded with no exceptions,0,ch2fin.html#Heading55,FALSE
+CNE,5,Coded with no exceptions,,,FALSE
+CNE,6,Coded with No Exceptions,,ch02A.html#Heading50,FALSE
+CNE,7,Coded with No Exceptions,,ch02a.html#Heading44,TRUE
+CNE,8,Coded with No Exceptions,,ch02a.html#Heading60,FALSE
+CNE,9,Coded with No Exceptions,,ch02a.html#Heading60,FALSE
+CNE,60,Coded with No Exceptions,,ch02A.html#Heading50,FALSE
+CNE,61,Coded with No Exceptions,,ch02a.html#Heading50,FALSE
+CNE,81,Coded with No Exceptions,,ch02a.html#Heading53,FALSE
+CNE,91,Coded with No Exceptions,,ch02a.html#Heading60,FALSE
+CNE,92,Coded with No Exceptions,,ch02a.html#Heading60,FALSE
+CNN,5,Composite ID number and Name simplified,,,FALSE
+CNN,6,Composite ID Number and Name Simplified,,ch02A.html#Heading61,FALSE
+CNN,7,Composite ID Number and Name Simplified,,ch02a.html#Heading55,FALSE
+CNN,8,Composite ID Number and Name Simplified,,ch02a.html#Heading84,FALSE
+CNN,9,Composite ID Number and Name Simplified,,ch02a.html#Heading84,FALSE
+CNN,60,Composite ID Number and Name Simplified,,ch02A.html#Heading61,FALSE
+CNN,61,Composite ID Number and Name Simplified,,ch02a.html#Heading61,FALSE
+CNN,81,Composite ID Number and Name Simplified,,ch02a.html#Heading76,FALSE
+CNN,91,Composite ID Number and Name Simplified,,ch02a.html#Heading84,FALSE
+CNN,92,Composite ID Number and Name Simplified,,ch02a.html#Heading84,FALSE
+CNS,4,Composite ID number and Name simplified,,,FALSE
+CP,3,composite price,0,,FALSE
+CP,4,Composite price,0,ch2fin.html#Heading63,FALSE
+CP,5,Composite price,,,FALSE
+CP,6,Composite Price,,ch02A.html#Heading74,FALSE
+CP,7,Composite Price,,ch02a.html#Heading68,FALSE
+CP,8,Composite Price,,ch02a.html#Heading97,FALSE
+CP,9,Composite Price,,ch02a.html#Heading97,FALSE
+CP,60,Composite Price,,ch02A.html#Heading74,FALSE
+CP,61,Composite Price,,ch02a.html#Heading74,FALSE
+CP,81,Composite Price,,ch02a.html#Heading88,FALSE
+CP,91,Composite Price,,ch02a.html#Heading97,FALSE
+CP,92,Composite Price,,ch02a.html#Heading97,FALSE
+CQ,1,COMPOSITE QUANTITY/UNITS,0,,FALSE
+CQ,2,COMPOSITE QUANTITY WITH UNITS,0,,FALSE
+CQ,3,composite quantity with units,0,,FALSE
+CQ,4,Composite quantity with units,0,ch2fin.html#Heading70,FALSE
+CQ,5,Composite quantity with units,,,FALSE
+CQ,6,Composite Quantity with Units,,ch02A.html#Heading82,FALSE
+CQ,7,Composite Quantity with Units,,ch02a.html#Heading76,FALSE
+CQ,8,Composite Quantity with Units,,ch02a.html#Heading105,FALSE
+CQ,9,Composite Quantity with Units,,ch02a.html#Heading105,FALSE
+CQ,60,Composite Quantity with Units,,ch02A.html#Heading82,FALSE
+CQ,61,Composite Quantity with Units,,ch02a.html#Heading82,FALSE
+CQ,81,Composite Quantity with Units,,ch02a.html#Heading95,FALSE
+CQ,91,Composite Quantity with Units,,ch02a.html#Heading105,FALSE
+CQ,92,Composite Quantity with Units,,ch02a.html#Heading105,FALSE
+CSU,4,channel sensitivity units,,,FALSE
+CSU,5,channel sensitivity units,,,FALSE
+CSU,6,Channel Sensitivity,,ch02A.html#Heading86,FALSE
+CSU,7,Channel Sensitivity and Units,,ch02a.html#Heading80,FALSE
+CSU,8,Channel Sensitivity and Units,,ch02a.html#Heading109,FALSE
+CSU,9,Channel Sensitivity and Units,,ch02a.html#Heading109,FALSE
+CSU,60,Channel Sensitivity,,ch02A.html#Heading86,FALSE
+CSU,61,Channel Sensitivity,,ch02a.html#Heading86,FALSE
+CSU,81,Channel Sensitivity and Units,,ch02a.html#Heading98,FALSE
+CSU,91,Channel Sensitivity and Units,,ch02a.html#Heading109,FALSE
+CSU,92,Channel Sensitivity and Units,,ch02a.html#Heading109,FALSE
+CWE,4,Coded with exceptions,0,ch2fin.html#Heading73,FALSE
+CWE,5,Coded with exceptions,,,FALSE
+CWE,6,Coded with Exceptions,,ch02A.html#Heading95,FALSE
+CWE,7,Coded with Exceptions,,ch02a.html#Heading89,TRUE
+CWE,8,Coded with Exceptions,,ch02a.html#Heading134,FALSE
+CWE,9,Coded with Exceptions,,ch02a.html#Heading134,FALSE
+CWE,60,Coded with Exceptions,,ch02A.html#Heading95,FALSE
+CWE,61,Coded with Exceptions,,ch02a.html#Heading95,FALSE
+CWE,81,Coded with Exceptions,,ch02a.html#Heading122,FALSE
+CWE,91,Coded with Exceptions,,ch02a.html#Heading134,FALSE
+CWE,92,Coded with Exceptions,,ch02a.html#Heading134,FALSE
+CWE,630,Coded with Exceptions,,,FALSE
+CX,3,extended composite ID with check digit,0,,FALSE
+CX,4,Extended composite ID with check digit,0,ch2fin.html#Heading82,FALSE
+CX,5,Extended composite ID with check digit,,,FALSE
+CX,6,Extended Composite ID with Check Digit,,ch02A.html#Heading106,FALSE
+CX,7,Extended Composite ID with Check Digit,,ch02a.html#Heading100,TRUE
+CX,8,Extended Composite ID with Check Digit,,ch02a.html#Heading158,FALSE
+CX,9,Extended Composite ID with Check Digit,,ch02a.html#Heading158,FALSE
+CX,60,Extended Composite ID with Check Digit,,ch02A.html#Heading106,FALSE
+CX,61,Extended Composite ID with Check Digit,,ch02a.html#Heading106,FALSE
+CX,81,Extended Composite ID with Check Digit,,ch02a.html#Heading145,FALSE
+CX,91,Extended Composite ID with Check Digit,,ch02a.html#Heading158,FALSE
+CX,92,Extended Composite ID with Check Digit,,ch02a.html#Heading158,FALSE
+CX,530,Extended Composite ID with Check Digit,,,FALSE
+CX,630,,,,FALSE
+DDI,4,daily deductible,,,FALSE
+DDI,5,daily deductible,,,FALSE
+DDI,6,Daily Deductible Information,,ch02A.html#Heading118,FALSE
+DDI,7,Daily Deductible Information,,ch02a.html#Heading112,FALSE
+DDI,8,Daily Deductible Information,,ch02a.html#Heading172,FALSE
+DDI,9,Daily Deductible Information,,ch02a.html#Heading172,FALSE
+DDI,60,Daily Deductible Information,,ch02A.html#Heading118,FALSE
+DDI,61,Daily Deductible Information,,ch02a.html#Heading118,FALSE
+DDI,81,Daily Deductible Information,,ch02a.html#Heading158,FALSE
+DDI,91,Daily Deductible Information,,ch02a.html#Heading172,FALSE
+DDI,92,Daily Deductible Information,,ch02a.html#Heading172,FALSE
+DIN,4,activation date,,,FALSE
+DIN,5,activation date,,,FALSE
+DIN,6,Date and Institution Name,,ch02A.html#Heading123,FALSE
+DIN,7,Date and Institution Name,,ch02a.html#Heading117,FALSE
+DIN,8,Date and Institution Name,,ch02a.html#Heading177,FALSE
+DIN,9,Date and Institution Name,,ch02a.html#Heading177,FALSE
+DIN,60,Date and Institution Name,,ch02A.html#Heading123,FALSE
+DIN,61,Date and Institution Name,,ch02a.html#Heading123,FALSE
+DIN,81,Date and Institution Name,,ch02a.html#Heading162,FALSE
+DIN,91,Date and Institution Name,,ch02a.html#Heading177,FALSE
+DIN,92,Date and Institution Name,,ch02a.html#Heading177,FALSE
+DLD,4,discharge location,,,FALSE
+DLD,5,discharge location,,,FALSE
+DLD,6,Discharge Location and Date,,ch02A.html#Heading127,FALSE
+DLD,7,Discharge to Location and Date,,ch02a.html#Heading121,FALSE
+DLD,8,Discharge to Location and Date,,ch02a.html#Heading181,FALSE
+DLD,9,Discharge to Location and Date,,ch02a.html#Heading181,FALSE
+DLD,60,Discharge Location and Date,,ch02A.html#Heading127,FALSE
+DLD,61,Discharge Location and Date,,ch02a.html#Heading127,FALSE
+DLD,81,Discharge to Location and Date,,ch02a.html#Heading165,FALSE
+DLD,91,Discharge to Location and Date,,ch02a.html#Heading181,FALSE
+DLD,92,Discharge to Location and Date,,ch02a.html#Heading181,FALSE
+DLD,630,Discharge to Location and Date,,,FALSE
+DLN,3,Driver’s license number,,,FALSE
+DLN,4,Driver’s license number,0,ch2fin.html#Heading89,FALSE
+DLN,5,Driver’s license number,,,FALSE
+DLN,6,Driver_s License Number,,ch02A.html#Heading131,FALSE
+DLN,7,Driver's License Number,,ch02a.html#Heading125,FALSE
+DLN,8,Driver's License Number,,ch02a.html#Heading185,FALSE
+DLN,9,Driver's License Number,,ch02a.html#Heading185,FALSE
+DLN,60,Driver_s License Number,,ch02A.html#Heading131,FALSE
+DLN,61,Driver's License Number,,ch02a.html#Heading131,FALSE
+DLN,81,Driver's License Number,,ch02a.html#Heading168,FALSE
+DLN,91,Driver's License Number,,ch02a.html#Heading185,FALSE
+DLN,92,Driver's License Number,,ch02a.html#Heading185,FALSE
+DLT,4,delta check,,,FALSE
+DLT,5,delta check,,,FALSE
+DLT,6,Delta,,ch02A.html#Heading136,FALSE
+DLT,7,Delta,,ch02a.html#Heading130,FALSE
+DLT,8,Delta,,ch02a.html#Heading190,FALSE
+DLT,9,Delta,,ch02a.html#Heading190,FALSE
+DLT,60,Delta,,ch02A.html#Heading136,FALSE
+DLT,61,Delta,,ch02a.html#Heading136,FALSE
+DLT,81,Delta,,ch02a.html#Heading172,FALSE
+DLT,91,Delta,,ch02a.html#Heading190,FALSE
+DLT,92,Delta,,ch02a.html#Heading190,FALSE
+DR,3,Date/time range,,,FALSE
+DR,4,Date/time range,0,ch2fin.html#Heading93,FALSE
+DR,5,Date/time range,,,FALSE
+DR,6,Date/Time Range,,ch02A.html#Heading142,FALSE
+DR,7,Date/Time Range,,ch02a.html#Heading136,TRUE
+DR,8,Date/Time Range,,ch02a.html#Heading196,FALSE
+DR,9,Date/Time Range,,ch02a.html#Heading196,FALSE
+DR,60,Date/Time Range,,ch02A.html#Heading142,FALSE
+DR,61,Date/Time Range,,ch02a.html#Heading142,FALSE
+DR,81,Date/Time Range,,ch02a.html#Heading177,FALSE
+DR,91,Date/Time Range,,ch02a.html#Heading196,FALSE
+DR,92,Date/Time Range,,ch02a.html#Heading196,FALSE
+DT,1,DATE,8,,FALSE
+DT,2,DATE,8,,FALSE
+DT,3,DATE,,,FALSE
+DT,4,Date,0,ch2fin.html#Heading96,FALSE
+DT,5,Date,,,FALSE
+DT,6,Date,,ch02A.html#Heading146,FALSE
+DT,7,Date,,ch02a.html#Heading140,FALSE
+DT,8,Date,,ch02a.html#Heading200,FALSE
+DT,9,Date,,ch02a.html#Heading200,FALSE
+DT,20,Date,,,FALSE
+DT,60,Date,,ch02A.html#Heading146,FALSE
+DT,61,Date,,ch02a.html#Heading146,FALSE
+DT,81,Date,,ch02a.html#Heading180,FALSE
+DT,91,Date,,ch02a.html#Heading200,FALSE
+DT,92,Date,,ch02a.html#Heading200,FALSE
+DTM,6,Date/Time,,ch02A.html#Heading147,FALSE
+DTM,7,Date/Time,,ch02a.html#Heading141,FALSE
+DTM,8,Date/Time,,ch02a.html#Heading201,FALSE
+DTM,9,Date/Time,,ch02a.html#Heading201,FALSE
+DTM,60,Date/Time,,ch02A.html#Heading147,FALSE
+DTM,61,Date/Time,,ch02a.html#Heading147,FALSE
+DTM,81,Date/Time,,ch02a.html#Heading181,FALSE
+DTM,91,Date/Time,,ch02a.html#Heading201,FALSE
+DTM,92,Date/Time,,ch02a.html#Heading201,FALSE
+DTN,4,Day Type and Number,,,FALSE
+DTN,5,Day Type and Number,,,FALSE
+DTN,6,Day Type and Number,,ch02A.html#Heading148,FALSE
+DTN,7,Day Type and Number,,ch02a.html#Heading142,FALSE
+DTN,8,Day Type and Number,,ch02a.html#Heading202,FALSE
+DTN,9,Day Type and Number,,ch02a.html#Heading202,FALSE
+DTN,60,Day Type and Number,,ch02A.html#Heading148,FALSE
+DTN,61,Day Type and Number,,ch02a.html#Heading148,FALSE
+DTN,81,Day Type and Number,,ch02a.html#Heading182,FALSE
+DTN,91,Day Type and Number,,ch02a.html#Heading202,FALSE
+DTN,92,Day Type and Number,,ch02a.html#Heading202,FALSE
+ED,3,encapsulated data,0,,FALSE
+ED,4,Encapsulated data,0,ch2fin.html#Heading97,FALSE
+ED,5,Encapsulated data,,,FALSE
+ED,6,Encapsulated Data,,ch02A.html#Heading152,FALSE
+ED,7,Encapsulated Data,,ch02a.html#Heading146,FALSE
+ED,8,Encapsulated Data,,ch02a.html#Heading206,FALSE
+ED,9,Encapsulated Data,,ch02a.html#Heading206,FALSE
+ED,60,Encapsulated Data,,ch02A.html#Heading152,FALSE
+ED,61,Encapsulated Data,,ch02a.html#Heading152,FALSE
+ED,81,Encapsulated Data,,ch02a.html#Heading185,FALSE
+ED,91,Encapsulated Data,,ch02a.html#Heading206,FALSE
+ED,92,Encapsulated Data,,ch02a.html#Heading206,FALSE
+EI,3,entity identifier,0,,FALSE
+EI,4,Entity identifier,0,ch2fin.html#Heading103,FALSE
+EI,5,Entity identifier,,,FALSE
+EI,6,Entity Identifier,,ch02A.html#Heading159,FALSE
+EI,7,Entity Identifier,,ch02a.html#Heading153,FALSE
+EI,8,Entity Identifier,,ch02a.html#Heading213,FALSE
+EI,9,Entity Identifier,,ch02a.html#Heading213,FALSE
+EI,20,,,,FALSE
+EI,60,Entity Identifier,,ch02A.html#Heading159,FALSE
+EI,61,Entity Identifier,,ch02a.html#Heading159,FALSE
+EI,81,Entity Identifier,,ch02a.html#Heading191,FALSE
+EI,91,Entity Identifier,,ch02a.html#Heading213,FALSE
+EI,92,Entity Identifier,,ch02a.html#Heading213,FALSE
+EI,630,Entity Identifier,,,FALSE
+EIP,4,parent order,,,FALSE
+EIP,5,parent order,,,FALSE
+EIP,6,Entity Identifier Pair,,ch02A.html#Heading165,FALSE
+EIP,7,Entity Identifier Pair,,ch02a.html#Heading159,FALSE
+EIP,8,Entity Identifier Pair,,ch02a.html#Heading219,FALSE
+EIP,9,Entity Identifier Pair,,ch02a.html#Heading219,FALSE
+EIP,60,Entity Identifier Pair,,ch02A.html#Heading165,FALSE
+EIP,61,Entity Identifier Pair,,ch02a.html#Heading165,FALSE
+EIP,81,Entity Identifier Pair,,ch02a.html#Heading196,FALSE
+EIP,91,Entity Identifier Pair,,ch02a.html#Heading219,FALSE
+EIP,92,Entity Identifier Pair,,ch02a.html#Heading219,FALSE
+ELD,4,error,,,FALSE
+ELD,5,error,,,FALSE
+ELD,6,Error Location and Description,,ch02A.html#Heading169,FALSE
+ELD,7,Error Location and Description,,ch02a.html#Heading163,FALSE
+ELD,60,Error Location and Description,,ch02A.html#Heading169,FALSE
+ELD,61,Error Location and Description,,ch02a.html#Heading169,FALSE
+ERL,6,Error Location,,ch02A.html#Heading175,FALSE
+ERL,7,Error Location,,ch02a.html#Heading169,FALSE
+ERL,8,Error Location,,ch02a.html#Heading224,FALSE
+ERL,9,Error Location,,ch02a.html#Heading224,FALSE
+ERL,60,Error Location,,ch02A.html#Heading175,FALSE
+ERL,61,Error Location,,ch02a.html#Heading175,FALSE
+ERL,81,Error Location,,ch02a.html#Heading200,FALSE
+ERL,91,Error Location,,ch02a.html#Heading224,FALSE
+ERL,92,Error Location,,ch02a.html#Heading224,FALSE
+FC,3,Financial class,,,FALSE
+FC,4,Financial class,0,ch2fin.html#Heading108,FALSE
+FC,5,Financial class,,,FALSE
+FC,6,Financial Class,,ch02A.html#Heading183,FALSE
+FC,7,Financial Class,,ch02a.html#Heading177,FALSE
+FC,8,Financial Class,,ch02a.html#Heading232,FALSE
+FC,9,Financial Class,,ch02a.html#Heading232,FALSE
+FC,60,Financial Class,,ch02A.html#Heading183,FALSE
+FC,61,Financial Class,,ch02a.html#Heading183,FALSE
+FC,81,Financial Class,,ch02a.html#Heading207,FALSE
+FC,91,Financial Class,,ch02a.html#Heading232,FALSE
+FC,92,Financial Class,,ch02a.html#Heading232,FALSE
+FN,4,Family Name,,,FALSE
+FN,5,familiy name,,,FALSE
+FN,6,Family Name,,ch02A.html#Heading187,FALSE
+FN,7,Family Name,,ch02a.html#Heading181,TRUE
+FN,8,Family Name,,ch02a.html#Heading236,FALSE
+FN,9,Family Name,,ch02a.html#Heading236,FALSE
+FN,60,Family Name,,ch02A.html#Heading187,FALSE
+FN,61,Family Name,,ch02a.html#Heading187,FALSE
+FN,81,Family Name,,ch02a.html#Heading210,FALSE
+FN,91,Family Name,,ch02a.html#Heading236,FALSE
+FN,92,Family Name,,ch02a.html#Heading236,FALSE
+FT,1,FORMATTED TEXT,0,,FALSE
+FT,2,FORMATTED TEXT,0,,FALSE
+FT,3,formatted text,,,FALSE
+FT,4,Formatted text,0,ch2fin.html#Heading111,FALSE
+FT,5,Formatted text,,,FALSE
+FT,6,Formatted Text Data,,ch02A.html#Heading194,FALSE
+FT,7,Formatted Text Data,,ch02a.html#Heading188,FALSE
+FT,8,Formatted Text Data,,ch02a.html#Heading243,FALSE
+FT,9,Formatted Text Data,,ch02a.html#Heading243,FALSE
+FT,60,Formatted Text Data,,ch02A.html#Heading194,FALSE
+FT,61,Formatted Text Data,,ch02a.html#Heading194,FALSE
+FT,81,Formatted Text Data,,ch02a.html#Heading216,FALSE
+FT,91,Formatted Text Data,,ch02a.html#Heading243,FALSE
+FT,92,Formatted Text Data,,ch02a.html#Heading243,FALSE
+GTS,6,General Timing Specification,,ch02A.html#Heading195,FALSE
+GTS,7,General Timing Specification,,ch02a.html#Heading189,FALSE
+GTS,8,General Timing Specification,,ch02a.html#Heading244,FALSE
+GTS,9,General Timing Specification,,ch02a.html#Heading244,FALSE
+GTS,60,General Timing Specification,,ch02A.html#Heading195,FALSE
+GTS,61,General Timing Specification,,ch02a.html#Heading195,FALSE
+GTS,81,General Timing Specification,,ch02a.html#Heading217,FALSE
+GTS,91,General Timing Specification,,ch02a.html#Heading244,FALSE
+GTS,92,General Timing Specification,,ch02a.html#Heading244,FALSE
+HD,3,hierarchic designator,0,,FALSE
+HD,4,Hierarchic designator,0,ch2fin.html#Heading112,FALSE
+HD,5,Hierarchic designator,,,FALSE
+HD,6,Hierarchic Designator,,ch02A.html#Heading196,FALSE
+HD,7,Hierarchic Designator,,ch02a.html#Heading190,FALSE
+HD,8,Hierarchic Designator,,ch02a.html#Heading245,FALSE
+HD,9,Hierarchic Designator,,ch02a.html#Heading245,FALSE
+HD,60,Hierarchic Designator,,ch02A.html#Heading196,FALSE
+HD,61,Hierarchic Designator,,ch02a.html#Heading196,FALSE
+HD,81,Hierarchic Designator,,ch02a.html#Heading218,FALSE
+HD,91,Hierarchic Designator,,ch02a.html#Heading245,FALSE
+HD,92,Hierarchic Designator,,ch02a.html#Heading245,FALSE
+ICD,6,Insurance Certification Definition,,ch02A.html#Heading201,FALSE
+ICD,7,Insurance Certification Definition,,ch02a.html#Heading195,FALSE
+ICD,8,Insurance Certification Definition,,ch02a.html#Heading250,FALSE
+ICD,9,Insurance Certification Definition,,ch02a.html#Heading250,FALSE
+ICD,60,Insurance Certification Definition,,ch02A.html#Heading201,FALSE
+ICD,61,Insurance Certification Definition,,ch02a.html#Heading201,FALSE
+ICD,81,Insurance Certification Definition,,ch02a.html#Heading222,FALSE
+ICD,91,Insurance Certification Definition,,ch02a.html#Heading250,FALSE
+ICD,92,Insurance Certification Definition,,ch02a.html#Heading250,FALSE
+ID,1,CODED VALUE,0,,FALSE
+ID,2,CODED VALUE,0,,FALSE
+ID,3,CODED VALUE,,,FALSE
+ID,4,Coded values for HL7 tables,0,ch2fin.html#Heading46,FALSE
+ID,5,Coded values for HL7 tables,,,FALSE
+ID,6,String Data,,ch02A.html#Heading206,FALSE
+ID,7,Coded Value for HL7 Defined Tables,,ch02a.html#Heading200,TRUE
+ID,8,Coded Value for HL7 Defined Tables,,ch02a.html#Heading255,FALSE
+ID,9,Coded Value for HL7 Defined Tables,,ch02a.html#Heading255,FALSE
+ID,20,,,,FALSE
+ID,60,String Data,,ch02A.html#Heading206,FALSE
+ID,61,String Data,,ch02a.html#Heading206,FALSE
+ID,81,Coded Value for HL7 Defined Tables,,ch02a.html#Heading226,FALSE
+ID,91,Coded Value for HL7 Defined Tables,,ch02a.html#Heading255,FALSE
+ID,92,Coded Value for HL7 Defined Tables,,ch02a.html#Heading255,FALSE
+ID,540,Coded Value for HL7 Defined Tables,,,FALSE
+ID,630,,,,FALSE
+IS,3,Coded value for user-defined tables,,,FALSE
+IS,4,Coded value for user-defined tables,0,ch2fin.html#Heading117,FALSE
+IS,5,Coded value for user-defined tables,,,FALSE
+IS,6,String Data,,ch02A.html#Heading207,FALSE
+IS,7,Coded Value for User-Defined Tables,,ch02a.html#Heading201,TRUE
+IS,8,Coded Value for User-Defined Tables,,ch02a.html#Heading256,FALSE
+IS,9,Coded Value for User-Defined Tables,,ch02a.html#Heading256,FALSE
+IS,20,,,,FALSE
+IS,60,String Data,,ch02A.html#Heading207,FALSE
+IS,61,String Data,,ch02a.html#Heading207,FALSE
+IS,81,Coded Value for User-Defined Tables,,ch02a.html#Heading227,FALSE
+IS,91,Coded Value for User-Defined Tables,,ch02a.html#Heading256,FALSE
+IS,92,Coded Value for User-Defined Tables,,ch02a.html#Heading256,FALSE
+IS,530,Coded Value for User-Defined Tables,,,FALSE
+IS,540,Coded value for user-defined tables,,,FALSE
+IS,630,,,,FALSE
+JCC,3,Job code/class,,,FALSE
+JCC,4,Job code/class,0,ch2fin.html#Heading118,FALSE
+JCC,5,Job code/class,,,FALSE
+JCC,6,Job Code/Class,,ch02A.html#Heading208,FALSE
+JCC,7,Job Code/Class,,ch02a.html#Heading202,FALSE
+JCC,8,Job Code/Class,,ch02a.html#Heading257,FALSE
+JCC,9,Job Code/Class,,ch02a.html#Heading257,FALSE
+JCC,60,Job Code/Class,,ch02A.html#Heading208,FALSE
+JCC,61,Job Code/Class,,ch02a.html#Heading208,FALSE
+JCC,81,Job Code/Class,,ch02a.html#Heading228,FALSE
+JCC,91,Job Code/Class,,ch02a.html#Heading257,FALSE
+JCC,92,Job Code/Class,,ch02a.html#Heading257,FALSE
+LA1,4,Location with address information (variant 1),,,FALSE
+LA1,5,Location with address information (variant 1),,,FALSE
+LA1,6,Location with Address Variation 1,,ch02A.html#Heading213,FALSE
+LA1,7,Location with Address Variation 1,,ch02a.html#Heading207,FALSE
+LA1,8,Location with Address Variation 1,,ch02a.html#Heading262,FALSE
+LA1,60,Location with Address Variation 1,,ch02A.html#Heading213,FALSE
+LA1,61,Location with Address Variation 1,,ch02a.html#Heading213,FALSE
+LA1,81,Location with Address Variation 1,,ch02a.html#Heading232,FALSE
+LA2,4,Location with address information (variant 2),,,FALSE
+LA2,5,Location with address information (variant 2),,,FALSE
+LA2,6,Location with Address Variation 2,,ch02A.html#Heading225,FALSE
+LA2,7,Location with Address Variation 2,,ch02a.html#Heading218,FALSE
+LA2,8,Location with Address Variation 2,,ch02a.html#Heading273,FALSE
+LA2,60,Location with Address Variation 2,,ch02A.html#Heading225,FALSE
+LA2,61,Location with Address Variation 2,,ch02a.html#Heading225,FALSE
+LA2,81,Location with Address Variation 2,,ch02a.html#Heading242,FALSE
+MA,3,multiplexed array,0,,FALSE
+MA,4,Multiplexed array,0,ch2fin.html#Heading121,FALSE
+MA,5,Multiplexed array,,,FALSE
+MA,6,Multiplexed Array,,ch02A.html#Heading243,FALSE
+MA,7,Multiplexed Array,,ch02a.html#Heading236,FALSE
+MA,8,Multiplexed Array,,ch02a.html#Heading291,FALSE
+MA,9,Multiplexed Array,,ch02a.html#Heading264,FALSE
+MA,60,Multiplexed Array,,ch02A.html#Heading243,FALSE
+MA,61,Multiplexed Array,,ch02a.html#Heading243,FALSE
+MA,81,Multiplexed Array,,ch02a.html#Heading259,FALSE
+MA,91,Multiplexed Array,,ch02a.html#Heading264,FALSE
+MA,92,Multiplexed Array,,ch02a.html#Heading264,FALSE
+MO,2,MONEY,0,,FALSE
+MO,3,MONEY,0,,FALSE
+MO,4,Money,0,ch2fin.html#Heading122,FALSE
+MO,5,Money,,,FALSE
+MO,6,Money,,ch02A.html#Heading244,FALSE
+MO,7,Money,,ch02a.html#Heading237,FALSE
+MO,8,Money,,ch02a.html#Heading292,FALSE
+MO,9,Money,,ch02a.html#Heading265,FALSE
+MO,20,,,,FALSE
+MO,60,Money,,ch02A.html#Heading244,FALSE
+MO,61,Money,,ch02a.html#Heading244,FALSE
+MO,81,Money,,ch02a.html#Heading260,FALSE
+MO,91,Money,,ch02a.html#Heading265,FALSE
+MO,92,Money,,ch02a.html#Heading265,FALSE
+MOC,4,Charge To Practise,,,FALSE
+MOC,5,Charge To Practise,,,FALSE
+MOC,6,Money and Code,,ch02A.html#Heading248,FALSE
+MOC,7,Money and Code,,ch02a.html#Heading241,FALSE
+MOC,8,Money and Code,,ch02a.html#Heading296,FALSE
+MOC,9,Money and Code,,ch02a.html#Heading269,FALSE
+MOC,60,Money and Code,,ch02A.html#Heading248,FALSE
+MOC,61,Money and Code,,ch02a.html#Heading248,FALSE
+MOC,81,Money and Code,,ch02a.html#Heading263,FALSE
+MOC,91,Money and Code,,ch02a.html#Heading269,FALSE
+MOC,92,Money and Code,,ch02a.html#Heading269,FALSE
+MOP,4,money or percentage,,,FALSE
+MOP,5,money or percentage,,,FALSE
+MOP,6,Money or Percentage,,ch02A.html#Heading251,FALSE
+MOP,7,Money or Percentage,,ch02a.html#Heading245,FALSE
+MOP,8,Money or Percentage,,ch02a.html#Heading300,FALSE
+MOP,9,Money or Percentage,,ch02a.html#Heading273,FALSE
+MOP,60,Money or Percentage,,ch02A.html#Heading251,FALSE
+MOP,61,Money or Percentage,,ch02a.html#Heading251,FALSE
+MOP,81,Money or Percentage,,ch02a.html#Heading266,FALSE
+MOP,91,Money or Percentage,,ch02a.html#Heading273,FALSE
+MOP,92,Money or Percentage,,ch02a.html#Heading273,FALSE
+MSG,4,Message Type,,,FALSE
+MSG,5,Message Type,,,FALSE
+MSG,6,Message Type,,ch02A.html#Heading256,FALSE
+MSG,7,Message Type,,ch02a.html#Heading250,FALSE
+MSG,8,Message Type,,ch02a.html#Heading305,FALSE
+MSG,9,Message Type,,ch02a.html#Heading278,FALSE
+MSG,60,Message Type,,ch02A.html#Heading256,FALSE
+MSG,61,Message Type,,ch02a.html#Heading256,FALSE
+MSG,81,Message Type,,ch02a.html#Heading270,FALSE
+MSG,91,Message Type,,ch02a.html#Heading278,FALSE
+MSG,92,Message Type,,ch02a.html#Heading278,FALSE
+NA,3,numeric array,0,,FALSE
+NA,4,Numeric array,0,ch2fin.html#Heading125,FALSE
+NA,5,Numeric array,,,FALSE
+NA,6,Numeric Array,,ch02A.html#Heading261,FALSE
+NA,7,Numeric Array,,ch02a.html#Heading255,FALSE
+NA,8,Numeric Array,,ch02a.html#Heading310,FALSE
+NA,9,Numeric Array,,ch02a.html#Heading283,FALSE
+NA,60,Numeric Array,,ch02A.html#Heading261,FALSE
+NA,61,Numeric Array,,ch02a.html#Heading261,FALSE
+NA,81,Numeric Array,,ch02a.html#Heading274,FALSE
+NA,91,Numeric Array,,ch02a.html#Heading283,FALSE
+NA,92,Numeric Array,,ch02a.html#Heading283,FALSE
+NDL,4,observing practitioner,,,FALSE
+NDL,5,observing practitioner,,,FALSE
+NDL,6,Name with Date and Location,,ch02A.html#Heading262,FALSE
+NDL,7,Name with Date and Location,,ch02a.html#Heading256,FALSE
+NDL,8,Name with Date and Location,,ch02a.html#Heading311,FALSE
+NDL,9,Name with Date and Location,,ch02a.html#Heading284,FALSE
+NDL,60,Name with Date and Location,,ch02A.html#Heading262,FALSE
+NDL,61,Name with Date and Location,,ch02a.html#Heading262,FALSE
+NDL,81,Name with Date and Location,,ch02a.html#Heading275,FALSE
+NDL,91,Name with Date and Location,,ch02a.html#Heading284,FALSE
+NDL,92,Name with Date and Location,,ch02a.html#Heading284,FALSE
+NM,1,NUMERIC,0,,FALSE
+NM,2,NUMERIC,0,,FALSE
+NM,3,NUMERIC,,,FALSE
+NM,4,Numeric,0,ch2fin.html#Heading126,FALSE
+NM,5,Numeric,,,FALSE
+NM,6,Numeric,,ch02A.html#Heading275,FALSE
+NM,7,Numeric,,ch02a.html#Heading269,FALSE
+NM,8,Numeric,,ch02a.html#Heading324,FALSE
+NM,9,Numeric,,ch02a.html#Heading297,FALSE
+NM,20,Numeric,,,FALSE
+NM,60,Numeric,,ch02A.html#Heading275,FALSE
+NM,61,Numeric,,ch02a.html#Heading275,FALSE
+NM,81,Numeric,,ch02a.html#Heading287,FALSE
+NM,91,Numeric,,ch02a.html#Heading297,FALSE
+NM,92,Numeric,,ch02a.html#Heading297,FALSE
+NM,530,Numeric,,,FALSE
+NR,4,numeric range,,,FALSE
+NR,5,numeric range,,,FALSE
+NR,6,Numeric Range,,ch02A.html#Heading276,FALSE
+NR,7,Numeric Range,,ch02a.html#Heading270,FALSE
+NR,8,Numeric Range,,ch02a.html#Heading325,FALSE
+NR,9,Numeric Range,,ch02a.html#Heading298,FALSE
+NR,60,Numeric Range,,ch02A.html#Heading276,FALSE
+NR,61,Numeric Range,,ch02a.html#Heading276,FALSE
+NR,81,Numeric Range,,ch02a.html#Heading288,FALSE
+NR,91,Numeric Range,,ch02a.html#Heading298,FALSE
+NR,92,Numeric Range,,ch02a.html#Heading298,FALSE
+OCD,4,occurence,,,FALSE
+OCD,5,occurence,,,FALSE
+OCD,6,Occurrence Code and Date,,ch02A.html#Heading280,FALSE
+OCD,7,Occurrence Code and Date,,ch02a.html#Heading274,FALSE
+OCD,8,Occurrence Code and Date,,ch02a.html#Heading329,FALSE
+OCD,9,Occurrence Code and Date,,ch02a.html#Heading302,FALSE
+OCD,60,Occurrence Code and Date,,ch02A.html#Heading280,FALSE
+OCD,61,Occurrence Code and Date,,ch02a.html#Heading280,FALSE
+OCD,81,Occurrence Code and Date,,ch02a.html#Heading291,FALSE
+OCD,91,Occurrence Code and Date,,ch02a.html#Heading302,FALSE
+OCD,92,Occurrence Code and Date,,ch02a.html#Heading302,FALSE
+OG,92,Observation Grouper,,ch02a.html#Heading306,FALSE
+OP,540,OP,,,FALSE
+OSD,4,order sequence,,,FALSE
+OSD,5,order sequence,,,FALSE
+OSD,6,Order Sequence Definition,,ch02A.html#Heading284,FALSE
+OSD,7,Order Sequence Definition,,ch02a.html#Heading278,FALSE
+OSD,60,Order Sequence Definition,,ch02A.html#Heading284,FALSE
+OSD,61,Order Sequence Definition,,ch02a.html#Heading284,FALSE
+OSP,4,occurence span,,,FALSE
+OSP,5,occurence span,,,FALSE
+OSP,6,Occurrence Span Code and Date,,ch02A.html#Heading297,FALSE
+OSP,7,Occurrence Span Code and Date,,ch02a.html#Heading291,FALSE
+OSP,8,Occurrence Span Code and Date,,ch02a.html#Heading334,FALSE
+OSP,9,Occurrence Span Code and Date,,ch02a.html#Heading307,FALSE
+OSP,60,Occurrence Span Code and Date,,ch02A.html#Heading297,FALSE
+OSP,61,Occurrence Span Code and Date,,ch02a.html#Heading297,FALSE
+OSP,81,Occurrence Span Code and Date,,ch02a.html#Heading295,FALSE
+OSP,91,Occurrence Span Code and Date,,ch02a.html#Heading307,FALSE
+OSP,92,Occurrence Span Code and Date,,ch02a.html#Heading312,FALSE
+PCF,4,Pre-certification required,,,FALSE
+PCF,5,Pre-certification required,,,FALSE
+PI,4,person identifier,,,FALSE
+PI,5,person identifier,,,FALSE
+PIP,4,Privileges,,,FALSE
+PIP,5,Privileges,,,FALSE
+PIP,6,Practitioner Institutional Privileges,,ch02A.html#Heading301,FALSE
+PIP,7,Practitioner Institutional Privileges,,ch02a.html#Heading296,FALSE
+PIP,8,Practitioner Institutional Privileges,,ch02a.html#Heading339,FALSE
+PIP,9,Practitioner Institutional Privileges,,ch02a.html#Heading312,FALSE
+PIP,60,Practitioner Institutional Privileges,,ch02A.html#Heading301,FALSE
+PIP,61,Practitioner Institutional Privileges,,ch02a.html#Heading301,FALSE
+PIP,81,Practitioner Institutional Privileges,,ch02a.html#Heading299,FALSE
+PIP,91,Practitioner Institutional Privileges,,ch02a.html#Heading312,FALSE
+PIP,92,Practitioner Institutional Privileges,,ch02a.html#Heading317,FALSE
+PL,3,patient location,0,,FALSE
+PL,4,Person location,0,ch2fin.html#Heading127,FALSE
+PL,5,Person location,,,FALSE
+PL,6,Person Location,,ch02A.html#Heading308,FALSE
+PL,7,Person Location,,ch02a.html#Heading303,FALSE
+PL,8,Person Location,,ch02a.html#Heading346,FALSE
+PL,9,Person Location,,ch02a.html#Heading319,FALSE
+PL,60,Person Location,,ch02A.html#Heading308,FALSE
+PL,61,Person Location,,ch02a.html#Heading308,FALSE
+PL,81,Person Location,,ch02a.html#Heading305,FALSE
+PL,91,Person Location,,ch02a.html#Heading319,FALSE
+PL,92,Person Location,,ch02a.html#Heading324,FALSE
+PLN,4,Practitioner ID Numbers,,,FALSE
+PLN,5,Practitioner ID Numbers,,,FALSE
+PLN,6,Practitioner License or Other ID Number,,ch02A.html#Heading321,FALSE
+PLN,7,Practitioner License or Other ID Number,,ch02a.html#Heading316,FALSE
+PLN,8,Practitioner License or Other ID Number,,ch02a.html#Heading359,FALSE
+PLN,9,Practitioner License or Other ID Number,,ch02a.html#Heading332,FALSE
+PLN,60,Practitioner License or Other ID Number,,ch02A.html#Heading321,FALSE
+PLN,61,Practitioner License or Other ID Number,,ch02a.html#Heading321,FALSE
+PLN,81,Practitioner License or Other ID Number,,ch02a.html#Heading317,FALSE
+PLN,91,Practitioner License or Other ID Number,,ch02a.html#Heading332,FALSE
+PLN,92,Practitioner License or Other ID Number,,ch02a.html#Heading337,FALSE
+PN,1,PERSON NAME,48,,FALSE
+PN,2,PERSON NAME,48,,FALSE
+PN,3,person name,0,,FALSE
+PN,4,Person name,0,ch2fin.html#Heading156,FALSE
+PN,5,Person name,,,FALSE
+PPN,3,Performing person time stamp,,,FALSE
+PPN,4,Performing person time stamp,0,ch2fin.html#Heading137,FALSE
+PPN,5,Performing person time stamp,,,FALSE
+PPN,6,Performing Person Time Stamp,,ch02A.html#Heading327,FALSE
+PPN,7,Performing Person Time Stamp,,ch02a.html#Heading322,FALSE
+PPN,8,Performing Person Time Stamp,,ch02a.html#Heading365,FALSE
+PPN,9,Performing Person Time Stamp,,ch02a.html#Heading338,FALSE
+PPN,60,Performing Person Time Stamp,,ch02A.html#Heading327,FALSE
+PPN,61,Performing Person Time Stamp,,ch02a.html#Heading327,FALSE
+PPN,81,Performing Person Time Stamp,,ch02a.html#Heading322,FALSE
+PPN,91,Performing Person Time Stamp,,ch02a.html#Heading338,FALSE
+PPN,92,Performing Person Time Stamp,,ch02a.html#Heading343,FALSE
+PRL,4,parent result link,,,FALSE
+PRL,5,parent result link,,,FALSE
+PRL,6,Parent Result Link,,ch02A.html#Heading353,FALSE
+PRL,7,Parent Result Link,,ch02a.html#Heading348,FALSE
+PRL,8,Parent Result Link,,ch02a.html#Heading393,FALSE
+PRL,9,Parent Result Link,,ch02a.html#Heading366,FALSE
+PRL,60,Parent Result Link,,ch02A.html#Heading353,FALSE
+PRL,61,Parent Result Link,,ch02a.html#Heading353,FALSE
+PRL,81,Parent Result Link,,ch02a.html#Heading349,FALSE
+PRL,91,Parent Result Link,,ch02a.html#Heading366,FALSE
+PRL,92,Parent Result Link,,ch02a.html#Heading371,FALSE
+PT,3,Processing type,,,FALSE
+PT,4,Processing type,0,ch2fin.html#Heading165,FALSE
+PT,5,Processing type,,,FALSE
+PT,6,Processing Type,,ch02A.html#Heading358,FALSE
+PT,7,Processing Type,,ch02a.html#Heading353,FALSE
+PT,8,Processing Type,,ch02a.html#Heading398,FALSE
+PT,9,Processing Type,,ch02a.html#Heading371,FALSE
+PT,60,Processing Type,,ch02A.html#Heading358,FALSE
+PT,61,Processing Type,,ch02a.html#Heading358,FALSE
+PT,81,Processing Type,,ch02a.html#Heading353,FALSE
+PT,91,Processing Type,,ch02a.html#Heading371,FALSE
+PT,92,Processing Type,,ch02a.html#Heading376,FALSE
+PTA,4,Policy Type,,,FALSE
+PTA,5,Policy Type,,,FALSE
+PTA,6,Policy Type and Amount,,ch02A.html#Heading362,FALSE
+PTA,7,Policy Type and Amount,,ch02a.html#Heading357,FALSE
+PTA,8,Policy Type and Amount,,ch02a.html#Heading402,FALSE
+PTA,9,Policy Type and Amount,,ch02a.html#Heading375,FALSE
+PTA,60,Policy Type and Amount,,ch02A.html#Heading362,FALSE
+PTA,61,Policy Type and Amount,,ch02a.html#Heading362,FALSE
+PTA,81,Policy Type and Amount,,ch02a.html#Heading356,FALSE
+PTA,91,Policy Type and Amount,,ch02a.html#Heading375,FALSE
+PTA,92,Policy Type and Amount,,ch02a.html#Heading380,FALSE
+QIP,3,Query input parameter list,,,FALSE
+QIP,4,Query input parameter list,0,ch2fin.html#Heading168,FALSE
+QIP,5,Query input parameter list,,,FALSE
+QIP,6,Query Input Parameter List,,ch02A.html#Heading368,FALSE
+QIP,7,Query Input Parameter List,,ch02a.html#Heading363,FALSE
+QIP,8,Query Input Parameter List,,ch02a.html#Heading408,FALSE
+QIP,9,Query Input Parameter List,,ch02a.html#Heading381,FALSE
+QIP,60,Query Input Parameter List,,ch02A.html#Heading368,FALSE
+QIP,61,Query Input Parameter List,,ch02a.html#Heading368,FALSE
+QIP,81,Query Input Parameter List,,ch02a.html#Heading361,FALSE
+QIP,91,Query Input Parameter List,,ch02a.html#Heading381,FALSE
+QIP,92,Query Input Parameter List,,ch02a.html#Heading386,FALSE
+QSC,3,Query selection criteria,,,FALSE
+QSC,4,Query selection criteria,0,ch2fin.html#Heading171,FALSE
+QSC,5,Query selection criteria,,,FALSE
+QSC,6,Query Selection Criteria,,ch02A.html#Heading372,FALSE
+QSC,7,Query Selection Criteria,,ch02a.html#Heading367,FALSE
+QSC,8,Query Selection Criteria,,ch02a.html#Heading412,FALSE
+QSC,9,Query Selection Criteria,,ch02a.html#Heading385,FALSE
+QSC,60,Query Selection Criteria,,ch02A.html#Heading372,FALSE
+QSC,61,Query Selection Criteria,,ch02a.html#Heading372,FALSE
+QSC,81,Query Selection Criteria,,ch02a.html#Heading364,FALSE
+QSC,91,Query Selection Criteria,,ch02a.html#Heading385,FALSE
+QSC,92,Query Selection Criteria,,ch02a.html#Heading390,FALSE
+RCD,3,Row column definition,,,FALSE
+RCD,4,Row column definition,0,ch2fin.html#Heading176,FALSE
+RCD,5,Row column definition,,,FALSE
+RCD,6,Row Column Definition,,ch02A.html#Heading378,FALSE
+RCD,7,Row Column Definition,,ch02a.html#Heading373,FALSE
+RCD,8,Row Column Definition,,ch02a.html#Heading418,FALSE
+RCD,9,Row Column Definition,,ch02a.html#Heading391,FALSE
+RCD,60,Row Column Definition,,ch02A.html#Heading378,FALSE
+RCD,61,Row Column Definition,,ch02a.html#Heading378,FALSE
+RCD,81,Row Column Definition,,ch02a.html#Heading369,FALSE
+RCD,91,Row Column Definition,,ch02a.html#Heading391,FALSE
+RCD,92,Row Column Definition,,ch02a.html#Heading396,FALSE
+RFR,4,reference range,,,FALSE
+RFR,5,reference range,,,FALSE
+RFR,6,Reference Range,,ch02A.html#Heading383,FALSE
+RFR,7,Reference Range,,ch02a.html#Heading378,FALSE
+RFR,8,Reference Range,,ch02a.html#Heading423,FALSE
+RFR,9,Reference Range,,ch02a.html#Heading396,FALSE
+RFR,60,Reference Range,,ch02A.html#Heading383,FALSE
+RFR,61,Reference Range,,ch02a.html#Heading383,FALSE
+RFR,81,Reference Range,,ch02a.html#Heading373,FALSE
+RFR,91,Reference Range,,ch02a.html#Heading396,FALSE
+RFR,92,Reference Range,,ch02a.html#Heading401,FALSE
+RI,3,Repeat interval,,,FALSE
+RI,4,Repeat interval,0,ch2fin.html#Heading180,FALSE
+RI,5,Repeat interval,,,FALSE
+RI,6,Repeat Interval,,ch02A.html#Heading392,FALSE
+RI,7,Repeat Interval,,ch02a.html#Heading387,FALSE
+RI,8,Repeat Interval,,ch02a.html#Heading432,FALSE
+RI,9,Repeat Interval,,ch02a.html#Heading405,FALSE
+RI,60,Repeat Interval,,ch02A.html#Heading392,FALSE
+RI,61,Repeat Interval,,ch02a.html#Heading392,FALSE
+RI,81,Repeat Interval,,ch02a.html#Heading381,FALSE
+RI,91,Repeat Interval,,ch02a.html#Heading405,FALSE
+RI,92,Repeat Interval,,ch02a.html#Heading410,FALSE
+RMC,4,Room Coverage,,,FALSE
+RMC,5,Room Coverage,,,FALSE
+RMC,6,Room Coverage,,ch02A.html#Heading396,FALSE
+RMC,7,Room Coverage,,ch02a.html#Heading391,FALSE
+RMC,8,Room Coverage,,ch02a.html#Heading436,FALSE
+RMC,9,Room Coverage,,ch02a.html#Heading409,FALSE
+RMC,60,Room Coverage,,ch02A.html#Heading396,FALSE
+RMC,61,Room Coverage,,ch02a.html#Heading396,FALSE
+RMC,81,Room Coverage,,ch02a.html#Heading384,FALSE
+RMC,91,Room Coverage,,ch02a.html#Heading409,FALSE
+RMC,92,Room Coverage,,ch02a.html#Heading414,FALSE
+RP,2,REFERENCE POINTER,0,,FALSE
+RP,3,reference pointer,0,,FALSE
+RP,4,Reference pointer,0,ch2fin.html#Heading183,FALSE
+RP,5,Reference pointer,,,FALSE
+RP,6,Reference Pointer,,ch02A.html#Heading402,FALSE
+RP,7,Reference Pointer,,ch02a.html#Heading397,FALSE
+RP,8,Reference Pointer,,ch02a.html#Heading442,FALSE
+RP,9,Reference Pointer,,ch02a.html#Heading415,FALSE
+RP,60,Reference Pointer,,ch02A.html#Heading402,FALSE
+RP,61,Reference Pointer,,ch02a.html#Heading402,FALSE
+RP,81,Reference Pointer,,ch02a.html#Heading389,FALSE
+RP,91,Reference Pointer,,ch02a.html#Heading415,FALSE
+RP,92,Reference Pointer,,ch02a.html#Heading420,FALSE
+RPT,6,Repeat Pattern,,ch02A.html#Heading412,FALSE
+RPT,7,Repeat Pattern,,ch02a.html#Heading403,FALSE
+RPT,8,Repeat Pattern,,ch02a.html#Heading448,FALSE
+RPT,9,Repeat Pattern,,ch02a.html#Heading421,FALSE
+RPT,60,Repeat Pattern,,ch02A.html#Heading412,FALSE
+RPT,61,Repeat Pattern,,ch02a.html#Heading412,FALSE
+RPT,81,Repeat Pattern,,ch02a.html#Heading394,FALSE
+RPT,91,Repeat Pattern,,ch02a.html#Heading421,FALSE
+RPT,92,Repeat Pattern,,ch02a.html#Heading426,FALSE
+SAD,5,street address,,,FALSE
+SAD,6,Street Address,,ch02A.html#Heading425,FALSE
+SAD,7,Street Address,,ch02a.html#Heading416,FALSE
+SAD,8,Street Address,,ch02a.html#Heading461,FALSE
+SAD,9,Street Address,,ch02a.html#Heading434,FALSE
+SAD,60,Street Address,,ch02A.html#Heading425,FALSE
+SAD,61,Street Address,,ch02a.html#Heading425,FALSE
+SAD,81,Street Address,,ch02a.html#Heading406,FALSE
+SAD,91,Street Address,,ch02a.html#Heading434,FALSE
+SAD,92,Street Address,,ch02a.html#Heading439,FALSE
+SCV,3,Scheduling class value pair,,,FALSE
+SCV,4,Scheduling class value pair,0,ch2fin.html#Heading192,FALSE
+SCV,5,Scheduling class value pair,,,FALSE
+SCV,6,Scheduling Class Value Pair,,ch02A.html#Heading430,FALSE
+SCV,7,Scheduling Class Value Pair,,ch02a.html#Heading421,FALSE
+SCV,8,Scheduling Class Value Pair,,ch02a.html#Heading466,FALSE
+SCV,9,Scheduling Class Value Pair,,ch02a.html#Heading439,FALSE
+SCV,60,Scheduling Class Value Pair,,ch02A.html#Heading430,FALSE
+SCV,61,Scheduling Class Value Pair,,ch02a.html#Heading430,FALSE
+SCV,81,Scheduling Class Value Pair,,ch02a.html#Heading410,FALSE
+SCV,91,Scheduling Class Value Pair,,ch02a.html#Heading439,FALSE
+SCV,92,Scheduling Class Value Pair,,ch02a.html#Heading444,FALSE
+SI,1,SET ID,4,,FALSE
+SI,2,SEQUENCE ID,4,,FALSE
+SI,3,Sequence ID,,,FALSE
+SI,4,Sequence ID,0,ch2fin.html#Heading195,FALSE
+SI,5,Sequence ID,,,FALSE
+SI,6,Sequence ID,,ch02A.html#Heading434,FALSE
+SI,7,Sequence ID,,ch02a.html#Heading425,FALSE
+SI,8,Sequence ID,,ch02a.html#Heading470,FALSE
+SI,9,Sequence ID,,ch02a.html#Heading443,FALSE
+SI,60,Sequence ID,,ch02A.html#Heading434,FALSE
+SI,61,Sequence ID,,ch02a.html#Heading434,FALSE
+SI,81,Sequence ID,,ch02a.html#Heading413,FALSE
+SI,91,Sequence ID,,ch02a.html#Heading443,FALSE
+SI,92,Sequence ID,,ch02a.html#Heading448,FALSE
+SI,530,Sequence ID,,,FALSE
+SN,3,structured numeric,0,,FALSE
+SN,4,Structured numeric,0,ch2fin.html#Heading196,FALSE
+SN,5,Structured numeric,,,FALSE
+SN,6,Structured Numeric,,ch02A.html#Heading435,FALSE
+SN,7,Structured Numeric,,ch02a.html#Heading426,FALSE
+SN,8,Structured Numeric,,ch02a.html#Heading471,FALSE
+SN,9,Structured Numeric,,ch02a.html#Heading444,FALSE
+SN,60,Structured Numeric,,ch02A.html#Heading435,FALSE
+SN,61,Structured Numeric,,ch02a.html#Heading435,FALSE
+SN,81,Structured Numeric,,ch02a.html#Heading414,FALSE
+SN,91,Structured Numeric,,ch02a.html#Heading444,FALSE
+SN,92,Structured Numeric,,ch02a.html#Heading449,FALSE
+SNM,8,String of Telephone Number Digits,,ch02a.html#Heading477,FALSE
+SNM,9,String of Telephone Number Digits,,ch02a.html#Heading450,FALSE
+SNM,81,String of Telephone Number Digits,,ch02a.html#Heading419,FALSE
+SNM,91,String of Telephone Number Digits,,ch02a.html#Heading450,FALSE
+SNM,92,String of Telephone Number Digits,,ch02a.html#Heading455,FALSE
+SPD,4,Specialty,,,FALSE
+SPD,5,Specialty,,,FALSE
+SPD,6,Specialty Description,,ch02A.html#Heading441,FALSE
+SPD,7,Specialty Description,,ch02a.html#Heading432,FALSE
+SPD,8,Specialty Description,,ch02a.html#Heading478,FALSE
+SPD,9,Specialty Description,,ch02a.html#Heading451,FALSE
+SPD,60,Specialty Description,,ch02A.html#Heading441,FALSE
+SPD,61,Specialty Description,,ch02a.html#Heading441,FALSE
+SPD,81,Specialty Description,,ch02a.html#Heading420,FALSE
+SPD,91,Specialty Description,,ch02a.html#Heading451,FALSE
+SPD,92,Specialty Description,,ch02a.html#Heading456,FALSE
+SPS,4,specimen source,,,FALSE
+SPS,5,specimen source,,,FALSE
+SPS,6,Specimen Source,,ch02A.html#Heading447,FALSE
+SPS,7,Specimen Source,,ch02a.html#Heading438,FALSE
+SPS,60,Specimen Source,,ch02A.html#Heading447,FALSE
+SPS,61,Specimen Source,,ch02a.html#Heading447,FALSE
+SRT,5,sort order,,,FALSE
+SRT,6,Sort Order,,ch02A.html#Heading456,FALSE
+SRT,7,Sort Order,,ch02a.html#Heading447,FALSE
+SRT,8,Sort Order,,ch02a.html#Heading485,FALSE
+SRT,9,Sort Order,,ch02a.html#Heading458,FALSE
+SRT,60,Sort Order,,ch02A.html#Heading456,FALSE
+SRT,61,Sort Order,,ch02a.html#Heading456,FALSE
+SRT,81,Sort Order,,ch02a.html#Heading426,FALSE
+SRT,91,Sort Order,,ch02a.html#Heading458,FALSE
+SRT,92,Sort Order,,ch02a.html#Heading463,FALSE
+ST,1,STRING,0,,FALSE
+ST,2,STRING,0,,FALSE
+ST,3,STRING,,,FALSE
+ST,4,String,0,ch2fin.html#Heading201,FALSE
+ST,5,String,,,FALSE
+ST,6,String Data,,ch02A.html#Heading460,FALSE
+ST,7,String Data,,ch02a.html#Heading451,FALSE
+ST,8,String Data,,ch02a.html#Heading489,FALSE
+ST,9,String Data,,ch02a.html#Heading462,FALSE
+ST,20,String,,,FALSE
+ST,60,String Data,,ch02A.html#Heading460,FALSE
+ST,61,String Data,,ch02a.html#Heading460,FALSE
+ST,81,String Data,,ch02a.html#Heading429,FALSE
+ST,91,String Data,,ch02a.html#Heading462,FALSE
+ST,92,String Data,,ch02a.html#Heading467,FALSE
+ST,540,String,,,FALSE
+ST,630,String,,,FALSE
+TM,1,TIME,6,,FALSE
+TM,2,TIME,6,,FALSE
+TM,3,TIME,,,FALSE
+TM,4,Time,0,ch2fin.html#Heading202,FALSE
+TM,5,Time,,,FALSE
+TM,6,Time,,ch02A.html#Heading461,FALSE
+TM,7,Time,,ch02a.html#Heading452,FALSE
+TM,8,Time,,ch02a.html#Heading490,FALSE
+TM,9,Time,,ch02a.html#Heading463,FALSE
+TM,60,Time,,ch02A.html#Heading461,FALSE
+TM,61,Time,,ch02a.html#Heading461,FALSE
+TM,81,Time,,ch02a.html#Heading430,FALSE
+TM,91,Time,,ch02a.html#Heading463,FALSE
+TM,92,Time,,ch02a.html#Heading468,FALSE
+TN,1,TELEPHONE NUMBER,0,,FALSE
+TN,2,TELEPHONE NUMBER,0,,FALSE
+TN,3,TELEPHONE NUMBER,,,FALSE
+TN,4,Telephone number,0,ch2fin.html#Heading203,FALSE
+TN,5,Telephone number,,,FALSE
+TQ,2,TIMING / QUANTITY,0,,FALSE
+TQ,3,TIMING / QUANTITY,,,FALSE
+TQ,4,Timing/quantity,0,ch2fin.html#Heading204,FALSE
+TQ,5,Timing/quantity,,,FALSE
+TQ,6,Timing Quantity,,ch02A.html#Heading462,FALSE
+TQ,7,Timing Quantity,,ch02a.html#Heading453,FALSE
+TQ,60,Timing Quantity,,ch02A.html#Heading462,FALSE
+TQ,61,Timing Quantity,,ch02a.html#Heading462,FALSE
+TS,1,TIME STAMP,19,,FALSE
+TS,2,TIME STAMP,19,,FALSE
+TS,3,TIME STAMP,19,,FALSE
+TS,4,Time stamp,0,ch2fin.html#Heading205,FALSE
+TS,5,Time stamp,,,FALSE
+TS,6,Time Stamp,,ch02A.html#Heading476,FALSE
+TS,7,Time Stamp,,ch02a.html#Heading467,FALSE
+TS,20,Timestamp,,,FALSE
+TS,60,Time Stamp,,ch02A.html#Heading476,FALSE
+TS,61,Time Stamp,,ch02a.html#Heading476,FALSE
+TS,540,Timestamp,,,FALSE
+TS,630,Timestamp,,,FALSE
+TX,1,TEXT,0,,FALSE
+TX,2,TEXT,0,,FALSE
+TX,3,TEXT,,,FALSE
+TX,4,Text data,0,ch2fin.html#Heading206,FALSE
+TX,5,Text data,,,FALSE
+TX,6,Text Data,,ch02A.html#Heading480,FALSE
+TX,7,Text Data,,ch02a.html#Heading468,FALSE
+TX,8,Text Data,,ch02a.html#Heading493,FALSE
+TX,9,Text Data,,ch02a.html#Heading466,FALSE
+TX,60,Text Data,,ch02A.html#Heading480,FALSE
+TX,61,Text Data,,ch02a.html#Heading480,FALSE
+TX,81,Text Data,,ch02a.html#Heading433,FALSE
+TX,91,Text Data,,ch02a.html#Heading466,FALSE
+TX,92,Text Data,,ch02a.html#Heading471,FALSE
+UVC,4,Value code and amount,,,FALSE
+UVC,5,Value code and amount,,,FALSE
+UVC,6,UB Value Code and Amount,,ch02A.html#Heading481,FALSE
+UVC,7,UB Value Code and Amount,,ch02a.html#Heading469,FALSE
+UVC,8,UB Value Code and Amount,,ch02a.html#Heading494,FALSE
+UVC,9,UB Value Code and Amount,,ch02a.html#Heading467,FALSE
+UVC,60,UB Value Code and Amount,,ch02A.html#Heading481,FALSE
+UVC,61,UB Value Code and Amount,,ch02a.html#Heading481,FALSE
+UVC,81,UB Value Code and Amount,,ch02a.html#Heading434,FALSE
+UVC,91,UB Value Code and Amount,,ch02a.html#Heading467,FALSE
+UVC,92,UB Value Code and Amount,,ch02a.html#Heading472,FALSE
+var,2,varies,,,FALSE
+var,3,varies,,,FALSE
+var,4,varies,,,FALSE
+var,5,varies,,,FALSE
+var,6,varies,,,FALSE
+var,7,varies,,,FALSE
+var,8,varies,,,FALSE
+var,9,varies,,,FALSE
+var,60,varies,,,FALSE
+var,61,varies,,,FALSE
+var,81,varies,,,FALSE
+var,91,varies,,,FALSE
+var,92,varies,,,FALSE
+VH,3,Visiting hours,,,FALSE
+VH,4,Visiting hours,0,ch2fin.html#Heading207,FALSE
+VH,5,Visiting hours,,,FALSE
+VH,6,Visiting Hours,,ch02A.html#Heading485,FALSE
+VH,7,Visiting Hours,,ch02a.html#Heading473,FALSE
+VH,8,Visiting Hours,,ch02a.html#Heading500,FALSE
+VH,9,Visiting Hours,,ch02a.html#Heading473,FALSE
+VH,60,Visiting Hours,,ch02A.html#Heading485,FALSE
+VH,61,Visiting Hours,,ch02a.html#Heading485,FALSE
+VH,81,Visiting Hours,,ch02a.html#Heading439,FALSE
+VH,91,Visiting Hours,,ch02a.html#Heading473,FALSE
+VH,92,Visiting Hours,,ch02a.html#Heading478,FALSE
+VID,4,Version identifier,0,ch2fin.html#Heading212,FALSE
+VID,5,Version identifier,,,FALSE
+VID,6,Version Identifier,,ch02A.html#Heading491,FALSE
+VID,7,Version Identifier,,ch02a.html#Heading479,FALSE
+VID,8,Version Identifier,,ch02a.html#Heading506,FALSE
+VID,9,Version Identifier,,ch02a.html#Heading479,FALSE
+VID,60,Version Identifier,,ch02A.html#Heading491,FALSE
+VID,61,Version Identifier,,ch02a.html#Heading491,FALSE
+VID,81,Version Identifier,,ch02a.html#Heading444,FALSE
+VID,91,Version Identifier,,ch02a.html#Heading479,FALSE
+VID,92,Version Identifier,,ch02a.html#Heading484,FALSE
+VR,4,value qualifier,,,FALSE
+VR,5,value qualifier,,,FALSE
+VR,6,Value Range,,ch02A.html#Heading496,FALSE
+VR,7,Value Range,,ch02a.html#Heading484,FALSE
+VR,8,Value Range,,ch02a.html#Heading511,FALSE
+VR,9,Value Range,,ch02a.html#Heading484,FALSE
+VR,60,Value Range,,ch02A.html#Heading496,FALSE
+VR,61,Value Range,,ch02a.html#Heading496,FALSE
+VR,81,Value Range,,ch02a.html#Heading448,FALSE
+VR,91,Value Range,,ch02a.html#Heading484,FALSE
+VR,92,Value Range,,ch02a.html#Heading489,FALSE
+WVI,4,channel identifier,,,FALSE
+WVI,5,channel identifier,,,FALSE
+WVI,6,Channel Identifier,,ch02A.html#Heading500,FALSE
+WVI,7,Channel Identifier,,ch02a.html#Heading488,FALSE
+WVI,8,Channel Identifier,,ch02a.html#Heading515,FALSE
+WVI,9,Channel Identifier,,ch02a.html#Heading488,FALSE
+WVI,60,Channel Identifier,,ch02A.html#Heading500,FALSE
+WVI,61,Channel Identifier,,ch02a.html#Heading500,FALSE
+WVI,81,Channel Identifier,,ch02a.html#Heading451,FALSE
+WVI,91,Channel Identifier,,ch02a.html#Heading488,FALSE
+WVI,92,Channel Identifier,,ch02a.html#Heading493,FALSE
+WVS,4,wavefrom source,,,FALSE
+WVS,5,waveform source,,,FALSE
+WVS,6,Waveform Source,,ch02A.html#Heading504,FALSE
+WVS,7,Waveform Source,,ch02a.html#Heading492,FALSE
+WVS,8,Waveform Source,,ch02a.html#Heading519,FALSE
+WVS,9,Waveform Source,,ch02a.html#Heading492,FALSE
+WVS,60,Waveform Source,,ch02A.html#Heading504,FALSE
+WVS,61,Waveform Source,,ch02a.html#Heading504,FALSE
+WVS,81,Waveform Source,,ch02a.html#Heading454,FALSE
+WVS,91,Waveform Source,,ch02a.html#Heading492,FALSE
+WVS,92,Waveform Source,,ch02a.html#Heading497,FALSE
+XAD,3,extended address,0,,FALSE
+XAD,4,Extended address,0,ch2fin.html#Heading216,FALSE
+XAD,5,Extended address,,,FALSE
+XAD,6,Extended Address,,ch02A.html#Heading508,FALSE
+XAD,7,Extended Address,,ch02a.html#Heading496,TRUE
+XAD,8,Extended Address,,ch02a.html#Heading523,FALSE
+XAD,9,Extended Address,,ch02a.html#Heading496,FALSE
+XAD,20,Address,,,FALSE
+XAD,60,Extended Address,,ch02A.html#Heading508,FALSE
+XAD,61,Extended Address,,ch02a.html#Heading508,FALSE
+XAD,81,Extended Address,,ch02a.html#Heading457,FALSE
+XAD,91,Extended Address,,ch02a.html#Heading496,FALSE
+XAD,92,Extended Address,,ch02a.html#Heading501,FALSE
+XAD,630,Extended Address,,,FALSE
+XCN,3,extended composite ID number and name for persons,0,,FALSE
+XCN,4,Extended composite ID number and name,0,ch2fin.html#Heading228,FALSE
+XCN,5,Extended composite ID number and name,,,FALSE
+XCN,6,Extended Composite ID Number and Name for Persons,,ch02A.html#Heading524,FALSE
+XCN,7,Extended Composite ID Number and Name for Persons,,ch02a.html#Heading521,FALSE
+XCN,8,Extended Composite ID Number and Name for Persons,,ch02a.html#Heading548,FALSE
+XCN,9,Extended Composite ID Number and Name for Persons,,ch02a.html#Heading521,FALSE
+XCN,60,Extended Composite ID Number and Name for Persons,,ch02A.html#Heading524,FALSE
+XCN,61,Extended Composite ID Number and Name for Persons,,ch02a.html#Heading524,FALSE
+XCN,81,Extended Composite ID Number and Name for Persons,,ch02a.html#Heading481,FALSE
+XCN,91,Extended Composite ID Number and Name for Persons,,ch02a.html#Heading521,FALSE
+XCN,92,Extended Composite ID Number and Name for Persons,,ch02a.html#Heading526,FALSE
+XCN,540,Extended Composite ID Number and Name for Persons,,,FALSE
+XON,3,extended composite name and identification number for organizations,0,,FALSE
+XON,4,Extended composite name and ID number for organizations,0,ch2fin.html#Heading246,FALSE
+XON,5,Extended composite name and ID number for organizations,,,FALSE
+XON,6,Extended Composite Name and Identification Number for Organizations,,ch02A.html#Heading549,FALSE
+XON,7,Extended Composite Name and Identification Number for Organizations,,ch02a.html#Heading546,FALSE
+XON,8,Extended Composite Name and Identification Number for Organizations,,ch02a.html#Heading575,FALSE
+XON,9,Extended Composite Name and Identification Number for Organizations,,ch02a.html#Heading548,FALSE
+XON,60,Extended Composite Name and Identification Number for Organizations,,ch02A.html#Heading549,FALSE
+XON,61,Extended Composite Name and Identification Number for Organizations,,ch02a.html#Heading549,FALSE
+XON,81,Extended Composite Name and Identification Number for Organizations,,ch02a.html#Heading507,FALSE
+XON,91,Extended Composite Name and Identification Number for Organizations,,ch02a.html#Heading548,FALSE
+XON,92,Extended Composite Name and Identification Number for Organizations,,ch02a.html#Heading553,FALSE
+XON,630,Extended Composite Name and Identification Number for Organizations,,,FALSE
+XPN,3,extended person name,0,,FALSE
+XPN,4,Extended person name,0,ch2fin.html#Heading256,FALSE
+XPN,5,Extended person name,,,FALSE
+XPN,6,Extended Person Name,,ch02A.html#Heading561,FALSE
+XPN,7,Extended Person Name,,ch02a.html#Heading558,TRUE
+XPN,8,Extended Person Name,,ch02a.html#Heading587,FALSE
+XPN,9,Extended Person Name,,ch02a.html#Heading560,FALSE
+XPN,60,Extended Person Name,,ch02A.html#Heading561,FALSE
+XPN,61,Extended Person Name,,ch02a.html#Heading561,FALSE
+XPN,81,Extended Person Name,,ch02a.html#Heading518,FALSE
+XPN,91,Extended Person Name,,ch02a.html#Heading560,FALSE
+XPN,92,Extended Person Name,,ch02a.html#Heading565,FALSE
+XTN,3,Extended telecommunications number,,,FALSE
+XTN,4,Extended telecommunications number,0,ch2fin.html#Heading267,FALSE
+XTN,5,Extended telecommunications number,,,FALSE
+XTN,6,Extended Telecommunication Number,,ch02A.html#Heading577,FALSE
+XTN,7,Extended Telecommunication Number,,ch02a.html#Heading574,TRUE
+XTN,8,Extended Telecommunication Number,,ch02a.html#Heading604,FALSE
+XTN,9,Extended Telecommunication Number,,ch02a.html#Heading577,FALSE
+XTN,20,Telefon,,,FALSE
+XTN,60,Extended Telecommunication Number,,ch02A.html#Heading577,FALSE
+XTN,61,Extended Telecommunication Number,,ch02a.html#Heading577,FALSE
+XTN,81,Extended Telecommunication Number,,ch02a.html#Heading534,FALSE
+XTN,91,Extended Telecommunication Number,,ch02a.html#Heading577,FALSE
+XTN,92,Extended Telecommunication Number,,ch02a.html#Heading582,FALSE

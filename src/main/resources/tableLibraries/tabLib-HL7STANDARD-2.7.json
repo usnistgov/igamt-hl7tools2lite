@@ -4,9 +4,8 @@
   "sectionTitle" : "Value Sets",
   "sectionDescription" : null,
   "sectionContents" : null,
-  "id" : "573b0842da08c28cd047f919",
+  "id" : "573dd232d4c6ca828c28fc9e",
   "accountId" : null,
-  "date" : null,
   "ext" : null,
   "valueSetLibraryIdentifier" : null,
   "status" : null,
@@ -20,8 +19,9 @@
     "orgName" : "NIST",
     "version" : null,
     "hl7Version" : "2.7",
-    "date" : "May 17, 2016",
-    "ext" : null
+    "date" : "May 19, 2016",
+    "ext" : null,
+    "tableLibId" : "b9a4ca53-6e79-4ff9-84ac-aec850c55509"
   },
   "scope" : "HL7STANDARD",
   "children" : [ {
