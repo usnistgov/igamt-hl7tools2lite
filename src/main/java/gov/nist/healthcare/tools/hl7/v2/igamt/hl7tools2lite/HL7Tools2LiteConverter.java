@@ -10,8 +10,8 @@
  */
 package gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -19,6 +19,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.UUID;
 
 import org.bson.types.ObjectId;
 import org.slf4j.Logger;
@@ -41,9 +42,11 @@ import gov.nist.healthcare.hl7tools.service.HL7DBService;
 import gov.nist.healthcare.hl7tools.service.HL7DBServiceException;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Code;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Component;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ContentDefinition;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLibrary;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLibraryMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLink;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatypes;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DocumentMetaData;
@@ -59,12 +62,14 @@ import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ProfileMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Section;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Segment;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.SegmentLibrary;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.SegmentLibraryMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.SegmentLink;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.SegmentRef;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.SegmentRefOrGroup;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Stability;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Table;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.TableLibrary;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.TableLibraryMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.TableLink;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Usage;
 
@@ -75,8 +80,9 @@ public class HL7Tools2LiteConverter implements Runnable {
 
 	Logger log = LoggerFactory.getLogger(HL7Tools2LiteConverter.class);
 
-//	public final static File OUTPUT_DIR = new File(System.getenv("IGAMT") + "/profiles");
-	public static SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+	// public final static File OUTPUT_DIR = new File(System.getenv("IGAMT") +
+	// "/profiles");
+	// public static SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
 
 	public Profile profile;
 	public IGLibrary ig;
@@ -95,36 +101,52 @@ public class HL7Tools2LiteConverter implements Runnable {
 	MongoClient mongo;
 	DB db;
 	DBCollection collIGD;
+	MongoOperations mongoOps = null;
+
+	public HL7Tools2LiteConverter(String[] versions) {
+		super();
+		this.versions = Arrays.asList(versions);
+	}
 	
+	public HL7Tools2LiteConverter() {
+		super();
+		this.versions = service.getSupportedHL7Versions();
+	}
 	
 	public void run() {
-		 MongoOperations mongoOps = null;
-		 mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new
-		 MongoClient(), "igamt1"));
+		mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igamt1"));
 		mongo = new MongoClient("localhost", 27017);
 		db = mongo.getDB("igamt");
 		collIGD = db.getCollection("igdocument");
 		log.info("start...");
 		log.info("Dropping mongo collection profile...");
-		// mongoOps.dropCollection(ProfilePreLib.class);
-		List<String> versions = service.getSupportedHL7Versions();
+		mongoOps.dropCollection(Table.class);
+		mongoOps.dropCollection(Datatype.class);
+		mongoOps.dropCollection(Segment.class);
+		mongoOps.dropCollection(TableLibrary.class);
+		mongoOps.dropCollection(DatatypeLibrary.class);
+		mongoOps.dropCollection(SegmentLibrary.class);
+		mongoOps.dropCollection(Message.class);
+		mongoOps.dropCollection(IGDocument.class);
+
 		// if (!OUTPUT_DIR.exists()) {
 		// OUTPUT_DIR.mkdir();
 		// }
 		for (String version : versions) {
-			this.version = version;
-			Profile profile = doVersion("2.7");
-			IGDocument igd = createIGDocument();
-			igd.setProfile(profile);
-			mongoOps.insertAll(mapTables.values());
-			mongoOps.insertAll(mapDatatypes.values());
-			mongoOps.insertAll(mapSegments.values());
-			mongoOps.insert(igd.getProfile().getTableLibrary());
-			mongoOps.insert(igd.getProfile().getDatatypeLibrary());
-			mongoOps.insert(igd.getProfile().getSegmentLibrary());
-			mongoOps.insert(igd);
-			igLibraries.put(version, ig);
-			// profiles.put(version, profile);
+			try {
+				this.version = version;
+				Profile profile = doVersion(version);
+				IGDocument igd = createIGDocument();
+				igd.addProfile(profile);
+				mongoOps.insertAll(igd.getProfile().getMessages().getChildren());
+				mongoOps.insert(igd.getProfile().getTableLibrary());
+				mongoOps.insert(igd.getProfile().getDatatypeLibrary());
+				mongoOps.insert(igd.getProfile().getSegmentLibrary());
+				mongoOps.insert(igd);
+				igLibraries.put(version, ig);
+			} catch (Exception e) {
+				log.error("error", e);
+			}
 		}
 		log.info("...end");
 	}
@@ -165,42 +187,9 @@ public class HL7Tools2LiteConverter implements Runnable {
 	IGDocument createIGDocument() {
 		IGDocument igd = new IGDocument();
 		igd.setScope(IGDocumentScope.HL7STANDARD);
-		igd.setMetaData(documentMetaData());
-		BasicDBObject qry = new BasicDBObject();
-		qry.put("metaData.hl7Version", "2.7");
-		DBObject root = (DBObject) collIGD.find(qry).next();
-		DBObject source = (DBObject) root.get("childSections");
-		igd.setChildSections(sections((DBObject) source));
 		return igd;
 	}
-	
-	private DocumentMetaData documentMetaData() {
-		DocumentMetaData metaData = new DocumentMetaData();
-		metaData.setDate(sdf.format(new Date()));
-		metaData.setOrgName("NIST");
-		metaData.setTitle("Default Title");
-		metaData.setHl7Version(version);
-		return metaData;
-	}
-	private Set<Section> sections(DBObject source) {
-		Set<Section> sections = new HashSet<Section>();
-		BasicDBList sectionsDBObjects = (BasicDBList) source;
-		Iterator<Object> it = sectionsDBObjects.iterator();
-		while (it.hasNext()) {
-			DBObject childSource = (DBObject) it.next();
-			Section targetSection = new Section();
-			targetSection.setChildSections(sections((DBObject) childSource.get("childSections")));
-			targetSection.setId(readMongoId(childSource));
-			targetSection.setSectionContents((String) childSource.get("sectionContents"));
-			targetSection.setSectionDescription((String) childSource.get("sectionDescription"));
-			targetSection.setSectionPosition((Integer) childSource.get("sectionPosition"));
-			targetSection.setSectionTitle((String) childSource.get("sectionTitle"));
-			targetSection.setType((String) childSource.get("type"));
-			sections.add(targetSection);
-		}
-		return sections;
-	}
-	
+
 	ProfileMetaData createProfileMetadata() {
 		ProfileMetaData pmd = new ProfileMetaData();
 		pmd.setOrgName("NIST");
@@ -210,7 +199,12 @@ public class HL7Tools2LiteConverter implements Runnable {
 	}
 
 	public static void main(String[] args) {
-		HL7Tools2LiteConverter app = new HL7Tools2LiteConverter();
+		HL7Tools2LiteConverter app;
+		if (args.length > 0) {
+		 app = new HL7Tools2LiteConverter(args);
+		} else {
+		 app = new HL7Tools2LiteConverter();
+		}
 		app.run();
 	}
 
@@ -343,8 +337,17 @@ public class HL7Tools2LiteConverter implements Runnable {
 			Segment seg = convertSegment(sg);
 			o.addSegment(new SegmentLink(seg.getId(), seg.getName(), seg.getExt()));
 		}
-
+		o.setMetaData(createSegmentLibraryMetaData());
 		return o;
+	}
+
+	SegmentLibraryMetaData createSegmentLibraryMetaData() {
+		SegmentLibraryMetaData segMetaData = new SegmentLibraryMetaData();
+		segMetaData.setSegmentLibId(UUID.randomUUID().toString());
+		segMetaData.setDate(Constant.mdy.format(new Date()));
+		segMetaData.setHl7Version(version);
+		segMetaData.setOrgName("NIST");
+		return segMetaData;
 	}
 
 	Segment convertSegment(gov.nist.healthcare.hl7tools.domain.Element i) {
@@ -361,6 +364,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		String key = i.getName();
 		if (!mapSegments.containsKey(key)) {
 			mapSegments.put(key, o);
+			mongoOps.insert(o);
 			mapSegmentsById.put(o.getId(), o);
 		} else {
 			log.debug("Key=" + key + " already put id=" + o.getId());
@@ -431,13 +435,24 @@ public class HL7Tools2LiteConverter implements Runnable {
 			if (ct != null) {
 				String key = ct.getKey();
 				Table tab = convertTable(ct);
+				mongoOps.insert(tab);
 				o.addTable(new TableLink(tab.getId(), tab.getBindingIdentifier()));
 				mapTables.put(key, tab);
 			} else {
 				log.debug("CodeTable is null!!");
 			}
 		}
+		o.setMetaData(createTableLibraryMetaData());
 		return o;
+	}
+
+	TableLibraryMetaData createTableLibraryMetaData() {
+		TableLibraryMetaData tabMetaData = new TableLibraryMetaData();
+		tabMetaData.setDate(Constant.mdy.format(new Date()));
+		tabMetaData.setHl7Version(version);
+		tabMetaData.setTableLibId(UUID.randomUUID().toString());
+		tabMetaData.setOrgName("NIST");
+		return tabMetaData;
 	}
 
 	Table convertTable(gov.nist.healthcare.hl7tools.domain.CodeTable i) {
@@ -503,12 +518,23 @@ public class HL7Tools2LiteConverter implements Runnable {
 	DatatypeLibrary convertDatatypes(gov.nist.healthcare.hl7tools.domain.DatatypeLibrary i) {
 		convertDataTypesFirstPass(i);
 		convertDataTypesSecondPass(i);
-		DatatypeLibrary dtLib = new DatatypeLibrary();
+		DatatypeLibrary o = new DatatypeLibrary();
 		for (Datatype dt : mapDatatypes.values()) {
-			dtLib.addDatatype(new DatatypeLink(dt.getId(), dt.getName(), dt.getExt()));
+			o.addDatatype(new DatatypeLink(dt.getId(), dt.getName(), dt.getExt()));
 		}
-		return dtLib;
+		o.setMetaData(createDatatypeLibraryMetaData());
+		return o;
 	}
+
+	DatatypeLibraryMetaData createDatatypeLibraryMetaData() {
+		DatatypeLibraryMetaData dtMetaData = new DatatypeLibraryMetaData();
+		dtMetaData.setDatatypeLibId(UUID.randomUUID().toString());
+		dtMetaData.setDate(Constant.mdy.format(new Date()));
+		dtMetaData.setHl7Version(version);
+		dtMetaData.setName(Constant.DefaultDatatypeLibrary);
+		dtMetaData.setOrgName("NIST");
+		return dtMetaData;
+	};
 
 	// We convert Dataypes in two passes.
 	void convertDataTypesFirstPass(gov.nist.healthcare.hl7tools.domain.DatatypeLibrary i) {
@@ -549,7 +575,8 @@ public class HL7Tools2LiteConverter implements Runnable {
 			// Key = dt.label and Value = the Datatype;
 			String key1 = convertedDt.getLabel();
 			assert (key.equals(key1)) : "key=" + key + " key1=" + key1;
-			convertDatatypeSecondPass(dt, convertedDt);
+			Datatype convertedDt2 = convertDatatypeSecondPass(dt, convertedDt);
+			mongoOps.insert(convertedDt2);
 		}
 		// dumpMap();
 	}
@@ -571,7 +598,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 	// Called by the second pass. Here we complete the conversion.
 	Datatype convertDatatypeSecondPass(gov.nist.healthcare.hl7tools.domain.Datatype i, Datatype o) {
 		o.setComponents(convertComponents(i.getComponents()));
-		log.info("dt=" + o.getLabel() + " components=" + o.getComponents().size());
+//		log.info("dt=" + o.getLabel() + " components=" + o.getComponents().size());
 		return o;
 	}
 
@@ -633,16 +660,16 @@ public class HL7Tools2LiteConverter implements Runnable {
 	String OidId() {
 		return "{ \"$oid\" : " + "\"" + generateId() + "\"" + "}";
 	}
-	
-	private String readMongoId(DBObject source){
-		if ( source.get("_id") != null){
-			if (source.get("_id") instanceof ObjectId){
+
+	private String readMongoId(DBObject source) {
+		if (source.get("_id") != null) {
+			if (source.get("_id") instanceof ObjectId) {
 				return ((ObjectId) source.get("_id")).toString();
 			} else {
 				return (String) source.get("_id");
 			}
-		} else if ( source.get("id") != null){
-			if (source.get("id") instanceof ObjectId){
+		} else if (source.get("id") != null) {
+			if (source.get("id") instanceof ObjectId) {
 				return ((ObjectId) source.get("id")).toString();
 			} else {
 				return (String) source.get("id");
@@ -650,6 +677,5 @@ public class HL7Tools2LiteConverter implements Runnable {
 		}
 		return null;
 	}
-
 
 }
