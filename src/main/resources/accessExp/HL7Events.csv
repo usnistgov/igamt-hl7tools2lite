@@ -265,28 +265,28 @@ A20,92,ADT/ACK -  Bed status update,3.3.20,
 A21,1,"A Patient Goes On A ""Leave Of Absence""",3.2.21,Patient Administration
 A21,2,"A Patient Goes On A ""Leave Of Absence""",3.2.21,Patient Administration
 A21,3,ADT/ACK -  Leave of absence - out (leaving),3.2.21,Patient Administration
-A21,4,ADT/ACK -  Patient goes on a Òleave of absenceÓ,3.2.21,Patient Administration
+A21,4,ADT/ACK -  Patient goes on a ñleave of absenceî,3.2.21,Patient Administration
 A21,5,"ADT/ACK -  Patient goes on a ""leave of absence""",3.3.21,Patient Administration
 A21,6,"ADT/ACK -  Patient goes on a ""leave of absence""",3.3.21,Patient Administration
 A21,7,"ADT/ACK -  Patient goes on a ""leave of absence""",3.3.21,Patient Administration
 A21,8,"ADT/ACK -  Patient goes on a ""leave of absence""",3.3.21,Patient Administration
 A21,9,"ADT/ACK -  Patient goes on a ""leave of absence""",3.3.21,
 A21,32,"ADT/ACK -  Patient goes on a ""leave of absence""",,Patient Administration
-A21,61,ADT/ACK -  Patient goes on a ‰€œleave of absence‰€ù,3.3.21,Patient Administration
+A21,61,ADT/ACK -  Patient goes on a äÛÏleave of absenceäÛù,3.3.21,Patient Administration
 A21,81,"ADT/ACK -  Patient goes on a ""leave of absence""",3.3.21,
 A21,91,"ADT/ACK -  Patient goes on a ""leave of absence""",3.3.21,
 A21,92,"ADT/ACK -  Patient goes on a ""leave of absence""",3.3.21,
 A22,1,"A Patient Returns From A ""Leave Of Absence""",3.2.22,Patient Administration
 A22,2,"A Patient Returns From A ""Leave Of Absence""",3.2.22,Patient Administration
 A22,3,ADT/ACK -  Leave of absence - in (returning),3.2.22,Patient Administration
-A22,4,ADT/ACK -  Patient returns from a Òleave of absenceÓ,3.2.22,Patient Administration
+A22,4,ADT/ACK -  Patient returns from a ñleave of absenceî,3.2.22,Patient Administration
 A22,5,"ADT/ACK -  Patient returns from a ""leave of absence""",3.3.22,Patient Administration
 A22,6,"ADT/ACK -  Patient returns from a ""leave of absence""",3.3.22,Patient Administration
 A22,7,"ADT/ACK -  Patient returns from a ""leave of absence""",3.3.22,Patient Administration
 A22,8,"ADT/ACK -  Patient returns from a ""leave of absence""",3.3.22,Patient Administration
 A22,9,"ADT/ACK -  Patient returns from a ""leave of absence""",3.3.22,
 A22,32,"ADT/ACK -  Patient returns from a ""leave of absence""",,Patient Administration
-A22,61,ADT/ACK -  Patient returns from a ‰€œleave of absence‰€ù,3.3.22,Patient Administration
+A22,61,ADT/ACK -  Patient returns from a äÛÏleave of absenceäÛù,3.3.22,Patient Administration
 A22,81,"ADT/ACK -  Patient returns from a ""leave of absence""",3.3.22,
 A22,91,"ADT/ACK -  Patient returns from a ""leave of absence""",3.3.22,
 A22,92,"ADT/ACK -  Patient returns from a ""leave of absence""",3.3.22,
@@ -2691,13 +2691,13 @@ S23,81,SIU/ACK - Notification of blocked schedule time slot(s),10.4,
 S23,91,SIU/ACK - Notification of blocked schedule time slot(s),10.4,
 S23,92,SIU/ACK - Notification of blocked schedule time slot(s),10.4,
 S24,3,"SIU/ACK - Notification of open (""unblocked"") schedule time slot(s)",10.3.13,Scheduling
-S24,4,SIU/ACK - Notification of opened (ÒunblockedÓ) schedule time slot(s),10.3.13,Scheduling
+S24,4,SIU/ACK - Notification of opened (ñunblockedî) schedule time slot(s),10.3.13,Scheduling
 S24,5,"SIU/ACK - Notification of opened (""unblocked"") schedule time slot(s)",10.4.13,Scheduling
 S24,6,"SIU/ACK - Notification of opened (""unblocked"") schedule time slot(s)",10.4,Scheduling
 S24,7,"SIU/ACK - Notification of opened (""unblocked"") schedule time slot(s)",10.4,Scheduling
 S24,8,"SIU/ACK - Notification of opened (""unblocked"") schedule time slot(s)",10.4,Scheduling
 S24,9,"SIU/ACK - Notification of opened (""unblocked"") schedule time slot(s)",10.4,
-S24,61,SIU/ACK - Notification of opened (‰€œunblocked‰€ù) schedule time slot(s),10.4,Scheduling
+S24,61,SIU/ACK - Notification of opened (äÛÏunblockedäÛù) schedule time slot(s),10.4,Scheduling
 S24,81,"SIU/ACK - Notification of opened (""unblocked"") schedule time slot(s)",10.4,
 S24,91,"SIU/ACK - Notification of opened (""unblocked"") schedule time slot(s)",10.4,
 S24,92,"SIU/ACK - Notification of opened (""unblocked"") schedule time slot(s)",10.4,

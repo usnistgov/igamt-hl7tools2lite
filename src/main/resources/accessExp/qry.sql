@@ -55,21 +55,30 @@ INNER JOIN hl7eventmessagetypes e ON v.`version_id` = e.`version_id`
 WHERE v.`hl7_version` = '2.8.2'
 AND m.`message_structure` = e.`message_structure_snd`;
 
+create or replace view emtypes282 as 
+SELECT s.`event_code`, s.`message_type`, s.`groupname`, s.`seg_code`, s.`modification`, s.`optional`, s.`repetitional`
+FROM hl7versions v INNER JOIN hl7eventmessagetypesegments s ON v.version_id = s.version_id
+WHERE v.`hl7_version` = "2.8.2";
 
-create or replace view seg92 as 
+create or replace view emtype282 as 
+SELECT s.`event_code`, s.`message_structure_snd`, s.`message_structure_return`
+FROM hl7versions v INNER JOIN hl7eventmessagetypes s ON v.version_id = s.version_id
+WHERE v.`hl7_version` = "2.8.2";
+
+create or replace view msg282 as 
+SELECT s.`message_structure`, s.`description`
+FROM hl7versions v INNER JOIN hl7msgstructids s ON v.version_id = s.version_id
+WHERE v.`hl7_version` = "2.8.2";
+
+create or replace view seg282 as 
 SELECT v.version_id, v.hl7_version, s.seg_code, s.description, s.visible
 FROM hl7versions v INNER JOIN hl7segments s ON v.version_id = s.version_id
 WHERE v.`hl7_version` = "2.8.2"
 AND s.visible = 'TRUE'
 ORDER BY s.seg_code;
 
-create or replace view ele92 as
-SELECT m.`message_structure`, m.`seq_no`, m.`groupname`, m.`seg_code`, m.`modification`, m.`optional`, m.`repetitional`, m.`version_id` 
+create or replace view ele282 as
+SET @row_number = 6943;
+SELECT (@row_number := @row_number + 1) AS id, m.`message_structure`, m.`seq_no`, m.`groupname`, m.`seg_code`, m.`modification`, m.`optional`, m.`repetitional`, m.`version_id` 
 FROM hl7versions v INNER JOIN hl7msgstructidsegments m ON v.version_id = m.version_id 
-WHERE v.`hl7_version` = '2.8.2'
-ORDER BY m.`seg_code`;
-
-select * 
-from seg92 RIGHT join ele92 on seg92.`seg_code` = ele92.`seg_code`
-order by seg92.`seg_code`;
-
+WHERE v.`hl7_version` = '2.8.2';
