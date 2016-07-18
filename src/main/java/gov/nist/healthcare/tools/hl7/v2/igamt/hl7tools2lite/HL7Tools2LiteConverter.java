@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import org.apache.xalan.templates.Constants;
 import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,6 +36,7 @@ import gov.nist.healthcare.hl7tools.service.HL7DBServiceException;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Code;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Component;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant.SCOPE;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ContentDefinition;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLibrary;
@@ -91,35 +91,33 @@ public class HL7Tools2LiteConverter implements Runnable {
 	public HL7DBService service = new HL7DBMockServiceImpl();
 	List<String> hl7Versions;
 	MongoClient mongo;
-//	DB db;
-//	DBCollection collIGD;
 	MongoOperations mongoOps = null;
 
 	public HL7Tools2LiteConverter(String[] hl7Versions) {
 		super();
 		this.hl7Versions = Arrays.asList(hl7Versions);
 	}
-	
+
 	public HL7Tools2LiteConverter() {
 		super();
 		this.hl7Versions = service.getSupportedHL7Versions();
 	}
-	
+
 	public void run() {
-		mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igamt"));
+		mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igamt1"));
 		mongo = new MongoClient("localhost", 27017);
-//		db = mongo.getDB("igamt");
-//		collIGD = db.getCollection("igdocument");
+		// db = mongo.getDB("igamt");
+		// collIGD = db.getCollection("igdocument");
 		log.info("start...");
-//		log.info("Dropping mongo collection profile...");
-//		mongoOps.dropCollection(Table.class);
-//		mongoOps.dropCollection(Datatype.class);
-//		mongoOps.dropCollection(Segment.class);
-//		mongoOps.dropCollection(TableLibrary.class);
-//		mongoOps.dropCollection(DatatypeLibrary.class);
-//		mongoOps.dropCollection(SegmentLibrary.class);
-//		mongoOps.dropCollection(Message.class);
-//		mongoOps.dropCollection(IGDocument.class);
+		log.info("Dropping mongo collection profile...");
+		mongoOps.dropCollection(Table.class);
+		mongoOps.dropCollection(Datatype.class);
+		mongoOps.dropCollection(Segment.class);
+		mongoOps.dropCollection(TableLibrary.class);
+		mongoOps.dropCollection(DatatypeLibrary.class);
+		mongoOps.dropCollection(SegmentLibrary.class);
+		mongoOps.dropCollection(Message.class);
+		mongoOps.dropCollection(IGDocument.class);
 
 		// if (!OUTPUT_DIR.exists()) {
 		// OUTPUT_DIR.mkdir();
@@ -195,9 +193,9 @@ public class HL7Tools2LiteConverter implements Runnable {
 	public static void main(String[] args) {
 		HL7Tools2LiteConverter app;
 		if (args.length > 0) {
-		 app = new HL7Tools2LiteConverter(args);
+			app = new HL7Tools2LiteConverter(args);
 		} else {
-		 app = new HL7Tools2LiteConverter();
+			app = new HL7Tools2LiteConverter();
 		}
 		app.run();
 	}
@@ -235,6 +233,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setIdentifier("Default" + i.getEvent() + "Identifier");
 		o.setMessageType(i.getMessageType());
 		o.setName(assembleMessageName(i));
+		o.setHl7Version(hl7Version);
 		assert (o.getName() != null);
 		o.setPosition(seq);
 		o.setStructID(assembleMessageStructID(i));
@@ -355,6 +354,8 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setFields(convertFields(checkFieldList(i.getFields())));
 		o.setLabel(i.getName());
 		o.setName(i.getName());
+		o.setHl7Version(hl7Version);
+		o.setScope(SCOPE.HL7STANDARD);
 		String key = i.getName();
 		if (!mapSegments.containsKey(key)) {
 			mapSegments.put(key, o);
@@ -463,6 +464,8 @@ public class HL7Tools2LiteConverter implements Runnable {
 		// Use ContentDefinition.Extensional.
 		o.setContentDefinition(ContentDefinition.Extensional);
 		o.setDescription(i.getDescription());
+		o.setHl7Version(hl7Version);
+		o.setScope(SCOPE.HL7STANDARD);
 		if (i instanceof HL7Table) {
 			HL7Table ii = (HL7Table) i;
 			// HL7 = Closed; User = Open (enum)
@@ -585,6 +588,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setComment(i.getComment());
 		o.setUsageNote(i.getUsageNotes());
 		o.setHl7Version(hl7Version);
+		o.setScope(SCOPE.HL7STANDARD);
 		// We refrain from converting components until the second pass.
 		// o.setComponents(convertComponents(i.getComponents()));
 		return o;
@@ -593,7 +597,8 @@ public class HL7Tools2LiteConverter implements Runnable {
 	// Called by the second pass. Here we complete the conversion.
 	Datatype convertDatatypeSecondPass(gov.nist.healthcare.hl7tools.domain.Datatype i, Datatype o) {
 		o.setComponents(convertComponents(i.getComponents()));
-//		log.info("dt=" + o.getLabel() + " components=" + o.getComponents().size());
+		// log.info("dt=" + o.getLabel() + " components=" +
+		// o.getComponents().size());
 		return o;
 	}
 
@@ -611,23 +616,36 @@ public class HL7Tools2LiteConverter implements Runnable {
 	}
 
 	Component convertComponent(gov.nist.healthcare.hl7tools.domain.Component i) {
-		String key = i.getDatatype().getName();
 		Component o = new Component();
-
+		String key = "";
 		try {
-			Datatype dt = mapDatatypes.get(key);
-			if (dt.getId() == null) {
-				throw new NullPointerException("dt=" + dt.toString());
+			gov.nist.healthcare.hl7tools.domain.Datatype iDt = i.getDatatype();
+			if (iDt != null) {
+				key = iDt.getName();
 			}
-			o.setComment(i.getComment());
-			o.setConfLength(Integer.toString(i.getConfLength()));
-			o.setDatatype(new DatatypeLink(dt.getId(), dt.getName(), dt.getExt()));
-			o.setMaxLength(i.getMaxLength());
-			o.setMinLength(i.getMinLength());
-			o.setPosition(i.getPosition());
-			o.setName(i.getDescription());
+			try {
+				DatatypeLink link = null;
+				Datatype dt = mapDatatypes.get(key);
+				if (dt == null) {
+					link = new DatatypeLink(null, null, null);
+				} else {
+					if (dt.getId() == null) {
+						throw new NullPointerException("dt=" + dt.toString());
+					}
+					link = new DatatypeLink(dt.getId(), dt.getName(), dt.getExt());
+				}
+				o.setComment(i.getComment());
+				o.setConfLength(Integer.toString(i.getConfLength()));
+				o.setDatatype(link);
+				o.setMaxLength(i.getMaxLength());
+				o.setMinLength(i.getMinLength());
+				o.setPosition(i.getPosition());
+				o.setName(i.getDescription());
+			} catch (NullPointerException e) {
+				log.error("Datatype name=" + key + " not found in mapDatatypes.", e);
+			}
 		} catch (NullPointerException e) {
-			log.error("Datatype name=" + key + " not found in mapDatatypes.", e);
+			log.error("Component datatype=" + i.getId() + " " + i.getDescription() + " not found.", e);
 		}
 
 		gov.nist.healthcare.hl7tools.domain.CodeTable ct = i.getCodeTable();

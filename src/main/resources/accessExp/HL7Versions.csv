@@ -9,13 +9,14 @@ version_id,hl7_version,description,status,date_release,HtmlPath,HtmlFile,filenam
 7,2.6,Official Standard,Final Release,10/1/07,std26,hl7.html,v26,6,21,TRUE,TRUE,0,D:\temp\HL7-xml v2.6,TRUE
 8,2.7,Official Standard,Final Release,2/1/11,std27,hl7.html,v27,7,23,TRUE,TRUE,0,d:\temp\HL7-xml v2.7,TRUE
 9,2.8,Official Standard,Final Release,4/1/14,std28,hl7.html,v28,8,26,TRUE,TRUE,0,d:\temp\HL7-xml v2.8,TRUE
+10,2.9,Official Standard,Draft,3/11/16,std29,hl7.html,v29,92,29,TRUE,TRUE,0,,TRUE
 20,2.2 DE,German Additions,In progress,,std22de,hl7.html,v22de,2,4,TRUE,TRUE,2,,FALSE
 32,2.3 Agfa,Agfa: ORBIS SP7,in progress,11/18/07,std23agfa,,v23agfa,3,7,TRUE,TRUE,3,,FALSE
 60,2.5 DE,German Additions,In Progress,7/5/07,std25de,hl7.html,v25de,6,15,TRUE,TRUE,6,,FALSE
 61,2.5.1,Official Standard,Final Release,5/5/07,std251,hl7.html,v251,6,19,TRUE,TRUE,6,d:\temp\HL7-xml v2.5.1,TRUE
 81,2.7.1,Official Standard,Final Release,,std271,hl7.html,v271,8,24,TRUE,TRUE,8,d:\temp\HL7-xml v2.7.1,TRUE
 91,2.8.1,Official Standard,Final Release,,std281,hl7.html,v281,9,27,TRUE,TRUE,9,d:\temp\HL7-xml v2.8.1,TRUE
-92,2.8.2,Official Standard,Final Release,,std282,hl7.html,v282,92,28,TRUE,TRUE,9,,TRUE
+92,2.8.2,Official Standard,Final Release,,std282,hl7.html,v282,92,28,TRUE,TRUE,9,d:\temp\HL7-xml v2.8.2,TRUE
 100,2.1 DE,German Additions,in progress,,std21de,,v21de,1,2,FALSE,FALSE,1,,FALSE
 300,2.3 DE,German Additions,in progress,,std23de,,v23de,3,6,TRUE,TRUE,3,,FALSE
 400,2.3.1 DE,German Additions,in progress,,std231de,,v231de,4,9,TRUE,TRUE,4,,FALSE

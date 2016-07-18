@@ -13,6 +13,7 @@ ACK,61,General acknowledgment message,10.4,ch10.html#Heading54
 ACK,81,General acknowledgment message,10.4,ch10.html#Heading49
 ACK,91,General acknowledgment message,10.4,ch10.html#Heading54
 ACK,92,General acknowledgment message,10.4,ch10.html#Heading54
+ACK,540,,,
 ACK,999,General acknowledgment message,,
 ADR,1,ANCILLARY RPT (DISPLAY),,
 ADR,2,ANCILLARY RPT (DISPLAY),,
@@ -36,6 +37,7 @@ ADT,61,ADT message,3.3.1,ch03.html#Heading5
 ADT,81,ADT message,3.3.1,ch03.html#Heading5
 ADT,91,ADT message,3.3.1,ch03.html#Heading5
 ADT,92,ADT message,3.3.1,ch03.html#Heading5
+ADT,540,,,
 ADT,999,ADT message,,
 BAR,1,Add/change billing account,,
 BAR,2,Add/change billing account,,
@@ -390,6 +392,7 @@ NUL,9,No message required (for referential integrity),0,
 NUL,61,Response for vaccination query with multiple PID matches,,
 NUL,91,,,
 NUL,92,,,
+NUL,540,,,
 OCF,1,ORDER CONFIRMATION,,
 OMB,6,Blood product order message,4.20.1,
 OMB,7,Blood product order message,4.20.1,ch04.html#Heading482
@@ -408,6 +411,7 @@ OMD,61,Dietary order,4.7.1,ch04.html#Heading170
 OMD,81,Dietary order,4.6.1,ch04.html#Heading168
 OMD,91,Dietary order,4.7.1,ch04.html#Heading192
 OMD,92,Dietary order,4.7.1,ch04.html#Heading192
+OMG,0,General Clinical Order Message,,
 OMG,5,General clinical order message,4,
 OMG,6,General clinical order message,4.4.4,
 OMG,7,General clinical order message,4.4.4,ch04.html#Heading22
@@ -417,6 +421,7 @@ OMG,61,General clinical order message,4.4.4,ch04.html#Heading22
 OMG,81,General clinical order message,4.3.4,ch04.html#Heading17
 OMG,91,General clinical order message,4.4.4,ch04.html#Heading19
 OMG,92,General clinical order message,4.4.4,ch04.html#Heading19
+OMG,540,,,
 OMI,6,Imaging order,4.4.12,
 OMI,7,Imaging order,4.4.12,ch04.html#Heading30
 OMI,8,Imaging order,4.4.14,ch04.html#Heading28
@@ -434,6 +439,7 @@ OML,61,Laboratory order message,4.4.10,ch04.html#Heading28
 OML,81,Laboratory order message,4.3.10,ch04.html#Heading23
 OML,91,Laboratory order message,4.4.10,ch04.html#Heading31
 OML,92,Laboratory order message,4.4.10,ch04.html#Heading31
+OML,540,,,
 OMN,5,Non-stock requisition order message,4,
 OMN,6,Non-stock requisition order message,4.10.3,
 OMN,7,Non-stock requisition order message,4.10.3,ch04.html#Heading193
@@ -538,6 +544,7 @@ ORL,61,Laboratory acknowledgment message (unsolicited),4.4.11,ch04.html#Heading2
 ORL,81,Laboratory acknowledgment message (unsolicited),4.3.11,ch04.html#Heading24
 ORL,91,Laboratory acknowledgment message (unsolicited),4.4.11.1,ch04.html#Heading34
 ORL,92,Laboratory acknowledgment message (unsolicited),4.4.11.1,ch04.html#Heading34
+ORL,540,,,
 ORM,1,Pharmacy/treatment order message,,
 ORM,2,Pharmacy/treatment order message,,
 ORM,3,Pharmacy/treatment order message,,
@@ -573,6 +580,7 @@ ORR,5,General order response message response to any ORM,4,
 ORR,6,General order response message response to any ORM,4.4.2,
 ORR,7,General order response message response to any ORM,4.4.2,ch04.html#Heading18
 ORR,61,General order response message response to any ORM,4.4.2,ch04.html#Heading18
+ORR,540,,,
 ORS,5,Stock requisition - Order acknowledgment message,4,
 ORS,6,Stock requisition - Order acknowledgment message,4.10.2,
 ORS,7,Stock requisition - Order acknowledgment message,4.10.2,ch04.html#Heading192
@@ -596,6 +604,7 @@ ORU,61,Unsolicited transmission of an observation message,5.7.3.1,ch05.html#Head
 ORU,81,Unsolicited transmission of an observation message,5.7.3.0,ch05.html#Heading104
 ORU,91,Unsolicited transmission of an observation message,7.3.1,ch07.html#Heading43
 ORU,92,Unsolicited transmission of an observation message,7.3.1,ch07.html#Heading44
+ORU,540,,,
 ORX,9,General Order Message with Document Payload Acknowledgement,4.4.20,ch04.html#Heading35
 ORX,91,General Order Message with Document Payload Acknowledgement,4.4.20,ch04.html#Heading47
 ORX,92,General Order Message with Document Payload Acknowledgement,4.4.20,ch04.html#Heading47

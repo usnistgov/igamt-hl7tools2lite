@@ -18,6 +18,7 @@ ACK,61,Standard Acknowlegdement,,,,2.14.1,ch02.html#Heading142,FALSE
 ACK,81,General Acknowledgment,,,,2.13.1,ch02.html#Heading93,FALSE
 ACK,91,,,,,2.13.1,ch02.html#Heading101,FALSE
 ACK,92,,,,,2.13.1,ch02.html#Heading101,FALSE
+ACK,540,,,,,,,FALSE
 ACK_N02,5,,,,,14,,FALSE
 ADR_A19,4,,A19,ADR,,,,FALSE
 ADR_A19,5,,,,,3,,FALSE
@@ -37,6 +38,7 @@ ADT_A01,61,General,,,,3.3.1,ch03.html#Heading5,FALSE
 ADT_A01,81,ADT Message,,,,3.3.1,ch03.html#Heading5,FALSE
 ADT_A01,91,,,,,3.3.1,ch03.html#Heading5,FALSE
 ADT_A01,92,,,,,3.3.1,ch03.html#Heading5,FALSE
+ADT_A01,540,,,,,,,FALSE
 ADT_A02,3,Transfer,A02,ADT,,,,FALSE
 ADT_A02,4,Transfer,A02,ADT,,,,FALSE
 ADT_A02,5,Transfer,,,,3,,FALSE
@@ -48,6 +50,7 @@ ADT_A02,61,Transfer,,,,3.3.2,ch03.html#Heading6,FALSE
 ADT_A02,81,ADT Message,,,,3.3.2,ch03.html#Heading6,FALSE
 ADT_A02,91,,,,,3.3.2,ch03.html#Heading6,FALSE
 ADT_A02,92,,,,,3.3.2,ch03.html#Heading6,FALSE
+ADT_A02,540,,,,,,,FALSE
 ADT_A03,3,Discharge,A03,ADT,,,,FALSE
 ADT_A03,4,Discharge,A03,ADT,,,,FALSE
 ADT_A03,5,Discharge,,,,3,,FALSE
@@ -90,6 +93,8 @@ ADT_A09,61,,,,,3.3.9,ch03.html#Heading13,FALSE
 ADT_A09,81,ADT Message,,,,3.3.9,ch03.html#Heading13,FALSE
 ADT_A09,91,,,,,3.3.9,ch03.html#Heading13,FALSE
 ADT_A09,92,,,,,3.3.9,ch03.html#Heading13,FALSE
+ADT_A09,540,,,,,,,FALSE
+ADT_A11,540,,,,,,,FALSE
 ADT_A12,3,Track/Cancel (2),A12,ADT,,,,FALSE
 ADT_A12,4,,A12,ADT,,,,FALSE
 ADT_A12,6,,,,,3.3.12,ch03.html#Heading16,FALSE
@@ -109,6 +114,7 @@ ADT_A15,61,,,,,3.3.15,ch03.html#Heading19,FALSE
 ADT_A15,81,ADT Message,,,,3.3.15,ch03.html#Heading19,FALSE
 ADT_A15,91,,,,,3.3.15,ch03.html#Heading19,FALSE
 ADT_A15,92,,,,,3.3.15,ch03.html#Heading19,FALSE
+ADT_A15,540,,,,,,,FALSE
 ADT_A16,3,Pending Discharge,A16,ADT,,,,FALSE
 ADT_A16,4,,A16,ADT,,,,FALSE
 ADT_A16,5,,,,,3,,FALSE
@@ -168,6 +174,8 @@ ADT_A24,61,,,,,3.3.24,ch03.html#Heading30,FALSE
 ADT_A24,81,ADT Message,,,,3.3.24,ch03.html#Heading28,FALSE
 ADT_A24,91,,,,,3.3.24,ch03.html#Heading28,FALSE
 ADT_A24,92,,,,,3.3.24,ch03.html#Heading28,FALSE
+ADT_A24,540,Link Patient Information,A24,,,,,FALSE
+ADT_A28,540,,,,,,,FALSE
 ADT_A30,3,,A30,ADT,,,,FALSE
 ADT_A30,4,,A30,ADT,,,,FALSE
 ADT_A30,5,,,,,3,,FALSE
@@ -196,6 +204,7 @@ ADT_A38,61,,,,,3.3.38,ch03.html#Heading44,FALSE
 ADT_A38,81,ADT Message,,,,3.3.38,ch03.html#Heading42,FALSE
 ADT_A38,91,,,,,3.3.38,ch03.html#Heading42,FALSE
 ADT_A38,92,,,,,3.3.38,ch03.html#Heading42,FALSE
+ADT_A38,540,,,,,,,FALSE
 ADT_A39,3,,A39,ADT,,,,FALSE
 ADT_A39,4,,A39,ADT,,,,FALSE
 ADT_A39,5,,,,,3,,FALSE
@@ -207,6 +216,8 @@ ADT_A39,61,,,,,3.3.39,ch03.html#Heading45,FALSE
 ADT_A39,81,ADT Message,,,,3.3.40,ch03.html#Heading44,FALSE
 ADT_A39,91,,,,,3.3.40,ch03.html#Heading44,FALSE
 ADT_A39,92,,,,,3.3.40,ch03.html#Heading44,FALSE
+ADT_A40,540,Merge Patient,,,,,,FALSE
+ADT_A42,540,Merge Visit,,,,,,FALSE
 ADT_A43,3,,A43,ADT,,,,FALSE
 ADT_A43,4,,A43,ADT,,,,FALSE
 ADT_A43,5,,,,,3,,FALSE
@@ -254,6 +265,7 @@ ADT_A52,61,,,,,3.3.52,ch03.html#Heading58,FALSE
 ADT_A52,81,ADT Message,,,,3.3.52,ch03.html#Heading56,FALSE
 ADT_A52,91,,,,,3.3.52,ch03.html#Heading56,FALSE
 ADT_A52,92,,,,,3.3.52,ch03.html#Heading56,FALSE
+ADT_A52,540,,,,,,,FALSE
 ADT_A54,5,,,,,3,,FALSE
 ADT_A54,6,,,,,3.3.54,ch03.html#Heading60,FALSE
 ADT_A54,7,,,,,3.3.54,ch03.html#Heading60,FALSE
@@ -878,6 +890,7 @@ NUL,32,,,,,,,FALSE
 NUL,61,,,,,,,FALSE
 NUL,91,,,,,,,FALSE
 NUL,92,,,,,,,FALSE
+NUL,540,,,,,,,FALSE
 OMB_O27,6,,,,,4.20.1,ch04.html#Heading466,FALSE
 OMB_O27,7,,,,,4.20.1,ch04.html#Heading482,FALSE
 OMB_O27,8,Blood Product Order Message,,,,4.13.1,ch04.html#Heading214,FALSE

@@ -273,6 +273,7 @@ DT,61,Date,,ch02a.html#Heading146,FALSE
 DT,81,Date,,ch02a.html#Heading180,FALSE
 DT,91,Date,,ch02a.html#Heading200,FALSE
 DT,92,Date,,ch02a.html#Heading200,FALSE
+DT,540,Date,,,FALSE
 DTM,6,Date/Time,,ch02A.html#Heading147,FALSE
 DTM,7,Date/Time,,ch02a.html#Heading141,FALSE
 DTM,8,Date/Time,,ch02a.html#Heading201,FALSE
@@ -571,6 +572,7 @@ NM,81,Numeric,,ch02a.html#Heading287,FALSE
 NM,91,Numeric,,ch02a.html#Heading297,FALSE
 NM,92,Numeric,,ch02a.html#Heading297,FALSE
 NM,530,Numeric,,,FALSE
+NM,540,Numeric,,,FALSE
 NR,4,numeric range,,,FALSE
 NR,5,numeric range,,,FALSE
 NR,6,Numeric Range,,ch02A.html#Heading276,FALSE
@@ -639,6 +641,7 @@ PL,61,Person Location,,ch02a.html#Heading308,FALSE
 PL,81,Person Location,,ch02a.html#Heading305,FALSE
 PL,91,Person Location,,ch02a.html#Heading319,FALSE
 PL,92,Person Location,,ch02a.html#Heading324,FALSE
+PL,540,Person Location,,,FALSE
 PLN,4,Practitioner ID Numbers,,,FALSE
 PLN,5,Practitioner ID Numbers,,,FALSE
 PLN,6,Practitioner License or Other ID Number,,ch02A.html#Heading321,FALSE

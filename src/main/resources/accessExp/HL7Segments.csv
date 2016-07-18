@@ -224,6 +224,7 @@ AL1,61,Patient Allergy Information,Allergieinformationen zum Patienten,,FALSE,FA
 AL1,81,Patient Allergy Information,Allergieinformationen zum Patienten,,FALSE,FALSE,TRUE,3.4.6,ch03.html#Heading266,FALSE
 AL1,91,Patient Allergy Information,Allergieinformationen zum Patienten,,FALSE,FALSE,TRUE,3.4.6,ch03.html#Heading271,FALSE
 AL1,92,Patient Allergy Information,Allergieinformationen zum Patienten,,FALSE,FALSE,TRUE,3.4.6,ch03.html#Heading271,FALSE
+AL1,540,Patient Allergy,,,FALSE,FALSE,TRUE,,,FALSE
 APR,3,Appointment Preferences,Terminvorschlag - bervorzugte Auswahlkriteriien,,FALSE,FALSE,TRUE,10.5.8,ch10.htm#Heading175,FALSE
 APR,4,APR - appointment preferences segment,Terminvorschlag - bervorzugte Auswahlkriteriien,,FALSE,FALSE,TRUE,10.5.8,ch10.html#Heading187,FALSE
 APR,5,Appointment Preferences,Terminvorschlag - bervorzugte Auswahlkriteriien,,FALSE,FALSE,TRUE,10.6.8,ch10.htm#Heading194,FALSE
@@ -490,6 +491,7 @@ DG1,61,Diagnosis,Diagnoseninformation,,FALSE,FALSE,TRUE,6.5.2,ch06.html#Heading4
 DG1,81,Diagnosis,Diagnoseninformation,,FALSE,FALSE,TRUE,6.5.2,ch06.html#Heading60,FALSE
 DG1,91,Diagnosis,Diagnoseninformation,,FALSE,FALSE,TRUE,6.5.2,ch06.html#Heading61,FALSE
 DG1,92,Diagnosis,Diagnoseninformation,,FALSE,FALSE,TRUE,6.5.2,ch06.html#Heading61,FALSE
+DG1,540,Diagnosis,,,FALSE,FALSE,TRUE,,,FALSE
 DMI,7,DRG Master File Information,DRG-Stammdaten,,FALSE,FALSE,TRUE,8.13.2,ch08.html#Heading311,FALSE
 DMI,8,DRG Master File Information,DRG-Stammdaten,,FALSE,FALSE,TRUE,8.13.2,ch08.html#Heading277,FALSE
 DMI,9,DRG Master File Information,DRG-Stammdaten,,FALSE,FALSE,TRUE,8.13.2,ch08.html#Heading310,FALSE
@@ -608,6 +610,7 @@ ERR,61,Error,Fehlerinformationen,,FALSE,FALSE,TRUE,2.15.5,ch02.html#Heading171,F
 ERR,81,Error,Fehlerinformationen,,FALSE,FALSE,TRUE,2.14.5,ch02.html#Heading119,FALSE
 ERR,91,Error,Fehlerinformationen,,FALSE,FALSE,TRUE,2.14.5,ch02.html#Heading131,FALSE
 ERR,92,Error,Fehlerinformationen,,FALSE,FALSE,TRUE,2.14.5,ch02.html#Heading131,FALSE
+ERR,540,Error,,,FALSE,FALSE,TRUE,,,FALSE
 EVN,1,EVENT TYPE,Ereignissinformationen,ADT,FALSE,FALSE,TRUE,3.3.1,kap3.html#Heading29,FALSE
 EVN,2,EVENT TYPE,Ereignissinformationen,ADT,FALSE,FALSE,TRUE,3.3.1,hl7chp3.html#Heading43,FALSE
 EVN,3,Event type,Ereignissinformationen,,FALSE,FALSE,TRUE,3.3.1,ch3.htm#Heading57,FALSE
@@ -622,6 +625,7 @@ EVN,61,Event Type,Ereignissinformationen,,FALSE,FALSE,TRUE,3.4.1,ch03.html#Headi
 EVN,81,Event Type,Ereignissinformationen,,FALSE,FALSE,TRUE,3.4.1,ch03.html#Heading69,FALSE
 EVN,91,Event Type,Ereignissinformationen,,FALSE,FALSE,TRUE,3.4.1,ch03.html#Heading69,FALSE
 EVN,92,Event Type,Ereignissinformationen,,FALSE,FALSE,TRUE,3.4.1,ch03.html#Heading69,FALSE
+EVN,540,Event Type,,,FALSE,FALSE,TRUE,,,FALSE
 FAC,3,Facility,Einrichtungsinformationen,,FALSE,FALSE,TRUE,7.11.6,ch7.htm#Heading284,FALSE
 FAC,4,FAC - facility segment,Einrichtungsinformationen,,FALSE,FALSE,TRUE,7.11.6,ch7.html#Heading311,FALSE
 FAC,5,Facility,Einrichtungsinformationen,,FALSE,FALSE,TRUE,7.12.6,ch07.htm#Heading315,FALSE
@@ -896,6 +900,7 @@ LOC,61,Location Identification,Stammdaten - Räumlichkeiten,,FALSE,FALSE,TRUE,8.9
 LOC,81,Location Identification,Stammdaten - Räumlichkeiten,,FALSE,FALSE,TRUE,8.9.2,ch08.html#Heading171,FALSE
 LOC,91,Location Identification,Stammdaten - Räumlichkeiten,,FALSE,FALSE,TRUE,8.9.2,ch08.html#Heading198,FALSE
 LOC,92,Location Identification,Stammdaten - Räumlichkeiten,,FALSE,FALSE,TRUE,8.9.2,ch08.html#Heading258,FALSE
+LOC,540,Location,,,FALSE,FALSE,TRUE,8.5.5,,FALSE
 LRL,3,Location Relationship,Stammdaten - Beziehungen zwischen Räumlichkeiten,,FALSE,FALSE,TRUE,8.8.4,ch8.htm#Heading195,FALSE
 LRL,4,LRL - location relationship segment,Stammdaten - Beziehungen zwischen Räumlichkeiten,,FALSE,FALSE,TRUE,8.8.4,ch8.html#Heading214,FALSE
 LRL,5,Location Relationship,Stammdaten - Beziehungen zwischen Räumlichkeiten,,FALSE,FALSE,TRUE,8.9.4,ch08.htm#Heading204,FALSE
@@ -907,6 +912,7 @@ LRL,61,Location Relationship,Stammdaten - Beziehungen zwischen Räumlichkeiten,,F
 LRL,81,Location Relationship,Stammdaten - Beziehungen zwischen Räumlichkeiten,,FALSE,FALSE,TRUE,8.9.4,ch08.html#Heading187,FALSE
 LRL,91,Location Relationship,Stammdaten - Beziehungen zwischen Räumlichkeiten,,FALSE,FALSE,TRUE,8.9.4,ch08.html#Heading216,FALSE
 LRL,92,Location Relationship,Stammdaten - Beziehungen zwischen Räumlichkeiten,,FALSE,FALSE,TRUE,8.9.4,ch08.html#Heading276,FALSE
+LRL,540,Location Relationship,,,FALSE,FALSE,TRUE,8.5.6,,FALSE
 MCP,92,Master File Coverage,,,FALSE,FALSE,TRUE,8.8.18,ch08.html#Heading242,FALSE
 MFA,2,MASTER FILE ACKNOWLEDGEMENT,Bestätigung zu Stammdatennachrichten,,FALSE,FALSE,TRUE,8.4.3,hl7chp8.html#Heading22,FALSE
 MFA,3,Master file acknowledgement segment,Bestätigung zu Stammdatennachrichten,,FALSE,FALSE,TRUE,8.4.3,ch8.htm#Heading22,FALSE
@@ -932,6 +938,7 @@ MFE,61,Master File Entry,Informationen zum Stammdatenelement,,FALSE,FALSE,TRUE,8
 MFE,81,Master File Entry,Informationen zum Stammdatenelement,,FALSE,FALSE,TRUE,8.5.2,ch08.html#Heading21,FALSE
 MFE,91,Master File Entry,Informationen zum Stammdatenelement,,FALSE,FALSE,TRUE,8.5.2,ch08.html#Heading24,FALSE
 MFE,92,Master File Entry,Informationen zum Stammdatenelement,,FALSE,FALSE,TRUE,8.5.2,ch08.html#Heading24,FALSE
+MFE,540,Master File Entry,,,FALSE,FALSE,TRUE,8.5.2,,FALSE
 MFI,2,MASTER FILE IDENTIFICATION,Identifikation der Stammdatentabelle,,FALSE,FALSE,TRUE,8.4.1,hl7chp8.html#Heading10,FALSE
 MFI,3,Master file identification segment,Identifikation der Stammdatentabelle,,FALSE,FALSE,TRUE,8.4.1,ch8.htm#Heading10,FALSE
 MFI,4,MFI - master file identification segment,Identifikation der Stammdatentabelle,,FALSE,FALSE,TRUE,8.4.1,ch8.html#Heading11,FALSE
@@ -944,6 +951,7 @@ MFI,61,Master File Identification,Identifikation der Stammdatentabelle,,FALSE,FA
 MFI,81,Master File Identification,Identifikation der Stammdatentabelle,,FALSE,FALSE,TRUE,8.5.1,ch08.html#Heading14,FALSE
 MFI,91,Master File Identification,Identifikation der Stammdatentabelle,,FALSE,FALSE,TRUE,8.5.1,ch08.html#Heading16,FALSE
 MFI,92,Master File Identification,Identifikation der Stammdatentabelle,,FALSE,FALSE,TRUE,8.5.1,ch08.html#Heading16,FALSE
+MFI,540,Master File Identification,,,FALSE,FALSE,TRUE,8.5.1,,FALSE
 MRG,1,MERGE PATIENT INFORMATION,Informationen zur Zusammenführung von Patientendaten,ADT,FALSE,FALSE,TRUE,,,FALSE
 MRG,2,MERGE PATIENT INFORMATION,Informationen zur Zusammenführung von Patientendaten,ADT,FALSE,FALSE,TRUE,3.3.8,hl7chp3.html#Heading164,FALSE
 MRG,3,Merge patient information,Informationen zur Zusammenführung von Patientendaten,,FALSE,FALSE,TRUE,3.3.8,ch3.htm#Heading236,FALSE
@@ -958,6 +966,7 @@ MRG,61,Merge Patient Information,Informationen zur Zusammenführung von Patienten
 MRG,81,Merge Patient Information,Informationen zur Zusammenführung von Patientendaten,,FALSE,FALSE,TRUE,3.4.10,ch03.html#Heading312,FALSE
 MRG,91,Merge Patient Information,Informationen zur Zusammenführung von Patientendaten,,FALSE,FALSE,TRUE,3.4.10,ch03.html#Heading321,FALSE
 MRG,92,Merge Patient Information,Informationen zur Zusammenführung von Patientendaten,,FALSE,FALSE,TRUE,3.4.10,ch03.html#Heading321,FALSE
+MRG,540,Merge Patient Information,,,FALSE,FALSE,TRUE,,,FALSE
 MSA,1,MESSAGE ACKNOWLEDGMENT,Nachrichtenbestätigung,CNT,FALSE,FALSE,TRUE,2.5.7,kap2.html#Heading59,FALSE
 MSA,2,MESSAGE ACKNOWLEDGMENT,Nachrichtenbestätigung,CNT,FALSE,FALSE,TRUE,2.10.2,hl7chp2.html#Heading102,FALSE
 MSA,3,Message acknowledgement segment,Nachrichtenbestätigung,,FALSE,FALSE,TRUE,2.24.2,ch2.htm#Heading331,FALSE
@@ -971,6 +980,7 @@ MSA,61,Message Acknowledgment,Nachrichtenbestätigung,,FALSE,FALSE,TRUE,2.15.8,ch
 MSA,81,Message Acknowledgment,Nachrichtenbestätigung,,FALSE,FALSE,TRUE,2.14.8,ch02.html#Heading150,FALSE
 MSA,91,Message Acknowledgment,Nachrichtenbestätigung,,FALSE,FALSE,TRUE,2.14.8,ch02.html#Heading165,FALSE
 MSA,92,Message Acknowledgment,Nachrichtenbestätigung,,FALSE,FALSE,TRUE,2.14.8,ch02.html#Heading165,FALSE
+MSA,540,Message Acknowledgement,,,FALSE,FALSE,TRUE,,,FALSE
 MSH,1,MESSAGE HEADER,Nachrichtenkopfinformationen,CNT,FALSE,FALSE,TRUE,2.5.8,kap2.html#Heading60,FALSE
 MSH,2,MESSAGE HEADER,Nachrichtenkopfinformationen,CNT,FALSE,FALSE,TRUE,2.10.1,hl7chp2.html#Heading84,FALSE
 MSH,3,Message header segment,Nachrichtenkopfinformationen,,FALSE,FALSE,TRUE,2.24.1,ch2.htm#Heading311,FALSE
@@ -985,6 +995,7 @@ MSH,61,Message Header,Nachrichtenkopfinformationen,,FALSE,FALSE,TRUE,2.15.9,ch02
 MSH,81,Message Header,Nachrichtenkopfinformationen,,FALSE,FALSE,TRUE,2.14.9,ch02.html#Heading159,FALSE
 MSH,91,Message Header,Nachrichtenkopfinformationen,,FALSE,FALSE,TRUE,2.14.9,ch02.html#Heading175,FALSE
 MSH,92,Message Header,Nachrichtenkopfinformationen,,FALSE,FALSE,TRUE,2.14.9,ch02.html#Heading175,FALSE
+MSH,540,Message Header,,,FALSE,FALSE,TRUE,,,FALSE
 NCK,1,SYSTEM CLOCK,Systemzeit,NMT,FALSE,FALSE,TRUE,,,FALSE
 NCK,2,System Clock,Systemzeit,,FALSE,FALSE,TRUE,,,FALSE
 NCK,3,System Clock,Systemzeit,,FALSE,FALSE,TRUE,C.2.1,appc.htm#Heading6,FALSE
@@ -1021,6 +1032,7 @@ NK1,61,Next of Kin / Associated Parties,Informationen zu Bezugspersonen,,FALSE,F
 NK1,81,Next of Kin / Associated Parties,Informationen zu Bezugspersonen,,FALSE,FALSE,TRUE,3.4.5,ch03.html#Heading224,FALSE
 NK1,91,Next of Kin / Associated Parties,Informationen zu Bezugspersonen,,FALSE,FALSE,TRUE,3.4.5,ch03.html#Heading228,FALSE
 NK1,92,Next of Kin / Associated Parties,Informationen zu Bezugspersonen,,FALSE,FALSE,TRUE,3.4.5,ch03.html#Heading228,FALSE
+NK1,540,Next of Kin/Associated Parties,,,FALSE,FALSE,TRUE,,,FALSE
 NPU,1,NON-PATIENT UPDATE,Bettenstatus,ADT,FALSE,FALSE,TRUE,3.3.5,kap3.html#Heading33,FALSE
 NPU,2,BED STATUS UPDATE,Bettenstatus,ADT,FALSE,FALSE,TRUE,3.3.7,hl7chp3.html#Heading161,FALSE
 NPU,3,Bed status update,Bettenstatus,,FALSE,FALSE,TRUE,3.3.7,ch3.htm#Heading233,FALSE
@@ -1073,6 +1085,7 @@ NTE,61,Notes and Comments,Anmerkungen und Kommentare,,FALSE,FALSE,TRUE,2.15.10,c
 NTE,81,Notes and Comments,Anmerkungen und Kommentare,,FALSE,FALSE,TRUE,2.14.10,ch02.html#Heading187,FALSE
 NTE,91,Notes and Comments,Anmerkungen und Kommentare,,FALSE,FALSE,TRUE,2.14.10,ch02.html#Heading204,FALSE
 NTE,92,Notes and Comments,Anmerkungen und Kommentare,,FALSE,FALSE,TRUE,2.14.10,ch02.html#Heading204,FALSE
+NTE,540,Notes and Text,,,FALSE,FALSE,TRUE,,,FALSE
 OBR,1,OBSERVATION REQUEST,Anforderung einer Untersuchung,ANR,FALSE,FALSE,TRUE,,,FALSE
 OBR,2,OBSERVATION REQUEST,Anforderung einer Untersuchung,ANR,FALSE,FALSE,TRUE,7.3.1,hl7chp7.html#Heading37,FALSE
 OBR,3,Observation request segment,Anforderung einer Untersuchung,,FALSE,FALSE,TRUE,4.5.1,ch4.htm#Heading61,FALSE
@@ -1087,6 +1100,7 @@ OBR,61,Observation Request,Anforderung einer Untersuchung,,FALSE,FALSE,TRUE,4.5.
 OBR,81,Observation Request,Anforderung einer Untersuchung,,FALSE,FALSE,TRUE,4.4.3,ch04.html#Heading71,FALSE
 OBR,91,Observation Request,Anforderung einer Untersuchung,,FALSE,FALSE,TRUE,4.5.3,ch04.html#Heading91,FALSE
 OBR,92,Observation Request,Anforderung einer Untersuchung,,FALSE,FALSE,TRUE,4.5.3,ch04.html#Heading91,FALSE
+OBR,540,Observation Request,,,FALSE,FALSE,TRUE,7.4.1,,FALSE
 OBX,1,RESULT,Ergebnis/Befund,ANR,FALSE,FALSE,TRUE,7.3.1,kap7.html#Heading9,FALSE
 OBX,2,OBSERVATION RESULT,Ergebnis/Befund,ANR,FALSE,FALSE,TRUE,7.3.2,hl7chp7.html#Heading38,FALSE
 OBX,3,Observation segment,Ergebnis/Befund,,FALSE,FALSE,TRUE,7.3.2,ch7.htm#Heading95,FALSE
@@ -1101,6 +1115,7 @@ OBX,61,Observation/Result,Ergebnis/Befund,,FALSE,FALSE,TRUE,7.4.2,ch07.html#Head
 OBX,81,Observation/Result,Ergebnis/Befund,,FALSE,FALSE,TRUE,7.4.2,ch07.html#Heading109,FALSE
 OBX,91,Observation/Result,Ergebnis/Befund,,FALSE,FALSE,TRUE,7.4.2,ch07.html#Heading113,FALSE
 OBX,92,Observation/Result,Ergebnis/Befund,,FALSE,FALSE,TRUE,7.4.2,ch07.html#Heading114,FALSE
+OBX,540,Observation/Result,,,FALSE,FALSE,TRUE,7.4.2,,FALSE
 ODS,2,"DIETARY ORDERS, SUPPLEMENTS, and PREFERENCES",Speisenanforderung,ORD,FALSE,FALSE,TRUE,4.6.1,hl7chp4.html#Heading93,FALSE
 ODS,3,"Dietary orders, supplements, and preferences",Speisenanforderung,,FALSE,FALSE,TRUE,4.6.1,ch4.htm#Heading108,FALSE
 ODS,4,"ODS - dietary orders, supplements, and preferences segment",Speisenanforderung,,FALSE,FALSE,TRUE,4.6.1,ch4.html#Heading126,FALSE
@@ -1273,6 +1288,7 @@ PD1,61,Patient Additional Demographic,Zusätzliche demographische Informationen z
 PD1,81,Patient Additional Demographic,Zusätzliche demographische Informationen zum Patienten,,FALSE,FALSE,TRUE,3.4.11,ch03.html#Heading320,FALSE
 PD1,91,Patient Additional Demographic,Zusätzliche demographische Informationen zum Patienten,,FALSE,FALSE,TRUE,3.4.11,ch03.html#Heading330,FALSE
 PD1,92,Patient Additional Demographic,Zusätzliche demographische Informationen zum Patienten,,FALSE,FALSE,TRUE,3.4.11,ch03.html#Heading330,FALSE
+PD1,540,Patient Adidtional Demographic,,,FALSE,FALSE,TRUE,,,FALSE
 PDA,5,Patient death and autopsy,Totenschein,,FALSE,FALSE,TRUE,3.4.12,ch03.htm#Heading337,FALSE
 PDA,6,Patient Death and Autopsy,Totenschein,,FALSE,FALSE,TRUE,3.4.12,ch03.html#Heading342,FALSE
 PDA,7,Patient Death and Autopsy,Totenschein,,FALSE,FALSE,TRUE,3.4.12,ch03.html#Heading344,FALSE
@@ -1329,6 +1345,7 @@ PID,61,Patient Identification,Patienteninformationen,,FALSE,FALSE,TRUE,3.4.2,ch0
 PID,81,Patient Identification,Patienteninformationen,,FALSE,FALSE,TRUE,3.4.2,ch03.html#Heading77,FALSE
 PID,91,Patient Identification,Patienteninformationen,,FALSE,FALSE,TRUE,3.4.2,ch03.html#Heading78,FALSE
 PID,92,Patient Identification,Patienteninformationen,,FALSE,FALSE,TRUE,3.4.2,ch03.html#Heading78,FALSE
+PID,540,Patient Identification,,,FALSE,FALSE,TRUE,,,FALSE
 PKG,7,Item Packaging,Verpackungseinheit,,FALSE,FALSE,TRUE,17.4.5,ch17.html#Heading95,FALSE
 PKG,8,Item Packaging,Verpackungseinheit,,FALSE,FALSE,TRUE,17.4.5,ch17.html#Heading91,FALSE
 PKG,9,Item Packaging,Verpackungseinheit,,FALSE,FALSE,TRUE,17.4.5,ch17.html#Heading99,FALSE
@@ -1356,6 +1373,7 @@ PR1,61,Procedures,Prozeduren,,FALSE,FALSE,TRUE,6.5.4,ch06.html#Heading85,FALSE
 PR1,81,Procedures,Prozeduren,,FALSE,FALSE,TRUE,6.5.4,ch06.html#Heading121,FALSE
 PR1,91,Procedures,Prozeduren,,FALSE,FALSE,TRUE,6.5.4,ch06.html#Heading124,FALSE
 PR1,92,Procedures,Prozeduren,,FALSE,FALSE,TRUE,6.5.4,ch06.html#Heading124,FALSE
+PR1,540,Procedures,,,FALSE,FALSE,TRUE,,,FALSE
 PRA,2,practitioner detail,Arztinformationen,,FALSE,FALSE,TRUE,9.1.2,hl7chp8.html#Heading59,FALSE
 PRA,3,Practitioner detail segment,Arztinformationen,,FALSE,FALSE,TRUE,8.6.3,ch8.htm#Heading68,FALSE
 PRA,4,PRA - practitioner detail segment,Arztinformationen,,FALSE,FALSE,TRUE,8.6.3,ch8.html#Heading78,FALSE
@@ -1368,6 +1386,7 @@ PRA,61,Practitioner Detail,Arztinformationen,,FALSE,FALSE,TRUE,15.4.6,ch15.html#
 PRA,81,Practitioner Detail,Arztinformationen,,FALSE,FALSE,TRUE,15.4.6,ch15.html#Heading88,FALSE
 PRA,91,Practitioner Detail,Arztinformationen,,FALSE,FALSE,TRUE,15.4.6,ch15.html#Heading88,FALSE
 PRA,92,Practitioner Detail,Arztinformationen,,FALSE,FALSE,TRUE,15.4.6,ch15.html#Heading88,FALSE
+PRA,540,Practitioner,,,FALSE,FALSE,TRUE,8.5.4,,FALSE
 PRB,3,Problem Detail,Probleminformationen,,FALSE,FALSE,TRUE,12.3.2,ch12.htm#Heading60,FALSE
 PRB,4,Problem Detail,Probleminformationen,,FALSE,FALSE,TRUE,12.3.2,ch12.html#Heading65,FALSE
 PRB,5,Problem Details,Probleminformationen,,FALSE,FALSE,TRUE,12.4.2,ch12.htm#Heading66,FALSE
@@ -1460,6 +1479,7 @@ PV1,61,Patient Visit,Fall-/Besuchsinformationen,,FALSE,FALSE,TRUE,3.4.3,ch03.htm
 PV1,81,Patient Visit,Fall-/Besuchsinformationen,,FALSE,FALSE,TRUE,3.4.3,ch03.html#Heading118,FALSE
 PV1,91,Patient Visit,Fall-/Besuchsinformationen,,FALSE,FALSE,TRUE,3.4.3,ch03.html#Heading120,FALSE
 PV1,92,Patient Visit,Fall-/Besuchsinformationen,,FALSE,FALSE,TRUE,3.4.3,ch03.html#Heading120,FALSE
+PV1,540,Patient Visit,,,FALSE,FALSE,TRUE,,,FALSE
 PV2,2,PATIENT VISIT - additional information,Ergänzende Fall- / Besuchsinformationen,QRY,FALSE,FALSE,TRUE,3.3.4,hl7chp3.html#Heading130,FALSE
 PV2,3,Patient visit - additional information,Ergänzende Fall- / Besuchsinformationen,,FALSE,FALSE,TRUE,3.3.4,ch3.htm#Heading150,FALSE
 PV2,4,PV2 - patient visit - additional information segment,Ergänzende Fall- / Besuchsinformationen,,FALSE,FALSE,TRUE,3.3.4,ch3.html#Heading154,FALSE
@@ -1473,6 +1493,7 @@ PV2,61,Patient Visit - Additional Information,Ergänzende Fall- / Besuchsinformat
 PV2,81,Patient Visit - Additional Information,Ergänzende Fall- / Besuchsinformationen,,FALSE,FALSE,TRUE,3.4.4,ch03.html#Heading173,FALSE
 PV2,91,Patient Visit - Additional Information,Ergänzende Fall- / Besuchsinformationen,,FALSE,FALSE,TRUE,3.4.4,ch03.html#Heading176,FALSE
 PV2,92,Patient Visit - Additional Information,Ergänzende Fall- / Besuchsinformationen,,FALSE,FALSE,TRUE,3.4.4,ch03.html#Heading176,FALSE
+PV2,540,Patient Visit - Additional Information,,,FALSE,FALSE,TRUE,,,FALSE
 PYE,7,Payee Information,Information über Rechnungsempfänger,,FALSE,FALSE,TRUE,16.4.3,ch16.html#Heading61,FALSE
 PYE,8,Payee Information,Information über Rechnungsempfänger,,FALSE,FALSE,TRUE,16.4.3,ch16.html#Heading59,FALSE
 PYE,9,Payee Information,Information über Rechnungsempfänger,,FALSE,FALSE,TRUE,16.4.3,ch16.html#Heading61,FALSE
@@ -1820,6 +1841,7 @@ SPM,61,Specimen,Probeninformation,,FALSE,FALSE,TRUE,7.4.3,ch07.html#Heading133,F
 SPM,81,Specimen,Probeninformation,,FALSE,FALSE,TRUE,7.4.3,ch07.html#Heading136,FALSE
 SPM,91,Specimen,Probeninformation,,FALSE,FALSE,TRUE,7.4.3,ch07.html#Heading144,FALSE
 SPM,92,Specimen,Probeninformation,,FALSE,FALSE,TRUE,7.4.3,ch07.html#Heading146,FALSE
+SPM,540,Specimen,,,FALSE,FALSE,TRUE,,,FALSE
 SPR,3,Stored Procedure Request Definition,Abfrage mittels Stored Procedure,,FALSE,FALSE,TRUE,2.24.20,ch2.htm#Heading444,FALSE
 SPR,4,SPR - stored procedure request definition segment,Abfrage mittels Stored Procedure,,FALSE,FALSE,TRUE,2.24.20,ch2.html#Heading529,FALSE
 SPR,5,Stored Procedure Request Definition,Abfrage mittels Stored Procedure,,FALSE,FALSE,TRUE,5.10.5.5,ch05.htm#Heading217,FALSE
@@ -1837,6 +1859,7 @@ STF,61,Staff Identification,Mitarbeiterinformationen,,FALSE,FALSE,TRUE,15.4.8,ch
 STF,81,Staff Identification,Mitarbeiterinformationen,,FALSE,FALSE,TRUE,15.4.8,ch15.html#Heading118,FALSE
 STF,91,Staff Identification,Mitarbeiterinformationen,,FALSE,FALSE,TRUE,15.4.8,ch15.html#Heading118,FALSE
 STF,92,Staff Identification,Mitarbeiterinformationen,,FALSE,FALSE,TRUE,15.4.8,ch15.html#Heading118,FALSE
+STF,540,Staff,,,FALSE,FALSE,TRUE,8.5.3,,FALSE
 STZ,7,Sterilization Parameter,Sterilisationsparameter,,FALSE,FALSE,TRUE,17.4.3,ch17.html#Heading82,FALSE
 STZ,8,Sterilization Parameter,Sterilisationsparameter,,FALSE,FALSE,TRUE,17.4.3,ch17.html#Heading80,FALSE
 STZ,9,Sterilization Parameter,Sterilisationsparameter,,FALSE,FALSE,TRUE,17.4.3,ch17.html#Heading86,FALSE
@@ -1969,8 +1992,8 @@ VTQ,5,Virtual Table Query Request,Abfrage aus virtuellen Tabellen,,FALSE,FALSE,T
 VTQ,6,Virtual Table Query Request,Abfrage aus virtuellen Tabellen,,FALSE,FALSE,TRUE,5.10.5.8,ch05.html#Heading236,FALSE
 VTQ,61,Virtual Table Query Request,Abfrage aus virtuellen Tabellen,,FALSE,FALSE,TRUE,5.10.5.8,ch05.html#Heading236,FALSE
 ZAS,32,,ambulanter Schein,,FALSE,FALSE,TRUE,,,FALSE
-ZB1,20,,Zusatzsegment der Bundeswehr,,FALSE,FALSE,TRUE,,,FALSE
-ZBE,20,,Bewegungsdaten,,FALSE,FALSE,TRUE,,,FALSE
+ZB1,20,Zusatzsegment der Bundeswehr,Zusatzsegment der Bundeswehr,,FALSE,FALSE,TRUE,,,FALSE
+ZBE,20,Movement Data,Bewegungsdaten,,FALSE,FALSE,TRUE,,,FALSE
 ZBE,32,Movement Information,Bewegungen,,FALSE,FALSE,TRUE,,,FALSE
 ZBE,60,Movement,Bewegungen,,FALSE,FALSE,TRUE,,,FALSE
 ZBE,630,Movement,,,FALSE,FALSE,TRUE,,,FALSE
@@ -1983,8 +2006,8 @@ ZFP,630,Professional Status,,,FALSE,FALSE,TRUE,,,FALSE
 ZFV,630,Additional Information regarding the encounter,,,FALSE,FALSE,TRUE,,,FALSE
 ZGI,530,Geburtsinformationen,,,FALSE,FALSE,TRUE,,,FALSE
 ZGK,60,Card Data,Kartendaten,,FALSE,FALSE,TRUE,,,FALSE
-ZK1,20,,Küche,,FALSE,FALSE,TRUE,,,FALSE
-ZK2,20,,Küche - Sitzplätze,,FALSE,FALSE,TRUE,,,FALSE
+ZK1,20,Kitchen,Küche,,FALSE,FALSE,TRUE,,,FALSE
+ZK2,20,Kitchen -Seats,Küche - Sitzplätze,,FALSE,FALSE,TRUE,,,FALSE
 ZKZ,60,Kostenübernahmezusage,,,FALSE,FALSE,TRUE,,,FALSE
 ZL7,4,diverses,diverses,,FALSE,FALSE,TRUE,8.5.1,ch8.html#Heading35,FALSE
 ZL7,5,diverses,diverses,,FALSE,FALSE,TRUE,8,,FALSE
@@ -1999,17 +2022,17 @@ ZL7,92,(proposed example only),diverses,,FALSE,FALSE,TRUE,8.6.1,ch08.html#Headin
 ZNG,32,Newborn Information,Neugeborene,,FALSE,FALSE,TRUE,,,FALSE
 ZNV,32,,ORBIS-Erweiterungen bei Vidierungen,,FALSE,FALSE,TRUE,,,FALSE
 ZOP,32,,Kommunikation zu OP,,FALSE,FALSE,TRUE,,,FALSE
-ZPF,20,,Pflegestufenerfassung,,FALSE,FALSE,TRUE,,,FALSE
+ZPF,20,Pflegestufenerfassung,Pflegestufenerfassung,,FALSE,FALSE,TRUE,,,FALSE
 ZSA,530,Psychiatrie-Zusatzdaten,,,FALSE,FALSE,TRUE,,,FALSE
-ZU1,540,UK Additional Data,,,FALSE,FALSE,TRUE,,,FALSE
-ZU2,540,UK Augmentes care,,,FALSE,FALSE,TRUE,,,FALSE
-ZU3,540,UK Additional Data - Attendance Details,,,FALSE,FALSE,TRUE,,,FALSE
-ZU4,540,UK Additional Data - Waiting List,,,FALSE,FALSE,TRUE,,,FALSE
-ZU5,540,UK Additional Data - Psychiatric census,,,FALSE,FALSE,TRUE,,,FALSE
-ZU6,540,UK Additional Data - Labour and delivery,,,FALSE,FALSE,TRUE,,,FALSE
-ZU7,540,UK Additional Data - Birth,,,FALSE,FALSE,TRUE,,,FALSE
-ZU8,540,UK Additional Data - Miscellaneous Demographic,,,FALSE,FALSE,TRUE,,,FALSE
-ZWL,20,,nichtmedizinische Wahlleistungen,,FALSE,FALSE,TRUE,,,FALSE
+ZU1,540,UK Additional Data,,,FALSE,FALSE,TRUE,A.4.3.1,,FALSE
+ZU2,540,UK Augmentes care,,,FALSE,FALSE,TRUE,A.4.3.2,,FALSE
+ZU3,540,UK Additional Data - Attendance Details,,,FALSE,FALSE,TRUE,A.4.3.3,,FALSE
+ZU4,540,UK Additional Data - Waiting List,,,FALSE,FALSE,TRUE,A.4.3.4,,FALSE
+ZU5,540,UK Additional Data - Psychiatric census,,,FALSE,FALSE,TRUE,A.4.3.5,,FALSE
+ZU6,540,UK Additional Data - Labour and delivery,,,FALSE,FALSE,TRUE,A.4.3.6,,FALSE
+ZU7,540,UK Additional Data - Birth,,,FALSE,FALSE,TRUE,A.4.3.7,,FALSE
+ZU8,540,UK Additional Data - Miscellaneous Demographic,,,FALSE,FALSE,TRUE,A.4.3.8,,FALSE
+ZWL,20,nichtmedizinische Wahlleistungen,nichtmedizinische Wahlleistungen,,FALSE,FALSE,TRUE,,,FALSE
 ZWL,32,,Wahlleistungen,,FALSE,FALSE,TRUE,,,FALSE
 Zxx,2,any Z segment,bel. Z-Segment,,FALSE,FALSE,TRUE,8.4,ch8.html,FALSE
 Zxx,3,any Z-Segment,bel. Z-Segment,,FALSE,FALSE,TRUE,,,FALSE
