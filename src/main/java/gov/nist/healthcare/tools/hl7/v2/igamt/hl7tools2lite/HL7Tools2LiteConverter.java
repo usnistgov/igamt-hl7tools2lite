@@ -10,8 +10,11 @@
  */
 package gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -119,18 +122,40 @@ public class HL7Tools2LiteConverter implements Runnable {
 		mongoOps.dropCollection(Message.class);
 		mongoOps.dropCollection(IGDocument.class);
 
-		// if (!OUTPUT_DIR.exists()) {
-		// OUTPUT_DIR.mkdir();
-		// }
 		for (String hl7Version : hl7Versions) {
 			try {
 				this.hl7Version = hl7Version;
 				Profile profile = doVersion(hl7Version);
+				
+			    List<Integer> poss1 = new ArrayList<Integer>();
+			    for (Message msg : profile.getMessages().getChildren()) {
+			    	poss1.add(msg.getPosition());
+			    }
+			    Collections.sort(poss1);
+		    	log.info("poss1=" + poss1);
+		    	
 				IGDocument igd = createIGDocument();
 				igd.addProfile(profile);
-				igd.getMetaData().setHl7Version(hl7Version);
+			    List<Integer> poss2 = new ArrayList<Integer>();
+			    for (Message msg : profile.getMessages().getChildren()) {
+			    	poss2.add(msg.getPosition());
+			    }
+			    Collections.sort(poss2);
+		    	log.info("poss2=" + poss2);
+
+		    	igd.getMetaData().setHl7Version(hl7Version);
 				igd.getMetaData().setDate(Constant.mdy.format(new Date()));
+				
+				
 				mongoOps.insertAll(igd.getProfile().getMessages().getChildren());
+			    List<Integer> poss3 = new ArrayList<Integer>();
+			    for (Message msg : igd.getProfile().getMessages().getChildren()) {
+			    	poss3.add(msg.getPosition());
+			    }
+			    Collections.sort(poss3);
+		    	log.info("poss3=" + poss3);
+		    	
+		    	
 				mongoOps.insert(igd.getProfile().getTableLibrary());
 				mongoOps.insert(igd.getProfile().getDatatypeLibrary());
 				mongoOps.insert(igd.getProfile().getSegmentLibrary());
@@ -206,6 +231,14 @@ public class HL7Tools2LiteConverter implements Runnable {
 		DatatypeLibrary dtLib = convertDatatypes(i.getDatatypeLibrary());
 		SegmentLibrary segLib = convertSegments(i.getSegmentLibrary());
 		Messages msgs = convertMessages(i.getMessageLibrary());
+
+	    List<Integer> poss = new ArrayList<Integer>();
+	    for (Message msg : msgs.getChildren()) {
+	    	poss.add(msg.getPosition());
+	    }
+	    Collections.sort(poss);
+    	log.info("poss=" + poss);
+		
 		p.setDatatypeLibrary(dtLib);
 		p.setSegmentLibrary(segLib);
 		p.setTableLibrary(tabLib);
@@ -218,7 +251,8 @@ public class HL7Tools2LiteConverter implements Runnable {
 		int seq = 1;
 		for (String key : i.keySet()) {
 			gov.nist.healthcare.hl7tools.domain.Message msg = i.get(key);
-			o.addMessage(convertMessage(msg, seq++));
+			o.addMessage(convertMessage(msg, seq));
+			seq++;
 		}
 
 		return o;
@@ -235,9 +269,9 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setName(assembleMessageName(i));
 		o.setHl7Version(hl7Version);
 		assert (o.getName() != null);
-		o.setPosition(seq);
+//		o.setPosition(seq);
 		o.setStructID(assembleMessageStructID(i));
-		// o.setDate(sdf.format(new Date()));
+		log.info("name=" + o.getName() + " pos=" + o.getPosition());
 		return o;
 	}
 
@@ -387,7 +421,8 @@ public class HL7Tools2LiteConverter implements Runnable {
 		Field o = new Field();
 		Datatype dt = mapDatatypes.get(s);
 		o.setComment(i.getComment());
-		o.setConfLength(Integer.toString(i.getConfLength()));
+		Integer confLength = i.getConfLength();
+		o.setConfLength(confLength < 0 ? Integer.toString(confLength) : "1");
 		o.setDatatype(new DatatypeLink(dt.getId(), dt.getName(), dt.getExt()));
 		o.setItemNo(i.getItemNo());
 		o.setMax(i.getMax());
@@ -635,7 +670,8 @@ public class HL7Tools2LiteConverter implements Runnable {
 					link = new DatatypeLink(dt.getId(), dt.getName(), dt.getExt());
 				}
 				o.setComment(i.getComment());
-				o.setConfLength(Integer.toString(i.getConfLength()));
+				Integer confLength = i.getConfLength();
+				o.setConfLength(confLength < 0 ? Integer.toString(confLength) : "1");
 				o.setDatatype(link);
 				o.setMaxLength(i.getMaxLength());
 				o.setMinLength(i.getMinLength());

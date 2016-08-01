@@ -1,0 +1,1295 @@
+message_type,version_id,description,section,anchor
+ACK,1,General acknowledgment message,,
+ACK,2,General acknowledgment message,,
+ACK,3,General acknowledgment message,,
+ACK,4,General acknowledgment message,,
+ACK,5,General acknowledgment message,3,
+ACK,6,General acknowledgment message,2.14.1,
+ACK,7,General acknowledgment message,10.4,ch10.html#Heading54
+ACK,8,General acknowledgment message,10.4,ch10.html#Heading49
+ACK,9,General acknowledgment message,10.4,ch10.html#Heading54
+ACK,32,General acknowledgment message,,
+ACK,61,General acknowledgment message,10.4,ch10.html#Heading54
+ACK,81,General acknowledgment message,10.4,ch10.html#Heading49
+ACK,91,General acknowledgment message,10.4,ch10.html#Heading54
+ACK,92,General acknowledgment message,10.4,ch10.html#Heading54
+ACK,540,,,
+ACK,999,General acknowledgment message,,
+ADR,1,ANCILLARY RPT (DISPLAY),,
+ADR,2,ANCILLARY RPT (DISPLAY),,
+ADR,3,ADT response,,
+ADR,4,ADT response,,
+ADR,5,ADT response,3,
+ADR,6,ADT response,3.3.19,
+ADR,7,ADT response,3.3.19,ch03.html#Heading23
+ADR,61,ADT response,3.3.19,ch03.html#Heading23
+ADT,1,ADT message,,
+ADT,2,ADT message,,
+ADT,3,ADT message,,
+ADT,4,ADT message,,
+ADT,5,ADT message,3,
+ADT,6,ADT message,3.3.1,
+ADT,7,ADT message,3.3.1,ch03.html#Heading5
+ADT,8,ADT message,3.3.1,ch03.html#Heading5
+ADT,9,ADT message,3.3.1,ch03.html#Heading5
+ADT,32,ADT message,,
+ADT,61,ADT message,3.3.1,ch03.html#Heading5
+ADT,81,ADT message,3.3.1,ch03.html#Heading5
+ADT,91,ADT message,3.3.1,ch03.html#Heading5
+ADT,92,ADT message,3.3.1,ch03.html#Heading5
+ADT,540,,,
+ADT,999,ADT message,,
+BAR,1,Add/change billing account,,
+BAR,2,Add/change billing account,,
+BAR,3,Add/change billing account,,
+BAR,4,Add/change billing account,,
+BAR,5,Add/change billing account,6,
+BAR,6,Add/change billing account,6.4.1,
+BAR,7,Add/change billing account,6.4.1,ch06.html#Heading6
+BAR,8,Add/change billing account,6.4.1,ch06.html#Heading6
+BAR,9,Add/change billing account,6.4.1,ch06.html#Heading6
+BAR,32,Add/change billing account,,
+BAR,61,Add/change billing account,6.4.1,ch06.html#Heading6
+BAR,81,Add/change billing account,6.4.1,ch06.html#Heading6
+BAR,91,Add/change billing account,6.4.1,ch06.html#Heading6
+BAR,92,Add/change billing account,6.4.1,ch06.html#Heading6
+BPS,6,Blood product dispense status message,4.20.3,
+BPS,7,Blood product dispense status message,4.20.3,ch04.html#Heading485
+BPS,8,Blood product dispense status message,4.13.3,ch04.html#Heading217
+BPS,9,Blood product dispense status message,4.13.3,ch04.html#Heading233
+BPS,61,Blood product dispense status message,4.20.3,ch04.html#Heading471
+BPS,81,Blood product dispense status message,4.12.3,ch04.html#Heading217
+BPS,91,Blood product dispense status message,4.13.3,ch04.html#Heading245
+BPS,92,Blood product dispense status message,4.13.3,ch04.html#Heading245
+BRP,6,Blood product dispense status acknowledgement message,4.20.4,
+BRP,7,Blood product dispense status acknowledgement message,4.20.4,ch04.html#Heading486
+BRP,8,Blood product dispense status acknowledgement message,4.13.4,ch04.html#Heading218
+BRP,9,Blood product dispense status acknowledgement message,4.13.4,ch04.html#Heading234
+BRP,61,Blood product dispense status acknowledgement message,4.20.4,ch04.html#Heading472
+BRP,81,Blood product dispense status acknowledgement message,4.12.4,ch04.html#Heading218
+BRP,91,Blood product dispense status acknowledgement message,4.13.4,ch04.html#Heading246
+BRP,92,Blood product dispense status acknowledgement message,4.13.4,ch04.html#Heading246
+BRT,6,Blood product transfusion/disposition acknowledgement message,4.20.6,
+BRT,7,Blood product transfusion/disposition acknowledgement message,4.20.6,ch04.html#Heading488
+BRT,8,Blood product transfusion/disposition acknowledgement message,4.13.6,ch04.html#Heading220
+BRT,9,Blood product transfusion/disposition acknowledgement message,4.13.6,ch04.html#Heading236
+BRT,61,Blood product transfusion/disposition acknowledgement message,4.20.6,ch04.html#Heading474
+BRT,81,Blood product transfusion/disposition acknowledgement message,4.12.6,ch04.html#Heading220
+BRT,91,Blood product transfusion/disposition acknowledgement message,4.13.6,ch04.html#Heading248
+BRT,92,Blood product transfusion/disposition acknowledgement message,4.13.6,ch04.html#Heading248
+BTS,6,Blood product transfusion/disposition message,4.20.5,
+BTS,7,Blood product transfusion/disposition message,4.20.5,ch04.html#Heading487
+BTS,8,Blood product transfusion/disposition message,4.13.5,ch04.html#Heading219
+BTS,9,Blood product transfusion/disposition message,4.13.5,ch04.html#Heading235
+BTS,61,Blood product transfusion/disposition message,4.20.5,ch04.html#Heading473
+BTS,81,Blood product transfusion/disposition message,4.12.5,ch04.html#Heading219
+BTS,91,Blood product transfusion/disposition message,4.13.5,ch04.html#Heading247
+BTS,92,Blood product transfusion/disposition message,4.13.5,ch04.html#Heading247
+CCF,8,Collaborative Care Fetch,11.7.2,ch11.html#Heading60
+CCF,9,Collaborative Care Fetch,11.7.2,ch11.html#Heading63
+CCF,81,Collaborative Care Fetch,11.6.2,ch11.html#Heading59
+CCF,91,Collaborative Care Fetch,11.7.2,ch11.html#Heading63
+CCF,92,Collaborative Care Fetch,11.7.2,ch11.html#Heading63
+CCI,8,Collaborative Care Information,11.7.2,ch11.html#Heading60
+CCI,9,Collaborative Care Information,11.7.2,ch11.html#Heading63
+CCI,81,Collaborative Care Information,11.6.2,ch11.html#Heading59
+CCI,91,Collaborative Care Information,11.7.2,ch11.html#Heading63
+CCI,92,Collaborative Care Information,11.7.2,ch11.html#Heading63
+CCM,8,Collaborative Care Message,11.6.1,ch11.html#Heading52
+CCM,9,Collaborative Care Message,11.6.1,ch11.html#Heading55
+CCM,81,Collaborative Care Message,11.5.1,ch11.html#Heading51
+CCM,91,Collaborative Care Message,11.6.1,ch11.html#Heading55
+CCM,92,Collaborative Care Message,11.6.1,ch11.html#Heading55
+CCQ,8,Collaborative Care Referral,11.7.1,ch11.html#Heading59
+CCQ,9,Collaborative Care Referral,11.7.1,ch11.html#Heading62
+CCQ,81,Collaborative Care Referral,11.6.1,ch11.html#Heading58
+CCQ,91,Collaborative Care Referral,11.7.1,ch11.html#Heading62
+CCQ,92,Collaborative Care Referral,11.7.1,ch11.html#Heading62
+CCR,8,,11.6.2,ch11.html#Heading53
+CCR,9,,11.6.2,ch11.html#Heading56
+CCR,81,,11.5.2,ch11.html#Heading52
+CCR,91,,11.6.2,ch11.html#Heading56
+CCR,92,,11.6.2,ch11.html#Heading56
+CCU,8,Collaborative Care Referral,11.6.6,ch11.html#Heading57
+CCU,9,Collaborative Care Referral,11.6.6,ch11.html#Heading60
+CCU,81,Collaborative Care Referral,11.5.6,ch11.html#Heading56
+CCU,91,Collaborative Care Referral,11.6.6,ch11.html#Heading60
+CCU,92,Collaborative Care Referral,11.6.6,ch11.html#Heading60
+CNQ,3,Cancel query,,
+CQU,8,Collaborative Care Referral,11.7.1,ch11.html#Heading59
+CQU,9,Collaborative Care Referral,11.7.1,ch11.html#Heading62
+CQU,81,Collaborative Care Referral,11.6.1,ch11.html#Heading58
+CQU,91,Collaborative Care Referral,11.7.1,ch11.html#Heading62
+CQU,92,Collaborative Care Referral,11.7.1,ch11.html#Heading62
+CRM,3,Clinical study registration message,,
+CRM,4,Clinical study registration message,,
+CRM,5,Clinical study registration message,7,
+CRM,6,Clinical study registration message,7.7.1,
+CRM,7,Clinical study registration message,7.7.1,ch07.html#Heading193
+CRM,8,Clinical study registration message,7.7.1,ch07.html#Heading208
+CRM,9,Clinical study registration message,7.7.1,ch07.html#Heading220
+CRM,61,Clinical study registration message,7.7.1,ch07.html#Heading190
+CRM,81,Clinical study registration message,7.7.1,ch07.html#Heading209
+CRM,91,Clinical study registration message,7.7.1,ch07.html#Heading221
+CRM,92,Clinical study registration message,7.7.1,ch07.html#Heading230
+CSU,3,Unsolicited study data message,,
+CSU,4,Unsolicited study data message,,
+CSU,5,Unsolicited study data message,7,
+CSU,6,Unsolicited study data message,7.7.2,
+CSU,7,Unsolicited study data message,7.7.2,ch07.html#Heading194
+CSU,8,Unsolicited study data message,7.7.2,ch07.html#Heading209
+CSU,9,Unsolicited study data message,7.7.2,ch07.html#Heading221
+CSU,61,Unsolicited study data message,7.7.2,ch07.html#Heading191
+CSU,81,Unsolicited study data message,7.7.2,ch07.html#Heading210
+CSU,91,Unsolicited study data message,7.7.2,ch07.html#Heading222
+CSU,92,Unsolicited study data message,7.7.2,ch07.html#Heading231
+DBC,9,Create Donor Record,4.16.4,ch04.html#Heading313
+DBC,91,Create Donor Record,4.16.4,ch04.html#Heading325
+DBC,92,Create Donor Record,4.16.4,ch04.html#Heading325
+DBU,9,Update Donor Record,4.16.5,ch04.html#Heading314
+DBU,91,Update Donor Record,4.16.5,ch04.html#Heading326
+DBU,92,Update Donor Record,4.16.5,ch04.html#Heading326
+DEL,9,Donor Eligibility,4.16.13,ch04.html#Heading322
+DEL,91,Donor Eligibility,4.16.13,ch04.html#Heading334
+DEL,92,Donor Eligibility,4.16.13,ch04.html#Heading334
+DEO,9,Donor Eligibility Observation,4.16.12,ch04.html#Heading321
+DEO,91,Donor Eligibility Observation,4.16.12,ch04.html#Heading333
+DEO,92,Donor Eligibility Observation,4.16.12,ch04.html#Heading333
+DER,9,Donor Eligibility Request,4.16.11,ch04.html#Heading320
+DER,91,Donor Eligibility Request,4.16.11,ch04.html#Heading332
+DER,92,Donor Eligibility Request,4.16.11,ch04.html#Heading332
+DFT,1,Detail financial transactions,,
+DFT,2,Detail financial transactions,,
+DFT,3,Detail financial transactions,,
+DFT,4,Detail financial transactions,,
+DFT,5,Detail financial transactions,6,
+DFT,6,Detail financial transactions,6.4.3,
+DFT,7,Detail financial transactions,6.4.3,ch06.html#Heading8
+DFT,8,Detail financial transactions,6.4.3,ch06.html#Heading8
+DFT,9,Detail financial transactions,6.4.3,ch06.html#Heading8
+DFT,32,Detail financial transactions,,
+DFT,61,Detail financial transactions,6.4.3,ch06.html#Heading8
+DFT,81,Detail financial transactions,6.4.3,ch06.html#Heading8
+DFT,91,Detail financial transactions,6.4.3,ch06.html#Heading8
+DFT,92,Detail financial transactions,6.4.3,ch06.html#Heading8
+DOC,3,Document response,,
+DOC,4,Document response,,
+DOC,5,Document response,9,
+DOC,6,Document response,9.8.1,
+DOC,7,Document response,9.8.1,ch09.html#Heading69
+DOC,61,Document response,9.8.1,ch09.html#Heading69
+DPR,9,Donation Procedure,4.16.15,ch04.html#Heading324
+DPR,91,Donation Procedure,4.16.15,ch04.html#Heading336
+DPR,92,Donation Procedure,4.16.15,ch04.html#Heading336
+DRC,9,Donor Request to Collect,4.16.14,ch04.html#Heading323
+DRC,91,Donor Request to Collect,4.16.14,ch04.html#Heading335
+DRC,92,Donor Request to Collect,4.16.14,ch04.html#Heading335
+DRG,9,,4.16.10,ch04.html#Heading319
+DRG,91,,4.16.10,ch04.html#Heading331
+DRG,92,,4.16.10,ch04.html#Heading331
+DSR,1,Display response,,
+DSR,2,Display response,,
+DSR,3,Display response,,
+DSR,4,Display response,,
+DSR,5,Display response,6,
+DSR,6,Display response,5.10.2.1,
+DSR,7,Display response,5.10.2.1,ch05.html#Heading166
+DSR,61,Display response,5.10.2.1,ch05.html#Heading166
+EAC,5,Automated equipment command message,13,
+EAC,6,Automated equipment command message,13.3.7,
+EAC,7,Automated equipment command message,13.3.7,ch13.html#Heading81
+EAC,8,Automated equipment command message,13.3.7,ch13.html#Heading81
+EAC,9,Automated equipment command message,13.3.7,ch13.html#Heading81
+EAC,61,Automated equipment command message,13.3.7,ch13.html#Heading81
+EAC,81,Automated equipment command message,13.3.7,ch13.html#Heading81
+EAC,91,Automated equipment command message,13.3.7,ch13.html#Heading81
+EAC,92,Automated equipment command message,13.3.7,ch13.html#Heading81
+EAN,5,Automated equipment notification message,13,
+EAN,6,Automated equipment notification message,13.3.9,
+EAN,7,Automated equipment notification message,13.3.9,ch13.html#Heading83
+EAN,8,Automated equipment notification message,13.3.9,ch13.html#Heading83
+EAN,9,Automated equipment notification message,13.3.9,ch13.html#Heading83
+EAN,61,Automated equipment notification message,13.3.9,ch13.html#Heading83
+EAN,81,Automated equipment notification message,13.3.9,ch13.html#Heading83
+EAN,91,Automated equipment notification message,13.3.9,ch13.html#Heading83
+EAN,92,Automated equipment notification message,13.3.9,ch13.html#Heading83
+EAR,5,Automated equipment response message,13,
+EAR,6,Automated equipment response message,13.3.8,
+EAR,7,Automated equipment response message,13.3.8,ch13.html#Heading82
+EAR,8,Automated equipment response message,13.3.8,ch13.html#Heading82
+EAR,9,Automated equipment response message,13.3.8,ch13.html#Heading82
+EAR,61,Automated equipment response message,13.3.8,ch13.html#Heading82
+EAR,81,Automated equipment response message,13.3.8,ch13.html#Heading82
+EAR,91,Automated equipment response message,13.3.8,ch13.html#Heading82
+EAR,92,Automated equipment response message,13.3.8,ch13.html#Heading82
+EDR,3,Enhanced display response,,
+EDR,4,Enhanced display response,,
+EDR,5,Enhanced display response,5,
+EDR,6,Enhanced display response,5.10.4.1,
+EDR,61,Enhanced display response,5.10.4.1,ch05.html#Heading174
+EHC,7,Health Care Invoice,16.3.1,ch16.html#Heading6
+EHC,8,Health Care Invoice,16.3.1,ch16.html#Heading6
+EHC,9,Health Care Invoice,16.3.1,ch16.html#Heading6
+EHC,81,Health Care Invoice,16.3.1,ch16.html#Heading6
+EHC,91,Health Care Invoice,16.3.1,ch16.html#Heading6
+EHC,92,Health Care Invoice,16.3.1,ch16.html#Heading6
+EQQ,3,Embedded query language query,,
+EQQ,4,Embedded query language query,,
+EQQ,5,Embedded query language query,5,
+EQQ,6,Embedded query language query,5.10.4.1,
+EQQ,61,Embedded query language query,5.10.4.1,ch05.html#Heading174
+ERP,3,Event replay response,,
+ERP,4,Event replay response,,
+ERP,5,Event replay response,5,
+ERP,6,Event replay response,5.10.4.2,
+ERP,61,Event replay response,5.10.4.2,ch05.html#Heading175
+ERQ,3,Event replay query,,
+ESR,5,Automated equipment status update acknowledgment message,13,
+ESR,6,Automated equipment status update acknowledgment message,13.3.2,
+ESR,7,Automated equipment status update acknowledgment message,13.3.2,ch13.html#Heading76
+ESR,8,Automated equipment status update acknowledgment message,13.3.2,ch13.html#Heading76
+ESR,9,Automated equipment status update acknowledgment message,13.3.2,ch13.html#Heading76
+ESR,61,Automated equipment status update acknowledgment message,13.3.2,ch13.html#Heading76
+ESR,81,Automated equipment status update acknowledgment message,13.3.2,ch13.html#Heading76
+ESR,91,Automated equipment status update acknowledgment message,13.3.2,ch13.html#Heading76
+ESR,92,Automated equipment status update acknowledgment message,13.3.2,ch13.html#Heading76
+ESU,5,Automated equipment status update message,13,
+ESU,6,Automated equipment status update message,13.3.1,
+ESU,7,Automated equipment status update message,13.3.1,ch13.html#Heading75
+ESU,8,Automated equipment status update message,13.3.1,ch13.html#Heading75
+ESU,9,Automated equipment status update message,13.3.1,ch13.html#Heading75
+ESU,61,Automated equipment status update message,13.3.1,ch13.html#Heading75
+ESU,81,Automated equipment status update message,13.3.1,ch13.html#Heading75
+ESU,91,Automated equipment status update message,13.3.1,ch13.html#Heading75
+ESU,92,Automated equipment status update message,13.3.1,ch13.html#Heading75
+INR,5,Automated equipment inventory request message,13,
+INR,6,Automated equipment inventory request message,13.3.6,
+INR,7,Automated equipment inventory request message,13.3.6,ch13.html#Heading80
+INR,8,Automated equipment inventory request message,13.3.6,ch13.html#Heading80
+INR,9,Automated equipment inventory request message,13.3.6,ch13.html#Heading80
+INR,61,Automated equipment inventory request message,13.3.6,ch13.html#Heading80
+INR,81,Automated equipment inventory request message,13.3.6,ch13.html#Heading80
+INR,91,Automated equipment inventory request message,13.3.6,ch13.html#Heading80
+INR,92,Automated equipment inventory request message,13.3.6,ch13.html#Heading80
+INU,5,Automated equipment inventory update message,13,
+INU,6,Automated equipment inventory update message,13.3.5,
+INU,7,Automated equipment inventory update message,13.3.5,ch13.html#Heading79
+INU,8,Automated equipment inventory update message,13.3.5,ch13.html#Heading79
+INU,9,Automated equipment inventory update message,13.3.5,ch13.html#Heading79
+INU,61,Automated equipment inventory update message,13.3.5,ch13.html#Heading79
+INU,81,Automated equipment inventory update message,13.3.5,ch13.html#Heading79
+INU,91,Automated equipment inventory update message,13.3.5,ch13.html#Heading79
+INU,92,Automated equipment inventory update message,13.3.5,ch13.html#Heading79
+LSR,5,Automated equipment log/service request message,13,
+LSR,6,Automated equipment log/service request message,13.3.13,
+LSR,7,Automated equipment log/service request message,13.3.13,ch13.html#Heading87
+LSR,8,Automated equipment log/service request message,13.3.13,ch13.html#Heading87
+LSR,9,Automated equipment log/service request message,13.3.13,ch13.html#Heading87
+LSR,61,Automated equipment log/service request message,13.3.13,ch13.html#Heading87
+LSR,81,Automated equipment log/service request message,13.3.13,ch13.html#Heading87
+LSR,91,Automated equipment log/service request message,13.3.13,ch13.html#Heading87
+LSR,92,Automated equipment log/service request message,13.3.13,ch13.html#Heading87
+LSU,5,Automated equipment log/service update message,13,
+LSU,6,Automated equipment log/service update message,13.3.12,
+LSU,7,Automated equipment log/service update message,13.3.12,ch13.html#Heading86
+LSU,8,Automated equipment log/service update message,13.3.12,ch13.html#Heading86
+LSU,9,Automated equipment log/service update message,13.3.12,ch13.html#Heading86
+LSU,61,Automated equipment log/service update message,13.3.12,ch13.html#Heading86
+LSU,81,Automated equipment log/service update message,13.3.12,ch13.html#Heading86
+LSU,91,Automated equipment log/service update message,13.3.12,ch13.html#Heading86
+LSU,92,Automated equipment log/service update message,13.3.12,ch13.html#Heading86
+MCF,1,Delayed Acknowledgment (Retained for backward compatibility only),,
+MCF,2,Delayed Acknowledgment (Retained for backward compatibility only),,
+MCF,3,Delayed Acknowledgment (Retained for backward compatibility only),,
+MCF,4,Delayed Acknowledgment (Retained for backward compatibility only),,
+MCF,5,Delayed Acknowledgment (Retained for backward compatibility only),2,
+MDM,3,Medical document management,,
+MDM,4,Medical document management,,
+MDM,5,Medical document management,9,
+MDM,6,Medical document management,9.5.1,
+MDM,7,Medical document management,9.5.1,ch09.html#Heading29
+MDM,8,Medical document management,9.6.1,ch09.html#Heading52
+MDM,9,Medical document management,9.6.1,ch09.html#Heading52
+MDM,32,Medical document management,,
+MDM,61,Medical document management,9.5.1,ch09.html#Heading29
+MDM,81,Medical document management,9.6.1,ch09.html#Heading52
+MDM,91,Medical document management,9.6.1,ch09.html#Heading52
+MDM,92,Medical document management,9.6.1,ch09.html#Heading52
+MFD,2,Master files delayed application acknowledgment,,
+MFD,3,Master files delayed application acknowledgment,,
+MFD,4,Master files delayed application acknowledgment,,
+MFD,5,Master files delayed application acknowledgment,8,
+MFK,2,Master files application acknowledgment,,
+MFK,3,Master files application acknowledgment,,
+MFK,4,Master files application acknowledgment,,
+MFK,5,Master files application acknowledgment,8,
+MFK,6,Master files application acknowledgment,8.4.1,
+MFK,7,Master files application acknowledgment,8.10.1,ch08.html#Heading243
+MFK,8,Master files application acknowledgment,8.10.1,ch08.html#Heading214
+MFK,9,Master files application acknowledgment,8.10.1,ch08.html#Heading242
+MFK,61,Master files application acknowledgment,8.10.1,ch08.html#Heading242
+MFK,81,Master files application acknowledgment,8.10.1,ch08.html#Heading214
+MFK,91,Master files application acknowledgment,8.10.1,ch08.html#Heading246
+MFK,92,Master files application acknowledgment,8.10.1,ch08.html#Heading306
+MFN,2,Master files notification,,
+MFN,3,Master files notification,,
+MFN,4,Master files notification,,
+MFN,5,Master files notification,8,
+MFN,6,Master files notification,8.4.1,
+MFN,7,Master files notification,8.10.1,ch08.html#Heading243
+MFN,8,Master files notification,8.10.1,ch08.html#Heading214
+MFN,9,Master files notification,8.10.1,ch08.html#Heading242
+MFN,61,Master files notification,8.10.1,ch08.html#Heading242
+MFN,81,Master files notification,8.10.1,ch08.html#Heading214
+MFN,91,Master files notification,8.10.1,ch08.html#Heading246
+MFN,92,Master files notification,8.10.1,ch08.html#Heading306
+MFQ,2,Master files query,,
+MFQ,3,Master files query,,
+MFQ,4,Master files query,,
+MFQ,5,Master files query,8,
+MFQ,6,Master files query,8.4.4,
+MFQ,7,Master files query,8.4.4,ch08.html#Heading17
+MFQ,61,Master files query,8.4.4,ch08.html#Heading18
+MFR,2,Master files response,,
+MFR,3,Master files response,,
+MFR,4,Master files response,,
+MFR,5,Master files response,8,
+MFR,6,Master files response,8.4.4,
+MFR,7,Master files response,8.10.1,ch08.html#Heading243
+MFR,61,Master files response,8.10.1,ch08.html#Heading242
+NMD,2,Application management data message,,
+NMD,4,Application management data message,,
+NMD,5,Application management data message,14,
+NMD,6,Application management data message,14.3.2,
+NMD,7,Application management data message,14.3.2,ch14.html#Heading7
+NMD,8,Application management data message,14.3.2,ch14.html#Heading6
+NMD,9,Application management data message,14.3.2,ch14.html#Heading6
+NMD,61,Application management data message,14.3.2,ch14.html#Heading7
+NMD,81,Application management data message,14.3.2,ch14.html#Heading6
+NMD,91,Application management data message,14.3.2,ch14.html#Heading6
+NMD,92,Application management data message,14.3.2,ch14.html#Heading6
+NMQ,2,Application management query message,,
+NMQ,4,Application management query message,,
+NMQ,5,Application management query message,14,
+NMQ,6,Application management query message,14.3.1,
+NMQ,7,Application management query message,14.3.1,ch14.html#Heading5
+NMQ,61,Application management query message,14.3.1,ch14.html#Heading5
+NMR,2,Application management response message,,
+NMR,4,Application management response message,,
+NMR,5,Application management response message,14,
+NMR,6,Application management response message,14.3.1,
+NMR,7,Application management response message,14.3.1,ch14.html#Heading5
+NMR,61,Application management response message,14.3.1,ch14.html#Heading5
+NUL,1,No message required (for referential integrity),0,
+NUL,2,No message required (for referential integrity),0,
+NUL,3,No message required (for referential integrity),0,
+NUL,4,No message required (for referential integrity),0,
+NUL,5,No message required (for referential integrity),0,
+NUL,6,No message required (for referential integrity),0,
+NUL,7,No message required (for referential integrity),0,
+NUL,8,No message required (for referential integrity),0,
+NUL,9,No message required (for referential integrity),0,
+NUL,61,Response for vaccination query with multiple PID matches,,
+NUL,91,,,
+NUL,92,,,
+NUL,540,,,
+OCF,1,ORDER CONFIRMATION,,
+OMB,6,Blood product order message,4.20.1,
+OMB,7,Blood product order message,4.20.1,ch04.html#Heading482
+OMB,8,Blood product order message,4.13.1,ch04.html#Heading214
+OMB,9,Blood product order message,4.13.1,ch04.html#Heading230
+OMB,61,Blood product order message,4.20.1,ch04.html#Heading468
+OMB,81,Blood product order message,4.12.1,ch04.html#Heading214
+OMB,91,Blood product order message,4.13.1,ch04.html#Heading242
+OMB,92,Blood product order message,4.13.1,ch04.html#Heading242
+OMD,5,Dietary order,4,
+OMD,6,Dietary order,4.7.1,
+OMD,7,Dietary order,4.7.1,ch04.html#Heading171
+OMD,8,Dietary order,4.7.1,ch04.html#Heading168
+OMD,9,Dietary order,4.7.1,ch04.html#Heading180
+OMD,61,Dietary order,4.7.1,ch04.html#Heading170
+OMD,81,Dietary order,4.6.1,ch04.html#Heading168
+OMD,91,Dietary order,4.7.1,ch04.html#Heading192
+OMD,92,Dietary order,4.7.1,ch04.html#Heading192
+OMG,0,General Clinical Order Message,,
+OMG,5,General clinical order message,4,
+OMG,6,General clinical order message,4.4.4,
+OMG,7,General clinical order message,4.4.4,ch04.html#Heading22
+OMG,8,General clinical order message,4.4.4,ch04.html#Heading18
+OMG,9,General clinical order message,4.4.4,ch04.html#Heading19
+OMG,61,General clinical order message,4.4.4,ch04.html#Heading22
+OMG,81,General clinical order message,4.3.4,ch04.html#Heading17
+OMG,91,General clinical order message,4.4.4,ch04.html#Heading19
+OMG,92,General clinical order message,4.4.4,ch04.html#Heading19
+OMG,540,,,
+OMI,6,Imaging order,4.4.12,
+OMI,7,Imaging order,4.4.12,ch04.html#Heading30
+OMI,8,Imaging order,4.4.14,ch04.html#Heading28
+OMI,9,Imaging order,4.4.14,ch04.html#Heading29
+OMI,61,Imaging order,4.4.12,ch04.html#Heading30
+OMI,81,Imaging order,4.3.14,ch04.html#Heading27
+OMI,91,Imaging order,4.4.14,ch04.html#Heading41
+OMI,92,Imaging order,4.4.14,ch04.html#Heading41
+OML,5,Laboratory order message,4,
+OML,6,Laboratory order message,4.4.6,
+OML,7,Laboratory order message,4.4.10,ch04.html#Heading28
+OML,8,Laboratory order message,4.4.10,ch04.html#Heading24
+OML,9,Laboratory order message,4.4.10,ch04.html#Heading25
+OML,61,Laboratory order message,4.4.10,ch04.html#Heading28
+OML,81,Laboratory order message,4.3.10,ch04.html#Heading23
+OML,91,Laboratory order message,4.4.10,ch04.html#Heading31
+OML,92,Laboratory order message,4.4.10,ch04.html#Heading31
+OML,540,,,
+OMN,5,Non-stock requisition order message,4,
+OMN,6,Non-stock requisition order message,4.10.3,
+OMN,7,Non-stock requisition order message,4.10.3,ch04.html#Heading193
+OMN,8,Non-stock requisition order message,4.10.3,ch04.html#Heading188
+OMN,9,Non-stock requisition order message,4.10.3,ch04.html#Heading202
+OMN,61,Non-stock requisition order message,4.10.3,ch04.html#Heading192
+OMN,81,Non-stock requisition order message,4.9.3,ch04.html#Heading188
+OMN,91,Non-stock requisition order message,4.10.3,ch04.html#Heading214
+OMN,92,Non-stock requisition order message,4.10.3,ch04.html#Heading214
+OMP,5,Pharmacy/treatment order message,4,
+OMP,6,Pharmacy/treatment order message,4.13.3,
+OMP,7,Pharmacy/treatment order message,4.13.3,ch04.html#Heading223
+OMP,8,Pharmacy/treatment order message,4.A.3.2,ch04a.html#Heading8
+OMP,9,Pharmacy/treatment order message,4.A.3,ch04a.html#Heading8
+OMP,61,Pharmacy/treatment order message,4.13.3,ch04.html#Heading222
+OMP,81,Pharmacy/treatment order message,4.A.3,ch04a.html#Heading7
+OMP,91,Pharmacy/treatment order message,4.A.3,ch04a.html#Heading8
+OMP,92,Pharmacy/treatment order message,4.A.3,ch04a.html#Heading8
+OMQ,9,General order message with document payload,4.4.19,ch04.html#Heading34
+OMQ,91,General order message with document payload,4.4.19,ch04.html#Heading46
+OMQ,92,General order message with document payload,4.4.19,ch04.html#Heading46
+OMS,5,Stock requisition order message,4,
+OMS,6,Stock requisition order message,4.10.1,
+OMS,7,Stock requisition order message,4.10.1,ch04.html#Heading191
+OMS,8,Stock requisition order message,4.10.1,ch04.html#Heading186
+OMS,9,Stock requisition order message,4.10.1,ch04.html#Heading200
+OMS,61,Stock requisition order message,4.10.1,ch04.html#Heading190
+OMS,81,Stock requisition order message,4.9.1,ch04.html#Heading186
+OMS,91,Stock requisition order message,4.10.1,ch04.html#Heading212
+OMS,92,Stock requisition order message,4.10.1,ch04.html#Heading212
+OPL,7,Population/Location-Based Laboratory Order Message,4.4.14,ch04.html#Heading32
+OPL,8,Population/Location-Based Laboratory Order Message,4.4.16,ch04.html#Heading30
+OPL,9,Population/Location-Based Laboratory Order Message,4.4.16,ch04.html#Heading31
+OPL,81,Population/Location-Based Laboratory Order Message,4.3.16,ch04.html#Heading29
+OPL,91,Population/Location-Based Laboratory Order Message,4.4.16,ch04.html#Heading43
+OPL,92,Population/Location-Based Laboratory Order Message,4.4.16,ch04.html#Heading43
+OPR,7,Population/Location-Based Laboratory Order Acknowledgment Message,4.4.15,ch04.html#Heading33
+OPR,8,Population/Location-Based Laboratory Order Acknowledgment Message,4.4.17,ch04.html#Heading31
+OPR,9,Population/Location-Based Laboratory Order Acknowledgment Message,4.4.17,ch04.html#Heading32
+OPR,81,Population/Location-Based Laboratory Order Acknowledgment Message,4.3.17,ch04.html#Heading30
+OPR,91,Population/Location-Based Laboratory Order Acknowledgment Message,4.4.17,ch04.html#Heading44
+OPR,92,Population/Location-Based Laboratory Order Acknowledgment Message,4.4.17,ch04.html#Heading44
+OPU,7,Unsolicited Population/Location-Based Laboratory Observation Message,7.3.10,ch07.html#Heading52
+OPU,8,Unsolicited Population/Location-Based Laboratory Observation Message,7.3.11,ch07.html#Heading51
+OPU,9,Unsolicited Population/Location-Based Laboratory Observation Message,7.3.11,ch07.html#Heading53
+OPU,81,Unsolicited Population/Location-Based Laboratory Observation Message,7.3.11,ch07.html#Heading51
+OPU,91,Unsolicited Population/Location-Based Laboratory Observation Message,7.3.11,ch07.html#Heading53
+OPU,92,Unsolicited Population/Location-Based Laboratory Observation Message,7.3.11,ch07.html#Heading54
+ORA,8,Observation Report  Acknowledgment,7.3.7,ch07.html#Heading47
+ORA,9,Observation Report  Acknowledgment,7.3.13,ch07.html#Heading55
+ORA,81,Observation Report  Acknowledgment,7.3.7,ch07.html#Heading47
+ORA,91,Observation Report  Acknowledgment,7.3.13,ch07.html#Heading55
+ORA,92,Observation Report Acknowledgment,7.3.13,ch07.html#Heading56
+ORB,6,Blood product order acknowledgement message,4.20.2,
+ORB,7,Blood product order acknowledgement message,4.20.2,ch04.html#Heading484
+ORB,8,Blood product order acknowledgement message,4.13.2,ch04.html#Heading216
+ORB,9,Blood product order acknowledgement message,4.13.2,ch04.html#Heading232
+ORB,61,Blood product order acknowledgement message,4.20.2,ch04.html#Heading470
+ORB,81,Blood product order acknowledgement message,4.12.2,ch04.html#Heading216
+ORB,91,Blood product order acknowledgement message,4.13.2,ch04.html#Heading244
+ORB,92,Blood product order acknowledgement message,4.13.2,ch04.html#Heading244
+ORD,5,Dietary order acknowledgment message,4,
+ORD,6,Dietary order acknowledgment message,4.7.2,
+ORD,7,Dietary order acknowledgment message,4.7.2,ch04.html#Heading172
+ORD,8,Dietary order acknowledgment message,4.7.2,ch04.html#Heading169
+ORD,9,Dietary order acknowledgment message,4.7.2,ch04.html#Heading181
+ORD,61,Dietary order acknowledgment message,4.7.2,ch04.html#Heading171
+ORD,81,Dietary order acknowledgment message,4.6.2,ch04.html#Heading169
+ORD,91,Dietary order acknowledgment message,4.7.2,ch04.html#Heading193
+ORD,92,Dietary order acknowledgment message,4.7.2,ch04.html#Heading193
+ORF,1,Query for results of observation,,
+ORF,2,Query for results of observation,,
+ORF,3,Query for results of observation,,
+ORF,4,Query for results of observation,,
+ORF,5,Query for results of observation,7,
+ORF,6,Query for results of observation,7.3.3,
+ORF,7,Query for results of observation,7.3.3,ch07.html#Heading45
+ORF,61,Query for results of observation,7.3.3,ch07.html#Heading45
+ORG,5,General clinical order acknowledgment message,4,
+ORG,6,General clinical order acknowledgment message,4.4.5,
+ORG,7,General clinical order acknowledgment message,4.4.5,ch04.html#Heading23
+ORG,8,General clinical order acknowledgment message,4.4.5,ch04.html#Heading19
+ORG,9,General clinical order acknowledgment message,4.4.5,ch04.html#Heading20
+ORG,61,General clinical order acknowledgment message,4.4.5,ch04.html#Heading23
+ORG,81,General clinical order acknowledgment message,4.3.5,ch04.html#Heading18
+ORG,91,General clinical order acknowledgment message,4.4.5,ch04.html#Heading20
+ORG,92,General clinical order acknowledgment message,4.4.5,ch04.html#Heading20
+ORI,6,Imaging order acknowledgement message,4.4.13,
+ORI,7,Imaging order acknowledgement message,4.4.13,ch04.html#Heading31
+ORI,8,Imaging order acknowledgement message,4.4.15,ch04.html#Heading29
+ORI,9,Imaging order acknowledgement message,4.4.15,ch04.html#Heading30
+ORI,61,Imaging order acknowledgement message,4.4.13,ch04.html#Heading31
+ORI,81,Imaging order acknowledgement message,4.3.15,ch04.html#Heading28
+ORI,91,Imaging order acknowledgement message,4.4.15,ch04.html#Heading42
+ORI,92,Imaging order acknowledgement message,4.4.15,ch04.html#Heading42
+ORL,5,Laboratory acknowledgment message (unsolicited),4,
+ORL,6,Laboratory acknowledgment message (unsolicited),4.4.7,
+ORL,7,Laboratory acknowledgment message (unsolicited),4.4.11,ch04.html#Heading29
+ORL,8,Laboratory acknowledgment message (unsolicited),4.4.11,ch04.html#Heading25
+ORL,9,Laboratory acknowledgment message (unsolicited),4.4.11,ch04.html#Heading26
+ORL,61,Laboratory acknowledgment message (unsolicited),4.4.11,ch04.html#Heading29
+ORL,81,Laboratory acknowledgment message (unsolicited),4.3.11,ch04.html#Heading24
+ORL,91,Laboratory acknowledgment message (unsolicited),4.4.11.1,ch04.html#Heading34
+ORL,92,Laboratory acknowledgment message (unsolicited),4.4.11.1,ch04.html#Heading34
+ORL,540,,,
+ORM,1,Pharmacy/treatment order message,,
+ORM,2,Pharmacy/treatment order message,,
+ORM,3,Pharmacy/treatment order message,,
+ORM,4,Pharmacy/treatment order message,,
+ORM,5,Pharmacy/treatment order message,4,
+ORM,6,Pharmacy/treatment order message,4.4.1,
+ORM,7,Pharmacy/treatment order message,4.4.1,ch04.html#Heading15
+ORM,32,Pharmacy/treatment order message,,
+ORM,61,Pharmacy/treatment order message,4.4.1,ch04.html#Heading15
+ORN,5,Non-stock requisition - General order acknowledgment message,4,
+ORN,6,Non-stock requisition - General order acknowledgment message,4.10.4,
+ORN,7,Non-stock requisition - General order acknowledgment message,4.10.4,ch04.html#Heading194
+ORN,8,Non-stock requisition - General order acknowledgment message,4.10.4,ch04.html#Heading189
+ORN,9,Non-stock requisition - General order acknowledgment message,4.10.4,ch04.html#Heading203
+ORN,61,Non-stock requisition - General order acknowledgment message,4.10.4,ch04.html#Heading193
+ORN,81,Non-stock requisition - General order acknowledgment message,4.9.4,ch04.html#Heading189
+ORN,91,Non-stock requisition - General order acknowledgment message,4.10.4,ch04.html#Heading215
+ORN,92,Non-stock requisition - General order acknowledgment message,4.10.4,ch04.html#Heading215
+ORP,5,Pharmacy/treatment order acknowledgment message,4,
+ORP,6,Pharmacy/treatment order acknowledgment message,4.13.4,
+ORP,7,Pharmacy/treatment order acknowledgment message,4.13.4,ch04.html#Heading224
+ORP,8,Pharmacy/treatment order acknowledgment message,4.A.3.3,ch04a.html#Heading9
+ORP,9,Pharmacy/treatment order acknowledgment message,4.A.4,ch04a.html#Heading9
+ORP,61,Pharmacy/treatment order acknowledgment message,4.13.4,ch04.html#Heading223
+ORP,81,Pharmacy/treatment order acknowledgment message,4.A.4,ch04a.html#Heading8
+ORP,91,Pharmacy/treatment order acknowledgment message,4.A.4,ch04a.html#Heading9
+ORP,92,Pharmacy/treatment order acknowledgment message,4.A.4,ch04a.html#Heading9
+ORR,1,General order response message response to any ORM,,
+ORR,2,General order response message response to any ORM,,
+ORR,3,General order response message response to any ORM,,
+ORR,4,General order response message response to any ORM,,
+ORR,5,General order response message response to any ORM,4,
+ORR,6,General order response message response to any ORM,4.4.2,
+ORR,7,General order response message response to any ORM,4.4.2,ch04.html#Heading18
+ORR,61,General order response message response to any ORM,4.4.2,ch04.html#Heading18
+ORR,540,,,
+ORS,5,Stock requisition - Order acknowledgment message,4,
+ORS,6,Stock requisition - Order acknowledgment message,4.10.2,
+ORS,7,Stock requisition - Order acknowledgment message,4.10.2,ch04.html#Heading192
+ORS,8,Stock requisition - Order acknowledgment message,4.10.2,ch04.html#Heading187
+ORS,9,Stock requisition - Order acknowledgment message,4.10.2,ch04.html#Heading201
+ORS,61,Stock requisition - Order acknowledgment message,4.10.2,ch04.html#Heading191
+ORS,81,Stock requisition - Order acknowledgment message,4.9.2,ch04.html#Heading187
+ORS,91,Stock requisition - Order acknowledgment message,4.10.2,ch04.html#Heading213
+ORS,92,Stock requisition - Order acknowledgment message,4.10.2,ch04.html#Heading213
+ORU,0,Unsolicited transmission of an observation message,,
+ORU,1,Unsolicited transmission of an observation message,,
+ORU,2,Unsolicited transmission of an observation message,,
+ORU,3,Unsolicited transmission of an observation message,,
+ORU,4,Unsolicited transmission of an observation message,,
+ORU,5,Unsolicited transmission of an observation message,7,
+ORU,6,Unsolicited transmission of an observation message,5.7.3.1,
+ORU,7,Unsolicited transmission of an observation message,5.7.3.1,ch05.html#Heading120
+ORU,8,Unsolicited transmission of an observation message,5.7.3.0,ch05.html#Heading104
+ORU,9,Unsolicited transmission of an observation message,7.3.1,ch07.html#Heading43
+ORU,61,Unsolicited transmission of an observation message,5.7.3.1,ch05.html#Heading120
+ORU,81,Unsolicited transmission of an observation message,5.7.3.0,ch05.html#Heading104
+ORU,91,Unsolicited transmission of an observation message,7.3.1,ch07.html#Heading43
+ORU,92,Unsolicited transmission of an observation message,7.3.1,ch07.html#Heading44
+ORU,540,,,
+ORX,9,General Order Message with Document Payload Acknowledgement,4.4.20,ch04.html#Heading35
+ORX,91,General Order Message with Document Payload Acknowledgement,4.4.20,ch04.html#Heading47
+ORX,92,General Order Message with Document Payload Acknowledgement,4.4.20,ch04.html#Heading47
+OSM,8,Specimen Shipment Message,7.18.1,ch07.html#Heading400
+OSM,9,Specimen Shipment Message,7.18.1,ch07.html#Heading424
+OSM,81,Specimen Shipment Message,7.18.1,ch07.html#Heading401
+OSM,91,Specimen Shipment Message,7.18.1,ch07.html#Heading425
+OSM,92,Specimen Shipment Message,7.18.1,ch07.html#Heading434
+OSQ,1,Query response for order status,,
+OSQ,2,Query response for order status,,
+OSQ,3,Query response for order status,,
+OSQ,4,Query response for order status,,
+OSQ,5,Query response for order status,4,
+OSQ,6,Query response for order status,4.4.3,
+OSQ,7,Query response for order status,4.4.3,ch04.html#Heading19
+OSQ,61,Query response for order status,4.4.3,ch04.html#Heading19
+OSR,3,Query response for order status,,
+OSR,4,Query response for order status,,
+OSR,5,Query response for order status,4,
+OSR,6,Query response for order status,4.4.3,
+OSR,7,Query response for order status,4.4.3,ch04.html#Heading19
+OSR,61,Query response for order status,4.4.3,ch04.html#Heading19
+OSU,9,Order status update,4.4.18,ch04.html#Heading33
+OSU,91,Order status update,4.4.18,ch04.html#Heading45
+OSU,92,Order status update,4.4.18,ch04.html#Heading45
+OUL,5,Unsolicited laboratory observation message,7,
+OUL,6,Unsolicited laboratory observation message,7.3.2,
+OUL,7,Unsolicited laboratory observation message,7.3.2,ch07.html#Heading44
+OUL,8,Unsolicited laboratory observation message,7.3.10,ch07.html#Heading50
+OUL,9,Unsolicited laboratory observation message,7.3.10,ch07.html#Heading52
+OUL,61,Unsolicited laboratory observation message,7.3.2,ch07.html#Heading44
+OUL,81,Unsolicited laboratory observation message,7.3.10,ch07.html#Heading50
+OUL,91,Unsolicited laboratory observation message,7.3.10,ch07.html#Heading52
+OUL,92,Unsolicited laboratory observation message,7.3.10,ch07.html#Heading53
+PEX,3,Product experience message,,
+PEX,4,Product experience message,,
+PEX,5,Product experience message,7,
+PEX,6,Product experience message,7.11.1,
+PEX,7,Product experience message,7.11.1,ch07.html#Heading256
+PEX,8,Product experience message,7.11.1,ch07.html#Heading266
+PEX,9,Product experience message,7.11.1,ch07.html#Heading283
+PEX,61,Product experience message,7.11.1,ch07.html#Heading253
+PEX,81,Product experience message,7.11.1,ch07.html#Heading267
+PEX,91,Product experience message,7.11.1,ch07.html#Heading284
+PEX,92,Product experience message,7.11.1,ch07.html#Heading293
+PGL,3,Patient goal message,,
+PGL,4,Patient goal message,,
+PGL,5,Patient goal message,12,
+PGL,6,Patient goal message,12.3.1,
+PGL,7,Patient goal message,12.3.1,ch12.html#Heading30
+PGL,8,Patient goal message,12.3.1,ch12.html#Heading26
+PGL,9,Patient goal message,12.3.1,ch12.html#Heading30
+PGL,61,Patient goal message,12.3.1,ch12.html#Heading30
+PGL,81,Patient goal message,12.3.1,ch12.html#Heading26
+PGL,91,Patient goal message,12.3.1,ch12.html#Heading30
+PGL,92,Patient goal message,12.3.1,ch12.html#Heading30
+PIN,3,Patient insurance information,,
+PIN,4,Patient insurance information,,
+PIN,5,Patient insurance information,11,
+PIN,6,Patient insurance information,11.3.7,
+PIN,7,Patient insurance information,11.3.7,ch11.html#Heading40
+PIN,8,Patient insurance information,11.3.7,ch11.html#Heading38
+PIN,9,Patient insurance information,11.3.7,ch11.html#Heading41
+PIN,61,Patient insurance information,11.3.7,ch11.html#Heading40
+PIN,81,Patient insurance information,11.2.7,ch11.html#Heading37
+PIN,91,Patient insurance information,11.3.7,ch11.html#Heading41
+PIN,92,Patient insurance information,11.3.7,ch11.html#Heading41
+PMU,5,Add personnel record,15,
+PMU,6,Add personnel record,15.3.1,
+PMU,7,Add personnel record,15.3.1,ch15.html#Heading6
+PMU,8,Add personnel record,15.3.1,ch15.html#Heading6
+PMU,9,Add personnel record,15.3.1,ch15.html#Heading6
+PMU,61,Add personnel record,15.3.1,ch15.html#Heading6
+PMU,81,Add personnel record,15.3.1,ch15.html#Heading6
+PMU,91,Add personnel record,15.3.1,ch15.html#Heading6
+PMU,92,Add personnel record,15.3.1,ch15.html#Heading6
+PPG,3,Patient pathway message (goal-oriented),,
+PPG,4,Patient pathway message (goal-oriented),,
+PPG,5,Patient pathway message (goal-oriented),12,
+PPG,6,Patient pathway message (goal-oriented),12.3.4,
+PPG,7,Patient pathway message (goal-oriented),12.3.4,ch12.html#Heading33
+PPG,8,Patient pathway message (goal-oriented),12.3.4,ch12.html#Heading29
+PPG,9,Patient pathway message (goal-oriented),12.3.4,ch12.html#Heading33
+PPG,61,Patient pathway message (goal-oriented),12.3.4,ch12.html#Heading33
+PPG,81,Patient pathway message (goal-oriented),12.3.4,ch12.html#Heading29
+PPG,91,Patient pathway message (goal-oriented),12.3.4,ch12.html#Heading33
+PPG,92,Patient pathway message (goal-oriented),12.3.4,ch12.html#Heading33
+PPP,3,Patient pathway message (problem-oriented),,
+PPP,4,Patient pathway message (problem-oriented),,
+PPP,5,Patient pathway message (problem-oriented),12,
+PPP,6,Patient pathway message (problem-oriented),12.3.3,
+PPP,7,Patient pathway message (problem-oriented),12.3.3,ch12.html#Heading32
+PPP,8,Patient pathway message (problem-oriented),12.3.3,ch12.html#Heading28
+PPP,9,Patient pathway message (problem-oriented),12.3.3,ch12.html#Heading32
+PPP,61,Patient pathway message (problem-oriented),12.3.3,ch12.html#Heading32
+PPP,81,Patient pathway message (problem-oriented),12.3.3,ch12.html#Heading28
+PPP,91,Patient pathway message (problem-oriented),12.3.3,ch12.html#Heading32
+PPP,92,Patient pathway message (problem-oriented),12.3.3,ch12.html#Heading32
+PPR,3,Patient problem message,,
+PPR,4,Patient problem message,,
+PPR,5,Patient problem message,12,
+PPR,6,Patient problem message,12.3.2,
+PPR,7,Patient problem message,12.3.2,ch12.html#Heading31
+PPR,8,Patient problem message,12.3.2,ch12.html#Heading27
+PPR,9,Patient problem message,12.3.2,ch12.html#Heading31
+PPR,61,Patient problem message,12.3.2,ch12.html#Heading31
+PPR,81,Patient problem message,12.3.2,ch12.html#Heading27
+PPR,91,Patient problem message,12.3.2,ch12.html#Heading31
+PPR,92,Patient problem message,12.3.2,ch12.html#Heading31
+PPT,3,Patient pathway goal-oriented response,,
+PPT,4,Patient pathway goal-oriented response,,
+PPT,5,Patient pathway goal-oriented response,12,
+PPT,6,Patient pathway goal-oriented response,12.3.12,
+PPT,7,Patient pathway goal-oriented response,12.3.12,ch12.html#Heading41
+PPT,8,Patient pathway goal-oriented response,12.3.12,ch12.html#Heading37
+PPT,61,Patient pathway goal-oriented response,12.3.12,ch12.html#Heading41
+PPT,81,Patient pathway goal-oriented response,12.3.12,ch12.html#Heading37
+PPV,3,Patient goal response,,
+PPV,4,Patient goal response,,
+PPV,5,Patient goal response,12,
+PPV,6,Patient goal response,12.3.8,
+PPV,7,Patient goal response,12.3.8,ch12.html#Heading37
+PPV,8,Patient goal response,12.3.8,ch12.html#Heading33
+PPV,61,Patient goal response,12.3.8,ch12.html#Heading37
+PPV,81,Patient goal response,12.3.8,ch12.html#Heading33
+PRR,3,Patient problem response,,
+PRR,4,Patient problem response,,
+PRR,5,Patient problem response,12,
+PRR,6,Patient problem response,12.3.6,
+PRR,7,Patient problem response,12.3.6,ch12.html#Heading35
+PRR,8,Patient problem response,12.3.6,ch12.html#Heading31
+PRR,61,Patient problem response,12.3.6,ch12.html#Heading35
+PRR,81,Patient problem response,12.3.6,ch12.html#Heading31
+PTR,3,Patient pathway problem-oriented response,,
+PTR,4,Patient pathway problem-oriented response,,
+PTR,5,Patient pathway problem-oriented response,12,
+PTR,6,Patient pathway problem-oriented response,12.3.10,
+PTR,7,Patient pathway problem-oriented response,12.3.10,ch12.html#Heading39
+PTR,8,Patient pathway problem-oriented response,12.3.10,ch12.html#Heading35
+PTR,61,Patient pathway problem-oriented response,12.3.10,ch12.html#Heading39
+PTR,81,Patient pathway problem-oriented response,12.3.10,ch12.html#Heading35
+QBP,5,Query by parameter,15,
+QBP,6,Query by parameter,3.3.56,
+QBP,7,Query by parameter,15.3.7,ch15.html#Heading12
+QBP,8,Query by parameter,15.3.7,ch15.html#Heading12
+QBP,9,Query by parameter,15.3.7,ch15.html#Heading12
+QBP,61,Query by parameter,15.3.7,ch15.html#Heading12
+QBP,81,Query by parameter,15.3.7,ch15.html#Heading12
+QBP,91,Query by parameter,15.3.7,ch15.html#Heading12
+QBP,92,Query by parameter,15.3.7,ch15.html#Heading12
+QCK,3,Deferred query,,
+QCK,4,Deferred query,,
+QCK,5,Deferred query,5,
+QCK,6,Deferred query,5.10.3.1,
+QCK,7,Deferred query,5.10.3.1,ch05.html#Heading170
+QCK,61,Deferred query,5.10.3.1,ch05.html#Heading170
+QCN,5,Cancel query,5,
+QCN,6,Cancel query,5.4.6,
+QCN,7,Cancel query,5.4.6,ch05.html#Heading52
+QCN,8,Cancel query,5.4.6,ch05.html#Heading47
+QCN,9,Cancel query,5.4.6,ch05.html#Heading52
+QCN,61,Cancel query,5.4.6,ch05.html#Heading52
+QCN,81,Cancel query,5.4.6,ch05.html#Heading47
+QCN,91,Cancel query,5.4.6,ch05.html#Heading52
+QCN,92,Cancel query,5.4.6,ch05.html#Heading52
+QRY,1,"Query, original mode",,
+QRY,2,"Query, original mode",,
+QRY,3,"Query, original mode",,
+QRY,4,"Query, original mode",,
+QRY,5,"Query, original mode",12,
+QRY,6,"Query, original mode",3.3.19,
+QRY,7,"Query, original mode",12.3.11,ch12.html#Heading40
+QRY,8,"Query, original mode",12.3.11,ch12.html#Heading36
+QRY,61,"Query, original mode",12.3.11,ch12.html#Heading40
+QRY,81,"Query, original mode",12.3.11,ch12.html#Heading36
+QSB,5,Create subscription,5,
+QSB,6,Create subscription,5.4.4,
+QSB,7,Create subscription,5.4.4,ch05.html#Heading50
+QSB,8,Create subscription,5.4.4,ch05.html#Heading45
+QSB,9,Create subscription,5.4.4,ch05.html#Heading50
+QSB,61,Create subscription,5.4.4,ch05.html#Heading50
+QSB,81,Create subscription,5.4.4,ch05.html#Heading45
+QSB,91,Create subscription,5.4.4,ch05.html#Heading50
+QSB,92,Create subscription,5.4.4,ch05.html#Heading50
+QSX,5,Cancel subscription/acknowledge message,5,
+QSX,6,Cancel subscription/acknowledge message,5.4.7,
+QSX,7,Cancel subscription/acknowledge message,5.4.7,ch05.html#Heading53
+QSX,8,Cancel subscription/acknowledge message,5.4.7,ch05.html#Heading48
+QSX,9,Cancel subscription/acknowledge message,5.4.7,ch05.html#Heading53
+QSX,61,Cancel subscription/acknowledge message,5.4.7,ch05.html#Heading53
+QSX,81,Cancel subscription/acknowledge message,5.4.7,ch05.html#Heading48
+QSX,91,Cancel subscription/acknowledge message,5.4.7,ch05.html#Heading53
+QSX,92,Cancel subscription/acknowledge message,5.4.7,ch05.html#Heading53
+QVR,5,Query for previous events,5,
+QVR,6,Query for previous events,5.4.5,
+QVR,7,Query for previous events,5.4.5,ch05.html#Heading51
+QVR,8,Query for previous events,5.4.5,ch05.html#Heading46
+QVR,9,Query for previous events,5.4.5,ch05.html#Heading51
+QVR,61,Query for previous events,5.4.5,ch05.html#Heading51
+QVR,81,Query for previous events,5.4.5,ch05.html#Heading46
+QVR,91,Query for previous events,5.4.5,ch05.html#Heading51
+QVR,92,Query for previous events,5.4.5,ch05.html#Heading51
+RAR,2,Pharmacy/treatment administration information,,
+RAR,3,Pharmacy/treatment administration information,,
+RAR,4,Pharmacy/treatment administration information,,
+RAR,5,Pharmacy/treatment administration information,4,
+RAR,6,Pharmacy/treatment administration information,4.13.16,
+RAR,7,Pharmacy/treatment administration information,4.13.16,ch04.html#Heading236
+RAR,61,Pharmacy/treatment administration information,4.13.16,ch04.html#Heading235
+RAS,2,Pharmacy/treatment administration message,,
+RAS,3,Pharmacy/treatment administration message,,
+RAS,4,Pharmacy/treatment administration message,,
+RAS,5,Pharmacy/treatment administration message,4,
+RAS,6,Pharmacy/treatment administration message,4.13.11,
+RAS,7,Pharmacy/treatment administration message,4.13.11,ch04.html#Heading231
+RAS,8,Pharmacy/treatment administration message,4.A.3.10,ch04a.html#Heading16
+RAS,9,Pharmacy/treatment administration message,4.A.11,ch04a.html#Heading16
+RAS,61,Pharmacy/treatment administration message,4.13.11,ch04.html#Heading230
+RAS,81,Pharmacy/treatment administration message,4.A.11,ch04a.html#Heading15
+RAS,91,Pharmacy/treatment administration message,4.A.11,ch04a.html#Heading16
+RAS,92,Pharmacy/treatment administration message,4.A.11,ch04a.html#Heading16
+RCI,3,Return clinical information,,
+RCI,4,Return clinical information,,
+RCI,5,Return clinical information,11,
+RCI,6,Return clinical information,11.3.5,
+RCI,7,Return clinical information,11.3.5,ch11.html#Heading38
+RCI,8,Return clinical information,11.3.5,ch11.html#Heading36
+RCI,61,Return clinical information,11.3.5,ch11.html#Heading38
+RCI,81,Return clinical information,11.2.5,ch11.html#Heading35
+RCL,3,Return clinical list,,
+RCL,4,Return clinical list,,
+RCL,5,Return clinical list,11,
+RCL,6,Return clinical list,11.3.6,
+RCL,7,Return clinical list,11.3.6,ch11.html#Heading39
+RCL,8,Return clinical list,11.3.6,ch11.html#Heading37
+RCL,61,Return clinical list,11.3.6,ch11.html#Heading39
+RCL,81,Return clinical list,11.2.6,ch11.html#Heading36
+RDE,2,Pharmacy/treatment encoded order message,,
+RDE,3,Pharmacy/treatment encoded order message,,
+RDE,4,Pharmacy/treatment encoded order message,,
+RDE,5,Pharmacy/treatment encoded order message,4,
+RDE,6,Pharmacy/treatment encoded order message,4.13.5,
+RDE,7,Pharmacy/treatment encoded order message,4.13.13,ch04.html#Heading233
+RDE,8,Pharmacy/treatment encoded order message,4.A.3.12,ch04a.html#Heading18
+RDE,9,Pharmacy/treatment encoded order message,4.A.13,ch04a.html#Heading18
+RDE,61,Pharmacy/treatment encoded order message,4.13.13,ch04.html#Heading232
+RDE,81,Pharmacy/treatment encoded order message,4.A.13,ch04a.html#Heading17
+RDE,91,Pharmacy/treatment encoded order message,4.A.13,ch04a.html#Heading18
+RDE,92,Pharmacy/treatment encoded order message,4.A.13,ch04a.html#Heading18
+RDR,2,Pharmacy/treatment dispense information,,
+RDR,3,Pharmacy/treatment dispense information,,
+RDR,4,Pharmacy/treatment dispense information,,
+RDR,5,Pharmacy/treatment dispense information,5,
+RDR,6,Pharmacy/treatment dispense information,4.13.17,
+RDR,7,Pharmacy/treatment dispense information,4.13.17,ch04.html#Heading237
+RDR,8,Pharmacy/treatment dispense information,5.9.1.0,ch05.html#Heading110
+RDR,9,Pharmacy/treatment dispense information,5.9.1.1,ch05.html#Heading127
+RDR,61,Pharmacy/treatment dispense information,4.13.17,ch04.html#Heading236
+RDR,81,Pharmacy/treatment dispense information,5.9.1.0,ch05.html#Heading110
+RDR,91,Pharmacy/treatment dispense information,5.9.1.1,ch05.html#Heading127
+RDR,92,Pharmacy/treatment dispense information,5.9.1.1,ch05.html#Heading127
+RDS,2,Pharmacy/treatment dispense message,,
+RDS,3,Pharmacy/treatment dispense message,,
+RDS,4,Pharmacy/treatment dispense message,,
+RDS,5,Pharmacy/treatment dispense message,4,
+RDS,6,Pharmacy/treatment dispense message,4.13.7,
+RDS,7,Pharmacy/treatment dispense message,4.13.7,ch04.html#Heading227
+RDS,8,Pharmacy/treatment dispense message,4.A.3.6,ch04a.html#Heading12
+RDS,9,Pharmacy/treatment dispense message,4.A.7,ch04a.html#Heading12
+RDS,61,Pharmacy/treatment dispense message,4.13.7,ch04.html#Heading226
+RDS,81,Pharmacy/treatment dispense message,4.A.7,ch04a.html#Heading11
+RDS,91,Pharmacy/treatment dispense message,4.A.7,ch04a.html#Heading12
+RDS,92,Pharmacy/treatment dispense message,4.A.7,ch04a.html#Heading12
+RDY,5,Display based response,5,
+RDY,6,Display based response,5.3.2.5,
+RDY,7,Display based response,5.3.2.5,ch05.html#Heading31
+RDY,8,Display based response,5.3.2.4,ch05.html#Heading27
+RDY,9,Display based response,5.3.2.5,ch05.html#Heading31
+RDY,61,Display based response,5.3.2.5,ch05.html#Heading31
+RDY,81,Display based response,5.3.2.4,ch05.html#Heading27
+RDY,91,Display based response,5.3.2.5,ch05.html#Heading31
+RDY,92,Display based response,5.3.2.5,ch05.html#Heading31
+REF,3,Patient referral,,
+REF,4,Patient referral,,
+REF,5,Patient referral,11,
+REF,6,Patient referral,11.5.1,
+REF,7,Patient referral,11.5.1,ch11.html#Heading48
+REF,8,Patient referral,11.5.1,ch11.html#Heading46
+REF,9,Patient referral,11.5.1,ch11.html#Heading49
+REF,61,Patient referral,11.5.1,ch11.html#Heading48
+REF,81,Patient referral,11.4.1,ch11.html#Heading45
+REF,91,Patient referral,11.5.1,ch11.html#Heading49
+REF,92,Patient referral,11.5.1,ch11.html#Heading49
+RER,2,Pharmacy/treatment encoded order information,,
+RER,3,Pharmacy/treatment encoded order information,,
+RER,4,Pharmacy/treatment encoded order information,,
+RER,5,Pharmacy/treatment encoded order information,4,
+RER,6,Pharmacy/treatment encoded order information,4.13.18,
+RER,7,Pharmacy/treatment encoded order information,4.13.18,ch04.html#Heading238
+RER,61,Pharmacy/treatment encoded order information,4.13.18,ch04.html#Heading237
+RGR,2,Pharmacy/treatment dose information,,
+RGR,3,Pharmacy/treatment dose information,,
+RGR,4,Pharmacy/treatment dose information,,
+RGR,5,Pharmacy/treatment dose information,4,
+RGR,6,Pharmacy/treatment dose information,4.13.19,
+RGR,7,Pharmacy/treatment dose information,4.13.19,ch04.html#Heading239
+RGR,61,Pharmacy/treatment dose information,4.13.19,ch04.html#Heading238
+RGV,2,Pharmacy/treatment give message,,
+RGV,3,Pharmacy/treatment give message,,
+RGV,4,Pharmacy/treatment give message,,
+RGV,5,Pharmacy/treatment give message,4,
+RGV,6,Pharmacy/treatment give message,4.13.9,
+RGV,7,Pharmacy/treatment give message,4.13.9,ch04.html#Heading229
+RGV,8,Pharmacy/treatment give message,4.A.3.8,ch04a.html#Heading14
+RGV,9,Pharmacy/treatment give message,4.A.9,ch04a.html#Heading14
+RGV,61,Pharmacy/treatment give message,4.13.9,ch04.html#Heading228
+RGV,81,Pharmacy/treatment give message,4.A.9,ch04a.html#Heading13
+RGV,91,Pharmacy/treatment give message,4.A.9,ch04a.html#Heading14
+RGV,92,Pharmacy/treatment give message,4.A.9,ch04a.html#Heading14
+ROC,3,Request clinical information,,
+ROD,3,Request pateint demographics,,
+ROR,2,Pharmacy/treatment order response,,
+ROR,3,Pharmacy/treatment order response,,
+ROR,4,Pharmacy/treatment order response,,
+ROR,5,Pharmacy/treatment order response,4,
+ROR,6,Pharmacy/treatment order response,4.13.15,
+ROR,7,Pharmacy/treatment order response,4.13.15,ch04.html#Heading235
+ROR,61,Pharmacy/treatment order response,4.13.15,ch04.html#Heading234
+RPA,3,Return patient authorization,,
+RPA,4,Return patient authorization,,
+RPA,5,Return patient authorization,11,
+RPA,6,Return patient authorization,11.4.1,
+RPA,7,Return patient authorization,11.4.1,ch11.html#Heading42
+RPA,8,Return patient authorization,11.4.1,ch11.html#Heading40
+RPA,9,Return patient authorization,11.4.1,ch11.html#Heading43
+RPA,61,Return patient authorization,11.4.1,ch11.html#Heading42
+RPA,81,Return patient authorization,11.3.1,ch11.html#Heading39
+RPA,91,Return patient authorization,11.4.1,ch11.html#Heading43
+RPA,92,Return patient authorization,11.4.1,ch11.html#Heading43
+RPI,3,Return patient information,,
+RPI,4,Return patient information,,
+RPI,5,Return patient information,11,
+RPI,6,Return patient information,11.3.1,
+RPI,7,Return patient information,11.3.1,ch11.html#Heading34
+RPI,8,Return patient information,11.3.1,ch11.html#Heading32
+RPI,9,Return patient information,11.3.1,ch11.html#Heading35
+RPI,61,Return patient information,11.3.1,ch11.html#Heading34
+RPI,81,Return patient information,11.2.1,ch11.html#Heading31
+RPI,91,Return patient information,11.3.1,ch11.html#Heading35
+RPI,92,Return patient information,11.3.1,ch11.html#Heading35
+RPL,3,Return patient display list,,
+RPL,4,Return patient display list,,
+RPL,5,Return patient display list,11,
+RPL,6,Return patient display list,11.3.2,
+RPL,7,Return patient display list,11.3.2,ch11.html#Heading35
+RPL,8,Return patient display list,11.3.2,ch11.html#Heading33
+RPL,9,Return patient display list,11.3.2,ch11.html#Heading36
+RPL,61,Return patient display list,11.3.2,ch11.html#Heading35
+RPL,81,Return patient display list,11.2.2,ch11.html#Heading32
+RPL,91,Return patient display list,11.3.2,ch11.html#Heading36
+RPL,92,Return patient display list,11.3.2,ch11.html#Heading36
+RPR,3,Return patient list,,
+RPR,4,Return patient list,,
+RPR,5,Return patient list,11,
+RPR,6,Return patient list,11.3.3,
+RPR,7,Return patient list,11.3.3,ch11.html#Heading36
+RPR,8,Return patient list,11.3.3,ch11.html#Heading34
+RPR,9,Return patient list,11.3.3,ch11.html#Heading37
+RPR,61,Return patient list,11.3.3,ch11.html#Heading36
+RPR,81,Return patient list,11.2.3,ch11.html#Heading33
+RPR,91,Return patient list,11.3.3,ch11.html#Heading37
+RPR,92,Return patient list,11.3.3,ch11.html#Heading37
+RQA,3,Request patient authorization,,
+RQA,4,Request patient authorization,,
+RQA,5,Request patient authorization,11,
+RQA,6,Request patient authorization,11.4.1,
+RQA,7,Request patient authorization,11.4.1,ch11.html#Heading42
+RQA,8,Request patient authorization,11.4.1,ch11.html#Heading40
+RQA,9,Request patient authorization,11.4.1,ch11.html#Heading43
+RQA,61,Request patient authorization,11.4.1,ch11.html#Heading42
+RQA,81,Request patient authorization,11.3.1,ch11.html#Heading39
+RQA,91,Request patient authorization,11.4.1,ch11.html#Heading43
+RQA,92,Request patient authorization,11.4.1,ch11.html#Heading43
+RQC,3,Request clinical information,,
+RQC,4,Request clinical information,,
+RQC,5,Request clinical information,11,
+RQC,6,Request clinical information,11.3.5,
+RQC,7,Request clinical information,11.3.5,ch11.html#Heading38
+RQC,8,Request clinical information,11.3.5,ch11.html#Heading36
+RQC,61,Request clinical information,11.3.5,ch11.html#Heading38
+RQC,81,Request clinical information,11.2.5,ch11.html#Heading35
+RQI,3,Request patient information,,
+RQI,4,Request patient information,,
+RQI,5,Request patient information,11,
+RQI,6,Request patient information,11.3.1,
+RQI,7,Request patient information,11.3.1,ch11.html#Heading34
+RQI,8,Request patient information,11.3.1,ch11.html#Heading32
+RQI,9,Request patient information,11.3.1,ch11.html#Heading35
+RQI,61,Request patient information,11.3.1,ch11.html#Heading34
+RQI,81,Request patient information,11.2.1,ch11.html#Heading31
+RQI,91,Request patient information,11.3.1,ch11.html#Heading35
+RQI,92,Request patient information,11.3.1,ch11.html#Heading35
+RQP,3,Request patient demographics,,
+RQP,4,Request patient demographics,,
+RQP,5,Request patient demographics,11,
+RQP,6,Request patient demographics,11.3.4,
+RQP,7,Request patient demographics,11.3.4,ch11.html#Heading37
+RQP,8,Request patient demographics,11.3.4,ch11.html#Heading35
+RQP,9,Request patient demographics,11.3.4,ch11.html#Heading38
+RQP,61,Request patient demographics,11.3.4,ch11.html#Heading37
+RQP,81,Request patient demographics,11.2.4,ch11.html#Heading34
+RQP,91,Request patient demographics,11.3.4,ch11.html#Heading38
+RQP,92,Request patient demographics,11.3.4,ch11.html#Heading38
+RQQ,3,Event replay query,,
+RQQ,4,Event replay query,,
+RQQ,5,Event replay query,5,
+RQQ,6,Event replay query,5.10.4.2,
+RQQ,61,Event replay query,5.10.4.2,ch05.html#Heading175
+RRA,2,Pharmacy/treatment administration acknowledgment message,,
+RRA,3,Pharmacy/treatment administration acknowledgment message,,
+RRA,4,Pharmacy/treatment administration acknowledgment message,,
+RRA,5,Pharmacy/treatment administration acknowledgment message,4,
+RRA,6,Pharmacy/treatment administration acknowledgment message,4.13.12,
+RRA,7,Pharmacy/treatment administration acknowledgment message,4.13.12,ch04.html#Heading232
+RRA,8,Pharmacy/treatment administration acknowledgment message,4.A.3.11,ch04a.html#Heading17
+RRA,9,Pharmacy/treatment administration acknowledgment message,4.A.12,ch04a.html#Heading17
+RRA,61,Pharmacy/treatment administration acknowledgment message,4.13.12,ch04.html#Heading231
+RRA,81,Pharmacy/treatment administration acknowledgment message,4.A.12,ch04a.html#Heading16
+RRA,91,Pharmacy/treatment administration acknowledgment message,4.A.12,ch04a.html#Heading17
+RRA,92,Pharmacy/treatment administration acknowledgment message,4.A.12,ch04a.html#Heading17
+RRD,2,Pharmacy/treatment dispense acknowledgment message,,
+RRD,3,Pharmacy/treatment dispense acknowledgment message,,
+RRD,4,Pharmacy/treatment dispense acknowledgment message,,
+RRD,5,Pharmacy/treatment dispense acknowledgment message,4,
+RRD,6,Pharmacy/treatment dispense acknowledgment message,4.13.8,
+RRD,7,Pharmacy/treatment dispense acknowledgment message,4.13.8,ch04.html#Heading228
+RRD,8,Pharmacy/treatment dispense acknowledgment message,4.A.3.7,ch04a.html#Heading13
+RRD,9,Pharmacy/treatment dispense acknowledgment message,4.A.8,ch04a.html#Heading13
+RRD,61,Pharmacy/treatment dispense acknowledgment message,4.13.8,ch04.html#Heading227
+RRD,81,Pharmacy/treatment dispense acknowledgment message,4.A.8,ch04a.html#Heading12
+RRD,91,Pharmacy/treatment dispense acknowledgment message,4.A.8,ch04a.html#Heading13
+RRD,92,Pharmacy/treatment dispense acknowledgment message,4.A.8,ch04a.html#Heading13
+RRE,2,Pharmacy/treatment encoded order acknowledgment message,,
+RRE,3,Pharmacy/treatment encoded order acknowledgment message,,
+RRE,4,Pharmacy/treatment encoded order acknowledgment message,,
+RRE,5,Pharmacy/treatment encoded order acknowledgment message,4,
+RRE,6,Pharmacy/treatment encoded order acknowledgment message,4.13.6,
+RRE,7,Pharmacy/treatment encoded order acknowledgment message,4.13.14,ch04.html#Heading234
+RRE,8,Pharmacy/treatment encoded order acknowledgment message,4.A.3.13,ch04a.html#Heading19
+RRE,9,Pharmacy/treatment encoded order acknowledgment message,4.A.14,ch04a.html#Heading19
+RRE,61,Pharmacy/treatment encoded order acknowledgment message,4.13.14,ch04.html#Heading233
+RRE,81,Pharmacy/treatment encoded order acknowledgment message,4.A.14,ch04a.html#Heading18
+RRE,91,Pharmacy/treatment encoded order acknowledgment message,4.A.14,ch04a.html#Heading19
+RRE,92,Pharmacy/treatment encoded order acknowledgment message,4.A.14,ch04a.html#Heading19
+RRG,2,Pharmacy/treatment give acknowledgment message,,
+RRG,3,Pharmacy/treatment give acknowledgment message,,
+RRG,4,Pharmacy/treatment give acknowledgment message,,
+RRG,5,Pharmacy/treatment give acknowledgment message,4,
+RRG,6,Pharmacy/treatment give acknowledgment message,4.13.10,
+RRG,7,Pharmacy/treatment give acknowledgment message,4.13.10,ch04.html#Heading230
+RRG,8,Pharmacy/treatment give acknowledgment message,4.A.3.9,ch04a.html#Heading15
+RRG,9,Pharmacy/treatment give acknowledgment message,4.A.10,ch04a.html#Heading15
+RRG,61,Pharmacy/treatment give acknowledgment message,4.13.10,ch04.html#Heading229
+RRG,81,Pharmacy/treatment give acknowledgment message,4.A.10,ch04a.html#Heading14
+RRG,91,Pharmacy/treatment give acknowledgment message,4.A.10,ch04a.html#Heading15
+RRG,92,Pharmacy/treatment give acknowledgment message,4.A.10,ch04a.html#Heading15
+RRI,3,Return referral information,,
+RRI,4,Return referral information,,
+RRI,5,Return referral information,11,
+RRI,6,Return referral information,11.5.1,
+RRI,7,Return referral information,11.5.1,ch11.html#Heading48
+RRI,8,Return referral information,11.5.1,ch11.html#Heading46
+RRI,9,Return referral information,11.5.1,ch11.html#Heading49
+RRI,61,Return referral information,11.5.1,ch11.html#Heading48
+RRI,81,Return referral information,11.4.1,ch11.html#Heading45
+RRI,91,Return referral information,11.5.1,ch11.html#Heading49
+RRI,92,Return referral information,11.5.1,ch11.html#Heading49
+RSP,5,Segment pattern response,15,
+RSP,6,Segment pattern response,3.3.56,
+RSP,7,Segment pattern response,15.3.7,ch15.html#Heading12
+RSP,8,Segment pattern response,15.3.7,ch15.html#Heading12
+RSP,9,Segment pattern response,15.3.7,ch15.html#Heading12
+RSP,61,Segment pattern response,15.3.7,ch15.html#Heading12
+RSP,81,Segment pattern response,15.3.7,ch15.html#Heading12
+RSP,91,Segment pattern response,15.3.7,ch15.html#Heading12
+RSP,92,Segment pattern response,15.3.7,ch15.html#Heading12
+RTB,5,Tabular response,5,
+RTB,6,Tabular response,4.6.2,
+RTB,7,Tabular response,4.6.2,ch04.html#Heading167
+RTB,8,Tabular response,4.6.2,ch04.html#Heading165
+RTB,9,Tabular response,4.6.2,ch04.html#Heading176
+RTB,61,Tabular response,4.6.2,ch04.html#Heading166
+RTB,81,Tabular response,4.5.2,ch04.html#Heading165
+RTB,91,Tabular response,4.6.2,ch04.html#Heading188
+RTB,92,Tabular response,4.6.2,ch04.html#Heading188
+SCN,7,Notification of Anti-Microbial Device Cycle Data,17.6.5,ch17.html#Heading161
+SCN,8,Notification of Anti-Microbial Device Cycle Data,17.6.5,ch17.html#Heading153
+SCN,9,Notification of Anti-Microbial Device Cycle Data,17.6.5,ch17.html#Heading166
+SCN,81,Notification of Anti-Microbial Device Cycle Data,17.6.5,ch17.html#Heading153
+SCN,91,Notification of Anti-Microbial Device Cycle Data,17.6.5,ch17.html#Heading166
+SCN,92,Notification of Anti-Microbial Device Cycle Data,17.6.5,ch17.html#Heading166
+SDN,7,Notification of Anti-Microbial Device Data,17.6.4,ch17.html#Heading160
+SDN,8,Notification of Anti-Microbial Device Data,17.6.4,ch17.html#Heading152
+SDN,9,Notification of Anti-Microbial Device Data,17.6.4,ch17.html#Heading165
+SDN,81,Notification of Anti-Microbial Device Data,17.6.4,ch17.html#Heading152
+SDN,91,Notification of Anti-Microbial Device Data,17.6.4,ch17.html#Heading165
+SDN,92,Notification of Anti-Microbial Device Data,17.6.4,ch17.html#Heading165
+SDR,7,Sterilization anti-microbial device data request,17.5.4,ch17.html#Heading154
+SDR,8,Sterilization anti-microbial device data request,17.5.4,ch17.html#Heading146
+SDR,9,Sterilization anti-microbial device data request,17.5.4,ch17.html#Heading159
+SDR,81,Sterilization anti-microbial device data request,17.5.4,ch17.html#Heading146
+SDR,91,Sterilization anti-microbial device data request,17.5.4,ch17.html#Heading159
+SDR,92,Sterilization anti-microbial device data request,17.5.4,ch17.html#Heading159
+SIU,3,Schedule information unsolicited,,
+SIU,4,Schedule information unsolicited,,
+SIU,5,Schedule information unsolicited,10,
+SIU,6,Schedule information unsolicited,10.4,
+SIU,7,Schedule information unsolicited,10.4,ch10.html#Heading54
+SIU,8,Schedule information unsolicited,10.4,ch10.html#Heading49
+SIU,9,Schedule information unsolicited,10.4,ch10.html#Heading54
+SIU,61,Schedule information unsolicited,10.4,ch10.html#Heading54
+SIU,81,Schedule information unsolicited,10.4,ch10.html#Heading49
+SIU,91,Schedule information unsolicited,10.4,ch10.html#Heading54
+SIU,92,Schedule information unsolicited,10.4,ch10.html#Heading54
+SLN,7,Notification of New Sterilization Lot,17.6.2,ch17.html#Heading158
+SLN,8,Notification of New Sterilization Lot,17.6.2,ch17.html#Heading150
+SLN,9,Notification of New Sterilization Lot,17.6.2,ch17.html#Heading163
+SLN,81,Notification of New Sterilization Lot,17.6.2,ch17.html#Heading150
+SLN,91,Notification of New Sterilization Lot,17.6.2,ch17.html#Heading163
+SLN,92,Notification of New Sterilization Lot,17.6.2,ch17.html#Heading163
+SLR,7,Sterilization lot request,17.5.1,ch17.html#Heading151
+SLR,8,Sterilization lot request,17.5.1,ch17.html#Heading143
+SLR,9,Sterilization lot request,17.5.1,ch17.html#Heading156
+SLR,81,Sterilization lot request,17.5.1,ch17.html#Heading143
+SLR,91,Sterilization lot request,17.5.1,ch17.html#Heading156
+SLR,92,Sterilization lot request,17.5.1,ch17.html#Heading156
+SMD,7,Sterilization anti-microbial device cycle data request,17.5.5,ch17.html#Heading155
+SMD,8,Sterilization anti-microbial device cycle data request,17.5.5,ch17.html#Heading147
+SMD,9,Sterilization anti-microbial device cycle data request,17.5.5,ch17.html#Heading160
+SMD,81,Sterilization anti-microbial device cycle data request,17.5.5,ch17.html#Heading147
+SMD,91,Sterilization anti-microbial device cycle data request,17.5.5,ch17.html#Heading160
+SMD,92,Sterilization anti-microbial device cycle data request,17.5.5,ch17.html#Heading160
+SPQ,3,Stored procedure request,,
+SPQ,4,Stored procedure request,,
+SPQ,5,Stored procedure request,5,
+SPQ,6,Stored procedure request,5.10.4.3,
+SPQ,61,Stored procedure request,5.10.4.3,ch05.html#Heading176
+SQM,3,Schedule query message,,
+SQM,4,Schedule query message,,
+SQM,5,Schedule query message,10,
+SQM,6,Schedule query message,10.5.3,
+SQM,7,Schedule query message,10.5.3,ch10.html#Heading72
+SQM,61,Schedule query message,10.5.3,ch10.html#Heading72
+SQR,3,Schedule query response,,
+SQR,4,Schedule query response,,
+SQR,5,Schedule query response,10,
+SQR,6,Schedule query response,10.5.3,
+SQR,7,Schedule query response,10.5.3,ch10.html#Heading72
+SQR,61,Schedule query response,10.5.3,ch10.html#Heading72
+SRM,3,Schedule request message,,
+SRM,4,Schedule request message,,
+SRM,5,Schedule request message,10,
+SRM,6,Schedule request message,10.3,
+SRM,7,Schedule request message,10.3,ch10.html#Heading42
+SRM,8,Schedule request message,10.3,ch10.html#Heading37
+SRM,9,Schedule request message,10.3,ch10.html#Heading42
+SRM,61,Schedule request message,10.3,ch10.html#Heading42
+SRM,81,Schedule request message,10.3,ch10.html#Heading37
+SRM,91,Schedule request message,10.3,ch10.html#Heading42
+SRM,92,Schedule request message,10.3,ch10.html#Heading42
+SRR,3,Scheduled request response,,
+SRR,4,Scheduled request response,,
+SRR,5,Scheduled request response,10,
+SRR,6,Scheduled request response,10.3,
+SRR,7,Scheduled request response,10.3,ch10.html#Heading42
+SRR,8,Scheduled request response,10.3,ch10.html#Heading37
+SRR,9,Scheduled request response,10.3,ch10.html#Heading42
+SRR,61,Scheduled request response,10.3,ch10.html#Heading42
+SRR,81,Scheduled request response,10.3,ch10.html#Heading37
+SRR,91,Scheduled request response,10.3,ch10.html#Heading42
+SRR,92,Scheduled request response,10.3,ch10.html#Heading42
+SSR,5,Specimen status request message,13,
+SSR,6,Specimen status request message,13.3.4,
+SSR,7,Specimen status request message,13.3.4,ch13.html#Heading78
+SSR,8,Specimen status request message,13.3.4,ch13.html#Heading78
+SSR,9,Specimen status request message,13.3.4,ch13.html#Heading78
+SSR,61,Specimen status request message,13.3.4,ch13.html#Heading78
+SSR,81,Specimen status request message,13.3.4,ch13.html#Heading78
+SSR,91,Specimen status request message,13.3.4,ch13.html#Heading78
+SSR,92,Specimen status request message,13.3.4,ch13.html#Heading78
+SSU,5,Specimen status update message,13,
+SSU,6,Specimen status update message,13.3.3,
+SSU,7,Specimen status update message,13.3.3,ch13.html#Heading77
+SSU,8,Specimen status update message,13.3.3,ch13.html#Heading77
+SSU,9,Specimen status update message,13.3.3,ch13.html#Heading77
+SSU,61,Specimen status update message,13.3.3,ch13.html#Heading77
+SSU,81,Specimen status update message,13.3.3,ch13.html#Heading77
+SSU,91,Specimen status update message,13.3.3,ch13.html#Heading77
+SSU,92,Specimen status update message,13.3.3,ch13.html#Heading77
+STC,7,Notification of Sterilization Configuration,17.6.1,ch17.html#Heading157
+STC,8,Notification of Sterilization Configuration,17.6.1,ch17.html#Heading149
+STC,9,Notification of Sterilization Configuration,17.6.1,ch17.html#Heading162
+STC,81,Notification of Sterilization Configuration,17.6.1,ch17.html#Heading149
+STC,91,Notification of Sterilization Configuration,17.6.1,ch17.html#Heading162
+STC,92,Notification of Sterilization Configuration,17.6.1,ch17.html#Heading162
+STI,7,Sterilization item request,17.5.3,ch17.html#Heading153
+STI,8,Sterilization item request,17.5.3,ch17.html#Heading145
+STI,9,Sterilization item request,17.5.3,ch17.html#Heading158
+STI,81,Sterilization item request,17.5.3,ch17.html#Heading145
+STI,91,Sterilization item request,17.5.3,ch17.html#Heading158
+STI,92,Sterilization item request,17.5.3,ch17.html#Heading158
+SUR,3,Summary product experience report,,
+SUR,4,Summary product experience report,,
+SUR,5,Summary product experience report,7,
+SUR,6,Summary product experience report,7.11.2,
+SUR,7,Summary product experience report,7.11.2,ch07.html#Heading257
+SUR,61,Summary product experience report,7.11.2,ch07.html#Heading254
+TBR,3,Tabular data response,,
+TBR,4,Tabular data response,,
+TBR,5,Tabular data response,5,
+TBR,6,Tabular data response,5.10.4.1,
+TBR,61,Tabular data response,5.10.4.1,ch05.html#Heading174
+TCR,5,Automated equipment test code settings request message,13,
+TCR,6,Automated equipment test code settings request message,13.3.11,
+TCR,7,Automated equipment test code settings request message,13.3.11,ch13.html#Heading85
+TCR,8,Automated equipment test code settings request message,13.3.11,ch13.html#Heading85
+TCR,9,Automated equipment test code settings request message,13.3.11,ch13.html#Heading85
+TCR,61,Automated equipment test code settings request message,13.3.11,ch13.html#Heading85
+TCR,81,Automated equipment test code settings request message,13.3.11,ch13.html#Heading85
+TCR,91,Automated equipment test code settings request message,13.3.11,ch13.html#Heading85
+TCR,92,Automated equipment test code settings request message,13.3.11,ch13.html#Heading85
+TCU,5,Automated equipment test code settings update message,13,
+TCU,6,Automated equipment test code settings update message,13.3.10,
+TCU,7,Automated equipment test code settings update message,13.3.10,ch13.html#Heading84
+TCU,8,Automated equipment test code settings update message,13.3.10,ch13.html#Heading84
+TCU,9,Automated equipment test code settings update message,13.3.10,ch13.html#Heading84
+TCU,61,Automated equipment test code settings update message,13.3.10,ch13.html#Heading84
+TCU,81,Automated equipment test code settings update message,13.3.10,ch13.html#Heading84
+TCU,91,Automated equipment test code settings update message,13.3.10,ch13.html#Heading84
+TCU,92,Automated equipment test code settings update message,13.3.10,ch13.html#Heading84
+UDM,1,Unsolicited display update message,,
+UDM,2,Unsolicited display update message,,
+UDM,3,Unsolicited display update message,,
+UDM,4,Unsolicited display update message,,
+UDM,5,Unsolicited display update message,5,
+UDM,6,Unsolicited display update message,5.10.1.1,
+UDM,7,Unsolicited display update message,5.10.1.1,ch05.html#Heading162
+UDM,8,Unsolicited display update message,5.10.1.1,ch05.html#Heading139
+UDM,9,Unsolicited display update message,5.10.1.1,ch05.html#Heading162
+UDM,61,Unsolicited display update message,5.10.1.1,ch05.html#Heading162
+UDM,81,Unsolicited display update message,5.10.1.1,ch05.html#Heading139
+UDM,91,Unsolicited display update message,5.10.1.1,ch05.html#Heading162
+UDM,92,Unsolicited display update message,5.10.1.1,ch05.html#Heading162
+VQQ,3,Virtual table query,,
+VQQ,4,Virtual table query,,
+VQQ,5,Virtual table query,5,
+VQQ,6,Virtual table query,5.10.4.4,
+VQQ,61,Virtual table query,5.10.4.4,ch05.html#Heading177
+VXQ,3,Query for vaccination record,,
+VXQ,4,Query for vaccination record,,
+VXQ,5,Query for vaccination record,4,
+VXQ,6,Query for vaccination record,4.17.3,
+VXQ,7,Query for vaccination record,4.17.3,ch04.html#Heading466
+VXQ,61,Query for vaccination record,4.17.3,ch04.html#Heading452
+VXR,3,Vaccination record response,,
+VXR,4,Vaccination record response,,
+VXR,5,Vaccination record response,4,
+VXR,6,Vaccination record response,4.17.5,
+VXR,7,Vaccination record response,4.17.5,ch04.html#Heading468
+VXR,61,Vaccination record response,4.17.5,ch04.html#Heading454
+VXU,3,Unsolicited vaccination record update,,
+VXU,4,Unsolicited vaccination record update,,
+VXU,5,Unsolicited vaccination record update,4,
+VXU,6,Unsolicited vaccination record update,4.17.6,
+VXU,7,Unsolicited vaccination record update,4.17.6,ch04.html#Heading469
+VXU,8,Unsolicited vaccination record update,4.A.7.5,ch04a.html#Heading247
+VXU,9,Unsolicited vaccination record update,4.A.6,ch04a.html#Heading294
+VXU,61,Unsolicited vaccination record update,4.17.6,ch04.html#Heading455
+VXU,81,Unsolicited vaccination record update,4.A.6,ch04a.html#Heading246
+VXU,91,Unsolicited vaccination record update,4.A.6,ch04a.html#Heading294
+VXU,92,Unsolicited vaccination record update,4.A.6,ch04a.html#Heading294
+VXX,3,Response for vaccination query with multiple PID matches,,
+VXX,4,Response for vaccination query with multiple PID matches,,
+VXX,5,Response for vaccination query with multiple PID matches,4,
+VXX,6,Response for vaccination query with multiple PID matches,4.17.4,
+VXX,7,Response for vaccination query with multiple PID matches,4.17.4,ch04.html#Heading467
+VXX,61,Response for vaccination query with multiple PID matches,4.17.4,ch04.html#Heading453
+ZNV,32,,,
