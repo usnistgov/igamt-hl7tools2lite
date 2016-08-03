@@ -156,9 +156,9 @@ public class HL7Tools2LiteConverter implements Runnable {
 		    	log.info("poss3=" + poss3);
 		    	
 		    	
-				mongoOps.insert(igd.getProfile().getTableLibrary());
-				mongoOps.insert(igd.getProfile().getDatatypeLibrary());
-				mongoOps.insert(igd.getProfile().getSegmentLibrary());
+				mongoOps.save(igd.getProfile().getTableLibrary());
+				mongoOps.save(igd.getProfile().getDatatypeLibrary());
+				mongoOps.save(igd.getProfile().getSegmentLibrary());
 				mongoOps.insert(igd);
 				igLibraries.put(hl7Version, ig);
 			} catch (Exception e) {
@@ -359,9 +359,12 @@ public class HL7Tools2LiteConverter implements Runnable {
 
 	SegmentLibrary convertSegments(gov.nist.healthcare.hl7tools.domain.SegmentLibrary i) {
 		SegmentLibrary o = new SegmentLibrary();
+		mongoOps.insert(o);
 		for (String key : i.keySet()) {
 			gov.nist.healthcare.hl7tools.domain.Segment sg = i.get(key);
 			Segment seg = convertSegment(sg);
+			seg.getLibIds().add(o.getId());
+			mongoOps.save(seg);
 			o.addSegment(new SegmentLink(seg.getId(), seg.getName(), seg.getExt()));
 		}
 		o.setMetaData(createSegmentLibraryMetaData());
@@ -451,6 +454,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 
 	TableLibrary convertTables(gov.nist.healthcare.hl7tools.domain.CodeTableLibrary i) {
 		TableLibrary o = new TableLibrary();
+		mongoOps.insert(o);
 		for (String s : i.keySet()) {
 			gov.nist.healthcare.hl7tools.domain.CodeTable ct = i.get(s);
 			if (ct != null) {
@@ -465,6 +469,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 			if (ct != null) {
 				String key = ct.getKey();
 				Table tab = convertTable(ct);
+				tab.getLibIds().add(o.getId());
 				mongoOps.insert(tab);
 				o.addTable(new TableLink(tab.getId(), tab.getBindingIdentifier()));
 				mapTables.put(key, tab);
@@ -551,7 +556,10 @@ public class HL7Tools2LiteConverter implements Runnable {
 		convertDataTypesFirstPass(i);
 		convertDataTypesSecondPass(i);
 		DatatypeLibrary o = new DatatypeLibrary();
+		mongoOps.insert(o);
 		for (Datatype dt : mapDatatypes.values()) {
+			dt.getLibIds().add(o.getId());
+			mongoOps.save(dt);
 			o.addDatatype(new DatatypeLink(dt.getId(), dt.getName(), dt.getExt()));
 		}
 		o.setMetaData(createDatatypeLibraryMetaData());
