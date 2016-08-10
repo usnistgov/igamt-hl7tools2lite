@@ -10,8 +10,6 @@
  */
 package gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -109,8 +107,6 @@ public class HL7Tools2LiteConverter implements Runnable {
 	public void run() {
 		mongoOps = new MongoTemplate(new SimpleMongoDbFactory(new MongoClient(), "igamt1"));
 		mongo = new MongoClient("localhost", 27017);
-		// db = mongo.getDB("igamt");
-		// collIGD = db.getCollection("igdocument");
 		log.info("start...");
 		log.info("Dropping mongo collection profile...");
 		mongoOps.dropCollection(Table.class);
@@ -268,8 +264,6 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setMessageType(i.getMessageType());
 		o.setName(assembleMessageName(i));
 		o.setHl7Version(hl7Version);
-		assert (o.getName() != null);
-//		o.setPosition(seq);
 		o.setStructID(assembleMessageStructID(i));
 		log.info("name=" + o.getName() + " pos=" + o.getPosition());
 		return o;
