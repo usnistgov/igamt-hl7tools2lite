@@ -90,14 +90,17 @@ public class HL7Tools2LiteConverter implements Runnable {
 	public Map<String, Profile> profiles = new HashMap<String, Profile>();
 	public Map<String, IGLibrary> igLibraries = new HashMap<String, IGLibrary>();
 
-	@Option(name = "-d", required = true, usage = "String value of database name")
+	@Option(name = "-d", aliases = "--database", required = true, usage = "Name of the database.")
 	String dbName = "igamt";
 
-	@Option(name = "-i", required = false, usage = "boolean value, If present, use existing ids else create new ids.")
+	@Option(name = "-i", aliases = "--ids", required = false, usage = "If present, use existing ids else create new ids.")
 	boolean existing;
 
-	@Option(name = "-v", handler = StringArrayOptionHandler.class, required = true, usage = "String values of hl7Versions to process.")
+	@Option(name = "-v", aliases = "--versions", handler = StringArrayOptionHandler.class, required = true, usage = "String values of hl7Versions to process.")
 	String[] hl7Versions;
+
+	@Option(name = "-h", aliases = "--help", usage = "Print usage.")
+	boolean help;
 
 	String hl7Version;
 
@@ -111,11 +114,14 @@ public class HL7Tools2LiteConverter implements Runnable {
 		super();
 		try {
 			CLI.parseArgument(args);
+			if (help) {
+				throw new CmdLineException(CLI, "" , null);
+			}
 			mongo = new MongoClient("localhost", 27017);
 			mongoOps = new MongoTemplate(new SimpleMongoDbFactory(mongo, dbName));
 		} catch (CmdLineException e) {
 			CLI.printUsage(System.out);
-			throw e;
+			System.exit(0);
 		}
 		log.info("Main==>");
 	}
@@ -415,7 +421,8 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setPosition(i.getPosition());
 		o.setUsage(convertUsage(i.getUsage()));
 		o.getChildren().addAll(convertElements(checkChildren(i.getChildren()), recur++));
-//		log.info("grp " + String.format("%" + recur + 1 * 2 + "d", recur) + " name=" + o.getName());
+		// log.info("grp " + String.format("%" + recur + 1 * 2 + "d", recur) + "
+		// name=" + o.getName());
 		return o;
 	}
 
@@ -448,12 +455,14 @@ public class HL7Tools2LiteConverter implements Runnable {
 		} else {
 			log.error("segment was null for element=" + i.getName());
 		}
-//		log.info("ref " + String.format("%" + recur + 1 * 2 + "d", recur) + " name=" + ref.getName());
+		// log.info("ref " + String.format("%" + recur + 1 * 2 + "d", recur) + "
+		// name=" + ref.getName());
 		return o;
 	}
 
 	SegmentLibrary convertSegments(gov.nist.healthcare.hl7tools.domain.SegmentLibrary i) {
 		SegmentLibrary o = acquireSegmentLibrary();
+		o.setScope(SCOPE.HL7STANDARD);
 		for (String key : i.keySet()) {
 			gov.nist.healthcare.hl7tools.domain.Segment sg = i.get(key);
 			Segment seg = convertSegment(sg);
@@ -470,6 +479,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		}
 		SegmentLibrary o = new SegmentLibrary();
 		o.setMetaData(createSegmentLibraryMetaData());
+		o.setScope(SCOPE.HL7STANDARD);
 		mongoOps.save(o);
 		return o;
 	}
@@ -574,6 +584,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 
 	TableLibrary convertTables(gov.nist.healthcare.hl7tools.domain.CodeTableLibrary i) {
 		TableLibrary o = acquireTableLibrary();
+		o.setScope(SCOPE.HL7STANDARD);
 		for (String s : i.keySet()) {
 			gov.nist.healthcare.hl7tools.domain.CodeTable ct = i.get(s);
 			if (ct != null) {
@@ -699,6 +710,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 
 	DatatypeLibrary convertDatatypes(gov.nist.healthcare.hl7tools.domain.DatatypeLibrary i) {
 		DatatypeLibrary o = acquireDatatypeLibrary();
+		o.setScope(SCOPE.HL7STANDARD);
 		convertDataTypesFirstPass(i);
 		convertDataTypesSecondPass(i);
 		for (Datatype dt : getMapDatatypes().values()) {
