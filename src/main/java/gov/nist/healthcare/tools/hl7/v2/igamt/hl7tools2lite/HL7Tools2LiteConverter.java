@@ -346,9 +346,9 @@ public class HL7Tools2LiteConverter implements Runnable {
 
 		String structID = assembleMessageStructID(i);
 		Message o = acquireMessage(structID);
-		int recur = 0;
 		log.info("message structID=" + structID + " " + seq);
-		o.getChildren().addAll(convertElements(checkChildren(i.getChildren()), recur));
+		o.getChildren().clear();
+		o.getChildren().addAll(convertElements(checkChildren(i.getChildren())));
 		o.setDescription(i.getDescription());
 		o.setEvent(i.getEvent().trim());
 		o.setIdentifier("Default" + i.getEvent().trim() + "Identifier");
@@ -386,23 +386,23 @@ public class HL7Tools2LiteConverter implements Runnable {
 		return rval;
 	}
 
-	List<SegmentRefOrGroup> convertElements(List<gov.nist.healthcare.hl7tools.domain.Element> i, int recur) {
+	List<SegmentRefOrGroup> convertElements(List<gov.nist.healthcare.hl7tools.domain.Element> i) {
 		List<SegmentRefOrGroup> o = new ArrayList<SegmentRefOrGroup>();
 		for (gov.nist.healthcare.hl7tools.domain.Element el : i) {
-			o.add(convertElement(el, recur));
+			o.add(convertElement(el));
 		}
 		return o;
 	}
 
-	SegmentRefOrGroup convertElement(gov.nist.healthcare.hl7tools.domain.Element i, int recur) {
+	SegmentRefOrGroup convertElement(gov.nist.healthcare.hl7tools.domain.Element i) {
 		SegmentRefOrGroup o = null;
 		switch (i.getType()) {
 		case GROUP: {
-			o = convertGroup(i, recur);
+			o = convertGroup(i);
 			break;
 		}
 		case SEGEMENT: {
-			o = convertSegmentRef(i, recur);
+			o = convertSegmentRef(i);
 			break;
 		}
 		default:
@@ -412,7 +412,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		return o;
 	}
 
-	Group convertGroup(gov.nist.healthcare.hl7tools.domain.Element i, int recur) {
+	Group convertGroup(gov.nist.healthcare.hl7tools.domain.Element i) {
 		Group o = new Group();
 		o.setComment(i.getComment());
 		o.setMax(i.getMax());
@@ -420,7 +420,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setName(i.getName());
 		o.setPosition(i.getPosition());
 		o.setUsage(convertUsage(i.getUsage()));
-		o.getChildren().addAll(convertElements(checkChildren(i.getChildren()), recur++));
+		o.getChildren().addAll(convertElements(checkChildren(i.getChildren())));
 		// log.info("grp " + String.format("%" + recur + 1 * 2 + "d", recur) + "
 		// name=" + o.getName());
 		return o;
@@ -434,7 +434,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 			return i;
 	}
 
-	SegmentRef convertSegmentRef(gov.nist.healthcare.hl7tools.domain.Element i, int recur) {
+	SegmentRef convertSegmentRef(gov.nist.healthcare.hl7tools.domain.Element i) {
 		SegmentRef o = new SegmentRef();
 		o.setUsage(convertUsage(i.getUsage()));
 		o.setMin(i.getMin());
