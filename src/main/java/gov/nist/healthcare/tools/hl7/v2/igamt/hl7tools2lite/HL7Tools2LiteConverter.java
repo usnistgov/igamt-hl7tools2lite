@@ -11,7 +11,6 @@
 package gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -115,7 +114,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		try {
 			CLI.parseArgument(args);
 			if (help) {
-				throw new CmdLineException(CLI, "" , null);
+				throw new CmdLineException(CLI, "", null);
 			}
 			mongo = new MongoClient("localhost", 27017);
 			mongoOps = new MongoTemplate(new SimpleMongoDbFactory(mongo, dbName));
@@ -315,14 +314,6 @@ public class HL7Tools2LiteConverter implements Runnable {
 		DatatypeLibrary dtLib = convertDatatypes(i.getDatatypeLibrary());
 		SegmentLibrary segLib = convertSegments(i.getSegmentLibrary());
 		Messages msgs = convertMessages(i.getMessageLibrary());
-
-		// List<Integer> poss = new ArrayList<Integer>();
-		// for (Message msg : msgs.getChildren()) {
-		// poss.add(msg.getPosition());
-		// }
-		// Collections.sort(poss);
-		// log.info("poss=" + poss);
-
 		p.setDatatypeLibrary(dtLib);
 		p.setSegmentLibrary(segLib);
 		p.setTableLibrary(tabLib);
@@ -346,7 +337,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 
 		String structID = assembleMessageStructID(i);
 		Message o = acquireMessage(structID);
-		log.info("message structID=" + structID + " " + seq);
+		log.debug("message structID=" + structID + " " + seq);
 		o.getChildren().clear();
 		o.getChildren().addAll(convertElements(checkChildren(i.getChildren())));
 		o.setDescription(i.getDescription());
@@ -421,8 +412,6 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setPosition(i.getPosition());
 		o.setUsage(convertUsage(i.getUsage()));
 		o.getChildren().addAll(convertElements(checkChildren(i.getChildren())));
-		// log.info("grp " + String.format("%" + recur + 1 * 2 + "d", recur) + "
-		// name=" + o.getName());
 		return o;
 	}
 
@@ -455,14 +444,14 @@ public class HL7Tools2LiteConverter implements Runnable {
 		} else {
 			log.error("segment was null for element=" + i.getName());
 		}
-		// log.info("ref " + String.format("%" + recur + 1 * 2 + "d", recur) + "
-		// name=" + ref.getName());
 		return o;
 	}
 
 	SegmentLibrary convertSegments(gov.nist.healthcare.hl7tools.domain.SegmentLibrary i) {
 		SegmentLibrary o = acquireSegmentLibrary();
 		o.setScope(SCOPE.HL7STANDARD);
+		getMapSegments().clear();
+		getMapSegmentsById().clear();
 		for (String key : i.keySet()) {
 			gov.nist.healthcare.hl7tools.domain.Segment sg = i.get(key);
 			Segment seg = convertSegment(sg);
@@ -572,7 +561,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 			if (tab == null) {
 				log.error("mapTables.get(" + key + ") was null");
 			} else {
-				o.setTable(new TableLink(tab.getId(), tab.getName()));
+				o.getTables().add(new TableLink(tab.getId(), tab.getBindingIdentifier()));
 			}
 		} else {
 			log.debug("CodeTable for field is null. description=" + i.getDescription());
@@ -585,13 +574,14 @@ public class HL7Tools2LiteConverter implements Runnable {
 	TableLibrary convertTables(gov.nist.healthcare.hl7tools.domain.CodeTableLibrary i) {
 		TableLibrary o = acquireTableLibrary();
 		o.setScope(SCOPE.HL7STANDARD);
+		getMapTables().clear();
 		for (String s : i.keySet()) {
 			gov.nist.healthcare.hl7tools.domain.CodeTable ct = i.get(s);
 			if (ct != null) {
 				String key = ct.getKey();
 				getMapTables().put(key, null);
 			} else {
-				log.debug("CodeTable is null!!");
+				log.info("1 CodeTable is null!!");
 			}
 		}
 		for (String s : i.keySet()) {
@@ -604,7 +594,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 				o.addTable(new TableLink(tab.getId(), tab.getBindingIdentifier()));
 				getMapTables().put(key, tab);
 			} else {
-				log.debug("CodeTable is null!!");
+				log.info("2 CodeTable is null!!");
 			}
 		}
 		return o;
@@ -748,6 +738,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		// Datatypes o = new Datatypes();
 		// List<String> dtIds = new ArrayList<String>();
 		// String dtId = "AAA"; // dummy value to avoid null;
+		getMapDatatypes().clear();
 		for (String key : i.keySet()) {
 			gov.nist.healthcare.hl7tools.domain.Datatype dt = i.get(key);
 			Datatype convertedDt = convertDatatypeFirstPass(dt);
@@ -881,10 +872,10 @@ public class HL7Tools2LiteConverter implements Runnable {
 			if (tab == null) {
 				log.info("mapTables.get(" + key1 + ") was null description=" + i.getDescription());
 			} else {
-				o.setTable(new TableLink(tab.getId(), tab.getName()));
+				o.getTables().add(new TableLink(tab.getId(), tab.getBindingIdentifier()));
 			}
 		} else {
-			log.debug("CodeTable for field is null. description=" + i.getDescription());
+			log.debug("CodeTable for component is null. description=" + i.getDescription());
 		}
 
 		o.setUsage(convertUsage(i.getUsage()));

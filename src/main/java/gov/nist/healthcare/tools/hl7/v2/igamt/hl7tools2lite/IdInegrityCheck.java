@@ -24,10 +24,12 @@ import org.springframework.data.mongodb.core.query.Query;
 
 import com.mongodb.MongoClient;
 
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Component;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLibrary;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLink;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Field;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Group;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.IGDocument;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Message;
@@ -120,13 +122,13 @@ public class IdInegrityCheck implements Runnable {
 
 			log.info("Tables==>");
 			checkTables(hl7Version);
-			
+
 			log.info("TableLibrary==>");
 			checkTableLibrary(hl7Version);
 
 			log.info("Datatypes==>");
 			checkDatatypes(hl7Version);
-			
+
 			log.info("DatatypeLibrary==>");
 			checkDatatypeLibrary(hl7Version);
 
@@ -234,6 +236,7 @@ public class IdInegrityCheck implements Runnable {
 		Iterator<Segment> itrSegsFrom = segsFrom.iterator();
 		Iterator<Segment> itrSegsTo = segsTo.iterator();
 
+		int tablesInFields = 0;
 		while (itrSegsFrom.hasNext() && itrSegsTo.hasNext()) {
 			Segment from = itrSegsFrom.next();
 			Segment to = itrSegsTo.next();
@@ -249,7 +252,17 @@ public class IdInegrityCheck implements Runnable {
 			if (match[1] != 0) {
 				log.error("ObjectId mismatch: from=" + from.getName() + " to=" + to.getName());
 			}
+			tablesInFields += checkFields4Tables(to);
 		}
+		log.info("HL7Version=" + hl7Version + " Tables in Fields=" + tablesInFields);
+	}
+
+	public int checkFields4Tables(Segment to) {
+		int tablesInFields = 0;
+		for (Field fld : to.getFields()) {
+			tablesInFields += fld.getTables().size();
+		}
+		return tablesInFields;
 	}
 
 	public void checkDatatypes(String hl7Version) {
@@ -280,6 +293,7 @@ public class IdInegrityCheck implements Runnable {
 		Iterator<Datatype> itrDtsFrom = dtsFrom.iterator();
 		Iterator<Datatype> itrDtTo = dtsTo.iterator();
 
+		int tablesInComponents = 0;
 		while (itrDtsFrom.hasNext() && itrDtTo.hasNext()) {
 			Datatype from = itrDtsFrom.next();
 			Datatype to = itrDtTo.next();
@@ -295,7 +309,17 @@ public class IdInegrityCheck implements Runnable {
 			if (match[1] != 0) {
 				log.error("ObjectId mismatch: from=" + from.getName() + " to=" + to.getName());
 			}
+			tablesInComponents += checkComponents4Tables(to);
 		}
+		log.info("HL7Version=" + hl7Version + " Tables in Components=" + tablesInComponents);
+	}
+
+	public int checkComponents4Tables(Datatype to) {
+		int tablesInComponents = 0;
+		for (Component comp : to.getComponents()) {
+			tablesInComponents += comp.getTables().size();
+		}
+		return tablesInComponents;
 	}
 
 	public void checkTables(String hl7Version) {
@@ -353,6 +377,13 @@ public class IdInegrityCheck implements Runnable {
 				log.error("Segment link not found " + link);
 			}
 		}
+		List<Segment> segs = findSegments(mongoTo, hl7Version);
+		for (Segment seg : segs) {
+			SegmentLink link = lib.findOne(seg.getId());
+			if (link == null) {
+				log.error("Segment not found in library id=" + seg.getId() + " name=" + seg.getName());
+			}
+		}
 	}
 
 	public void checkDatatypeLibrary(String hl7Version) {
@@ -362,13 +393,40 @@ public class IdInegrityCheck implements Runnable {
 				log.error("Datatype link not found " + link);
 			}
 		}
+		List<Datatype> dts = findDatatypes(mongoTo, hl7Version);
+		for (Datatype dt : dts) {
+			DatatypeLink link = lib.findOne(dt.getId());
+			if (link == null) {
+				log.error("Datatype not found in library id=" + dt.getId() + " name=" + dt.getName());
+			}
+		}
 	}
 
 	public void checkTableLibrary(String hl7Version) {
 		TableLibrary lib = findTableLibrary(mongoTo, hl7Version);
 		for (TableLink link : lib.getChildren()) {
 			if (findTableById(mongoTo, link.getId()) == null) {
-				log.error("Table link not found " + link);
+				log.error("Table link not found id=" + link.getId() + " bindingIdentifier="
+						+ link.getBindingIdentifier());
+//				List<Table> tabs = findTableByBindingId(hl7Version, mongoTo, link.getBindingIdentifier());
+//				if (tabs.size() > 0) {
+//					Table tab1 = tabs.get(0);
+//					tab1.setId(link.getId());
+//					mongoTo.save(tab1);
+////					for (Table tab1 : tabs) {
+////						TableLink link1 = lib.findOneTableById(tab1.getId());
+////						log.error("Possible duplicate=" + link1.getId() + " bindingIdentifier="
+////								+ link1.getBindingIdentifier());
+////					}
+//				}
+			}
+		}
+		List<Table> tables = findTables(mongoFrom, hl7Version);
+		for (Table tab : tables) {
+			TableLink link = lib.findOneTableById(tab.getId());
+			if (link == null) {
+				log.error("Table not found in library id=" + tab.getId() + " bindingIdentifier="
+						+ tab.getBindingIdentifier());
 			}
 		}
 	}
@@ -398,6 +456,10 @@ public class IdInegrityCheck implements Runnable {
 		if (Constant.GROUP.equals(sog.getType())) {
 			Group grp = (Group) sog;
 			bld.append(format(grp.getName(), recur));
+			bld.append(" " + grp.getUsage());
+			bld.append(" " + grp.getMin());
+			bld.append("..");
+			bld.append(grp.getMax());
 			bld.append(System.lineSeparator());
 			for (SegmentRefOrGroup sog1 : grp.getChildren()) {
 				recur++;
@@ -510,8 +572,16 @@ public class IdInegrityCheck implements Runnable {
 	Table findTableById(MongoOperations mongoOps, String id) {
 		Criteria where = Criteria.where("_id").is(new ObjectId(id));
 		Query qry = Query.query(where);
-		Table seg = mongoOps.findOne(qry, Table.class);
-		return seg;
+		Table tab = mongoOps.findOne(qry, Table.class);
+		return tab;
+	}
+
+	List<Table> findTableByBindingId(String hl7Version, MongoOperations mongoOps, String id) {
+		Criteria where = Criteria.where("scope").is(Constant.SCOPE.HL7STANDARD).and("hl7Version").is(hl7Version)
+				.and("bindingIdentifier").is(id);
+		Query qry = Query.query(where);
+		List<Table> tabs = mongoOps.find(qry, Table.class);
+		return tabs;
 	}
 
 	public static void main(String[] args) {
