@@ -624,7 +624,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		Table o = acquireTable(i.getKey());
 
 		o.setBindingIdentifier(i.getKey());
-		o.setName(i.getDescription());
+		o.setName(i.getKey());
 		o.setOid(i.getOid());
 		o.setVersion(i.getVersion());
 		o.setCodes(convertCodes(i.getCodes()));
