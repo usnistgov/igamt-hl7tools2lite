@@ -42,6 +42,7 @@ import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Code;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Component;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant.SCOPE;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant.STATUS;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ContentDefinition;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLibrary;
@@ -92,7 +93,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 	@Option(name = "-d", aliases = "--database", required = true, usage = "Name of the database.")
 	String dbName = "igamt";
 
-	@Option(name = "-i", aliases = "--ids", required = false, usage = "If present, use existing ids else create new ids.")
+	@Option(name = "-use", aliases = "--use", required = false, usage = "If present, use existing ids else create new ids.")
 	boolean existing;
 
 	@Option(name = "-v", aliases = "--versions", handler = StringArrayOptionHandler.class, required = true, usage = "String values of hl7Versions to process.")
@@ -186,7 +187,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 			profile = convert(getIg());
 			profile.setId(generateId());
 			profile.setScope(IGDocumentScope.HL7STANDARD);
-			// ProfileMetaData pmd = createProfileMetaData();
+ 			// ProfileMetaData pmd = createProfileMetaData();
 			// profile.setMetaData(pmd);
 		} catch (HL7DBServiceException e) {
 			log.error("", e);
@@ -346,6 +347,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setMessageType(i.getMessageType());
 		o.setName(assembleMessageName(i));
 		o.setScope(SCOPE.HL7STANDARD);
+		o.setStatus(STATUS.PUBLISHED);
 		o.setHl7Version(hl7Version);
 		o.setStructID(structID);
 		return o;
@@ -495,6 +497,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setName(i.getName());
 		o.setHl7Version(hl7Version);
 		o.setScope(SCOPE.HL7STANDARD);
+		o.setStatus(STATUS.PUBLISHED);
 		String key = i.getName();
 		if (!getMapSegments().containsKey(key)) {
 			getMapSegments().put(key, o);
@@ -543,8 +546,9 @@ public class HL7Tools2LiteConverter implements Runnable {
 		Field o = new Field();
 		Datatype dt = getMapDatatypes().get(s);
 		o.setComment(i.getComment());
-		Integer confLength = i.getConfLength();
-		o.setConfLength(confLength < 0 ? Integer.toString(confLength) : "1");
+//		Integer confLength = i.getConfLength();
+//		o.setConfLength(confLength < 0 ? Integer.toString(confLength) : "1");
+		o.setConfLength(i.getConfLength());
 		o.setDatatype(new DatatypeLink(dt.getId(), dt.getName(), dt.getExt()));
 		o.setItemNo(i.getItemNo());
 		o.setMax(i.getMax());
@@ -635,6 +639,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setDescription(i.getDescription());
 		o.setHl7Version(hl7Version);
 		o.setScope(SCOPE.HL7STANDARD);
+		o.setStatus(STATUS.PUBLISHED);
 		if (i instanceof HL7Table) {
 			HL7Table ii = (HL7Table) i;
 			// HL7 = Closed; User = Open (enum)
@@ -788,6 +793,7 @@ public class HL7Tools2LiteConverter implements Runnable {
 		o.setUsageNote(i.getUsageNotes());
 		o.setHl7Version(hl7Version);
 		o.setScope(SCOPE.HL7STANDARD);
+		o.setStatus(STATUS.PUBLISHED);
 		// We refrain from converting components until the second pass.
 		// o.setComponents(convertComponents(i.getComponents()));
 		return o;
@@ -851,8 +857,8 @@ public class HL7Tools2LiteConverter implements Runnable {
 					link = new DatatypeLink(dt.getId(), dt.getName(), dt.getExt());
 				}
 				o.setComment(i.getComment());
-				Integer confLength = i.getConfLength();
-				o.setConfLength(confLength < 0 ? Integer.toString(confLength) : "1");
+				String confLength = i.getConfLength();
+				o.setConfLength(confLength);
 				o.setDatatype(link);
 				o.setMaxLength(i.getMaxLength());
 				o.setMinLength(i.getMinLength());
