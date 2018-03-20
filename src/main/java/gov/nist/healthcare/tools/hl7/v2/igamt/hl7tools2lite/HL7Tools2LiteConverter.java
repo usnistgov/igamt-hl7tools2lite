@@ -13,6 +13,7 @@ package gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -37,22 +38,26 @@ import org.springframework.data.mongodb.core.query.Query;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 
-import gov.nist.healthcare.hl7tools.domain.HL7Table;
 import gov.nist.healthcare.hl7tools.domain.IGLibrary;
 import gov.nist.healthcare.hl7tools.service.HL7DBMockServiceImpl;
 import gov.nist.healthcare.hl7tools.service.HL7DBService;
 import gov.nist.healthcare.hl7tools.service.HL7DBServiceException;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Code;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Comment;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Component;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant.SCOPE;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant.STATUS;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Constant.SourceType;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ContentDefinition;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DataElement;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Datatype;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLibrary;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLibraryMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DatatypeLink;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DocumentMetaData;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DynamicMappingDefinition;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.DynamicMappingItem;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Extensibility;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Field;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Group;
@@ -74,6 +79,8 @@ import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.TableLibrary;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.TableLibraryMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.TableLink;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Usage;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ValueSetBinding;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.VariesMapItem;
 
 // Converts from old to new. We read old *.json into an object graph rooted on IGLibrary then
 // convert
@@ -118,6 +125,7 @@ public class HL7Tools2LiteConverter implements Runnable {
   IGDocument igd;
 
 
+
   public HL7Tools2LiteConverter(String[] args) throws CmdLineException {
     super();
     try {
@@ -134,6 +142,7 @@ public class HL7Tools2LiteConverter implements Runnable {
     log.info("Main==>");
   }
 
+  @Override
   public void run() {
     log.info("start...");
 
@@ -152,7 +161,6 @@ public class HL7Tools2LiteConverter implements Runnable {
     for (String hl7Version : hl7Versions) {
       try {
         this.hl7Version = hl7Version;
-        dtmTots(hl7Version);
         ig = null;
         igd = null;
         Profile profile = doVersion(hl7Version);
@@ -170,6 +178,7 @@ public class HL7Tools2LiteConverter implements Runnable {
         mongoOps.save(getIgd().getProfile().getSegmentLibrary());
         mongoOps.save(getIgd());
         drTodrdtm(hl7Version);
+        fixDatatypeRecursion(hl7Version);
         igLibraries.put(hl7Version, getIg());
       } catch (Exception e) {
         log.error("error", e);
@@ -283,6 +292,7 @@ public class HL7Tools2LiteConverter implements Runnable {
     meta.setHl7Version(hl7Version);
     meta.setName("Default Name");
     meta.setDate(Constant.mdy.format(new Date()));
+    meta.setStatus(STATUS.PUBLISHED.toString());
     return meta;
   }
 
@@ -306,6 +316,7 @@ public class HL7Tools2LiteConverter implements Runnable {
     pmd.setOrgName("NIST");
     pmd.setHl7Version(hl7Version);
     pmd.setName("Default Name");
+    pmd.setStatus(STATUS.PUBLISHED.toString());
     return pmd;
   }
 
@@ -350,9 +361,8 @@ public class HL7Tools2LiteConverter implements Runnable {
     Message o = acquireMessage(structID);
     log.debug("message structID=" + structID + " " + seq);
     o.getChildren().clear();
-    List<SegmentRefOrGroup> newSegmentRefOrGroup = convertElements(checkChildren(i.getChildren()));
-    List<SegmentRefOrGroup> oldSegmentRefOrGroup =  o.getChildren();
-    DataUtil.reuseSegmentRefOrGroupIdsIfExist(newSegmentRefOrGroup, oldSegmentRefOrGroup);
+    List<SegmentRefOrGroup> newSegmentRefOrGroup =
+        convertElements(checkChildren(i.getChildren()), o, null);
     o.getChildren().clear();
     o.getChildren().addAll(newSegmentRefOrGroup);
     o.setDescription(i.getDescription());
@@ -395,23 +405,25 @@ public class HL7Tools2LiteConverter implements Runnable {
     return rval;
   }
 
-  List<SegmentRefOrGroup> convertElements(List<gov.nist.healthcare.hl7tools.domain.Element> i) {
+  List<SegmentRefOrGroup> convertElements(List<gov.nist.healthcare.hl7tools.domain.Element> i,
+      Message message, String parentPath) {
     List<SegmentRefOrGroup> o = new ArrayList<SegmentRefOrGroup>();
     for (gov.nist.healthcare.hl7tools.domain.Element el : i) {
-      o.add(convertElement(el));
+      o.add(convertElement(el, message, parentPath));
     }
     return o;
   }
 
-  SegmentRefOrGroup convertElement(gov.nist.healthcare.hl7tools.domain.Element i) {
+  SegmentRefOrGroup convertElement(gov.nist.healthcare.hl7tools.domain.Element i, Message message,
+      String parentPath) {
     SegmentRefOrGroup o = null;
     switch (i.getType()) {
       case GROUP: {
-        o = convertGroup(i);
+        o = convertGroup(i, message, parentPath);
         break;
       }
       case SEGEMENT: {
-        o = convertSegmentRef(i);
+        o = convertSegmentRef(i, message, parentPath);
         break;
       }
       default:
@@ -421,15 +433,33 @@ public class HL7Tools2LiteConverter implements Runnable {
     return o;
   }
 
-  Group convertGroup(gov.nist.healthcare.hl7tools.domain.Element i) {
+  Group convertGroup(gov.nist.healthcare.hl7tools.domain.Element i, Message message,
+      String parentPath) {
     Group o = new Group();
-    o.setComment(i.getComment());
     o.setMax(i.getMax());
     o.setMin(i.getMin());
     o.setName(i.getName());
+
+    String newGroupName = o.getName();
+    newGroupName = newGroupName.replaceAll(" ", "_");
+    String[] groupNameSplit = newGroupName.split("\\.");
+    if (groupNameSplit.length > 0) {
+      newGroupName = groupNameSplit[groupNameSplit.length - 1];
+      o.setName(newGroupName);
+    }
+
     o.setPosition(i.getPosition());
     o.setUsage(convertUsage(i.getUsage()));
-    o.getChildren().addAll(convertElements(checkChildren(i.getChildren())));
+    String oPath = getSegRefOrGroupPath(parentPath, o);
+    if (i.getComment() != null && !i.getComment().equals("")) {
+      Comment comment = new Comment();
+      comment.setDescription(i.getComment());
+      comment.setLastUpdatedDate(new Date());
+      comment.setLocation(oPath);
+      message.addComment(comment);
+    }
+    o.getChildren().addAll(convertElements(checkChildren(i.getChildren()), message, oPath));
+    checkIntegrity(o);
     return o;
   }
 
@@ -441,7 +471,8 @@ public class HL7Tools2LiteConverter implements Runnable {
       return i;
   }
 
-  SegmentRef convertSegmentRef(gov.nist.healthcare.hl7tools.domain.Element i) {
+  SegmentRef convertSegmentRef(gov.nist.healthcare.hl7tools.domain.Element i, Message message,
+      String parentPath) {
     SegmentRef o = new SegmentRef();
     o.setUsage(convertUsage(i.getUsage()));
     o.setMin(i.getMin());
@@ -449,6 +480,13 @@ public class HL7Tools2LiteConverter implements Runnable {
     o.setPosition(i.getPosition());
     String key = i.getName();
     Segment ref = getMapSegments().get(key);
+    if (i.getComment() != null && !i.getComment().equals("")) {
+      Comment comment = new Comment();
+      comment.setDescription(i.getComment());
+      comment.setLastUpdatedDate(new Date());
+      comment.setLocation(getSegRefOrGroupPath(parentPath, o));
+      message.addComment(comment);
+    }
     if (ref != null) {
       if (ref.getId() != null) {
         log.trace("settingRef id=" + ref.getId() + " from key=" + key);
@@ -462,8 +500,15 @@ public class HL7Tools2LiteConverter implements Runnable {
     } else {
       log.error("segment was null for element=" + i.getName());
     }
+    checkIntegrity(o);
     return o;
   }
+
+
+  String getSegRefOrGroupPath(String parentPath, SegmentRefOrGroup o) {
+    return parentPath == null ? o.getPosition() + "" : parentPath + "." + o.getPosition();
+  }
+
 
   SegmentLibrary convertSegments(gov.nist.healthcare.hl7tools.domain.SegmentLibrary i) {
     SegmentLibrary o = acquireSegmentLibrary();
@@ -508,15 +553,34 @@ public class HL7Tools2LiteConverter implements Runnable {
     Segment o = acquireSegment(i.getName());
     o.setComment(i.getComment());
     o.setDescription(i.getDescription());
-    List<Field> newFields = convertFields(checkFieldList(i.getFields()));
-    DataUtil.reuseFieldIdsIfExist(newFields,o.getFields());
-    o.setFields(newFields);
+    if (o.getDescription() == null || o.getDescription().equals("")) {
+      if (o.getName().equals("UB1")) {
+        o.setDescription("UB82");
+      }
+    }
+
     o.setLabel(i.getName());
     o.setName(i.getName());
     o.setHl7Version(hl7Version);
     o.setScope(SCOPE.HL7STANDARD);
     o.setStatus(STATUS.PUBLISHED);
     o.setHl7Section(i.getSection());
+
+
+    if (o.getName().equals("OBX")) {
+      DynamicMappingDefinition dmDefinition = new DynamicMappingDefinition();
+      VariesMapItem structure = new VariesMapItem();
+      structure.setHl7Version(hl7Version);
+      structure.setSegmentName(o.getName());
+      structure.setTargetLocation("5");
+      structure.setReferenceLocation("2");
+      dmDefinition.setMappingStructure(structure);
+      dmDefinition.setDynamicMappingItems(new ArrayList<DynamicMappingItem>());
+      o.setDynamicMappingDefinition(dmDefinition);
+    }
+
+
+    convertFields(checkFieldList(i.getFields()), o);
     String key = i.getName();
     if (!getMapSegments().containsKey(key)) {
       getMapSegments().put(key, o);
@@ -553,30 +617,36 @@ public class HL7Tools2LiteConverter implements Runnable {
     return i;
   }
 
-  List<Field> convertFields(List<gov.nist.healthcare.hl7tools.domain.Field> i) {
+  void convertFields(List<gov.nist.healthcare.hl7tools.domain.Field> i, Segment parent) {
     List<Field> o = new ArrayList<Field>();
     for (gov.nist.healthcare.hl7tools.domain.Field f : i) {
-      o.add(convertField(f));
+      o.add(convertField(f, parent));
     }
-    return o;
+    parent.setFields(o);
   }
 
-  Field convertField(gov.nist.healthcare.hl7tools.domain.Field i) {
+  Field convertField(gov.nist.healthcare.hl7tools.domain.Field i, Segment parent) {
     String s = i.getDatatype().getName();
     Field o = new Field();
     Datatype dt = getMapDatatypes().get(s);
-    o.setComment(i.getComment());
     // Integer confLength = i.getConfLength();
     // o.setConfLength(confLength < 0 ? Integer.toString(confLength) : "1");
-    o.setConfLength(i.getConfLength());
+    o.setConfLength(
+        i.getConfLength() != null && i.getConfLength().equals("-1") ? "" : i.getConfLength());
+    if ("0".equals(o.getConfLength())) {
+      o.setConfLength(DataElement.LENGTH_NA);
+    }
     o.setDatatype(new DatatypeLink(dt.getId(), dt.getName(), dt.getExt()));
     o.setItemNo(i.getItemNo());
     o.setMax(i.getMax());
     o.setMin(i.getMin());
-    o.setMinLength(i.getMinLength());
+    o.setMinLength(i.getMinLength() + "");
     o.setMaxLength(i.getMaxLength());
     o.setName(i.getDescription());
     o.setPosition(i.getPosition());
+
+
+
     // Some fields do not have a code table associated with them.
     gov.nist.healthcare.hl7tools.domain.CodeTable ct = i.getCodeTable();
     if (ct != null) {
@@ -585,13 +655,29 @@ public class HL7Tools2LiteConverter implements Runnable {
       if (tab == null) {
         log.error("mapTables.get(" + key + ") was null");
       } else {
-        o.getTables().add(new TableLink(tab.getId(), tab.getBindingIdentifier()));
+        // o.getTables().add(new TableLink(tab.getId(), tab.getBindingIdentifier()));
+        ValueSetBinding vsb = new ValueSetBinding();
+        vsb.setLocation(o.getPosition() + "");
+        vsb.setTableId(tab.getId());
+        vsb.setUsage(o.getUsage());
+        parent.addValueSetBinding(vsb);
       }
     } else {
       log.debug("CodeTable for field is null. description=" + i.getDescription());
     }
     o.setUsage(convertUsage(i.getUsage()));
+    if (o.getUsage().equals(Usage.B) || o.getUsage().equals(Usage.W)) {
+      o.setUsage(Usage.X);
+    }
 
+    if (i.getComment() != null && !i.getComment().equals("")) {
+      Comment comment = new Comment();
+      comment.setDescription(i.getComment());
+      comment.setLastUpdatedDate(new Date());
+      comment.setLocation(i.getPosition() + "");
+      parent.addComment(comment);
+    }
+    checkIntegrity(o);
     return o;
   }
 
@@ -649,26 +735,43 @@ public class HL7Tools2LiteConverter implements Runnable {
     Table o = acquireTable(i.getKey());
 
     o.setBindingIdentifier(i.getKey());
-    o.setName(i.getKey());
+    o.setName(i.getDescription());
     o.setOid(i.getOid());
     o.setVersion(i.getVersion());
     o.setCodes(convertCodes(i.getCodes()));
+
+    Set<String> codeSystems = new HashSet<String>();
+    for (Code c : o.getCodes()) {
+      if (c.getCodeSystem() != null && !c.getCodeSystem().isEmpty()) {
+        codeSystems.add(c.getCodeSystem());
+      }
+    }
+    o.setCodeSystems(codeSystems);
+
     // Static OR Dynamic (enum) no condition as per Woo. Use Static.
-    o.setStability(Stability.Static);
+    o.setStability(Stability.fromValue("Undefined"));
     // Use ContentDefinition.Extensional.
-    o.setContentDefinition(ContentDefinition.Extensional);
-    o.setDescription(i.getDescription());
+    o.setContentDefinition(ContentDefinition.fromValue("Undefined"));
+    o.setExtensibility(Extensibility.fromValue("Undefined"));
+    o.setDescription(null);
     o.setHl7Version(hl7Version);
     o.setScope(SCOPE.HL7STANDARD);
     o.setStatus(STATUS.PUBLISHED);
-    if (i instanceof HL7Table) {
-      HL7Table ii = (HL7Table) i;
-      // HL7 = Closed; User = Open (enum)
-      Extensibility ext = ("HL7".equals(ii.getType()) ? Extensibility.Closed : Extensibility.Open);
-      o.setExtensibility(ext);
-    } else {
-      log.debug("No type");
-    }
+    o.setDefPreText(o.getDescription());
+    o.setSourceType(SourceType.INTERNAL);
+
+    int numberOfCodes = o.getCodes().size();
+    o.setNumberOfCodes(numberOfCodes);
+
+
+    // if (i instanceof HL7Table) {
+    // HL7Table ii = (HL7Table) i;
+    // // HL7 = Closed; User = Open (enum)
+    // Extensibility ext = ("HL7".equals(ii.getType()) ? Extensibility.Closed : Extensibility.Open);
+    // o.setExtensibility(ext);
+    // } else {
+    // log.debug("No type");
+    // }
     return o;
   }
 
@@ -707,6 +810,12 @@ public class HL7Tools2LiteConverter implements Runnable {
     o.setLabel(i.getDescription());
     o.setCodeSystem(convertCodeSystem(i.getCodeSystem()));
     o.setCodeUsage(convertCodeUsage(i));
+    if (o.getCodeUsage() == null) {
+      o.setCodeUsage("P");
+    } else if (!o.getCodeUsage().equals("R") && !o.getCodeUsage().equals("P")
+        && !o.getCodeUsage().equals("E")) {
+      o.setCodeUsage("P");
+    }
     o.setComments(i.getComment());
     return o;
   }
@@ -810,9 +919,13 @@ public class HL7Tools2LiteConverter implements Runnable {
     o.setLabel(i.getName());
     o.setName(i.getName());
     o.setDescription(i.getDescription());
+    if (o.getDescription() == null || o.getDescription().equals("")) {
+      o.setDescription("No Description");
+    }
     o.setComment(i.getComment());
     o.setUsageNote(i.getUsageNotes());
     o.setHl7Version(hl7Version);
+    o.getHl7versions().add(hl7Version);
     o.setScope(SCOPE.HL7STANDARD);
     o.setStatus(STATUS.PUBLISHED);
     o.setHl7Section(i.getSection());
@@ -857,42 +970,45 @@ public class HL7Tools2LiteConverter implements Runnable {
 
   public Datatype acquireDatatype(String name) {
     Datatype dt = null;
-    if (existing) {
-      dt = getDataType(name, hl7Version);
-    }
-    if (dt == null) {
+    try {
       if (existing) {
-        log.info("Datatype not found in database. name=" + name);
+        dt = getDataType(name, hl7Version);
       }
-      dt = new Datatype();
+      if (dt == null) {
+        if (existing) {
+          log.info("Datatype not found in database. name=" + name);
+        }
+        dt = new Datatype();
+      }
+    } catch (RuntimeException e) {
+      System.out.println("Failed to aquire datatype " + name);
+      e.printStackTrace();
+    } catch (Exception e) {
+      System.out.println("Failed to aquire datatype " + name);
+      e.printStackTrace();
     }
     return dt;
   }
 
   // Called by the second pass. Here we complete the conversion.
   Datatype convertDatatypeSecondPass(gov.nist.healthcare.hl7tools.domain.Datatype i, Datatype o) {
-    List<Component> newComponents = convertComponents(i.getComponents());
-    DataUtil.reuseComponentIdsIfExist(newComponents,o.getComponents());
-    o.setComponents(newComponents);
-    // log.info("dt=" + o.getLabel() + " components=" +
-    // o.getComponents().size());
+    convertComponents(i.getComponents(), o);
     return o;
   }
 
   // Called by the convertDatatypeSecondPass pass.
-  List<Component> convertComponents(List<gov.nist.healthcare.hl7tools.domain.Component> i) {
+  void convertComponents(List<gov.nist.healthcare.hl7tools.domain.Component> i, Datatype parent) {
     List<Component> o = new ArrayList<Component>();
     if (i != null) {
       for (gov.nist.healthcare.hl7tools.domain.Component c : i) {
-        Component convertedComponent = convertComponent(c);
+        Component convertedComponent = convertComponent(c, parent);
         o.add(convertedComponent);
       }
     }
-
-    return o;
+    parent.setComponents(o);
   }
 
-  Component convertComponent(gov.nist.healthcare.hl7tools.domain.Component i) {
+  Component convertComponent(gov.nist.healthcare.hl7tools.domain.Component i, Datatype parent) {
     Component o = new Component();
     String key = "";
     try {
@@ -911,11 +1027,14 @@ public class HL7Tools2LiteConverter implements Runnable {
           }
           link = new DatatypeLink(dt.getId(), dt.getName(), dt.getExt());
         }
-        o.setComment(i.getComment());
-        o.setConfLength(i.getConfLength());
+        o.setConfLength(
+            i.getConfLength() != null && i.getConfLength().equals("-1") ? "" : i.getConfLength());
+        if ("0".equals(o.getConfLength())) {
+          o.setConfLength(DataElement.LENGTH_NA);
+        }
         o.setDatatype(link);
         o.setMaxLength(i.getMaxLength());
-        o.setMinLength(i.getMinLength());
+        o.setMinLength(i.getMinLength() + "");
         o.setPosition(i.getPosition());
         o.setName(i.getDescription());
       } catch (NullPointerException e) {
@@ -925,6 +1044,8 @@ public class HL7Tools2LiteConverter implements Runnable {
       log.error("Component datatype=" + i.getId() + " " + i.getDescription() + " not found.", e);
     }
 
+
+
     gov.nist.healthcare.hl7tools.domain.CodeTable ct = i.getCodeTable();
     if (ct != null) {
       String key1 = i.getCodeTable().getKey();
@@ -932,19 +1053,82 @@ public class HL7Tools2LiteConverter implements Runnable {
       if (tab == null) {
         log.info("mapTables.get(" + key1 + ") was null description=" + i.getDescription());
       } else {
-        o.getTables().add(new TableLink(tab.getId(), tab.getBindingIdentifier()));
+        // o.getTables().add(new TableLink(tab.getId(), tab.getBindingIdentifier()));
+        ValueSetBinding vsb = new ValueSetBinding();
+        vsb.setLocation(o.getPosition() + "");
+        vsb.setUsage(o.getUsage());
+        vsb.setTableId(tab.getId());
+        parent.addValueSetBinding(vsb);
       }
     } else {
       log.debug("CodeTable for component is null. description=" + i.getDescription());
     }
 
+    if (i.getComment() != null && !i.getComment().equals("")) {
+      Comment comment = new Comment();
+      comment.setDescription(i.getComment());
+      comment.setLastUpdatedDate(new Date());
+      comment.setLocation(o.getPosition() + "");
+      parent.addComment(comment);
+    }
+
+
     o.setUsage(convertUsage(i.getUsage()));
+    if (o.getUsage().equals(Usage.B) || o.getUsage().equals(Usage.W)) {
+      o.setUsage(Usage.X);
+    }
+    checkIntegrity(o);
     return o;
   }
 
   Usage convertUsage(gov.nist.healthcare.hl7tools.domain.Usage i) {
     return Usage.fromValue(i.getValue());
   }
+
+
+
+  void checkIntegrity(Component o) {
+    checkLength(o.getMinLength(), o.getMaxLength());
+
+  }
+
+  void checkIntegrity(Field o) {
+    checkLength(o.getMinLength(), o.getMaxLength());
+    checkCard(o.getMin(), o.getMax());
+  }
+
+  void checkIntegrity(SegmentRefOrGroup o) {
+    checkCard(o.getMin(), o.getMax());
+  }
+
+  void checkLength(String minLength, String maxLength) {
+    try {
+      if (maxLength != null) {
+        Integer max = Integer.valueOf(maxLength);
+        Integer min = Integer.valueOf(minLength);
+        if (min > max) {
+          throw new IllegalArgumentException(
+              "Min Length " + minLength + " is greather than Max Length " + maxLength);
+        }
+      }
+    } catch (NumberFormatException e) {
+    }
+  }
+
+  void checkCard(Integer minCard, String maxCard) {
+    try {
+      if (maxCard != null && !"*".equals(maxCard)) {
+        Integer max = Integer.valueOf(maxCard);
+        if (minCard > max) {
+          throw new IllegalArgumentException(
+              "Min Card " + minCard + " is greather than Max Card " + maxCard);
+        }
+      }
+    } catch (NumberFormatException e) {
+    }
+  }
+
+
 
   String generateId() {
     return ObjectId.get().toString();
@@ -1009,10 +1193,7 @@ public class HL7Tools2LiteConverter implements Runnable {
       DatatypeLibrary dtLib = igDoc.getProfile().getDatatypeLibrary();
       DatatypeLink drtmLink = null;
       for (DatatypeLink dtLink : dtLib.getChildren()) {
-        // Segment segment = findSegment(link.getId());
-        // for (Field field : segment.getFields()) {
-        // DatatypeLink dtLink = field.getDatatype();
-        if (dtLink != null && !dtLink.getName().equals("-")) {
+        if (dtLink != null && dtLink.getName() != null && !dtLink.getName().equals("-")) {
           Datatype d1 = finDatatype(dtLink.getId());
           List<Component> components = d1.getComponents();
           if (components != null && !components.isEmpty()) {
@@ -1020,7 +1201,8 @@ public class HL7Tools2LiteConverter implements Runnable {
               DatatypeLink link1 = c1.getDatatype();
               if (link1 != null && link1.getId() != null && link1.getName().equals("DR")) {
                 Datatype prev = finDatatype(link1.getId());
-                if (prev.getScope().equals(SCOPE.HL7STANDARD) || "".equals(prev.getExt()) || null == prev.getExt()) {
+                if (prev.getScope().equals(SCOPE.HL7STANDARD) || "".equals(prev.getExt())
+                    || null == prev.getExt()) {
                   if (drtmLink == null) {
                     Datatype drdtm = findDRDTM(hl7Version);
                     drtmLink = new DatatypeLink(drdtm.getId(), drdtm.getName(), drdtm.getExt());
@@ -1040,12 +1222,6 @@ public class HL7Tools2LiteConverter implements Runnable {
     }
   }
 
-  private Segment findSegment(String id) {
-    Criteria where = Criteria.where("_id").is(new ObjectId(id));
-    Query qry = Query.query(where);
-    return mongoOps.findOne(qry, Segment.class);
-  }
-
 
   private Datatype finDatatype(String id) {
     Criteria where = Criteria.where("_id").is(new ObjectId(id));
@@ -1053,6 +1229,111 @@ public class HL7Tools2LiteConverter implements Runnable {
     return mongoOps.findOne(qry, Datatype.class);
   }
 
+
+  private Table findTable(String id) {
+    Criteria where = Criteria.where("id").is(new ObjectId(id));
+    Query qry = Query.query(where);
+    return mongoOps.findOne(qry, Table.class);
+  }
+
+  public List<Segment> findSegmentByIds(Set<String> ids) {
+    Criteria where = Criteria.where("id").in(ids);
+    Query qry = Query.query(where);
+    List<Segment> segments = mongoOps.find(qry, Segment.class);
+    return segments;
+  }
+
+  public List<Datatype> findDatatypeByIds(Set<String> ids) {
+    Criteria where = Criteria.where("id").in(ids);
+    Query qry = Query.query(where);
+    List<Datatype> datatypes = mongoOps.find(qry, Datatype.class);
+    return datatypes;
+  }
+
+  private boolean contains(DatatypeLink link, DatatypeLibrary datatypeLibrary) {
+    if (datatypeLibrary.getChildren() != null) {
+      for (DatatypeLink datatypeLink : datatypeLibrary.getChildren()) {
+        if (datatypeLink.getId() != null && datatypeLink.getId().equals(link.getId())) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  private void fixDatatypeRecursion(IGDocument document) {
+    DatatypeLibrary datatypeLibrary = document.getProfile().getDatatypeLibrary();
+    Datatype withdrawn = getWithdrawnDatatype(document.getProfile().getMetaData().getHl7Version());
+    DatatypeLink withdrawnLink =
+        new DatatypeLink(withdrawn.getId(), withdrawn.getName(), withdrawn.getExt());
+    Set<String> datatypeIds = new HashSet<String>();
+    for (DatatypeLink datatypeLink : datatypeLibrary.getChildren()) {
+      datatypeIds.add(datatypeLink.getId());
+    }
+    List<Datatype> datatypes = findDatatypeByIds(datatypeIds);
+    for (Datatype datatype : datatypes) {
+      if (datatype != null) {
+        List<Component> components = datatype.getComponents();
+        if (components != null && !components.isEmpty()) {
+          for (Component component : components) {
+            DatatypeLink componentDatatypeLink = component.getDatatype();
+            if (componentDatatypeLink != null && componentDatatypeLink.getId() != null
+                && componentDatatypeLink.getId().equals(datatype.getId())) {
+              component.setDatatype(withdrawnLink);
+              if (!contains(withdrawnLink, datatypeLibrary)) {
+                datatypeLibrary.addDatatype(withdrawnLink);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    for (Datatype dt : datatypes) {
+      mongoOps.save(dt);
+    }
+    mongoOps.save(datatypeLibrary);
+  }
+
+
+
+  private Datatype getWithdrawnDatatype(String hl7Version) {
+    List<Datatype> datatypes =
+        findByNameAndVersionAndScope("-", hl7Version, SCOPE.HL7STANDARD.toString());
+    Datatype dt = datatypes != null && !datatypes.isEmpty() ? datatypes.get(0) : null;
+    if (dt == null) {
+      dt = new Datatype();
+      dt.setName("-");
+      dt.setDescription("withdrawn");
+      dt.setHl7versions(new HashSet<>(Arrays.asList(new String[] {hl7Version})));
+      dt.setHl7Version(hl7Version);
+      dt.setScope(SCOPE.HL7STANDARD);
+      dt.setDateUpdated(Calendar.getInstance().getTime());
+      dt.setStatus(STATUS.PUBLISHED);
+      dt.setPrecisionOfDTM(3);
+      mongoOps.save(dt);
+    }
+    return dt;
+  }
+
+  public List<Datatype> findByNameAndVersionAndScope(String name, String hl7Version, String scope) {
+    Criteria where = Criteria.where("name").is(name).andOperator(
+        Criteria.where("hl7Version").is(hl7Version).andOperator(Criteria.where("scope").is(scope)));
+    Query qry = Query.query(where);
+    List<Datatype> datatypes = mongoOps.find(qry, Datatype.class);
+    return datatypes;
+  }
+
+
+
+  private void fixDatatypeRecursion(String hl7Version) {
+    Criteria where = Criteria.where("metaData.hl7Version").is(hl7Version);
+    Query qry = Query.query(where);
+    List<IGDocument> igDocuments = mongoOps.find(qry, IGDocument.class);
+    for (IGDocument document : igDocuments) {
+      fixDatatypeRecursion(document);
+    }
+  }
 
 
 }
