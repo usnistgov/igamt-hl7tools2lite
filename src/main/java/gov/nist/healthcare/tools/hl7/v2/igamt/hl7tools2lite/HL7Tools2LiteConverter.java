@@ -11,6 +11,9 @@
  */
 package gov.nist.healthcare.tools.hl7.v2.igamt.hl7tools2lite;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -22,6 +25,11 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.bson.types.ObjectId;
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
@@ -124,6 +132,53 @@ public class HL7Tools2LiteConverter implements Runnable {
   MongoOperations mongoOps;
   IGDocument igd;
 
+  POIFSFileSystem fs = null;
+  Workbook thirdLevelWorkbook = null;
+  Workbook ce_Workbook = null;
+
+  FileOutputStream fileOut = null;
+  boolean write = true;
+
+
+
+  HashMap<String, Map<String, String>> threeLevelsDatatypesSubstituionMap = null;
+
+  private void initThreeLevelsDatatypesSubstituionMap() {
+    threeLevelsDatatypesSubstituionMap = new HashMap<String, Map<String, String>>();
+
+    Map<String, String> versionMap = new HashMap<String, String>();
+    threeLevelsDatatypesSubstituionMap.put("2.3", versionMap);
+    versionMap.put("CE", "ST");
+    versionMap.put("HD", "IS");
+
+    versionMap = new HashMap<String, String>();
+    threeLevelsDatatypesSubstituionMap.put("2.3.1", versionMap);
+    versionMap.put("CE", "ST");
+    versionMap.put("HD", "IS");
+
+    versionMap = new HashMap<String, String>();
+    threeLevelsDatatypesSubstituionMap.put("2.4", versionMap);
+    versionMap.put("CE", "ST");
+    versionMap.put("TS", "ST");
+
+
+    versionMap = new HashMap<String, String>();
+    threeLevelsDatatypesSubstituionMap.put("2.5", versionMap);
+    versionMap.put("CE", "ST");
+    versionMap.put("TS", "DTM");
+
+
+    versionMap = new HashMap<String, String>();
+    threeLevelsDatatypesSubstituionMap.put("2.5.1", versionMap);
+    versionMap.put("CE", "ST");
+    versionMap.put("TS", "DTM");
+
+    versionMap = new HashMap<String, String>();
+    threeLevelsDatatypesSubstituionMap.put("2.6", versionMap);
+    versionMap.put("CWE", "ST");
+
+  }
+
 
 
   public HL7Tools2LiteConverter(String[] args) throws CmdLineException {
@@ -135,6 +190,7 @@ public class HL7Tools2LiteConverter implements Runnable {
       }
       mongo = new MongoClient("localhost", 27017);
       mongoOps = new MongoTemplate(new SimpleMongoDbFactory(mongo, dbName));
+      initThreeLevelsDatatypesSubstituionMap();
     } catch (CmdLineException e) {
       CLI.printUsage(System.out);
       System.exit(0);
@@ -158,6 +214,9 @@ public class HL7Tools2LiteConverter implements Runnable {
       mongoOps.dropCollection(IGDocument.class);
     }
 
+
+    thirdLevelWorkbook = new HSSFWorkbook();
+    ce_Workbook = new HSSFWorkbook();
     for (String hl7Version : hl7Versions) {
       try {
         this.hl7Version = hl7Version;
@@ -177,13 +236,56 @@ public class HL7Tools2LiteConverter implements Runnable {
         mongoOps.save(getIgd().getProfile().getDatatypeLibrary());
         mongoOps.save(getIgd().getProfile().getSegmentLibrary());
         mongoOps.save(getIgd());
-        drTodrdtm(hl7Version);
         fixDatatypeRecursion(hl7Version);
         igLibraries.put(hl7Version, getIg());
+        fixCE_(hl7Version);
+        fixStandardThirdLevelComplexDatatype(hl7Version);
       } catch (Exception e) {
         log.error("error", e);
       }
     }
+
+    try {
+      for (String hl7Version : hl7Versions) {
+        this.hl7Version = hl7Version;
+        addMissingDatatypes(hl7Version);
+        changeDR_DTMtoDR_NIST(hl7Version);
+      }
+    } catch (Exception e) {
+      log.error("error", e);
+    }
+
+    FileOutputStream fileOut;
+    try {
+      File file = new File("./src/main/resources/ThirdLevelDatatypeResults.xls");
+      if (!file.exists()) {
+        file.createNewFile();
+      }
+      fileOut = new FileOutputStream(file);
+      thirdLevelWorkbook.write(fileOut);
+      fileOut.close();
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+
+    try {
+      File file = new File("./src/main/resources/CE_Results.xls");
+      if (!file.exists()) {
+        file.createNewFile();
+      }
+      fileOut = new FileOutputStream(file);
+      ce_Workbook.write(fileOut);
+      fileOut.close();
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+
+
+
+    // pw.flush();
+    // pw.close();
     log.info("...end");
   }
 
@@ -935,10 +1037,10 @@ public class HL7Tools2LiteConverter implements Runnable {
   }
 
   Datatype findDRDTM(String hl7Version) {
-    Datatype d = getDataType("DR_DTM", hl7Version);
+    Datatype d = getDataType("DR_NIST", hl7Version);
     if (d == null) {
       d = getDataType("DR", hl7Version);
-      d.setName("DR_DTM");
+      d.setName("DR_NIST");
       d.setId(null);
       d.setScope(SCOPE.HL7STANDARD);
       List<Component> components = d.getComponents();
@@ -1185,43 +1287,6 @@ public class HL7Tools2LiteConverter implements Runnable {
   }
 
 
-  private void drTodrdtm(String hl7Version) {
-    Criteria where = Criteria.where("metaData.hl7Version").is(hl7Version);
-    Query qry = Query.query(where);
-    List<IGDocument> igs = mongoOps.find(qry, IGDocument.class);
-    for (IGDocument igDoc : igs) {
-      DatatypeLibrary dtLib = igDoc.getProfile().getDatatypeLibrary();
-      DatatypeLink drtmLink = null;
-      for (DatatypeLink dtLink : dtLib.getChildren()) {
-        if (dtLink != null && dtLink.getName() != null && !dtLink.getName().equals("-")) {
-          Datatype d1 = finDatatype(dtLink.getId());
-          List<Component> components = d1.getComponents();
-          if (components != null && !components.isEmpty()) {
-            for (Component c1 : components) {
-              DatatypeLink link1 = c1.getDatatype();
-              if (link1 != null && link1.getId() != null && link1.getName().equals("DR")) {
-                Datatype prev = finDatatype(link1.getId());
-                if (prev.getScope().equals(SCOPE.HL7STANDARD) || "".equals(prev.getExt())
-                    || null == prev.getExt()) {
-                  if (drtmLink == null) {
-                    Datatype drdtm = findDRDTM(hl7Version);
-                    drtmLink = new DatatypeLink(drdtm.getId(), drdtm.getName(), drdtm.getExt());
-                  }
-                  c1.setDatatype(drtmLink);
-                }
-              }
-            }
-            mongoOps.save(d1);
-          }
-        }
-      }
-      if (drtmLink != null) {
-        dtLib.getChildren().add(drtmLink);
-        mongoOps.save(dtLib);
-      }
-    }
-  }
-
 
   private Datatype finDatatype(String id) {
     Criteria where = Criteria.where("_id").is(new ObjectId(id));
@@ -1249,6 +1314,31 @@ public class HL7Tools2LiteConverter implements Runnable {
     List<Datatype> datatypes = mongoOps.find(qry, Datatype.class);
     return datatypes;
   }
+
+  public Datatype findDatatypeById(String id) {
+    Criteria where = Criteria.where("id").in(id);
+    Query qry = Query.query(where);
+    Datatype datatype = mongoOps.findOne(qry, Datatype.class);
+    return datatype;
+  }
+
+  public Datatype findDatatypeByName(String name, String hl7Version) {
+    List<Datatype> datatypes =
+        findByNameAndVersionAndScope(name, hl7Version, SCOPE.HL7STANDARD.toString());
+    Datatype dt = datatypes != null && !datatypes.isEmpty() ? datatypes.get(0) : null;
+    return dt;
+  }
+
+
+
+  public Segment findSegmentById(String id) {
+    Criteria where = Criteria.where("id").in(id);
+    Query qry = Query.query(where);
+    Segment segment = mongoOps.findOne(qry, Segment.class);
+    return segment;
+  }
+
+
 
   private boolean contains(DatatypeLink link, DatatypeLibrary datatypeLibrary) {
     if (datatypeLibrary.getChildren() != null) {
@@ -1305,7 +1395,7 @@ public class HL7Tools2LiteConverter implements Runnable {
       dt = new Datatype();
       dt.setName("-");
       dt.setDescription("withdrawn");
-      dt.setHl7versions(new HashSet<>(Arrays.asList(new String[] {hl7Version})));
+      dt.setHl7versions(Arrays.asList(new String[] {hl7Version}));
       dt.setHl7Version(hl7Version);
       dt.setScope(SCOPE.HL7STANDARD);
       dt.setDateUpdated(Calendar.getInstance().getTime());
@@ -1334,6 +1424,622 @@ public class HL7Tools2LiteConverter implements Runnable {
       fixDatatypeRecursion(document);
     }
   }
+
+
+  private void fixCE_(String hl7Version) throws IOException {
+    Criteria where = Criteria.where("profile.metaData.hl7Version").is(hl7Version);
+    Query qry = Query.query(where);
+    List<IGDocument> igDocuments = mongoOps.find(qry, IGDocument.class);
+    org.apache.poi.ss.usermodel.Sheet sheet = ce_Workbook.createSheet(hl7Version);
+    HashMap<String, String> toBeRemoved = new HashMap<String, String>();
+
+    for (IGDocument document : igDocuments) {
+      String title = null;
+      String author = null;
+      if (document.getScope().equals(IGDocumentScope.HL7STANDARD)) {
+        title = "HL7 Standard " + hl7Version;
+        author = "N/A";
+      } else {
+        author = document.getAccountId() + "";
+        title = document.getMetaData().getTitle();
+      }
+      HashMap<String, String> results = fixCE_(document);
+      toBeRemoved.putAll(results);
+      saveCE_Found(title, author, results, sheet);
+    }
+
+    for (String id : toBeRemoved.keySet()) {
+      Query query = Query.query(Criteria.where("id").is(id));
+      mongoOps.remove(query, Datatype.class);
+    }
+  }
+
+  /**
+   * 
+   * @param hl7Version
+   * @throws IOException
+   */
+  private void changeDR_DTMtoDR_NIST(String hl7Version) throws IOException {
+    Criteria where = Criteria.where("profile.metaData.hl7Version").is(hl7Version);
+    Query qry = Query.query(where);
+    HashMap<String, String> toBeRemoved = new HashMap<String, String>();
+    List<IGDocument> igDocuments = mongoOps.find(qry, IGDocument.class);
+    for (IGDocument document : igDocuments) {
+      toBeRemoved.putAll(changeDR_DTMtoDR_NIST(document));
+    }
+    for (String id : toBeRemoved.keySet()) {
+      Query query = Query.query(Criteria.where("id").is(id));
+      mongoOps.remove(query, Datatype.class);
+    }
+  }
+
+
+
+  private void fixStandardThirdLevelComplexDatatype(String hl7Version) throws IOException {
+    Criteria where = Criteria.where("profile.metaData.hl7Version").is(hl7Version).and("scope")
+        .is(IGDocumentScope.HL7STANDARD);
+    Query qry = Query.query(where);
+    List<IGDocument> igDocuments = mongoOps.find(qry, IGDocument.class);
+    org.apache.poi.ss.usermodel.Sheet sheet = thirdLevelWorkbook.createSheet(hl7Version);
+    for (IGDocument document : igDocuments) {
+      HashMap<String, String> tmp = listSegmentThirdLevelComplexDatatype(document);
+      String title = null;
+      String author = null;
+      if (document.getScope().equals(IGDocumentScope.HL7STANDARD)) {
+        title = "HL7 Standard " + hl7Version;
+        author = "N/A";
+      } else {
+        author = document.getAccountId() + "";
+        title = document.getMetaData().getTitle();
+      }
+      saveThirdLevelDatatypeResults(title, author, tmp, sheet);
+      fixThirdLevelDatatype(document);
+      tmp = listSegmentThirdLevelComplexDatatype(document);
+      if (tmp != null && !tmp.isEmpty()) {
+        throw new IllegalArgumentException("Third level datatype found for " + title);
+      }
+    }
+  }
+
+
+  private void addMissingDatatypes(String hl7Version) throws IOException {
+    Criteria where = Criteria.where("profile.metaData.hl7Version").is(hl7Version);
+    Query qry = Query.query(where);
+    List<IGDocument> igDocuments = mongoOps.find(qry, IGDocument.class);
+    for (IGDocument document : igDocuments) {
+      addMissingDatatypes(document);
+    }
+  }
+
+
+
+  private void saveThirdLevelDatatypeResults(String title, String author,
+      HashMap<String, String> results, org.apache.poi.ss.usermodel.Sheet sheet) throws IOException {
+    if (results != null && !results.isEmpty()) {
+      Row loc = sheet.createRow((short) sheet.getLastRowNum() + 1);
+      Cell rCell1 = loc.createCell(0);
+      rCell1.setCellValue("Title");
+      Cell rCell2 = loc.createCell(1);
+      rCell2.setCellValue("Author");
+
+      loc = sheet.createRow((short) sheet.getLastRowNum() + 1);
+      rCell1 = loc.createCell(0);
+      rCell1.setCellValue(title);
+      rCell2 = loc.createCell(1);
+      rCell2.setCellValue(author);
+
+
+      loc = sheet.createRow((short) sheet.getLastRowNum() + 1);
+      rCell1 = loc.createCell(0);
+      rCell1.setCellValue("Component");
+      rCell2 = loc.createCell(1);
+      rCell2.setCellValue("Datatype");
+
+
+      for (String location : results.keySet()) {
+        loc = sheet.createRow((short) sheet.getLastRowNum() + 1);
+        rCell1 = loc.createCell(0);
+        rCell1.setCellValue(location);
+        rCell2 = loc.createCell(1);
+        rCell2.setCellValue(results.get(location));
+      }
+    }
+  }
+
+
+  private void saveCE_Found(String title, String author, HashMap<String, String> results,
+      org.apache.poi.ss.usermodel.Sheet sheet) throws IOException {
+    if (results != null && !results.isEmpty()) {
+      Row loc = sheet.createRow((short) sheet.getLastRowNum() + 1);
+      Cell rCell1 = loc.createCell(0);
+      rCell1.setCellValue("Title");
+      Cell rCell2 = loc.createCell(1);
+      rCell2.setCellValue("Author");
+
+      loc = sheet.createRow((short) sheet.getLastRowNum() + 1);
+      rCell1 = loc.createCell(0);
+      rCell1.setCellValue(title);
+      rCell2 = loc.createCell(1);
+      rCell2.setCellValue(author);
+
+
+      loc = sheet.createRow((short) sheet.getLastRowNum() + 1);
+      rCell1 = loc.createCell(0);
+      rCell1.setCellValue("CE_*");
+
+
+      for (String id : results.keySet()) {
+        loc = sheet.createRow((short) sheet.getLastRowNum() + 1);
+        rCell2 = loc.createCell(0);
+        rCell2.setCellValue(results.get(id));
+      }
+    }
+  }
+
+
+
+  private void drTodrdtm(String hl7Version) {
+    Criteria where = Criteria.where("metaData.hl7Version").is(hl7Version);
+    Query qry = Query.query(where);
+    List<IGDocument> igs = mongoOps.find(qry, IGDocument.class);
+    for (IGDocument igDoc : igs) {
+      DatatypeLibrary dtLib = igDoc.getProfile().getDatatypeLibrary();
+      DatatypeLink drtmLink = null;
+      for (DatatypeLink dtLink : dtLib.getChildren()) {
+        if (dtLink != null && dtLink.getName() != null && !dtLink.getName().equals("-")) {
+          Datatype d1 = finDatatype(dtLink.getId());
+          if (d1 != null) {
+            List<Component> components = d1.getComponents();
+            if (components != null && !components.isEmpty()) {
+              for (Component c1 : components) {
+                DatatypeLink link1 = c1.getDatatype();
+                if (link1 != null && link1.getId() != null && link1.getName().equals("DR")) {
+                  Datatype prev = finDatatype(link1.getId());
+                  if (prev.getScope().equals(SCOPE.HL7STANDARD) || "".equals(prev.getExt())
+                      || null == prev.getExt()) {
+                    if (drtmLink == null) {
+                      Datatype drdtm = findDRDTM(hl7Version);
+                      drtmLink = new DatatypeLink(drdtm.getId(), drdtm.getName(), drdtm.getExt());
+                    }
+                    c1.setDatatype(drtmLink);
+                  }
+                }
+              }
+              mongoOps.save(d1);
+            }
+          }
+        }
+      }
+      if (drtmLink != null) {
+        dtLib.getChildren().add(drtmLink);
+        mongoOps.save(dtLib);
+      }
+    }
+  }
+
+
+
+  private Datatype createOrGetNistFlavor(Datatype datatype) {
+    Datatype found = getDataType(datatype.getName() + "_NIST", datatype.getHl7Version());
+    if (found == null) {
+      datatype.setId(null);
+      datatype.setName(datatype.getName() + "_NIST");
+      datatype.setLabel(datatype.getName());
+      datatype.setPurposeAndUse(
+          "The data type flavor is a NIST generated datatype to fix the 5-level datatype issue in the HL7 v2.x base standard for certain elements that use this data type. For more details, please refer to documentation explaining the issue and the resolution.");
+      mongoOps.save(datatype);
+      return datatype;
+    }
+    return found;
+  }
+
+
+
+  private String getSubstitute(String name) {
+    if (name != null) {
+      Map<String, String> versionMap = threeLevelsDatatypesSubstituionMap.get(hl7Version);
+      if (versionMap != null) {
+        return versionMap.get(name);
+      }
+    }
+    return null;
+  }
+
+
+
+  private HashMap<String, String> listSegmentThirdLevelComplexDatatype(Segment segment) {
+    HashMap<String, String> results = new HashMap<String, String>();
+    if (segment != null && segment.getScope().equals(SCOPE.HL7STANDARD)) {
+      List<Field> fields = segment.getFields();
+      if (fields != null && !fields.isEmpty()) {
+        for (Field field : fields) {
+          DatatypeLink fieldDatatypeLink = field.getDatatype(); // CQ
+          if (fieldDatatypeLink != null && fieldDatatypeLink.getId() != null) {
+            Datatype fieldDatatype = findDatatypeById(fieldDatatypeLink.getId());
+            List<Component> components = fieldDatatype.getComponents();
+            if (components != null && !components.isEmpty()) {
+              for (Component component : components) {
+                DatatypeLink componentDatatypeLink = component.getDatatype(); // CE
+                if (componentDatatypeLink != null && componentDatatypeLink.getId() != null) {
+                  Datatype compDatatype = findDatatypeById(componentDatatypeLink.getId());
+                  if (compDatatype.getComponents() != null
+                      && !compDatatype.getComponents().isEmpty()) {
+                    for (Component subComponent : compDatatype.getComponents()) {
+                      DatatypeLink subComponentDatatypeLink = subComponent.getDatatype(); // CE
+                      if (subComponentDatatypeLink != null
+                          && subComponentDatatypeLink.getId() != null) {
+                        Datatype subComponentDatatype =
+                            findDatatypeById(subComponentDatatypeLink.getId());
+                        if (subComponentDatatype.getComponents() != null
+                            && !subComponentDatatype.getComponents().isEmpty()) {
+                          results.put(
+                              segment.getName() + "-" + field.getPosition() + "."
+                                  + component.getPosition() + "." + subComponent.getPosition(),
+                              subComponentDatatype.getName());
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    return results;
+  }
+
+
+  private HashMap<String, String> fixCE_(IGDocument document) {
+    DatatypeLibrary datatypeLibrary = document.getProfile().getDatatypeLibrary();
+    SegmentLibrary segmentLibrary = document.getProfile().getSegmentLibrary();
+
+    // Set<String> datatypeIds = new HashSet<String>();
+    HashMap<String, String> toBeRemoved = new HashMap<String, String>();
+    String hl7Version = document.getMetaData().getHl7Version();
+    Set<DatatypeLink> newLinks = new HashSet<DatatypeLink>();
+    for (DatatypeLink datatypeLink : datatypeLibrary.getChildren()) {
+      // datatypeIds.add(datatypeLink.getId());
+      Datatype datatype = findDatatypeById(datatypeLink.getId());
+      if (datatype != null) {
+        if (datatype != null && datatype.getId() != null && datatype.getName().startsWith("CE_")
+            && datatype.getScope().equals(SCOPE.HL7STANDARD)) {
+          toBeRemoved.put(datatype.getId(), datatype.getName());
+        } else {
+          List<Component> components = datatype.getComponents();
+          if (components != null && !components.isEmpty()) {
+            boolean substituted = false;
+            for (Component component : components) {
+              DatatypeLink componentDatatypeLink = component.getDatatype();
+              Datatype ce = findDatatypeById(componentDatatypeLink.getId());
+              if (ce != null && ce.getId() != null && ce.getName().startsWith("CE_")
+                  && ce.getScope().equals(SCOPE.HL7STANDARD)) {
+                Datatype substitute = getDataType("CE", hl7Version);
+                if (substitute != null) {
+                  toBeRemoved.put(ce.getId(), ce.getName());
+                  DatatypeLink newLink = new DatatypeLink(substitute.getId(), substitute.getName(),
+                      substitute.getExt());
+                  component.setDatatype(newLink);
+                  if (!contains(newLinks, newLink)) {
+                    newLinks.add(newLink);
+                  }
+                  substituted = true;
+                }
+              }
+            }
+            if (substituted) {
+              mongoOps.save(datatype);
+            }
+          }
+        }
+      }
+    }
+
+
+    for (SegmentLink segmentLink : segmentLibrary.getChildren()) {
+      Segment segment = findSegmentById(segmentLink.getId());
+      if (segment != null) {
+        List<Field> fields = segment.getFields();
+        if (fields != null && !fields.isEmpty()) {
+          boolean substituted = false;
+          for (Field field : fields) {
+            DatatypeLink fieldDatatypeLink = field.getDatatype(); // CQ
+            Datatype ce = findDatatypeById(fieldDatatypeLink.getId());
+            if (ce != null && ce.getId() != null && ce.getName().startsWith("CE_")
+                && ce.getScope().equals(SCOPE.HL7STANDARD)) {
+              Datatype substitute = getDataType("CE", hl7Version);
+              if (substitute != null) {
+                toBeRemoved.put(ce.getId(), ce.getName());
+                DatatypeLink newLink =
+                    new DatatypeLink(substitute.getId(), substitute.getName(), substitute.getExt());
+                field.setDatatype(newLink);
+                if (!contains(newLinks, newLink)) {
+                  newLinks.add(newLink);
+                }
+                substituted = true;
+              }
+            }
+          }
+          if (substituted) {
+            mongoOps.save(segment);
+          }
+        }
+      }
+    }
+
+
+    for (DatatypeLink link : datatypeLibrary.getChildren()) {
+      if (!toBeRemoved.keySet().contains((link.getId())) && !contains(newLinks, link)) {
+        newLinks.add(link);
+      }
+    }
+
+    datatypeLibrary.setChildren(newLinks);
+    mongoOps.save(datatypeLibrary);
+    mongoOps.save(document);
+
+
+    return toBeRemoved;
+  }
+
+
+  private HashMap<String, String> changeDR_DTMtoDR_NIST(IGDocument document) {
+    DatatypeLibrary datatypeLibrary = document.getProfile().getDatatypeLibrary();
+    SegmentLibrary segmentLibrary = document.getProfile().getSegmentLibrary();
+
+    // Set<String> datatypeIds = new HashSet<String>();
+    HashMap<String, String> toBeRemoved = new HashMap<String, String>();
+    Set<DatatypeLink> newLinks = new HashSet<DatatypeLink>();
+    for (DatatypeLink datatypeLink : datatypeLibrary.getChildren()) {
+      // datatypeIds.add(datatypeLink.getId());
+      Datatype datatype = findDatatypeById(datatypeLink.getId());
+      if (datatype != null) {
+        if (datatype != null && datatype.getId() != null && datatype.getName().equals("DR_DTM")
+            && datatype.getScope().equals(SCOPE.HL7STANDARD)) {
+          toBeRemoved.put(datatype.getId(), datatype.getName());
+        } else {
+          List<Component> components = datatype.getComponents();
+          if (components != null && !components.isEmpty()) {
+            boolean substituted = false;
+            for (Component component : components) {
+              DatatypeLink componentDatatypeLink = component.getDatatype();
+              Datatype d = findDatatypeById(componentDatatypeLink.getId());
+              if (d != null && d.getId() != null && d.getName().equals("DR_DTM")
+                  && d.getScope().equals(SCOPE.HL7STANDARD)) {
+                Datatype substitute = getDataType("DR_NIST", d.getHl7Version());
+                if (substitute != null) {
+                  toBeRemoved.put(d.getId(), d.getName());
+                  DatatypeLink newLink = new DatatypeLink(substitute.getId(), substitute.getName(),
+                      substitute.getExt());
+                  component.setDatatype(newLink);
+                  if (!contains(newLinks, newLink)) {
+                    newLinks.add(newLink);
+                  }
+                  substituted = true;
+                }
+              }
+            }
+            if (substituted) {
+              mongoOps.save(datatype);
+            }
+          }
+        }
+      }
+    }
+
+
+    for (SegmentLink segmentLink : segmentLibrary.getChildren()) {
+      Segment segment = findSegmentById(segmentLink.getId());
+      if (segment != null) {
+        List<Field> fields = segment.getFields();
+        if (fields != null && !fields.isEmpty()) {
+          boolean substituted = false;
+          for (Field field : fields) {
+            DatatypeLink fieldDatatypeLink = field.getDatatype(); // CQ
+            Datatype ce = findDatatypeById(fieldDatatypeLink.getId());
+            if (ce != null && ce.getId() != null && ce.getName().equals("DR_DTM")
+                && ce.getScope().equals(SCOPE.HL7STANDARD)) {
+              Datatype substitute = getDataType("DR_NIST", ce.getHl7Version());
+              if (substitute != null) {
+                toBeRemoved.put(ce.getId(), ce.getName());
+                DatatypeLink newLink =
+                    new DatatypeLink(substitute.getId(), substitute.getName(), substitute.getExt());
+                field.setDatatype(newLink);
+                if (!contains(newLinks, newLink)) {
+                  newLinks.add(newLink);
+                }
+                substituted = true;
+              }
+            }
+          }
+          if (substituted) {
+            mongoOps.save(segment);
+          }
+        }
+      }
+    }
+
+
+    for (DatatypeLink link : datatypeLibrary.getChildren()) {
+      if (!toBeRemoved.keySet().contains((link.getId())) && !contains(newLinks, link)) {
+        newLinks.add(link);
+      }
+    }
+
+    datatypeLibrary.setChildren(newLinks);
+    mongoOps.save(datatypeLibrary);
+    mongoOps.save(document);
+
+
+    return toBeRemoved;
+  }
+
+
+
+  private boolean contains(Set<DatatypeLink> links, DatatypeLink link) {
+    for (DatatypeLink tmp : links) {
+      if (tmp != null && link != null && tmp.getId() != null && tmp.getId().equals(link.getId())) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+
+
+  private void fixThirdLevelDatatype(IGDocument document) {
+    DatatypeLibrary datatypeLibrary = document.getProfile().getDatatypeLibrary();
+    Set<String> datatypeIds = new HashSet<String>();
+    Set<DatatypeLink> newLinks = new HashSet<DatatypeLink>();
+    for (DatatypeLink datatypeLink : datatypeLibrary.getChildren()) {
+      datatypeIds.add(datatypeLink.getId());
+      Datatype datatype = findDatatypeById(datatypeLink.getId());
+      HashMap<String, String> results = new HashMap<String, String>();
+      if (datatype != null) {
+        List<Component> components = datatype.getComponents();
+        if (components != null && !components.isEmpty()) {
+          for (Component component : components) {
+            DatatypeLink componentDatatypeLink = component.getDatatype(); // CQ
+            if (componentDatatypeLink != null && componentDatatypeLink.getId() != null) {
+
+              if (datatypeLibrary.findOne(componentDatatypeLink.getId()) == null
+                  && !contains(newLinks, componentDatatypeLink)) {
+                newLinks.add(componentDatatypeLink);
+              }
+
+              Datatype compDatatype = findDatatypeById(componentDatatypeLink.getId());
+              List<Component> subComponents = compDatatype.getComponents();
+              boolean substituted = false;
+              if (subComponents != null && !subComponents.isEmpty()) {
+                for (Component subComponent : subComponents) {
+                  DatatypeLink component2DatatypeLink = subComponent.getDatatype(); // CE
+                  if (component2DatatypeLink != null && component2DatatypeLink.getId() != null) {
+
+                    if (datatypeLibrary.findOne(component2DatatypeLink.getId()) == null
+                        && !contains(newLinks, component2DatatypeLink)) {
+                      newLinks.add(component2DatatypeLink);
+                    }
+
+
+                    Datatype subComponentDatatype =
+                        findDatatypeById(component2DatatypeLink.getId());
+
+
+                    if (subComponentDatatype.getScope().equals(SCOPE.HL7STANDARD)
+                        && subComponentDatatype.getComponents() != null
+                        && !subComponentDatatype.getComponents().isEmpty()) {
+                      results.put(datatype.getName() + "-" + component.getPosition() + "."
+                          + subComponent.getPosition(), subComponentDatatype.getName());
+                      String substituteName = getSubstitute(component2DatatypeLink.getName());
+                      if (substituteName != null) {
+                        Datatype substitute = findDatatypeByName(substituteName,
+                            subComponentDatatype.getHl7Version());
+                        DatatypeLink substituteLink = new DatatypeLink(substitute.getId(),
+                            substitute.getName(), substitute.getExt());
+                        substituted = true;
+                        subComponent.setDatatype(substituteLink);
+                        if (datatypeLibrary.findOne(substituteLink.getId()) == null
+                            && !contains(newLinks, substituteLink)) {
+                          newLinks.add(substituteLink);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              if (substituted) {
+                Datatype nistFlavor = createOrGetNistFlavor(compDatatype);
+                DatatypeLink newLink =
+                    new DatatypeLink(nistFlavor.getId(), nistFlavor.getName(), nistFlavor.getExt());
+                component.setDatatype(newLink);
+                if (datatypeLibrary.findOne(newLink.getId()) == null
+                    && !contains(newLinks, newLink)) {
+                  newLinks.add(newLink);
+                }
+
+              }
+            }
+          }
+        }
+        mongoOps.save(datatype);
+      }
+    }
+
+
+    if (!newLinks.isEmpty()) {
+      for (DatatypeLink link : newLinks) {
+        if (datatypeLibrary.findOne(link.getId()) == null) {
+          datatypeLibrary.addDatatype(link);
+        }
+      }
+    }
+
+    mongoOps.save(datatypeLibrary);
+    mongoOps.save(document);
+
+  }
+
+
+  private void addMissingDatatypes(IGDocument document) {
+    DatatypeLibrary datatypeLibrary = document.getProfile().getDatatypeLibrary();
+    Set<DatatypeLink> newLinks = new HashSet<DatatypeLink>();
+    for (DatatypeLink datatypeLink : datatypeLibrary.getChildren()) {
+      Datatype datatype = findDatatypeById(datatypeLink.getId());
+      if (datatype != null) {
+        List<Component> components = datatype.getComponents();
+        if (components != null && !components.isEmpty()) {
+          for (Component component : components) {
+            DatatypeLink componentDatatypeLink = component.getDatatype(); // CQ
+            if (componentDatatypeLink != null && componentDatatypeLink.getId() != null) {
+              if (datatypeLibrary.findOne(componentDatatypeLink.getId()) == null
+                  && !contains(newLinks, componentDatatypeLink)) {
+                newLinks.add(componentDatatypeLink);
+              }
+              Datatype compDatatype = findDatatypeById(componentDatatypeLink.getId());
+              List<Component> subComponents = compDatatype.getComponents();
+              if (subComponents != null && !subComponents.isEmpty()) {
+                for (Component subComponent : subComponents) {
+                  DatatypeLink component2DatatypeLink = subComponent.getDatatype(); // CE
+                  if (component2DatatypeLink != null && component2DatatypeLink.getId() != null) {
+                    if (datatypeLibrary.findOne(component2DatatypeLink.getId()) == null
+                        && !contains(newLinks, component2DatatypeLink)) {
+                      newLinks.add(component2DatatypeLink);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        mongoOps.save(datatype);
+      }
+    }
+
+
+    if (!newLinks.isEmpty()) {
+      for (DatatypeLink link : newLinks) {
+        if (datatypeLibrary.findOne(link.getId()) == null) {
+          datatypeLibrary.addDatatype(link);
+        }
+      }
+    }
+    mongoOps.save(datatypeLibrary);
+    mongoOps.save(document);
+  }
+
+
+
+  private HashMap<String, String> listSegmentThirdLevelComplexDatatype(IGDocument document) {
+    SegmentLibrary segmentLibrary = document.getProfile().getSegmentLibrary();
+    HashMap<String, String> results = new HashMap<String, String>();
+    for (SegmentLink segmentLink : segmentLibrary.getChildren()) {
+      Segment segment = findSegmentById(segmentLink.getId());
+      results.putAll(listSegmentThirdLevelComplexDatatype(segment));
+    }
+    return results;
+  }
+
 
 
 }
