@@ -88,6 +88,7 @@ import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.TableLibraryMetaData;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.TableLink;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.Usage;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ValueSetBinding;
+import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.ValueSetOrSingleCodeBinding;
 import gov.nist.healthcare.tools.hl7.v2.igamt.lite.domain.VariesMapItem;
 
 // Converts from old to new. We read old *.json into an object graph rooted on IGLibrary then
@@ -762,7 +763,16 @@ public class HL7Tools2LiteConverter implements Runnable {
         vsb.setLocation(o.getPosition() + "");
         vsb.setTableId(tab.getId());
         vsb.setUsage(o.getUsage());
-        parent.addValueSetBinding(vsb);
+
+        boolean found = false;
+        for (ValueSetOrSingleCodeBinding b : parent.getValueSetBindings()) {
+          if (b instanceof ValueSetBinding && b.getTableId().equals(vsb.getTableId())) {
+            found = true;
+          }
+        }
+        if (!found) {
+          parent.addValueSetBinding(vsb);
+        }
       }
     } else {
       log.debug("CodeTable for field is null. description=" + i.getDescription());
@@ -1160,7 +1170,17 @@ public class HL7Tools2LiteConverter implements Runnable {
         vsb.setLocation(o.getPosition() + "");
         vsb.setUsage(o.getUsage());
         vsb.setTableId(tab.getId());
-        parent.addValueSetBinding(vsb);
+
+        boolean found = false;
+        for (ValueSetOrSingleCodeBinding b : parent.getValueSetBindings()) {
+          if (b instanceof ValueSetBinding && b.getTableId().equals(vsb.getTableId())) {
+            found = true;
+          }
+        }
+        if (!found) {
+          parent.addValueSetBinding(vsb);
+        }
+
       }
     } else {
       log.debug("CodeTable for component is null. description=" + i.getDescription());
